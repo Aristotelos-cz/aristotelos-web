@@ -28,8 +28,12 @@ Potřebujete Node.js 20.9 nebo novější.
 
 ## Proměnné prostředí
 
-Viz `.env.example`. Na Vercelu nastavte `NEXT_PUBLIC_SITE_URL` na produkční adresu.
-Náhledová nasazení na Vercelu mají automaticky zakázané indexování.
+Viz `.env.example`. `NEXT_PUBLIC_SITE_URL` je výchozí `https://aristotelos.com`, měnit ho není potřeba.
+
+Vyhledávače web indexují, jen když běží jako produkční nasazení na doméně z `NEXT_PUBLIC_SITE_URL`.
+Adresa `*.vercel.app` i náhledová nasazení jsou skryté (robots.txt i značka noindex).
+Po připojení domény aristotelos.com na Vercelu stačí web znovu nasadit a indexování se zapne samo.
+Ručně to lze přepnout proměnnou `SITE_INDEXING=on` nebo `off`.
 
 ## Co ještě chybí před spuštěním
 
