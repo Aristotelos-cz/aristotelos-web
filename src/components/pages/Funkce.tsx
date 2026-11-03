@@ -6,7 +6,8 @@ export default function FunkcePage() {
   return (
     <>
 <section style={{ backgroundColor: "#F5F8FA", backgroundImage: "linear-gradient(#E3EAF0 1px, transparent 1px), linear-gradient(90deg, #E3EAF0 1px, transparent 1px)", backgroundSize: "32px 32px", borderBottom: "1px solid #E3E8ED" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "80px 24px 72px", display: "flex", flexDirection: "column", gap: "28px" }}>
+<div className="hero-grid" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+<div className="hero-text" style={{ display: "flex", flexDirection: "column" }}>
 <div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
 <span style={{ flex: "55", background: "#006699" }}>
@@ -16,18 +17,95 @@ export default function FunkcePage() {
 </span>
 <span>Funkce</span>
 </div>
-<h1 style={{ margin: "0", fontSize: "clamp(2.3rem, 4.2vw, 3.7rem)", lineHeight: "1.06", letterSpacing: "-0.025em", fontWeight: "700", maxWidth: "16em", textWrap: "balance" }}>Všechno pro plánování směn a docházku v jednom systému</h1>
-<p style={{ margin: "0", fontSize: "1.2rem", color: "#33424F", maxWidth: "36em" }}>Od předpovědi objemu práce po podklady pro mzdy. Každou funkci nastavíme podle pravidel vašeho provozu.</p>
-<nav aria-label="Funkce na této stránce" style={{ display: "flex", flexWrap: "wrap", gap: "8px", fontSize: "14.5px", fontWeight: "500" }}>
-<a href="#predpoved" style={{ display: "inline-flex", alignItems: "center", minHeight: "40px", padding: "0 14px", borderRadius: "999px", background: "#FFFFFF", border: "1px solid #C5D0D9", color: "#0E1A24", textDecoration: "none" }}>Předpověď</a>
-<a href="#kapacity" style={{ display: "inline-flex", alignItems: "center", minHeight: "40px", padding: "0 14px", borderRadius: "999px", background: "#FFFFFF", border: "1px solid #C5D0D9", color: "#0E1A24", textDecoration: "none" }}>Kapacity</a>
-<a href="#planovani" style={{ display: "inline-flex", alignItems: "center", minHeight: "40px", padding: "0 14px", borderRadius: "999px", background: "#FFFFFF", border: "1px solid #C5D0D9", color: "#0E1A24", textDecoration: "none" }}>Automatické plánování</a>
-<a href="#prani" style={{ display: "inline-flex", alignItems: "center", minHeight: "40px", padding: "0 14px", borderRadius: "999px", background: "#FFFFFF", border: "1px solid #C5D0D9", color: "#0E1A24", textDecoration: "none" }}>Přání zaměstnanců</a>
-<a href="#rizeni" style={{ display: "inline-flex", alignItems: "center", minHeight: "40px", padding: "0 14px", borderRadius: "999px", background: "#FFFFFF", border: "1px solid #C5D0D9", color: "#0E1A24", textDecoration: "none" }}>Řízení provozu</a>
-<a href="#dochazka" style={{ display: "inline-flex", alignItems: "center", minHeight: "40px", padding: "0 14px", borderRadius: "999px", background: "#FFFFFF", border: "1px solid #C5D0D9", color: "#0E1A24", textDecoration: "none" }}>Docházka</a>
-<a href="#aplikace" style={{ display: "inline-flex", alignItems: "center", minHeight: "40px", padding: "0 14px", borderRadius: "999px", background: "#0E1A24", border: "1px solid #0E1A24", color: "#FFFFFF", textDecoration: "none" }}>Mobilní aplikace</a>
-<a href="#reporty" style={{ display: "inline-flex", alignItems: "center", minHeight: "40px", padding: "0 14px", borderRadius: "999px", background: "#FFFFFF", border: "1px solid #C5D0D9", color: "#0E1A24", textDecoration: "none" }}>Reporty a mzdy</a>
-<a href="#sprava" style={{ display: "inline-flex", alignItems: "center", minHeight: "40px", padding: "0 14px", borderRadius: "999px", background: "#FFFFFF", border: "1px solid #C5D0D9", color: "#0E1A24", textDecoration: "none" }}>Správa a přihlášení</a>
+<h1 className="hero-h1" style={{ margin: "0", lineHeight: "1.06", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Všechno pro plánování směn a docházku v jednom systému</h1>
+<p className="hero-lead" style={{ margin: "0", fontSize: "1.15rem", lineHeight: "1.5", color: "#33424F", maxWidth: "34em" }}>Od předpovědi objemu práce po podklady pro mzdy. Každou funkci nastavíme podle pravidel vašeho provozu.</p>
+<div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
+<a href="#demo" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 26px", borderRadius: "8px", background: "#0072A3", color: "#FFFFFF", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Domluvit ukázku</a>
+<Link href="/kalkulacka-uspor" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 24px", borderRadius: "8px", background: "#FFFFFF", border: "1px solid #C5D0D9", color: "#0E1A24", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Spočítat úsporu</Link>
+</div>
+</div>
+<nav aria-label="Funkce na této stránce" className="funkce-mrizka" style={{ display: "grid", gridAutoRows: "1fr", gap: "12px" }}>
+<a href="#predpoved" className="funkce-dlazdice" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "12px", minHeight: "112px", padding: "14px 14px 16px", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", color: "#0E1A24", textDecoration: "none" }}>
+<span style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+<span aria-hidden="true" style={{ display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "11px", background: "#EEF5F9" }}>
+<svg width="30" height="30" viewBox="0 0 32 32"><path d="M5 5v22h22" style={{ fill: "none", stroke: "#006E99", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><path d="M8 21l5-5 4 3 5-7" style={{ fill: "none", stroke: "#006E99", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><path d="M22 12l5-5" style={{ fill: "none", stroke: "#FF6633", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", strokeDasharray: "2 3" }} /><circle cx="22" cy="12" r="1.6" style={{ fill: "#FF6633" }} /></svg>
+</span>
+<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "12px", color: "#4A5866" }}>01</span>
+</span>
+<span style={{ fontWeight: "600", fontSize: "15px", lineHeight: "1.25" }}>Předpověď</span>
+</a>
+<a href="#kapacity" className="funkce-dlazdice" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "12px", minHeight: "112px", padding: "14px 14px 16px", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", color: "#0E1A24", textDecoration: "none" }}>
+<span style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+<span aria-hidden="true" style={{ display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "11px", background: "#EEF5F9" }}>
+<svg width="30" height="30" viewBox="0 0 32 32"><circle cx="16" cy="11" r="4" style={{ fill: "none", stroke: "#006E99", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><path d="M9 26c0-4 3-7 7-7s7 3 7 7" style={{ fill: "none", stroke: "#006E99", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><circle cx="7" cy="13" r="2.8" style={{ fill: "none", stroke: "#FF6633", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><path d="M2.5 25c0-3 2-5 4.5-5" style={{ fill: "none", stroke: "#FF6633", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><circle cx="25" cy="13" r="2.8" style={{ fill: "none", stroke: "#FF6633", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><path d="M29.5 25c0-3-2-5-4.5-5" style={{ fill: "none", stroke: "#FF6633", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /></svg>
+</span>
+<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "12px", color: "#4A5866" }}>02</span>
+</span>
+<span style={{ fontWeight: "600", fontSize: "15px", lineHeight: "1.25" }}>Kapacity</span>
+</a>
+<a href="#planovani" className="funkce-dlazdice" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "12px", minHeight: "112px", padding: "14px 14px 16px", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", color: "#0E1A24", textDecoration: "none" }}>
+<span style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+<span aria-hidden="true" style={{ display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "11px", background: "#EEF5F9" }}>
+<svg width="30" height="30" viewBox="0 0 32 32"><rect x="5" y="7" width="22" height="20" rx="3" style={{ fill: "none", stroke: "#006E99", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><path d="M5 13h22M11 4v5M21 4v5" style={{ fill: "none", stroke: "#006E99", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><path d="M16 15.5l1.3 3.2 3.2 1.3-3.2 1.3-1.3 3.2-1.3-3.2-3.2-1.3 3.2-1.3z" style={{ fill: "#FF6633" }} /></svg>
+</span>
+<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "12px", color: "#4A5866" }}>03</span>
+</span>
+<span style={{ fontWeight: "600", fontSize: "15px", lineHeight: "1.25" }}>Automatické plánování</span>
+</a>
+<a href="#prani" className="funkce-dlazdice" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "12px", minHeight: "112px", padding: "14px 14px 16px", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", color: "#0E1A24", textDecoration: "none" }}>
+<span style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+<span aria-hidden="true" style={{ display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "11px", background: "#EEF5F9" }}>
+<svg width="30" height="30" viewBox="0 0 32 32"><path d="M6 6h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H13l-6 5v-5H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" style={{ fill: "none", stroke: "#006E99", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><path d="M16 18.5s-4.5-2.6-4.5-5.4a2.4 2.4 0 0 1 4.5-1.2 2.4 2.4 0 0 1 4.5 1.2c0 2.8-4.5 5.4-4.5 5.4z" style={{ fill: "#FF6633" }} /></svg>
+</span>
+<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "12px", color: "#4A5866" }}>04</span>
+</span>
+<span style={{ fontWeight: "600", fontSize: "15px", lineHeight: "1.25" }}>Přání zaměstnanců</span>
+</a>
+<a href="#rizeni" className="funkce-dlazdice" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "12px", minHeight: "112px", padding: "14px 14px 16px", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", color: "#0E1A24", textDecoration: "none" }}>
+<span style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+<span aria-hidden="true" style={{ display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "11px", background: "#EEF5F9" }}>
+<svg width="30" height="30" viewBox="0 0 32 32"><path d="M5 22a11 11 0 1 1 22 0" style={{ fill: "none", stroke: "#006E99", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><path d="M16 11v2M9.5 13.5l1.4 1.4M22.5 13.5l-1.4 1.4M7 22h2M23 22h2" style={{ fill: "none", stroke: "#006E99", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><path d="M16 22l5-6" style={{ fill: "none", stroke: "#FF6633", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><circle cx="16" cy="22" r="2" style={{ fill: "#FF6633" }} /><path d="M8 27h16" style={{ fill: "none", stroke: "#006E99", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /></svg>
+</span>
+<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "12px", color: "#4A5866" }}>05</span>
+</span>
+<span style={{ fontWeight: "600", fontSize: "15px", lineHeight: "1.25" }}>Řízení provozu</span>
+</a>
+<a href="#dochazka" className="funkce-dlazdice" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "12px", minHeight: "112px", padding: "14px 14px 16px", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", color: "#0E1A24", textDecoration: "none" }}>
+<span style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+<span aria-hidden="true" style={{ display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "11px", background: "#EEF5F9" }}>
+<svg width="30" height="30" viewBox="0 0 32 32"><circle cx="15" cy="15" r="11" style={{ fill: "none", stroke: "#006E99", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><path d="M15 9v6l4 2" style={{ fill: "none", stroke: "#006E99", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><circle cx="24" cy="24" r="5.5" style={{ fill: "#FFFFFF", stroke: "#FF6633", strokeWidth: 2 }} /><path d="M21.7 24.2l1.6 1.6 3-3.2" style={{ fill: "none", stroke: "#FF6633", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /></svg>
+</span>
+<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "12px", color: "#4A5866" }}>06</span>
+</span>
+<span style={{ fontWeight: "600", fontSize: "15px", lineHeight: "1.25" }}>Docházka</span>
+</a>
+<a href="#aplikace" className="funkce-dlazdice" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "12px", minHeight: "112px", padding: "14px 14px 16px", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", color: "#0E1A24", textDecoration: "none" }}>
+<span style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+<span aria-hidden="true" style={{ display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "11px", background: "#EEF5F9" }}>
+<svg width="30" height="30" viewBox="0 0 32 32"><rect x="9" y="3" width="14" height="26" rx="3" style={{ fill: "none", stroke: "#006E99", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><path d="M14 25.5h4" style={{ fill: "none", stroke: "#006E99", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><path d="M13 9h6M13 13h6M13 17h3.5" style={{ fill: "none", stroke: "#FF6633", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /></svg>
+</span>
+<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "12px", color: "#4A5866" }}>07</span>
+</span>
+<span style={{ fontWeight: "600", fontSize: "15px", lineHeight: "1.25" }}>Mobilní aplikace</span>
+</a>
+<a href="#reporty" className="funkce-dlazdice" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "12px", minHeight: "112px", padding: "14px 14px 16px", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", color: "#0E1A24", textDecoration: "none" }}>
+<span style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+<span aria-hidden="true" style={{ display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "11px", background: "#EEF5F9" }}>
+<svg width="30" height="30" viewBox="0 0 32 32"><path d="M9 4h10l6 6v18H9z" style={{ fill: "none", stroke: "#006E99", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><path d="M19 4v6h6" style={{ fill: "none", stroke: "#006E99", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><path d="M13 24v-5M17 24v-8M21 24v-3" style={{ fill: "none", stroke: "#FF6633", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /></svg>
+</span>
+<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "12px", color: "#4A5866" }}>08</span>
+</span>
+<span style={{ fontWeight: "600", fontSize: "15px", lineHeight: "1.25" }}>Reporty a mzdy</span>
+</a>
+<a href="#sprava" className="funkce-dlazdice" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "12px", minHeight: "112px", padding: "14px 14px 16px", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", color: "#0E1A24", textDecoration: "none" }}>
+<span style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+<span aria-hidden="true" style={{ display: "grid", placeItems: "center", width: "46px", height: "46px", borderRadius: "11px", background: "#EEF5F9" }}>
+<svg width="30" height="30" viewBox="0 0 32 32"><path d="M16 3.5l10 4v7.5c0 6.8-4.4 10.8-10 13-5.6-2.2-10-6.2-10-13V7.5z" style={{ fill: "none", stroke: "#006E99", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><rect x="12" y="15" width="8" height="6.5" rx="1.5" style={{ fill: "none", stroke: "#FF6633", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /><path d="M13.8 15v-1.8a2.2 2.2 0 0 1 4.4 0V15" style={{ fill: "none", stroke: "#FF6633", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }} /></svg>
+</span>
+<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "12px", color: "#4A5866" }}>09</span>
+</span>
+<span style={{ fontWeight: "600", fontSize: "15px", lineHeight: "1.25" }}>Správa a přihlášení</span>
+</a>
 </nav>
 </div>
 </section>
