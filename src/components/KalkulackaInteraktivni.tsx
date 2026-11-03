@@ -1,15 +1,7 @@
 'use client'
 import Link from 'next/link'
-import { useMemo, useState, type ReactNode, type CSSProperties } from 'react'
-
-// Předpoklady (realistický scénář z kalkulátoru pro nabídky; opatrný = polovina)
-const FOND_HPP = 38
-const FOND_ZKRACENY = 20
-const TYDNU_V_MESICI = 4.345
-const VYKON_V_NEEFEKTIVNICH_HODINACH = 0.3
-const PRIPLATEK_PRESCAS = 1.25
-const NASOBEK_VEDOUCI = 1.4
-const NAKLADY_ZASKOLENI = 30000
+import { useEffect, useMemo, useRef, useState, type FormEvent, type ReactNode, type CSSProperties } from 'react'
+import { cislo, spocitej } from '@/lib/odhadUspor'
 
 const MONO = "'IBM Plex Mono', Menlo, monospace"
 const label: CSSProperties = { fontWeight: 600, fontSize: '15.5px' }
@@ -17,20 +9,9 @@ const input: CSSProperties = { width: '100%', boxSizing: 'border-box', minHeight
 const range: CSSProperties = { width: '100%', accentColor: '#0072A3', minHeight: '32px', margin: 0 }
 const finput: CSSProperties = { width: '100%', boxSizing: 'border-box', minHeight: '48px', padding: '0 14px', border: '1px solid #4A5866', borderRadius: '8px', font: 'inherit', fontSize: '16px', color: '#0E1A24', background: '#FFFFFF' }
 
-const num = (v: string, d: number) => {
-  const x = parseFloat(String(v).replace(',', '.'))
-  return Number.isFinite(x) && x >= 0 ? x : d
-}
-const nf = (x: number, d: number) => x.toLocaleString('cs-CZ', { minimumFractionDigits: d, maximumFractionDigits: d })
-const range2 = (lo: number, hi: number) => {
-  if (hi >= 1e6) return `${nf(lo / 1e6, 1)}–${nf(hi / 1e6, 1)} mil. Kč`
-  if (hi >= 1e4) return `${nf(Math.round(lo / 1e3), 0)}–${nf(Math.round(hi / 1e3), 0)} tis. Kč`
-  return `${nf(Math.round(lo / 100) * 100, 0)}–${nf(Math.round(hi / 100) * 100, 0)} Kč`
-}
-
 type FieldProps = { id: string; label: string; hint: string; value: string; onChange: (v: string) => void; min: number; max: number; step: number; unit: string }
 function Field({ id, label: l, hint, value, onChange, min, max, step, unit }: FieldProps) {
-  const n = Math.min(max, num(value, 0))
+  const n = Math.min(max, cislo(value, 0))
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
       <label htmlFor={id} style={label}>{l}</label>
@@ -49,28 +30,54 @@ export default function KalkulackaInteraktivni({ children }: { children: ReactNo
   const [w, setW] = useState('200')
   const [hpp, setHpp] = useState('90')
   const [m, setM] = useState('5')
-  const [sent, setSent] = useState(false)
+  const [stav, setStav] = useState<'vyplnuje' | 'odesila' | 'odeslano' | 'chyba'>('vyplnuje')
+  const [chyba, setChyba] = useState('')
+  const zobrazeno = useRef(0)
+  useEffect(() => {
+    zobrazeno.current = Date.now()
+  }, [])
 
   const r = useMemo(() => {
-    const N = num(n, 0), W = num(w, 0), M = num(m, 0)
-    const hppPct = Math.min(100, num(hpp, 0)), H = hppPct / 100
-    const fond = (H * FOND_HPP + (1 - H) * FOND_ZKRACENY) * TYDNU_V_MESICI
-    const areas = [
-      { title: 'Obsazení provozu', lo: N * fond * W * 0.005 * (1 - VYKON_V_NEEFEKTIVNICH_HODINACH) * 12, hi: N * fond * W * 0.01 * (1 - VYKON_V_NEEFEKTIVNICH_HODINACH) * 12 },
-      { title: 'Přesčasy a neodpracované hodiny', lo: N * H * (0.05 * W * PRIPLATEK_PRESCAS + 0.005 * W) * 12, hi: N * H * (0.1 * W * PRIPLATEK_PRESCAS + 0.01 * W) * 12 },
-      { title: 'Čas vedoucích', lo: M * 16 * W * NASOBEK_VEDOUCI * 12, hi: M * 32 * W * NASOBEK_VEDOUCI * 12 },
-      { title: 'Fluktuace', lo: N * 0.01 * NAKLADY_ZASKOLENI, hi: N * 0.02 * NAKLADY_ZASKOLENI },
-    ]
-    const max = Math.max(1, ...areas.map((a) => a.hi))
-    const lo = areas.reduce((s, a) => s + a.lo, 0)
-    const hi = areas.reduce((s, a) => s + a.hi, 0)
+    const o = spocitej({ lide: cislo(n, 0), mzda: cislo(w, 0), hppProcent: cislo(hpp, 0), vedouci: cislo(m, 0) })
+    const max = Math.max(1, ...o.oblasti.map((a) => a.hi))
     return {
-      areas: areas.map((a) => ({ ...a, range: range2(a.lo, a.hi), loW: `${((a.lo / max) * 100).toFixed(1)}%`, hiW: `${((a.hi / max) * 100).toFixed(1)}%` })),
-      total: range2(lo, hi),
-      month: range2(lo / 12, hi / 12),
-      summary: `${nf(N, 0)} lidí ve směnách, ${nf(W, 0)} Kč/h, ${nf(hppPct, 0)} % HPP, ${nf(M, 0)} vedoucích, odhad ${range2(lo, hi)} ročně`,
+      areas: o.oblasti.map((a) => ({ title: a.nazev, range: a.rozpeti, loW: `${((a.lo / max) * 100).toFixed(1)}%`, hiW: `${((a.hi / max) * 100).toFixed(1)}%` })),
+      total: o.rocne,
+      month: o.mesicne,
+      summary: o.shrnuti,
     }
   }, [n, w, hpp, m])
+
+  async function odeslat(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    const f = new FormData(e.currentTarget)
+    setStav('odesila')
+    setChyba('')
+    try {
+      const odpoved = await fetch('/api/business-case', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          jmeno: f.get('jmeno'),
+          firma: f.get('firma'),
+          email: f.get('email'),
+          telefon: f.get('telefon'),
+          web: f.get('web'),
+          cas: zobrazeno.current ? Date.now() - zobrazeno.current : 0,
+          lide: n,
+          mzda: w,
+          hpp,
+          vedouci: m,
+        }),
+      })
+      const j = (await odpoved.json().catch(() => ({}))) as { ok?: boolean; chyba?: string }
+      if (!odpoved.ok || !j.ok) throw new Error(j.chyba || '')
+      setStav('odeslano')
+    } catch (err) {
+      setChyba((err as Error).message || 'Formulář se nepodařilo odeslat. Napište nám prosím na info@aristotelos.com nebo zavolejte na +420 606 337 182.')
+      setStav('chyba')
+    }
+  }
 
   return (
     <>
@@ -139,24 +146,30 @@ export default function KalkulackaInteraktivni({ children }: { children: ReactNo
             </ul>
           </div>
           <div style={{ background: '#FFFFFF', color: '#0E1A24', borderRadius: '14px', padding: '32px', display: 'flex', flexDirection: 'column', gap: '18px' }}>
-            {!sent ? (
-              <form onSubmit={(e) => { e.preventDefault(); setSent(true) }} style={{ margin: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            {stav !== 'odeslano' ? (
+              <form onSubmit={odeslat} style={{ margin: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 <h3 style={{ margin: 0, fontSize: '1.3rem', fontWeight: 700 }}>Chci business case na míru</h3>
                 <p style={{ margin: 0, padding: '12px 14px', background: '#F5F8FA', borderRadius: '8px', fontSize: '14.5px', color: '#33424F' }}>Z kalkulačky: {r.summary}</p>
-                <input type="hidden" name="kalkulacka" value={r.summary} />
+                <div aria-hidden="true" style={{ position: 'absolute', left: '-10000px', width: '1px', height: '1px', overflow: 'hidden' }}>
+                  <label htmlFor="bc-web">Nevyplňujte</label>
+                  <input id="bc-web" name="web" type="text" tabIndex={-1} autoComplete="off" />
+                </div>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))', gap: '14px' }}>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}><label htmlFor="bc-jmeno" style={{ fontWeight: 600, fontSize: '14.5px' }}>Jméno a příjmení</label><input id="bc-jmeno" name="jmeno" type="text" autoComplete="name" required style={finput} /></div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}><label htmlFor="bc-firma" style={{ fontWeight: 600, fontSize: '14.5px' }}>Firma</label><input id="bc-firma" name="firma" type="text" autoComplete="organization" required style={finput} /></div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}><label htmlFor="bc-email" style={{ fontWeight: 600, fontSize: '14.5px' }}>Pracovní e-mail</label><input id="bc-email" name="email" type="email" autoComplete="email" required style={finput} /></div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}><label htmlFor="bc-tel" style={{ fontWeight: 600, fontSize: '14.5px' }}>Telefon</label><input id="bc-tel" name="telefon" type="tel" autoComplete="tel" style={finput} /></div>
                 </div>
-                <button type="submit" style={{ minHeight: '52px', border: 0, borderRadius: '8px', background: '#0072A3', color: '#FFFFFF', font: 'inherit', fontWeight: 600, fontSize: '16px', cursor: 'pointer' }}>Odeslat žádost</button>
+                {stav === 'chyba' && (
+                  <p role="alert" style={{ margin: 0, padding: '12px 14px', borderRadius: '8px', background: '#FDECEA', color: '#8A1C12', fontSize: '14.5px' }}>{chyba}</p>
+                )}
+                <button type="submit" disabled={stav === 'odesila'} style={{ minHeight: '52px', border: 0, borderRadius: '8px', background: '#0072A3', color: '#FFFFFF', font: 'inherit', fontWeight: 600, fontSize: '16px', cursor: stav === 'odesila' ? 'progress' : 'pointer', opacity: stav === 'odesila' ? 0.75 : 1 }}>{stav === 'odesila' ? 'Odesílám…' : 'Odeslat žádost'}</button>
                 <p style={{ margin: 0, fontSize: '13px', color: '#4A5866' }}>Ozveme se do dvou pracovních dnů. Odesláním souhlasíte se zpracováním údajů podle <Link href="/ochrana-osobnich-udaju">zásad ochrany osobních údajů</Link>.</p>
               </form>
             ) : (
               <div role="status" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <h3 style={{ margin: 0, fontSize: '1.3rem', fontWeight: 700 }}>Děkujeme, žádost máme</h3>
-                <p style={{ margin: 0, color: '#33424F' }}>Ozveme se do dvou pracovních dnů a domluvíme, jaká data pro business case budeme potřebovat.</p>
+                <p style={{ margin: 0, color: '#33424F' }}>Na váš e-mail jsme poslali potvrzení s odhadem z kalkulačky. Ozveme se do dvou pracovních dnů a domluvíme, jaká data pro business case budeme potřebovat.</p>
               </div>
             )}
           </div>
