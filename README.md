@@ -23,7 +23,7 @@ Potřebujete Node.js 20.9 nebo novější.
 | `src/components/KalkulackaInteraktivni.tsx` | Kalkulačka úspor a formulář pro business case |
 | `src/lib/odhadUspor.ts` | Výpočet kalkulačky (sdílí ho stránka i server) |
 | `src/app/api/business-case/` | Odeslání žádosti o business case: e-mail obchodu s Excelem, potvrzení zájemci |
-| `src/lib/businessCaseExcel.ts`, `src/assets/` | Předvyplnění komplexního business casu (šablona Excelu) |
+| `src/lib/businessCaseExcel.ts` | Předvyplnění komplexního business casu ze šablony `src/assets/business-case-sablona.xlsx` (šablona záměrně není ve veřejném repozitáři) |
 | `src/lib/posta.ts` | Odesílání e-mailů přes Microsoft 365 (Microsoft Graph) |
 | `src/lib/site.ts` | Seznam stránek, titulky a popisy pro vyhledávače, adresa webu |
 | `src/content/faq.json` | Časté otázky pro strukturovaná data (schema.org FAQPage) |
@@ -43,7 +43,9 @@ Ručně to lze přepnout proměnnou `SITE_INDEXING=on` nebo `off`.
 
 Formulář „Chci business case na míru“ na stránce Kalkulačka úspor:
 
-1. pošle obchodu e-mail se zadáním a s přiloženým komplexním business casem (Excel předvyplněný údaji z kalkulačky),
+1. pošle obchodu e-mail se zadáním; když je na serveru šablona `src/assets/business-case-sablona.xlsx`,
+   přiloží i komplexní business case předvyplněný údaji z kalkulačky (šablona ve veřejném repozitáři není,
+   aby si výpočetní model nemohl stáhnout kdokoli; přidáme ji, až bude repozitář soukromý),
 2. pošle zájemci potvrzení s jeho odhadem a dalším postupem.
 
 E-maily odcházejí z firemní schránky v Microsoft 365 přes Microsoft Graph. Klasické SMTP s heslem
