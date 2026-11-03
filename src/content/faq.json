@@ -1,0 +1,166 @@
+{
+  "/": [
+    {
+      "q": "Pro koho je AristoTelos?",
+      "a": "Pro firmy se směnným provozem, od malých týmů po desítky tisíc zaměstnanců: kontaktní centra, obchody, lékárny, sklady, banky, pojišťovny a energetiku."
+    },
+    {
+      "q": "Hlídá AristoTelos zákoník práce i po novele?",
+      "a": "Ano, dodržení garantujeme na 100 %. Novelu nasadíme předem a pravidla se přepnou ke dni účinnosti."
+    },
+    {
+      "q": "Umí AristoTelos i docházku?",
+      "a": "Ano. Pozitivní i negativní evidenci, zákonná potvrzení z mobilu a podklady pro mzdy."
+    },
+    {
+      "q": "Dá se napojit na naše systémy?",
+      "a": "Ano, přes API nebo souborem. Napojujeme personální a mzdové systémy, SAP, Active Directory, docházkové systémy a platformy kontaktních center."
+    },
+    {
+      "q": "Funguje AristoTelos i mimo Česko?",
+      "a": "Ano. Pracovní právo je nastavené pro Česko, Slovensko, Německo a Rakousko."
+    },
+    {
+      "q": "Jak dlouho trvá nasazení?",
+      "a": "Probíhá ve třech etapách: analýza, nastavení s integracemi, testy se školením. Podle rozsahu trvá typicky 3 až 9 měsíců."
+    },
+    {
+      "q": "Kolik AristoTelos stojí?",
+      "a": "Cenu připravíme na míru podle počtu uživatelů a rozsahu nasazení. Napište si o ni."
+    },
+    {
+      "q": "Kde jsou naše data?",
+      "a": "V datovém centru Českých Radiokomunikací (ČRa) v Česku, s úrovní Tier III a provozem podle ISO/IEC 27001. Nebo ve vaší vlastní infrastruktuře."
+    }
+  ],
+  "/mobilni-aplikace": [
+    {
+      "q": "Je aplikace pro iOS i Android?",
+      "a": "Ano. Stáhnete ji v App Store i na Google Play."
+    },
+    {
+      "q": "V jakých jazycích aplikace je?",
+      "a": "V češtině, slovenštině, angličtině a maďarštině."
+    },
+    {
+      "q": "Co když zaměstnanec v aplikaci zadá něco, co nejde?",
+      "a": "Vše, co zaměstnanec v mobilu udělá, AristoTelos hned zkontroluje podle pravidel. Výměna nebo převzetí směny, které by pravidla porušily, neprojdou."
+    }
+  ],
+  "/integrace-a-api": [
+    {
+      "q": "Má AristoTelos API?",
+      "a": "Ano. Import i export dat přes API a webové služby. Výsledky všech reportů jsou přes API dostupné i pro vaše další systémy. Dokumentaci API poskytujeme zákazníkům."
+    },
+    {
+      "q": "Nemáme volnou kapacitu IT. Jde to i bez ní?",
+      "a": "Ano. Napojení zajistíme my, nebo stačí výměna souborů CSV a XLS. U jednoho z klientů stačila výměna přes Excel, bez zásahu do IT."
+    },
+    {
+      "q": "Jak často se data přenášejí?",
+      "a": "Import běží automaticky v nastavených intervalech. Příchody a odchody z docházkových systémů mohou přicházet online."
+    },
+    {
+      "q": "Na jaké telefonní platformy se napojíte?",
+      "a": "Máme napojení na Genesys, Cisco, Daktelu a Sprinkl. Další platformy napojíme přes API."
+    }
+  ],
+  "/reseni/kontaktni-centra": [
+    {
+      "q": "Spočítá AristoTelos počet agentů na naši úroveň obsluhy?",
+      "a": "Ano. Z předpovědi hovorů a průměrné doby obsluhy spočítá potřebný počet agentů pro každý interval tak, aby byla splněna požadovaná úroveň obsluhy."
+    },
+    {
+      "q": "Napojí se na naši telefonní platformu?",
+      "a": "Ano. Máme napojení na Genesys, Cisco, Daktelu a Sprinkl. Další platformy napojíme přes API."
+    },
+    {
+      "q": "Můžeme plánovat i brigádníky a částečné úvazky?",
+      "a": "Ano. Kmenové zaměstnance naplánujeme jmenovitě a zbytek provozu nabídneme jako volné směny k rezervaci v mobilní aplikaci."
+    }
+  ],
+  "/reseni/obchodni-retezce-a-lekarny": [
+    {
+      "q": "Zvládne AristoTelos stovky prodejen?",
+      "a": "Ano. Albert v něm má 350 prodejen a 3 distribuční centra, Benu 350 lékáren. Organizační strukturu nastavíme podle vaší sítě a regionů."
+    },
+    {
+      "q": "Odkud bere AristoTelos data o návštěvnosti a prodejích?",
+      "a": "Z vašich pokladních nebo obchodních systémů, automaticky přes API, nebo ze souborů CSV a XLS."
+    },
+    {
+      "q": "Umí plánovat podle kvalifikace zaměstnanců?",
+      "a": "Ano. Každý zaměstnanec může mít více znalostí a AristoTelos je při plánování činností zohlední."
+    }
+  ],
+  "/reseni/distribucni-centra": [
+    {
+      "q": "Zvládne AristoTelos nepřetržitý provoz?",
+      "a": "Ano. Ranní, odpolední i noční směny, rotace, víkendy a svátky, vždy s hlídáním odpočinku podle zákoníku práce."
+    },
+    {
+      "q": "Umí pracovat s agenturními pracovníky?",
+      "a": "Ano. Neobsazené směny může předat jako objednávku agentuře práce, nebo je nabídnout brigádníkům a kmenovým zaměstnancům jako přesčas."
+    },
+    {
+      "q": "Jak se AristoTelos napojí na SAP?",
+      "a": "Přes API, nebo výměnou souborů. U jednoho z klientů stačila výměna přes Excel, bez zásahu do IT."
+    }
+  ],
+  "/reseni/banky-a-pojistovny": [
+    {
+      "q": "Můžeme AristoTelos provozovat ve vlastní infrastruktuře?",
+      "a": "Ano. AristoTelos nabízíme jako službu i jako instalaci ve vaší infrastruktuře, pod dohledem vašeho IT."
+    },
+    {
+      "q": "Podporujete jednotné přihlášení?",
+      "a": "Ano. Integrované přihlášení přes Active Directory a jednotné přihlášení přes Microsoft nebo Google. Role mohou být synchronizované s vaším personálním systémem."
+    },
+    {
+      "q": "Jak často testujete bezpečnost aplikace?",
+      "a": "Velký penetrační test nezávislou firmou provádíme každý rok, nové funkce testujeme průběžně."
+    }
+  ],
+  "/reseni/energetika-a-telekomunikace": [
+    {
+      "q": "Zvládne AristoTelos kontaktní centrum i prodejny zároveň?",
+      "a": "Ano. Všechny kanály jsou v jednom systému a každý má svá pravidla: linka se plánuje po 15 minutách, kanceláře podle otevírací doby, prodejny podle návštěvnosti a prodejů."
+    },
+    {
+      "q": "Na jaké systémy se napojíte?",
+      "a": "U klientů z energetiky a telekomunikací jsou to ústředny Cisco a Sprinkl a SAP. Další systémy napojíme přes otevřené API, nebo výměnou souborů."
+    },
+    {
+      "q": "Jak dlouho trvá nasazení?",
+      "a": "Obvykle 3 až 9 měsíců podle počtu kanálů, poboček a napojení. Začít se dá jedním kanálem a další přidat později."
+    }
+  ],
+  "/bezpecnost": [
+    {
+      "q": "Kde jsou naše data?",
+      "a": "Ve službě v datovém centru Českých Radiokomunikací (ČRa) v Česku, s úrovní Tier III a provozem podle ISO/IEC 27001. Nebo ve vaší vlastní infrastruktuře. Vyberete si při nasazení."
+    },
+    {
+      "q": "Můžeme AristoTelos provozovat ve vlastní infrastruktuře?",
+      "a": "Ano. AristoTelos nabízíme jako službu i jako instalaci ve vaší infrastruktuře, pod dohledem vašeho IT."
+    },
+    {
+      "q": "Jak často testujete bezpečnost aplikace?",
+      "a": "Velký penetrační test nezávislou firmou podle metodiky OWASP provádíme každý rok, nové funkce testujeme průběžně."
+    }
+  ],
+  "/kalkulacka-uspor": [
+    {
+      "q": "Jak přesný je odhad?",
+      "a": "Je to orientační odhad z průměrných předpokladů. Přesná čísla spočítáme v business casu z dat o vašem provozu."
+    },
+    {
+      "q": "Proč kalkulačka nepočítá s cenou AristoTela?",
+      "a": "Cenu připravujeme na míru podle počtu uživatelů a rozsahu nasazení. Náklady, návratnost a ROI proto počítáme až v business casu."
+    },
+    {
+      "q": "Co když nemám všechna čísla?",
+      "a": "Stačí odhad. Chybějící údaje doplníme spolu při přípravě business casu."
+    }
+  ]
+}
