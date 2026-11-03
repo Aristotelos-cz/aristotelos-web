@@ -1,6 +1,15 @@
 // Základní údaje o webu a stránkách (metadata, sitemap, llms.txt)
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://aristotelos.com').replace(/\/$/, '')
 
+// Smí web indexovat vyhledávače? Na Vercelu jen produkční nasazení na doméně ze SITE_URL.
+// Adresa *.vercel.app a náhledová nasazení zůstávají skrytá, aby nekonkurovala starému webu.
+// Ručně lze přepnout proměnnou prostředí SITE_INDEXING=on nebo off.
+export const INDEXABLE =
+  process.env.SITE_INDEXING === 'on' ||
+  (process.env.SITE_INDEXING !== 'off' &&
+    (!process.env.VERCEL_ENV ||
+      (process.env.VERCEL_ENV === 'production' && process.env.VERCEL_PROJECT_PRODUCTION_URL === new URL(SITE_URL).host)))
+
 export type PageInfo = { path: string; title: string; description: string; noindex?: boolean }
 
 export const PAGES: PageInfo[] = [
