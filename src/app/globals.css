@@ -31,3 +31,35 @@ summary::-webkit-details-marker { display: none; }
 @media (max-width: 640px) { .phone2 { display: none; } }
 /* Úvodní stránka: telefon přes snímek jen na širších obrazovkách */
 @media (max-width: 760px) { .hero-phone { display: none; } }
+
+/* Hlavička: na širokých obrazovkách zůstává nahoře při posouvání,
+   na užších je menu pod tlačítkem „Menu“ (jinak by zabíralo půl obrazovky) */
+.nav-toggle { display: none; }
+.menu-reseni-odkaz:hover { background: #F5F8FA; }
+@media (min-width: 1120px) {
+  .site-header { position: sticky; top: 0; z-index: 50; }
+  [id] { scroll-margin-top: 96px; }
+}
+@media (max-width: 1119px) {
+  .nav-toggle { display: inline-flex; }
+  .site-nav, .site-cta { display: none !important; }
+  .site-header.otevreno .site-nav { display: flex !important; flex-direction: column; align-items: stretch !important; width: 100%; gap: 0 !important; font-size: 17px !important; border-top: 1px solid #E3E8ED; padding-top: 6px; }
+  .site-header.otevreno .site-nav > a, .site-header.otevreno .site-nav > div > button { padding: 12px 0 !important; box-shadow: none !important; }
+  .site-header.otevreno .site-cta { display: inline-flex !important; width: 100%; justify-content: center; }
+  .site-header.otevreno .menu-reseni { position: static !important; width: auto !important; padding: 0 0 8px !important; border: 0 !important; box-shadow: none !important; }
+}
+
+/* Úvodní stránka: text vlevo, snímek aplikace vpravo, vše na první obrazovce */
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr); gap: 40px 56px; align-items: center; padding: 48px 24px 60px; }
+.hero-text { gap: 22px; }
+.hero-h1 { font-size: clamp(2.2rem, min(3.3vw, 6.2vh), 3.3rem); }
+/* Nízká okna (menší notebooky): menší mezery, aby se úvod vešel celý */
+@media (min-width: 1001px) and (max-height: 760px) {
+  .hero-grid { padding: 28px 24px 36px; }
+  .hero-text { gap: 16px; }
+  .hero-lead { font-size: 1rem !important; }
+}
+@media (max-width: 1000px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); padding: 40px 24px 56px; }
+  .hero-h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); }
+}
