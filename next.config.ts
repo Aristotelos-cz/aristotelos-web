@@ -2,6 +2,10 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  // Šablona Excelu pro business case se čte ze souboru, musí být součástí serverové funkce
+  outputFileTracingIncludes: {
+    '/api/business-case': ['./src/assets/business-case-sablona.xlsx'],
+  },
   async headers() {
     return [
       {

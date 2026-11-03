@@ -20,7 +20,11 @@ Potřebujete Node.js 20.9 nebo novější.
 | `src/app/[[...slug]]/page.tsx` | Všechny stránky webu: adresa → komponenta, metadata, FAQ pro vyhledávače |
 | `src/components/pages/` | Obsah jednotlivých stránek (převedený z návrhu na plátně) |
 | `src/components/SiteHeader.tsx`, `SiteFooter.tsx` | Hlavička a patička |
-| `src/components/KalkulackaInteraktivni.tsx` | Kalkulačka úspor (počítá v prohlížeči) |
+| `src/components/KalkulackaInteraktivni.tsx` | Kalkulačka úspor a formulář pro business case |
+| `src/lib/odhadUspor.ts` | Výpočet kalkulačky (sdílí ho stránka i server) |
+| `src/app/api/business-case/` | Odeslání žádosti o business case: e-mail obchodu s Excelem, potvrzení zájemci |
+| `src/lib/businessCaseExcel.ts`, `src/assets/` | Předvyplnění komplexního business casu (šablona Excelu) |
+| `src/lib/posta.ts` | Odesílání e-mailů přes Microsoft 365 (Microsoft Graph) |
 | `src/lib/site.ts` | Seznam stránek, titulky a popisy pro vyhledávače, adresa webu |
 | `src/content/faq.json` | Časté otázky pro strukturovaná data (schema.org FAQPage) |
 | `src/app/robots.ts`, `sitemap.ts`, `llms.txt/` | robots.txt (AI boti povoleni), mapa webu, přehled pro AI asistenty |
@@ -35,9 +39,57 @@ Adresa `*.vercel.app` i náhledová nasazení jsou skryté (robots.txt i značka
 Po připojení domény aristotelos.com na Vercelu stačí web znovu nasadit a indexování se zapne samo.
 Ručně to lze přepnout proměnnou `SITE_INDEXING=on` nebo `off`.
 
+## Odesílání e-mailů z formulářů (Microsoft 365)
+
+Formulář „Chci business case na míru“ na stránce Kalkulačka úspor:
+
+1. pošle obchodu e-mail se zadáním a s přiloženým komplexním business casem (Excel předvyplněný údaji z kalkulačky),
+2. pošle zájemci potvrzení s jeho odhadem a dalším postupem.
+
+E-maily odcházejí z firemní schránky v Microsoft 365 přes Microsoft Graph. Klasické SMTP s heslem
+Microsoft od konce roku 2026 vypíná, proto se nepoužívá.
+
+### Nastavení v Microsoft 365 (udělá správce Microsoft 365)
+
+1. **Entra admin center** (entra.microsoft.com) → Aplikace → Registrace aplikací → Nová registrace.
+   Název třeba „Web aristotelos.com“, jen pro tuto organizaci.
+2. U aplikace si zapište **ID aplikace (klienta)** a **ID adresáře (tenanta)**.
+3. Certifikáty a tajné kódy → Nový tajný klíč klienta (platnost 24 měsíců) → zkopírujte **hodnotu** (zobrazí se jen jednou).
+   Do kalendáře si dejte připomínku na obnovení před vypršením.
+4. Povolte aplikaci posílat poštu **jen z jedné schránky** (doporučeno, RBAC for Applications v Exchange Online).
+   V Exchange Online PowerShellu (`Connect-ExchangeOnline`):
+
+   ```powershell
+   # ID aplikace = ID klienta z kroku 2, ObjectId = ID objektu z Entra → Podnikové aplikace → Web aristotelos.com
+   New-ServicePrincipal -AppId <ID aplikace> -ObjectId <ID objektu podnikové aplikace> -DisplayName "Web aristotelos.com"
+   New-ManagementScope -Name "Web aristotelos.com" -RecipientRestrictionFilter "PrimarySmtpAddress -eq 'info@aristotelos.com'"
+   New-ManagementRoleAssignment -App <ID objektu podnikové aplikace> -Role "Application Mail.Send" -CustomResourceScope "Web aristotelos.com"
+   ```
+
+   V tom případě aplikaci v Entra **nepřidávejte** oprávnění Mail.Send (dalo by jí přístup ke všem schránkám).
+   Projevení může trvat až 2 hodiny.
+
+   Rychlejší, ale širší varianta: v Entra → Oprávnění rozhraní API → Microsoft Graph → Oprávnění aplikace → `Mail.Send`
+   → Udělit souhlas správce. Aplikace pak může posílat z kterékoli schránky ve firmě.
+
+### Proměnné prostředí na Vercelu
+
+Vercel → projekt aristotelos-web → Settings → Environment Variables (pro Production i Preview):
+
+| Proměnná | Hodnota |
+| --- | --- |
+| `MS_TENANT_ID` | ID adresáře (tenanta) |
+| `MS_CLIENT_ID` | ID aplikace (klienta) |
+| `MS_CLIENT_SECRET` | hodnota tajného klíče (označte jako Sensitive) |
+| `MAIL_FROM` | schránka, ze které web posílá, např. `info@aristotelos.com` |
+| `LEAD_EMAIL_TO` | kam chodí žádosti obchodu, víc adres oddělte čárkou |
+
+Po uložení proměnných nasaďte web znovu (Deployments → Redeploy). Bez nastavení formulář na Vercelu
+ukáže zájemci chybu s odkazem na e-mail a telefon. Na vlastním počítači se žádost jen vypíše do konzole.
+
 ## Co ještě chybí před spuštěním
 
-- Odesílání formulářů (ukázka, business case) – zatím jen potvrzení na stránce
+- Odesílání formuláře „Domluvit ukázku“ (stejným způsobem jako business case)
 - Odkaz na aplikaci v Google Play, certifikát ISO ke stažení
 - Přesměrování starých adres (`next.config.ts` → `redirects`)
 - Napojení obsahu na Sanity (projekt `kgbqsodt`, dataset `production`)
