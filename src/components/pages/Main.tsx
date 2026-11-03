@@ -6,9 +6,8 @@ export default function MainPage() {
   return (
     <>
 <section style={{ backgroundColor: "#F5F8FA", backgroundImage: "linear-gradient(#E3EAF0 1px, transparent 1px), linear-gradient(90deg, #E3EAF0 1px, transparent 1px)", backgroundSize: "32px 32px", borderBottom: "1px solid #E3E8ED" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "80px 24px 88px", display: "flex", flexDirection: "column", gap: "56px" }}>
-<div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(460px, 100%), 1fr))", gap: "28px 56px", alignItems: "end" }}>
-<div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+<div className="hero-grid" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+<div className="hero-text" style={{ display: "flex", flexDirection: "column" }}>
 <div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
 <span style={{ flex: "55", background: "#006699" }}>
@@ -18,33 +17,31 @@ export default function MainPage() {
 </span>
 <span>Plánování směn a docházka</span>
 </div>
-<h1 style={{ margin: "0", fontSize: "clamp(2.4rem, 4.6vw, 4.1rem)", lineHeight: "1.04", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Plán směn za hodiny, ne za dny. <span style={{ color: "#006E99" }}>S jistotou zákoníku práce.</span>
+<h1 className="hero-h1" style={{ margin: "0", lineHeight: "1.05", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Plán směn za hodiny, ne za dny. <span style={{ color: "#006E99" }}>S jistotou zákoníku práce.</span>
 </h1>
-</div>
-<div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-<p style={{ margin: "0", fontSize: "1.2rem", lineHeight: "1.55", color: "#33424F", maxWidth: "34em" }}>AristoTelos předpoví objem práce, spočítá potřebný počet lidí a sám naplánuje směny tak, aby seděl provoz, náklady i přání zaměstnanců. Docházka a podklady pro mzdy jsou ve stejném systému.</p>
-<ul style={{ listStyle: "none", margin: "0", padding: "0", display: "flex", flexWrap: "wrap", gap: "10px", fontSize: "15px", fontWeight: "500" }}>
-<li style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "8px 14px", borderRadius: "999px", background: "#0E1A24", color: "#FFFFFF" }}>
-<svg aria-hidden="true" width="18" height="18" viewBox="0 0 20 20">
-<rect x="5.5" y="1.5" width="9" height="17" rx="2" style={{ fill: "none", stroke: "#FFFFFF", strokeWidth: "1.6" }}>
+<p className="hero-lead" style={{ margin: "0", fontSize: "1.1rem", lineHeight: "1.5", color: "#33424F", maxWidth: "36em" }}>AristoTelos předpoví objem práce, spočítá potřebný počet lidí a sám naplánuje směny tak, aby seděl provoz, náklady i přání zaměstnanců. Docházka a podklady pro mzdy jsou ve stejném systému.</p>
+<ul className="hero-body" style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "minmax(0, 1fr)", gap: "8px", fontSize: "15px", fontWeight: "500", color: "#33424F" }}>
+<li style={{ display: "flex", alignItems: "flex-start", gap: "10px" }}>
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "2px" }}>
+<rect x="5.5" y="1.5" width="9" height="17" rx="2" style={{ fill: "none", stroke: "#006E99", strokeWidth: "1.6" }}>
 </rect>
-<path d="M8.5 15.5h3" style={{ fill: "none", stroke: "#FFFFFF", strokeWidth: "1.6", strokeLinecap: "round" }}>
+<path d="M8.5 15.5h3" style={{ fill: "none", stroke: "#006E99", strokeWidth: "1.6", strokeLinecap: "round" }}>
 </path>
 </svg>Mobilní aplikace pro iOS a Android</li>
-<li style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "8px 14px", borderRadius: "999px", background: "#FFFFFF", border: "1px solid #C5D0D9" }}>
-<svg aria-hidden="true" width="18" height="18" viewBox="0 0 20 20">
+<li style={{ display: "flex", alignItems: "flex-start", gap: "10px" }}>
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "2px" }}>
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>Plán podle zákoníku práce</li>
-<li style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "8px 14px", borderRadius: "999px", background: "#FFFFFF", border: "1px solid #C5D0D9" }}>
-<svg aria-hidden="true" width="18" height="18" viewBox="0 0 20 20">
+<li style={{ display: "flex", alignItems: "flex-start", gap: "10px" }}>
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "2px" }}>
 <circle cx="10" cy="10" r="7.5" style={{ fill: "none", stroke: "#006E99", strokeWidth: "1.6" }}>
 </circle>
 <path d="M10 5.5V10l3 2" style={{ fill: "none", stroke: "#006E99", strokeWidth: "1.6", strokeLinecap: "round" }}>
 </path>
 </svg>Docházka a podklady pro mzdy</li>
-<li style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "8px 14px", borderRadius: "999px", background: "#FFFFFF", border: "1px solid #C5D0D9" }}>
-<svg aria-hidden="true" width="18" height="18" viewBox="0 0 20 20">
+<li style={{ display: "flex", alignItems: "flex-start", gap: "10px" }}>
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "2px" }}>
 <path d="M7 5.5L2.5 10L7 14.5M13 5.5l4.5 4.5L13 14.5" style={{ fill: "none", stroke: "#006E99", strokeWidth: "1.8", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>Otevřené API a napojení na vaše systémy</li>
@@ -55,21 +52,20 @@ export default function MainPage() {
 </div>
 <p style={{ margin: "0", fontSize: "14.5px", color: "#4A5866" }}>Spoléhají na něj Albert, Benu, ČSOB, T-Mobile, Kooperativa a další.</p>
 </div>
-</div>
-<figure style={{ margin: "0 0 32px", position: "relative", paddingRight: "clamp(0px, 14vw, 170px)" }}>
-<div style={{ background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.32)" }}>
-<div aria-hidden="true" style={{ display: "flex", alignItems: "center", gap: "6px", height: "28px", padding: "0 12px", background: "#EEF2F5", borderBottom: "1px solid #DCE3E9" }}>
-<span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
+<figure style={{ margin: "0", position: "relative", paddingBottom: "44px" }}>
+<div style={{ marginRight: "clamp(0px, 8vw, 104px)", background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.32)" }}>
+<div aria-hidden="true" style={{ display: "flex", alignItems: "center", gap: "6px", height: "24px", padding: "0 12px", background: "#EEF2F5", borderBottom: "1px solid #DCE3E9" }}>
+<span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#C5D0D9" }}>
 </span>
-<span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
+<span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#C5D0D9" }}>
 </span>
-<span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
+<span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#C5D0D9" }}>
 </span>
 </div>
-<img src="/screens/plan-smen-pozadavky.webp" alt="Plán směn v AristoTelu: měsíční plán týmu se směnami a pod každým zaměstnancem jeho požadavky na dovolenou a volno" width="1500" height="785" loading="lazy" style={{ display: "block", width: "100%", height: "auto" }} />
+<img src="/screens/plan-smen-pozadavky.webp" alt="Plán směn v AristoTelu: měsíční plán týmu se směnami a pod každým zaměstnancem jeho požadavky na dovolenou a volno" width="1500" height="785" fetchPriority="high" style={{ display: "block", width: "100%", height: "auto" }} />
 </div>
-<div className="hero-phone" style={{ position: "absolute", right: "0", bottom: "-32px", width: "clamp(140px, 19vw, 230px)", border: "8px solid #0E1A24", borderRadius: "30px", background: "#FFFFFF", overflow: "hidden", boxShadow: "0 28px 56px -20px rgba(14, 26, 36, 0.5)" }}>
-<img src="/screens/mobil-moje-smeny.webp" alt="Mobilní aplikace AristoTelos: přehled Moje směny s činnostmi a přestávkou" width="585" height="1266" style={{ display: "block", width: "100%", height: "auto" }} loading="lazy" />
+<div className="hero-phone" style={{ position: "absolute", right: "0", bottom: "0", width: "clamp(120px, 11.5vw, 158px)", border: "7px solid #0E1A24", borderRadius: "26px", background: "#FFFFFF", overflow: "hidden", boxShadow: "0 28px 56px -20px rgba(14, 26, 36, 0.5)" }}>
+<img src="/screens/mobil-moje-smeny.webp" alt="Mobilní aplikace AristoTelos: přehled Moje směny s činnostmi a přestávkou" width="585" height="1266" fetchPriority="high" style={{ display: "block", width: "100%", height: "auto" }} />
 </div>
 </figure>
 </div>

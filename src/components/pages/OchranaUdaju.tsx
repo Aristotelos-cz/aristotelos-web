@@ -15,7 +15,7 @@ export default function OchranaUdajuPage() {
 <span>Ochrana osobních údajů</span>
 </div>
 <h1 style={{ margin: "0", fontSize: "clamp(2.2rem, 4vw, 3.2rem)", lineHeight: "1.08", letterSpacing: "-0.02em", fontWeight: "700" }}>Jak zacházíme s vašimi osobními údaji</h1>
-<p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Platí od <mark style={{ background: "#FFF1D6", color: "#7A4A12", padding: "1px 4px", borderRadius: "4px" }}>[datum]</mark>. Týká se webu aristotelos.com, formuláře pro ukázku a obchodní komunikace.</p>
+<p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Platí od <mark style={{ background: "#FFF1D6", color: "#7A4A12", padding: "1px 4px", borderRadius: "4px" }}>[datum]</mark>. Týká se webu aristotelos.com, formulářů pro ukázku a business case a obchodní komunikace.</p>
 <div role="note" style={{ background: "#FFFBF5", border: "1.5px dashed #E0A060", borderRadius: "12px", padding: "18px 20px", color: "#7A4A12", fontSize: "15px" }}>Návrh struktury. Text musí před zveřejněním zkontrolovat a doplnit právník nebo pověřenec pro ochranu osobních údajů. Místa k doplnění jsou zvýrazněná.</div>
 </div>
 </section>
@@ -57,11 +57,12 @@ export default function OchranaUdajuPage() {
 </section>
 <section aria-labelledby="g-udaje" style={{ display: "flex", flexDirection: "column", gap: "14px", paddingTop: "36px", borderTop: "1px solid #E3E8ED" }}>
 <h2 id="g-udaje" style={{ margin: "0", fontSize: "1.6rem", lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "700" }}>Jaké údaje zpracováváme</h2>
-<p style={{ margin: "0", color: "#33424F" }}>Údaje, které nám sami pošlete ve formuláři pro ukázku:</p>
+<p style={{ margin: "0", color: "#33424F" }}>Údaje, které nám sami pošlete ve formuláři pro ukázku nebo pro business case:</p>
 <ul style={{ margin: "0", paddingLeft: "22px", color: "#33424F", display: "flex", flexDirection: "column", gap: "6px" }}>
 <li>jméno a příjmení, firmu, pracovní e-mail a telefon,</li>
 <li>odvětví a přibližný počet lidí ve směnách,</li>
-<li>text zprávy, pokud ji napíšete.</li>
+<li>text zprávy, pokud ji napíšete,</li>
+<li>u business casu čísla z kalkulačky úspor: počet lidí ve směnách, průměrné hodinové mzdové náklady, podíl HPP a počet vedoucích.</li>
 </ul>
 <p style={{ margin: "0", color: "#33424F" }}>Dále údaje z e-mailové a telefonické komunikace s námi a <mark style={{ background: "#FFF1D6", color: "#7A4A12", padding: "1px 4px", borderRadius: "4px" }}>[technické údaje podle nastavení měření návštěvnosti]</mark>.</p>
 </section>
@@ -84,7 +85,7 @@ export default function OchranaUdajuPage() {
 </section>
 <section aria-labelledby="g-prijemci" style={{ display: "flex", flexDirection: "column", gap: "14px", paddingTop: "36px", borderTop: "1px solid #E3E8ED" }}>
 <h2 id="g-prijemci" style={{ margin: "0", fontSize: "1.6rem", lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "700" }}>Komu údaje předáváme</h2>
-<p style={{ margin: "0", color: "#33424F" }}>Údaje neprodáváme. Předáváme je jen poskytovatelům služeb, které pro provoz webu a komunikaci potřebujeme: <mark style={{ background: "#FFF1D6", color: "#7A4A12", padding: "1px 4px", borderRadius: "4px" }}>[doplnit: hosting webu, redakční systém, e-mail, CRM, měření návštěvnosti]</mark>.</p>
+<p style={{ margin: "0", color: "#33424F" }}>Údaje neprodáváme. Předáváme je jen poskytovatelům služeb, které pro provoz webu a komunikaci potřebujeme: <mark style={{ background: "#FFF1D6", color: "#7A4A12", padding: "1px 4px", borderRadius: "4px" }}>[doplnit: hosting webu (Vercel), redakční systém (Sanity), e-mail (Microsoft 365), CRM, měření návštěvnosti]</mark>.</p>
 <p style={{ margin: "0", color: "#33424F" }}>
 <mark style={{ background: "#FFF1D6", color: "#7A4A12", padding: "1px 4px", borderRadius: "4px" }}>[Ověřit: web poběží na službách Vercel a Sanity, které sídlí v USA. Doplnit, zda a na jakém základě se údaje předávají mimo EU.]</mark>
 </p>
