@@ -1,0 +1,33 @@
+/* Základní styly webu AristoTelos (převzato z návrhu na plátně) */
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #FFFFFF;
+  color: #0E1A24;
+  font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+*, *::before, *::after { box-sizing: border-box; }
+a { color: #006E99; }
+a:hover { color: #004A68; }
+img { max-width: 100%; }
+summary { cursor: pointer; list-style: none; }
+summary::-webkit-details-marker { display: none; }
+:focus-visible { outline: 3px solid #0072A3; outline-offset: 2px; }
+
+/* Odkaz „Přeskočit na obsah“ pro klávesnici */
+.skip-link { position: absolute; left: -9999px; top: 8px; z-index: 100; padding: 10px 16px; background: #0E1A24; color: #FFFFFF; border-radius: 8px; }
+.skip-link:focus { left: 16px; color: #FFFFFF; }
+
+/* Integrace a API: šipky v toku dat */
+.flow-arrow::before { content: "→"; }
+@media (max-width: 860px) {
+  .flow-arrow::before { content: "↓"; }
+  .flow { flex-direction: column; }
+}
+/* Mobilní aplikace: druhý telefon jen na širších obrazovkách */
+@media (max-width: 640px) { .phone2 { display: none; } }
+/* Úvodní stránka: telefon přes snímek jen na širších obrazovkách */
+@media (max-width: 760px) { .hero-phone { display: none; } }
