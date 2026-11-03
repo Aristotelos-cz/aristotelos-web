@@ -22,6 +22,7 @@ const ZA: Polozka[] = [
   { href: '/reference', label: 'Reference' },
   { href: '/bezpecnost', label: 'Bezpečnost' },
   { href: '/o-nas', label: 'O nás' },
+  { href: '/kalkulacka-uspor', label: 'Kalkulačka úspor' },
 ]
 
 const base = { color: '#0E1A24', textDecoration: 'none', padding: '10px 0' }
@@ -144,7 +145,7 @@ export default function SiteHeader() {
           </svg>
           {menu ? 'Zavřít' : 'Menu'}
         </button>
-        <nav id="hlavni-menu" className="site-nav" aria-label="Hlavní menu" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '4px 28px', fontSize: '15px', fontWeight: 500 }}>
+        <nav id="hlavni-menu" className="site-nav" aria-label="Hlavní menu" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '4px 20px', fontSize: '14.5px', fontWeight: 500 }}>
           {PRED.map((p) => <Odkaz key={p.href} p={p} pathname={pathname} />)}
           <MenuReseni pathname={pathname} />
           {ZA.map((p) => <Odkaz key={p.href} p={p} pathname={pathname} />)}
