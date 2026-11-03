@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import type { ComponentType } from 'react'
 import JsonLd from '@/components/JsonLd'
-import { PAGES, SITE_URL } from '@/lib/site'
+import { INDEXABLE, PAGES, SITE_URL } from '@/lib/site'
 import faq from '@/content/faq.json'
 import MainPage from '@/components/pages/Main'
 import FunkcePage from '@/components/pages/Funkce'
@@ -55,7 +55,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: info.description,
     alternates: { canonical: path },
     openGraph: { title: info.title, description: info.description, url: SITE_URL + (path === '/' ? '' : path) },
-    robots: info.noindex ? { index: false, follow: true } : undefined,
+    // Klíč robots tu přepisuje nastavení z layoutu, proto znovu i podmínka INDEXABLE
+    robots: !INDEXABLE ? { index: false, follow: false } : info.noindex ? { index: false, follow: true } : undefined,
   }
 }
 
