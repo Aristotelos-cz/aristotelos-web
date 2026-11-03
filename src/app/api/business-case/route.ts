@@ -73,12 +73,12 @@ export async function POST(request: Request) {
   const datum = new Date()
   const nazevSouboru = `Business case ${kontakt.firma.replace(/[^\p{L}\p{N} .-]/gu, '').replace(/\s+/g, ' ').trim().slice(0, 60) || 'zakaznik'} ${datum.toISOString().slice(0, 10)}.xlsx`
 
-  // Excel je bonus: když se ho nepodaří připravit (např. chybí šablona), žádost odejde i bez něj
+  // Excel je bonus: šablona záměrně není ve veřejném repozitáři. Když chybí, žádost odejde bez přílohy.
   let excel: Uint8Array | null = null
   try {
     excel = await vytvorBusinessCase(kontakt.firma, vstupy, datum)
   } catch (e) {
-    console.error('[business case] Excel se nepodařilo připravit:', e)
+    if ((e as NodeJS.ErrnoException).code !== 'ENOENT') console.error('[business case] Excel se nepodařilo připravit:', e)
   }
 
   try {
@@ -144,7 +144,7 @@ function emailObchod(k: { jmeno: string; firma: string; email: string; telefon: 
   <p style="margin: 0 0 8px;">${
     sExcelem
       ? 'V příloze je komplexní business case předvyplněný těmito údaji (firma, datum, počet lidí, podíl HPP, hodinová mzda, mzda vedoucího jako 1,4násobek a počet vedoucích). Doplňte víkendy, agenturní pracovníky, fluktuaci a ceny.'
-      : 'Komplexní business case se tentokrát nepodařilo předvyplnit, údaje výše přepište do Excelu ručně.'
+      : 'Údaje výše přepište do komplexního business casu v Excelu (list Vstupy) a doplňte víkendy, agenturní pracovníky, fluktuaci a ceny.'
   }</p>
   <p style="margin: 0; color: #4A5866; font-size: 13px;">Zájemci odešlo automatické potvrzení s jeho odhadem. Odpovědí na tento e-mail píšete přímo jemu.</p>
 </div>`
