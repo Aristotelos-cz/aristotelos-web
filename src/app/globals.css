@@ -36,11 +36,11 @@ summary::-webkit-details-marker { display: none; }
    na užších je menu pod tlačítkem „Menu“ (jinak by zabíralo půl obrazovky) */
 .nav-toggle { display: none; }
 .menu-reseni-odkaz:hover { background: #F5F8FA; }
-@media (min-width: 1120px) {
+@media (min-width: 1200px) {
   .site-header { position: sticky; top: 0; z-index: 50; }
   [id] { scroll-margin-top: 96px; }
 }
-@media (max-width: 1119px) {
+@media (max-width: 1199px) {
   .nav-toggle { display: inline-flex; }
   .site-nav, .site-cta { display: none !important; }
   .site-header.otevreno .site-nav { display: flex !important; flex-direction: column; align-items: stretch !important; width: 100%; gap: 0 !important; font-size: 17px !important; border-top: 1px solid #E3E8ED; padding-top: 6px; }
