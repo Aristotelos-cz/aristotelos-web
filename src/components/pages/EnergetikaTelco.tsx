@@ -6,7 +6,7 @@ export default function EnergetikaTelcoPage() {
   return (
     <>
 <section style={{ backgroundColor: "#F5F8FA", backgroundImage: "linear-gradient(#E3EAF0 1px, transparent 1px), linear-gradient(90deg, #E3EAF0 1px, transparent 1px)", backgroundSize: "32px 32px", borderBottom: "1px solid #E3E8ED" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "80px 24px 88px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(460px, 100%), 1fr))", gap: "56px", alignItems: "center" }}>
+<div className="hero-wrap" style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(460px, 100%), 1fr))", gap: "56px", alignItems: "center" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "26px" }}>
 <div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
@@ -17,7 +17,7 @@ export default function EnergetikaTelcoPage() {
 </span>
 <span>Řešení pro energetiku a telekomunikace</span>
 </div>
-<h1 style={{ margin: "0", fontSize: "clamp(2.4rem, 4.6vw, 4rem)", lineHeight: "1.04", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Kontaktní centra, kanceláře i prodejny v jednom plánu</h1>
+<h1 className="hero-h1-stranka" style={{ margin: "0", lineHeight: "1.04", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Kontaktní centra, kanceláře i prodejny v jednom plánu</h1>
 <p style={{ margin: "0", fontSize: "1.2rem", color: "#33424F", maxWidth: "34em" }}>Zákazníci energetických a telekomunikačních firem volají na linku, chodí do zákaznických kanceláří i do značkových prodejen. AristoTelos naplánuje lidi ve všech třech kanálech v jednom systému, podle předpovědi poptávky a vždy v souladu se zákoníkem práce.</p>
 <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
 <a href="#demo" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 26px", borderRadius: "8px", background: "#0072A3", color: "#FFFFFF", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Domluvit ukázku</a>
@@ -51,13 +51,13 @@ export default function EnergetikaTelcoPage() {
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: "8px", paddingTop: "14px", borderTop: "1px solid #E3E8ED" }}>
 <div style={{ height: "56px", display: "flex", alignItems: "center", justifyContent: "center", padding: "8px" }}>
-<img src="/logos/innogy.svg" alt="innogy" style={{ maxHeight: "42px", maxWidth: "112px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />
+<img src="/logos/innogy.svg" alt="innogy" style={{ maxHeight: "42px", maxWidth: "112px", filter: "grayscale(1)", opacity: "0.72" }} />
 </div>
 <div style={{ height: "56px", display: "flex", alignItems: "center", justifyContent: "center", padding: "8px" }}>
-<img src="/logos/t-mobile.svg" alt="T-Mobile" style={{ maxHeight: "36px", maxWidth: "112px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />
+<img src="/logos/t-mobile.svg" alt="T-Mobile" style={{ maxHeight: "36px", maxWidth: "112px", filter: "grayscale(1)", opacity: "0.72" }} />
 </div>
 <div style={{ height: "56px", display: "flex", alignItems: "center", justifyContent: "center", padding: "8px" }}>
-<img src="/logos/prazska-energetika.svg" alt="Pražská energetika" style={{ maxHeight: "36px", maxWidth: "112px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />
+<img src="/logos/prazska-energetika.svg" alt="Pražská energetika" style={{ maxHeight: "36px", maxWidth: "112px", filter: "grayscale(1)", opacity: "0.72" }} />
 </div>
 </div>
 </div>

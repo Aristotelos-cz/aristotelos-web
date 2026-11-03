@@ -5,7 +5,7 @@ export default function BezpecnostPage() {
   return (
     <>
 <section style={{ backgroundColor: "#F5F8FA", backgroundImage: "linear-gradient(#E3EAF0 1px, transparent 1px), linear-gradient(90deg, #E3EAF0 1px, transparent 1px)", backgroundSize: "32px 32px", borderBottom: "1px solid #E3E8ED" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "80px 24px 88px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(460px, 100%), 1fr))", gap: "56px", alignItems: "center" }}>
+<div className="hero-wrap" style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(460px, 100%), 1fr))", gap: "56px", alignItems: "center" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "26px" }}>
 <div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
@@ -16,39 +16,39 @@ export default function BezpecnostPage() {
 </span>
 <span>Bezpečnost</span>
 </div>
-<h1 style={{ margin: "0", fontSize: "clamp(2.4rem, 4.6vw, 4rem)", lineHeight: "1.04", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Bezpečnost, kterou prověří i vaše IT</h1>
+<h1 className="hero-h1-stranka" style={{ margin: "0", lineHeight: "1.04", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Bezpečnost, kterou prověří i vaše IT</h1>
 <p style={{ margin: "0", fontSize: "1.2rem", color: "#33424F", maxWidth: "34em" }}>AristoTelos pracuje s daty o zaměstnancích, směnách a docházce. Proto ho vyvíjíme a provozujeme podle ISO/IEC 27001, každý rok ho necháváme testovat nezávislou firmou a vy si vyberete, kde poběží.</p>
 <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
 <a href="#demo" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 26px", borderRadius: "8px", background: "#0072A3", color: "#FFFFFF", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Domluvit ukázku pro IT</a>
 <a href="#it" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 24px", borderRadius: "8px", background: "#FFFFFF", border: "1px solid #C5D0D9", color: "#0E1A24", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Co ověří vaše IT</a>
 </div>
 </div>
-<div style={{ background: "#FFFFFF", border: "1px solid #D5DEE6", borderTop: "4px solid #006699", borderRadius: "14px", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.28)", padding: "32px", display: "flex", flexDirection: "column", gap: "18px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #D5DEE6", borderTop: "4px solid #006699", borderRadius: "14px", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.28)", padding: "clamp(22px, 3.6vh, 32px)", display: "flex", flexDirection: "column", gap: "18px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", color: "#4A5866", letterSpacing: "0.06em", textTransform: "uppercase" }}>Certifikace</span>
 <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
 <span style={{ fontSize: "2rem", fontWeight: "700", letterSpacing: "-0.02em", lineHeight: "1.1" }}>ISO/IEC 27001:2022</span>
 <span style={{ color: "#33424F" }}>Systém řízení bezpečnosti informací</span>
 </div>
 <dl style={{ margin: "0", display: "flex", flexDirection: "column" }}>
-<div style={{ display: "grid", gridTemplateColumns: "minmax(0, 0.9fr) minmax(0, 1.4fr)", gap: "12px", padding: "11px 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px" }}>
+<div style={{ display: "grid", gridTemplateColumns: "minmax(0, 0.9fr) minmax(0, 1.4fr)", gap: "12px", padding: "clamp(7px, 1.3vh, 11px) 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px" }}>
 <dt style={{ color: "#4A5866" }}>Rozsah</dt>
 <dd style={{ margin: "0", fontWeight: "500" }}>Návrh, vývoj, instalace, provoz a správa AristoTela</dd>
 </div>
-<div style={{ display: "grid", gridTemplateColumns: "minmax(0, 0.9fr) minmax(0, 1.4fr)", gap: "12px", padding: "11px 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px" }}>
+<div style={{ display: "grid", gridTemplateColumns: "minmax(0, 0.9fr) minmax(0, 1.4fr)", gap: "12px", padding: "clamp(7px, 1.3vh, 11px) 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px" }}>
 <dt style={{ color: "#4A5866" }}>Certifikační orgán</dt>
 <dd style={{ margin: "0", fontWeight: "500" }}>TAYLLORCOX</dd>
 </div>
-<div style={{ display: "grid", gridTemplateColumns: "minmax(0, 0.9fr) minmax(0, 1.4fr)", gap: "12px", padding: "11px 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px" }}>
+<div style={{ display: "grid", gridTemplateColumns: "minmax(0, 0.9fr) minmax(0, 1.4fr)", gap: "12px", padding: "clamp(7px, 1.3vh, 11px) 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px" }}>
 <dt style={{ color: "#4A5866" }}>Číslo certifikátu</dt>
 <dd style={{ margin: "0", fontWeight: "500" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace" }}>2511061514</span>
 </dd>
 </div>
-<div style={{ display: "grid", gridTemplateColumns: "minmax(0, 0.9fr) minmax(0, 1.4fr)", gap: "12px", padding: "11px 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px" }}>
+<div style={{ display: "grid", gridTemplateColumns: "minmax(0, 0.9fr) minmax(0, 1.4fr)", gap: "12px", padding: "clamp(7px, 1.3vh, 11px) 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px" }}>
 <dt style={{ color: "#4A5866" }}>Certifikováno od</dt>
 <dd style={{ margin: "0", fontWeight: "500" }}>28. 6. 2022</dd>
 </div>
-<div style={{ display: "grid", gridTemplateColumns: "minmax(0, 0.9fr) minmax(0, 1.4fr)", gap: "12px", padding: "11px 0", fontSize: "15px" }}>
+<div style={{ display: "grid", gridTemplateColumns: "minmax(0, 0.9fr) minmax(0, 1.4fr)", gap: "12px", padding: "clamp(7px, 1.3vh, 11px) 0", fontSize: "15px" }}>
 <dt style={{ color: "#4A5866" }}>Platnost do</dt>
 <dd style={{ margin: "0", fontWeight: "500" }}>27. 6. 2028</dd>
 </div>

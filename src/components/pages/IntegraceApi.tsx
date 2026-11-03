@@ -5,8 +5,9 @@ export default function IntegraceApiPage() {
   return (
     <>
 <section style={{ backgroundColor: "#F5F8FA", backgroundImage: "linear-gradient(#E3EAF0 1px, transparent 1px), linear-gradient(90deg, #E3EAF0 1px, transparent 1px)", backgroundSize: "32px 32px", borderBottom: "1px solid #E3E8ED" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "80px 24px 88px", display: "flex", flexDirection: "column", gap: "56px" }}>
-<div style={{ display: "flex", flexDirection: "column", gap: "26px", maxWidth: "820px" }}>
+<div className="hero-wrap" style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "clamp(24px, 4vh, 40px)" }}>
+<div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(460px, 100%), 1fr))", gap: "20px 56px", alignItems: "end" }}>
+<div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
 <div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
 <span style={{ flex: "55", background: "#006699" }}>
@@ -16,45 +17,48 @@ export default function IntegraceApiPage() {
 </span>
 <span>Integrace a API</span>
 </div>
-<h1 style={{ margin: "0", fontSize: "clamp(2.4rem, 4.6vw, 4rem)", lineHeight: "1.04", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Napojí se na systémy, které už používáte</h1>
-<p style={{ margin: "0", fontSize: "1.2rem", color: "#33424F", maxWidth: "40em" }}>AristoTelos má propracované API pro import i export dat. Vymění si data s personálním, mzdovým a docházkovým systémem, s telefonní platformou i datovým skladem. Napojení zajistíme my, nebo si ho vaše IT udělá samo.</p>
+<h1 className="hero-h1-stranka" style={{ margin: "0", lineHeight: "1.04", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Napojí se na systémy, které už používáte</h1>
+</div>
+<div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+<p className="hero-lead" style={{ margin: "0", fontSize: "1.1rem", lineHeight: "1.5", color: "#33424F", maxWidth: "40em" }}>AristoTelos má propracované API pro import i export dat. Vymění si data s personálním, mzdovým a docházkovým systémem, s telefonní platformou i datovým skladem. Napojení zajistíme my, nebo si ho vaše IT udělá samo.</p>
 <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
 <a href="#demo" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 26px", borderRadius: "8px", background: "#0072A3", color: "#FFFFFF", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Probrat napojení s IT</a>
 <a href="#praxe" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 24px", borderRadius: "8px", background: "#FFFFFF", border: "1px solid #C5D0D9", color: "#0E1A24", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Napojení z praxe</a>
 </div>
 </div>
+</div>
 <div className="flow" style={{ display: "flex", alignItems: "stretch", gap: "20px" }}>
-<div style={{ flex: "1 1 0", minWidth: "0", width: "100%", boxSizing: "border-box", background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "14px", padding: "22px 24px 12px", display: "flex", flexDirection: "column", gap: "6px" }}>
+<div style={{ flex: "1 1 0", minWidth: "0", width: "100%", boxSizing: "border-box", background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "14px", padding: "16px 20px 8px", display: "flex", flexDirection: "column", gap: "4px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "12.5px", color: "#4A5866", letterSpacing: "0.06em", textTransform: "uppercase" }}>Do AristoTela</span>
 <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
-<li style={{ display: "flex", flexDirection: "column", gap: "1px", padding: "10px 0", borderTop: "1px solid #E3E8ED" }}>
-<span style={{ fontWeight: "600", fontSize: "15.5px" }}>Personální systém</span>
-<span style={{ fontSize: "13.5px", color: "#4A5866" }}>organizační struktura a zaměstnanci</span>
+<li style={{ display: "flex", flexDirection: "column", gap: "0", padding: "7px 0", borderTop: "1px solid #E3E8ED" }}>
+<span style={{ fontWeight: "600", fontSize: "14.5px", lineHeight: "1.35" }}>Personální systém</span>
+<span style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>organizační struktura a zaměstnanci</span>
 </li>
-<li style={{ display: "flex", flexDirection: "column", gap: "1px", padding: "10px 0", borderTop: "1px solid #E3E8ED" }}>
-<span style={{ fontWeight: "600", fontSize: "15.5px" }}>Active Directory a LDAP</span>
-<span style={{ fontSize: "13.5px", color: "#4A5866" }}>role, oprávnění, jednotné přihlášení</span>
+<li style={{ display: "flex", flexDirection: "column", gap: "0", padding: "7px 0", borderTop: "1px solid #E3E8ED" }}>
+<span style={{ fontWeight: "600", fontSize: "14.5px", lineHeight: "1.35" }}>Active Directory a LDAP</span>
+<span style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>role, oprávnění, jednotné přihlášení</span>
 </li>
-<li style={{ display: "flex", flexDirection: "column", gap: "1px", padding: "10px 0", borderTop: "1px solid #E3E8ED" }}>
-<span style={{ fontWeight: "600", fontSize: "15.5px" }}>Telefonní platformy</span>
-<span style={{ fontSize: "13.5px", color: "#4A5866" }}>Genesys, Cisco, Daktela, Sprinkl</span>
+<li style={{ display: "flex", flexDirection: "column", gap: "0", padding: "7px 0", borderTop: "1px solid #E3E8ED" }}>
+<span style={{ fontWeight: "600", fontSize: "14.5px", lineHeight: "1.35" }}>Telefonní platformy</span>
+<span style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>Genesys, Cisco, Daktela, Sprinkl</span>
 </li>
-<li style={{ display: "flex", flexDirection: "column", gap: "1px", padding: "10px 0", borderTop: "1px solid #E3E8ED" }}>
-<span style={{ fontWeight: "600", fontSize: "15.5px" }}>Pokladny a obchodní systémy</span>
-<span style={{ fontSize: "13.5px", color: "#4A5866" }}>návštěvnost a prodeje</span>
+<li style={{ display: "flex", flexDirection: "column", gap: "0", padding: "7px 0", borderTop: "1px solid #E3E8ED" }}>
+<span style={{ fontWeight: "600", fontSize: "14.5px", lineHeight: "1.35" }}>Pokladny a obchodní systémy</span>
+<span style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>návštěvnost a prodeje</span>
 </li>
-<li style={{ display: "flex", flexDirection: "column", gap: "1px", padding: "10px 0", borderTop: "1px solid #E3E8ED" }}>
-<span style={{ fontWeight: "600", fontSize: "15.5px" }}>Docházkové systémy</span>
-<span style={{ fontSize: "13.5px", color: "#4A5866" }}>příchody a odchody online</span>
+<li style={{ display: "flex", flexDirection: "column", gap: "0", padding: "7px 0", borderTop: "1px solid #E3E8ED" }}>
+<span style={{ fontWeight: "600", fontSize: "14.5px", lineHeight: "1.35" }}>Docházkové systémy</span>
+<span style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>příchody a odchody online</span>
 </li>
 </ul>
 </div>
 <span className="flow-arrow" aria-hidden="true" style={{ flex: "none", alignSelf: "center", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "28px", color: "#FF6633", lineHeight: "1" }}>
 </span>
-<div style={{ flex: "1 1 0", minWidth: "0", width: "100%", boxSizing: "border-box", background: "#0E1A24", color: "#FFFFFF", borderRadius: "14px", padding: "28px", display: "flex", flexDirection: "column", justifyContent: "center", gap: "16px", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.4)" }}>
+<div style={{ flex: "1 1 0", minWidth: "0", width: "100%", boxSizing: "border-box", background: "#0E1A24", color: "#FFFFFF", borderRadius: "14px", padding: "22px", display: "flex", flexDirection: "column", justifyContent: "center", gap: "12px", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.4)" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "12.5px", color: "#FF8A2B", letterSpacing: "0.06em", textTransform: "uppercase" }}>AristoTelos API</span>
-<span style={{ fontSize: "1.45rem", fontWeight: "700", lineHeight: "1.2" }}>Plán směn, docházka a data o provozu na jednom místě</span>
-<ul style={{ listStyle: "none", margin: "0", padding: "0", display: "flex", flexDirection: "column", gap: "8px", fontSize: "14.5px", color: "#C3CED7" }}>
+<span style={{ fontSize: "1.25rem", fontWeight: "700", lineHeight: "1.2" }}>Plán směn, docházka a data o provozu na jednom místě</span>
+<ul style={{ listStyle: "none", margin: "0", padding: "0", display: "flex", flexDirection: "column", gap: "6px", fontSize: "13.5px", color: "#C3CED7" }}>
 <li>Import a export přes API a webové služby</li>
 <li>Přímé napojení na databázi</li>
 <li>Výměna souborů CSV a XLS</li>
@@ -63,24 +67,24 @@ export default function IntegraceApiPage() {
 </div>
 <span className="flow-arrow" aria-hidden="true" style={{ flex: "none", alignSelf: "center", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "28px", color: "#FF6633", lineHeight: "1" }}>
 </span>
-<div style={{ flex: "1 1 0", minWidth: "0", width: "100%", boxSizing: "border-box", background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "14px", padding: "22px 24px 12px", display: "flex", flexDirection: "column", gap: "6px" }}>
+<div style={{ flex: "1 1 0", minWidth: "0", width: "100%", boxSizing: "border-box", background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "14px", padding: "16px 20px 8px", display: "flex", flexDirection: "column", gap: "4px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "12.5px", color: "#4A5866", letterSpacing: "0.06em", textTransform: "uppercase" }}>Z AristoTela</span>
 <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
-<li style={{ display: "flex", flexDirection: "column", gap: "1px", padding: "10px 0", borderTop: "1px solid #E3E8ED" }}>
-<span style={{ fontWeight: "600", fontSize: "15.5px" }}>Mzdový systém</span>
-<span style={{ fontSize: "13.5px", color: "#4A5866" }}>odpracovaný čas, příplatky, odměny</span>
+<li style={{ display: "flex", flexDirection: "column", gap: "0", padding: "7px 0", borderTop: "1px solid #E3E8ED" }}>
+<span style={{ fontWeight: "600", fontSize: "14.5px", lineHeight: "1.35" }}>Mzdový systém</span>
+<span style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>odpracovaný čas, příplatky, odměny</span>
 </li>
-<li style={{ display: "flex", flexDirection: "column", gap: "1px", padding: "10px 0", borderTop: "1px solid #E3E8ED" }}>
-<span style={{ fontWeight: "600", fontSize: "15.5px" }}>Datový sklad a BI</span>
-<span style={{ fontSize: "13.5px", color: "#4A5866" }}>výsledky všech reportů</span>
+<li style={{ display: "flex", flexDirection: "column", gap: "0", padding: "7px 0", borderTop: "1px solid #E3E8ED" }}>
+<span style={{ fontWeight: "600", fontSize: "14.5px", lineHeight: "1.35" }}>Datový sklad a BI</span>
+<span style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>výsledky všech reportů</span>
 </li>
-<li style={{ display: "flex", flexDirection: "column", gap: "1px", padding: "10px 0", borderTop: "1px solid #E3E8ED" }}>
-<span style={{ fontWeight: "600", fontSize: "15.5px" }}>ERP a provozní systémy</span>
-<span style={{ fontSize: "13.5px", color: "#4A5866" }}>práce podle naplánovaných směn</span>
+<li style={{ display: "flex", flexDirection: "column", gap: "0", padding: "7px 0", borderTop: "1px solid #E3E8ED" }}>
+<span style={{ fontWeight: "600", fontSize: "14.5px", lineHeight: "1.35" }}>ERP a provozní systémy</span>
+<span style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>práce podle naplánovaných směn</span>
 </li>
-<li style={{ display: "flex", flexDirection: "column", gap: "1px", padding: "10px 0", borderTop: "1px solid #E3E8ED" }}>
-<span style={{ fontWeight: "600", fontSize: "15.5px" }}>Interní systémy</span>
-<span style={{ fontSize: "13.5px", color: "#4A5866" }}>cokoli dalšího přes API</span>
+<li style={{ display: "flex", flexDirection: "column", gap: "0", padding: "7px 0", borderTop: "1px solid #E3E8ED" }}>
+<span style={{ fontWeight: "600", fontSize: "14.5px", lineHeight: "1.35" }}>Interní systémy</span>
+<span style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>cokoli dalšího přes API</span>
 </li>
 </ul>
 </div>

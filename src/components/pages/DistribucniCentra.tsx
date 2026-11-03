@@ -5,7 +5,7 @@ export default function DistribucniCentraPage() {
   return (
     <>
 <section style={{ backgroundColor: "#F5F8FA", backgroundImage: "linear-gradient(#E3EAF0 1px, transparent 1px), linear-gradient(90deg, #E3EAF0 1px, transparent 1px)", backgroundSize: "32px 32px", borderBottom: "1px solid #E3E8ED" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "80px 24px 88px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(460px, 100%), 1fr))", gap: "56px", alignItems: "center" }}>
+<div className="hero-wrap" style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(460px, 100%), 1fr))", gap: "56px", alignItems: "center" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "26px" }}>
 <div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
@@ -16,7 +16,7 @@ export default function DistribucniCentraPage() {
 </span>
 <span>Řešení pro distribuční centra</span>
 </div>
-<h1 style={{ margin: "0", fontSize: "clamp(2.4rem, 4.6vw, 4rem)", lineHeight: "1.04", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Rotace, konto pracovní doby a spravedlivé noci bez Excelu</h1>
+<h1 className="hero-h1-stranka" style={{ margin: "0", lineHeight: "1.04", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Rotace, konto pracovní doby a spravedlivé noci bez Excelu</h1>
 <p style={{ margin: "0", fontSize: "1.2rem", color: "#33424F", maxWidth: "34em" }}>AristoTelos naplánuje směny ve skladech a distribučních centrech se střídáním směn, kontem pracovní doby, kmenovými i agenturními pracovníky. Plán vždy splní zákoník práce.</p>
 <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
 <a href="#demo" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 26px", borderRadius: "8px", background: "#0072A3", color: "#FFFFFF", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Domluvit ukázku</a>

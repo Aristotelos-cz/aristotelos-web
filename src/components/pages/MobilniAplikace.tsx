@@ -6,7 +6,7 @@ export default function MobilniAplikacePage() {
   return (
     <>
 <section style={{ backgroundColor: "#F5F8FA", backgroundImage: "linear-gradient(#E3EAF0 1px, transparent 1px), linear-gradient(90deg, #E3EAF0 1px, transparent 1px)", backgroundSize: "32px 32px", borderBottom: "1px solid #E3E8ED" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "80px 24px 88px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(460px, 100%), 1fr))", gap: "56px", alignItems: "center" }}>
+<div className="hero-wrap" style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(460px, 100%), 1fr))", gap: "56px", alignItems: "center" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "26px" }}>
 <div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
@@ -17,7 +17,7 @@ export default function MobilniAplikacePage() {
 </span>
 <span>Mobilní aplikace pro iOS a Android</span>
 </div>
-<h1 style={{ margin: "0", fontSize: "clamp(2.4rem, 4.6vw, 4rem)", lineHeight: "1.04", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Celý plán směn v kapse každého zaměstnance</h1>
+<h1 className="hero-h1-stranka" style={{ margin: "0", lineHeight: "1.04", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Celý plán směn v kapse každého zaměstnance</h1>
 <p style={{ margin: "0", fontSize: "1.2rem", color: "#33424F", maxWidth: "34em" }}>Zaměstnanci v aplikaci vidí své směny, zadávají přání, vyměňují si směny a potvrzují plán i docházku. Vše, co v mobilu udělají, AristoTelos hned zkontroluje podle pravidel. Vedoucí ušetří desítky telefonátů.</p>
 <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
 <a href="https://apps.apple.com/cz/app/aristotelos/id1549846465" style={{ display: "inline-flex", flexDirection: "column", justifyContent: "center", minHeight: "52px", padding: "6px 20px", borderRadius: "10px", background: "#0E1A24", color: "#FFFFFF", textDecoration: "none", lineHeight: "1.2" }}>
@@ -33,11 +33,11 @@ export default function MobilniAplikacePage() {
 </div>
 <figure style={{ margin: "0", display: "flex", flexDirection: "column", alignItems: "center", gap: "14px" }}>
 <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-start", maxWidth: "100%" }}>
-<div style={{ width: "260px", maxWidth: "100%", flex: "none", border: "9px solid #0E1A24", borderRadius: "36px", background: "#FFFFFF", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.45)" }}>
-<img src="/screens/mobil-moje-smeny.webp" alt="Aplikace AristoTelos: Moje směny s činnostmi, přestávkou a tlačítky pro výměnu směny" width="585" height="1266" loading="lazy" style={{ display: "block", width: "100%", height: "auto" }} />
+<div style={{ width: "clamp(170px, 29vh, 260px)", maxWidth: "100%", flex: "none", border: "9px solid #0E1A24", borderRadius: "36px", background: "#FFFFFF", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.45)" }}>
+<img src="/screens/mobil-moje-smeny.webp" alt="Aplikace AristoTelos: Moje směny s činnostmi, přestávkou a tlačítky pro výměnu směny" width="585" height="1266" fetchPriority="high" style={{ display: "block", width: "100%", height: "auto" }} />
 </div>
-<div className="phone2" style={{ width: "260px", maxWidth: "100%", flex: "none", border: "9px solid #0E1A24", borderRadius: "36px", background: "#FFFFFF", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.45)", marginLeft: "16px", marginTop: "56px" }}>
-<img src="/screens/mobil-ukoly.webp" alt="Aplikace AristoTelos: Úkoly a upozornění s potvrzením plánu směn" width="585" height="1266" loading="lazy" style={{ display: "block", width: "100%", height: "auto" }} />
+<div className="phone2" style={{ width: "clamp(170px, 29vh, 260px)", maxWidth: "100%", flex: "none", border: "9px solid #0E1A24", borderRadius: "36px", background: "#FFFFFF", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.45)", marginLeft: "16px", marginTop: "clamp(28px, 7vh, 56px)" }}>
+<img src="/screens/mobil-ukoly.webp" alt="Aplikace AristoTelos: Úkoly a upozornění s potvrzením plánu směn" width="585" height="1266" fetchPriority="high" style={{ display: "block", width: "100%", height: "auto" }} />
 </div>
 </div>
 </figure>
