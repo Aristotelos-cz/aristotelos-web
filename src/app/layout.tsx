@@ -9,7 +9,7 @@ import './globals.css'
 import SiteHeader from '@/components/SiteHeader'
 import SiteFooter from '@/components/SiteFooter'
 import JsonLd from '@/components/JsonLd'
-import { SITE_URL } from '@/lib/site'
+import { INDEXABLE, SITE_URL } from '@/lib/site'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   description: 'AristoTelos naplánuje směny za hodiny místo dnů, vždy podle zákoníku práce. Docházka, mobilní aplikace pro iOS a Android a otevřené API.',
   applicationName: 'AristoTelos',
   openGraph: { type: 'website', locale: 'cs_CZ', siteName: 'AristoTelos' },
-  // Náhledový web na Vercelu nesmí být v indexu – zapne se až na produkční doméně
-  robots: process.env.VERCEL_ENV && process.env.VERCEL_ENV !== 'production' ? { index: false, follow: false } : undefined,
+  // Do indexu až na produkční doméně (viz INDEXABLE v src/lib/site.ts)
+  robots: INDEXABLE ? undefined : { index: false, follow: false },
 }
 
 export const viewport: Viewport = { themeColor: '#0E1A24' }

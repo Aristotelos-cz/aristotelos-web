@@ -1,10 +1,9 @@
 import type { MetadataRoute } from 'next'
-import { SITE_URL } from '@/lib/site'
+import { INDEXABLE, SITE_URL } from '@/lib/site'
 
 // Vyhledávače i AI asistenti (ChatGPT, Claude, Perplexity, Gemini…) mají přístup k celému webu
 export default function robots(): MetadataRoute.Robots {
-  const preview = process.env.VERCEL_ENV && process.env.VERCEL_ENV !== 'production'
-  if (preview) return { rules: { userAgent: '*', disallow: '/' } }
+  if (!INDEXABLE) return { rules: { userAgent: '*', disallow: '/' } }
   return {
     rules: [
       { userAgent: '*', allow: '/', disallow: ['/studio'] },
