@@ -63,3 +63,9 @@ summary::-webkit-details-marker { display: none; }
   .hero-grid { grid-template-columns: minmax(0, 1fr); padding: 40px 24px 56px; }
   .hero-h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); }
 }
+
+/* Produkt (/funkce): dlaždice funkcí s ikonami */
+.funkce-mrizka { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.funkce-dlazdice { transition: border-color .15s, box-shadow .15s, transform .15s; }
+.funkce-dlazdice:hover { border-color: #0072A3 !important; box-shadow: 0 10px 24px -14px rgba(14, 26, 36, 0.35); transform: translateY(-1px); color: #0E1A24 !important; }
+@media (max-width: 520px) { .funkce-mrizka { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
