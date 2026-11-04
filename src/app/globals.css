@@ -66,6 +66,7 @@ summary::-webkit-details-marker { display: none; }
 
 /* Produkt (/funkce): ukázky z aplikace a pás dlaždic funkcí s ikonami */
 .hero-grid-tesny { padding-bottom: 28px; }
+.funkce-pas { padding: 0 24px clamp(20px, 5vh, 48px); }
 .funkce-mrizka { grid-template-columns: repeat(9, minmax(0, 1fr)); }
 .funkce-dlazdice { transition: border-color .15s, box-shadow .15s, transform .15s; }
 .funkce-dlazdice:hover { border-color: #0072A3 !important; box-shadow: 0 10px 24px -14px rgba(14, 26, 36, 0.35); transform: translateY(-1px); color: #0E1A24 !important; }
@@ -73,9 +74,53 @@ summary::-webkit-details-marker { display: none; }
 @media (max-width: 1000px) { .funkce-mrizka { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 /* Úvod podstránek: mezery a nadpis se přizpůsobí výšce okna, aby byl celý úvod na první obrazovce */
-.hero-wrap { padding: clamp(36px, 6.5vh, 72px) 24px clamp(40px, 7.5vh, 80px); }
+.hero-wrap { padding: clamp(20px, 5.6vh, 72px) 24px clamp(24px, 6.6vh, 80px); }
 .hero-h1-stranka { font-size: clamp(2.2rem, min(4.2vw, 6.4vh), 3.7rem); }
 @media (max-width: 1000px) {
   .hero-wrap { padding: 40px 24px 56px; }
-  .hero-h1-stranka { font-size: clamp(2.2rem, 7vw, 3.2rem); }
+  .hero-h1-stranka { font-size: clamp(1.9rem, 7.6vw, 3.2rem); }
+}
+
+/* Velmi nízká okna (např. notebook 1280 × 720 s lištami prohlížeče): menší mezery, bez doplňkových řádků */
+@media (min-width: 1001px) and (max-height: 680px) {
+  .hero-eyebrow, .hero-trust { display: none !important; }
+  .hero-grid { padding: 20px 24px 24px; }
+  .hero-wrap { padding-top: 16px; padding-bottom: 20px; }
+  .hero-text { gap: 14px; }
+  .funkce-dlazdice { min-height: 80px !important; padding: 10px 10px 11px !important; }
+}
+/* Integrace: na nízkých oknech schéma jen s názvy systémů (popisy jsou níž na stránce) */
+@media (min-width: 1001px) and (max-height: 720px) {
+  .flow-popis { display: none; }
+}
+/* Telefony: menší úvod, aby byl nadpis, text i hlavní tlačítko vidět hned */
+@media (max-width: 480px) {
+  .hero-grid, .hero-wrap { padding: 28px 20px 40px; }
+  .hero-h1 { font-size: clamp(1.9rem, 8.4vw, 2.6rem) !important; }
+  .hero-text { gap: 16px; }
+  .hero-lead { font-size: 1rem !important; }
+}
+
+/* Kalkulačka úspor: nadpis, zadání i výsledek na první obrazovce (velikost se řídí výškou okna) */
+.kalk-sekce { padding: clamp(16px, 3.6vh, 36px) 24px clamp(20px, 4.4vh, 44px); gap: clamp(14px, 2.6vh, 24px); }
+.kalk-uvod { gap: clamp(6px, 1.2vh, 12px); }
+.kalk-h1 { font-size: clamp(1.9rem, min(3.2vw, 5.2vh), 2.8rem); }
+.kalk-mrizka { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.kalk-pole { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.kalk-panel { padding: clamp(18px, 2.8vh, 26px) clamp(20px, 2.2vw, 28px); }
+.kalk-celkem { font-size: clamp(2rem, min(3.4vw, 5.6vh), 2.9rem); }
+.kalk-lista { display: none; }
+/* Nízká okna notebooků: schovat doplňkové texty, aby se vešla celá kalkulačka */
+@media (min-width: 1001px) and (max-height: 720px) {
+  .kalk-nizko-skryt { display: none !important; }
+}
+@media (min-width: 1001px) and (max-height: 680px) {
+  .kalk-sekce { padding-top: 12px; padding-bottom: 16px; }
+}
+@media (max-width: 1000px) {
+  .kalk-mrizka { grid-template-columns: minmax(0, 1fr); }
+  .kalk-lista { display: flex; position: sticky; bottom: 8px; z-index: 5; }
+}
+@media (max-width: 560px) {
+  .kalk-pole { grid-template-columns: minmax(0, 1fr); }
 }
