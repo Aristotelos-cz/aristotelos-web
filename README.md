@@ -30,6 +30,15 @@ Potřebujete Node.js 20.9 nebo novější.
 | `src/app/robots.ts`, `sitemap.ts`, `llms.txt/` | robots.txt (AI boti povoleni), mapa webu, přehled pro AI asistenty |
 | `public/` | Logo, loga zákazníků, snímky aplikace |
 
+## Pravidlo: první obrazovka
+
+Úvodní část každé stránky (nadpis, text, hlavní tlačítko a obrázek, u kalkulačky celé zadání i výsledek)
+musí být vidět celá hned po otevření, bez posouvání, na každé velikosti displeje.
+Kontroluje se v oknech 1920 × 960, 1536 × 730, 1470 × 835, 1440 × 780, 1366 × 625, 1280 × 680, 1280 × 600
+a 1024 × 700. Na tabletu na výšku a na telefonech (768 × 950, 390 × 700, 360 × 640) musí být vidět nadpis,
+text a hlavní tlačítko, u kalkulačky zadání a souhrn výsledku.
+Mezery a velikost nadpisů v úvodu se proto řídí výškou okna (třídy `hero-*` a `kalk-*` v `src/app/globals.css`).
+
 ## Proměnné prostředí
 
 Viz `.env.example`. `NEXT_PUBLIC_SITE_URL` je výchozí `https://aristotelos.com`, měnit ho není potřeba.
