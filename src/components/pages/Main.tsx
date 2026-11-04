@@ -8,7 +8,7 @@ export default function MainPage() {
 <section style={{ backgroundColor: "#F5F8FA", backgroundImage: "linear-gradient(#E3EAF0 1px, transparent 1px), linear-gradient(90deg, #E3EAF0 1px, transparent 1px)", backgroundSize: "32px 32px", borderBottom: "1px solid #E3E8ED" }}>
 <div className="hero-grid" style={{ maxWidth: "1200px", margin: "0 auto" }}>
 <div className="hero-text" style={{ display: "flex", flexDirection: "column" }}>
-<div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
+<div className="hero-eyebrow" style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
 <span style={{ flex: "55", background: "#006699" }}>
 </span>
@@ -50,7 +50,7 @@ export default function MainPage() {
 <a href="#demo" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 26px", borderRadius: "8px", background: "#0072A3", color: "#FFFFFF", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Domluvit ukázku</a>
 <a href="#produkt" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 24px", borderRadius: "8px", background: "#FFFFFF", border: "1px solid #C5D0D9", color: "#0E1A24", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Jak AristoTelos funguje</a>
 </div>
-<p style={{ margin: "0", fontSize: "14.5px", color: "#4A5866" }}>Spoléhají na něj Albert, Benu, ČSOB, T-Mobile, Kooperativa a další.</p>
+<p className="hero-trust" style={{ margin: "0", fontSize: "14.5px", color: "#4A5866" }}>Spoléhají na něj Albert, Benu, ČSOB, T-Mobile, Kooperativa a další.</p>
 </div>
 <figure style={{ margin: "0", position: "relative", paddingBottom: "44px" }}>
 <div style={{ marginRight: "clamp(0px, 8vw, 104px)", background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.32)" }}>

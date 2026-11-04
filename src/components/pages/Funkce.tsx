@@ -8,7 +8,7 @@ export default function FunkcePage() {
 <section style={{ backgroundColor: "#F5F8FA", backgroundImage: "linear-gradient(#E3EAF0 1px, transparent 1px), linear-gradient(90deg, #E3EAF0 1px, transparent 1px)", backgroundSize: "32px 32px", borderBottom: "1px solid #E3E8ED" }}>
 <div className="hero-grid hero-grid-tesny" style={{ maxWidth: "1200px", margin: "0 auto" }}>
 <div className="hero-text" style={{ display: "flex", flexDirection: "column" }}>
-<div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
+<div className="hero-eyebrow" style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
 <span style={{ flex: "55", background: "#006699" }}>
 </span>
@@ -46,7 +46,7 @@ export default function FunkcePage() {
 </div>
 </figure>
 </div>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px 48px" }}>
+<div className="funkce-pas" style={{ maxWidth: "1200px", margin: "0 auto" }}>
 <nav aria-label="Funkce na této stránce" className="funkce-mrizka" style={{ display: "grid", gridAutoRows: "1fr", gap: "10px" }}>
 <a href="#predpoved" className="funkce-dlazdice" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "10px", minHeight: "96px", padding: "12px 12px 13px", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", color: "#0E1A24", textDecoration: "none" }}>
 <span style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>

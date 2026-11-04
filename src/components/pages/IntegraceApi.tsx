@@ -8,7 +8,7 @@ export default function IntegraceApiPage() {
 <div className="hero-wrap" style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "clamp(24px, 4vh, 40px)" }}>
 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(460px, 100%), 1fr))", gap: "20px 56px", alignItems: "end" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-<div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
+<div className="hero-eyebrow" style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
 <span style={{ flex: "55", background: "#006699" }}>
 </span>
@@ -33,23 +33,23 @@ export default function IntegraceApiPage() {
 <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
 <li style={{ display: "flex", flexDirection: "column", gap: "0", padding: "7px 0", borderTop: "1px solid #E3E8ED" }}>
 <span style={{ fontWeight: "600", fontSize: "14.5px", lineHeight: "1.35" }}>Personální systém</span>
-<span style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>organizační struktura a zaměstnanci</span>
+<span className="flow-popis" style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>organizační struktura a zaměstnanci</span>
 </li>
 <li style={{ display: "flex", flexDirection: "column", gap: "0", padding: "7px 0", borderTop: "1px solid #E3E8ED" }}>
 <span style={{ fontWeight: "600", fontSize: "14.5px", lineHeight: "1.35" }}>Active Directory a LDAP</span>
-<span style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>role, oprávnění, jednotné přihlášení</span>
+<span className="flow-popis" style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>role, oprávnění, jednotné přihlášení</span>
 </li>
 <li style={{ display: "flex", flexDirection: "column", gap: "0", padding: "7px 0", borderTop: "1px solid #E3E8ED" }}>
 <span style={{ fontWeight: "600", fontSize: "14.5px", lineHeight: "1.35" }}>Telefonní platformy</span>
-<span style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>Genesys, Cisco, Daktela, Sprinkl</span>
+<span className="flow-popis" style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>Genesys, Cisco, Daktela, Sprinkl</span>
 </li>
 <li style={{ display: "flex", flexDirection: "column", gap: "0", padding: "7px 0", borderTop: "1px solid #E3E8ED" }}>
 <span style={{ fontWeight: "600", fontSize: "14.5px", lineHeight: "1.35" }}>Pokladny a obchodní systémy</span>
-<span style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>návštěvnost a prodeje</span>
+<span className="flow-popis" style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>návštěvnost a prodeje</span>
 </li>
 <li style={{ display: "flex", flexDirection: "column", gap: "0", padding: "7px 0", borderTop: "1px solid #E3E8ED" }}>
 <span style={{ fontWeight: "600", fontSize: "14.5px", lineHeight: "1.35" }}>Docházkové systémy</span>
-<span style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>příchody a odchody online</span>
+<span className="flow-popis" style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>příchody a odchody online</span>
 </li>
 </ul>
 </div>
@@ -72,19 +72,19 @@ export default function IntegraceApiPage() {
 <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
 <li style={{ display: "flex", flexDirection: "column", gap: "0", padding: "7px 0", borderTop: "1px solid #E3E8ED" }}>
 <span style={{ fontWeight: "600", fontSize: "14.5px", lineHeight: "1.35" }}>Mzdový systém</span>
-<span style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>odpracovaný čas, příplatky, odměny</span>
+<span className="flow-popis" style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>odpracovaný čas, příplatky, odměny</span>
 </li>
 <li style={{ display: "flex", flexDirection: "column", gap: "0", padding: "7px 0", borderTop: "1px solid #E3E8ED" }}>
 <span style={{ fontWeight: "600", fontSize: "14.5px", lineHeight: "1.35" }}>Datový sklad a BI</span>
-<span style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>výsledky všech reportů</span>
+<span className="flow-popis" style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>výsledky všech reportů</span>
 </li>
 <li style={{ display: "flex", flexDirection: "column", gap: "0", padding: "7px 0", borderTop: "1px solid #E3E8ED" }}>
 <span style={{ fontWeight: "600", fontSize: "14.5px", lineHeight: "1.35" }}>ERP a provozní systémy</span>
-<span style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>práce podle naplánovaných směn</span>
+<span className="flow-popis" style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>práce podle naplánovaných směn</span>
 </li>
 <li style={{ display: "flex", flexDirection: "column", gap: "0", padding: "7px 0", borderTop: "1px solid #E3E8ED" }}>
 <span style={{ fontWeight: "600", fontSize: "14.5px", lineHeight: "1.35" }}>Interní systémy</span>
-<span style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>cokoli dalšího přes API</span>
+<span className="flow-popis" style={{ fontSize: "12.5px", lineHeight: "1.35", color: "#4A5866" }}>cokoli dalšího přes API</span>
 </li>
 </ul>
 </div>

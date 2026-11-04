@@ -4,8 +4,8 @@ export default function OchranaUdajuPage() {
   return (
     <>
 <section style={{ background: "#F5F8FA", borderBottom: "1px solid #E3E8ED" }}>
-<div style={{ maxWidth: "880px", margin: "0 auto", padding: "72px 24px 56px", display: "flex", flexDirection: "column", gap: "20px" }}>
-<div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
+<div className="hero-wrap" style={{ maxWidth: "880px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "20px" }}>
+<div className="hero-eyebrow" style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
 <span style={{ flex: "55", background: "#006699" }}>
 </span>
@@ -14,7 +14,7 @@ export default function OchranaUdajuPage() {
 </span>
 <span>Ochrana osobních údajů</span>
 </div>
-<h1 style={{ margin: "0", fontSize: "clamp(2.2rem, 4vw, 3.2rem)", lineHeight: "1.08", letterSpacing: "-0.02em", fontWeight: "700" }}>Jak zacházíme s vašimi osobními údaji</h1>
+<h1 className="hero-h1-stranka" style={{ margin: "0", lineHeight: "1.08", letterSpacing: "-0.02em", fontWeight: "700" }}>Jak zacházíme s vašimi osobními údaji</h1>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Platí od <mark style={{ background: "#FFF1D6", color: "#7A4A12", padding: "1px 4px", borderRadius: "4px" }}>[datum]</mark>. Týká se webu aristotelos.com, formulářů pro ukázku a business case a obchodní komunikace.</p>
 <div role="note" style={{ background: "#FFFBF5", border: "1.5px dashed #E0A060", borderRadius: "12px", padding: "18px 20px", color: "#7A4A12", fontSize: "15px" }}>Návrh struktury. Text musí před zveřejněním zkontrolovat a doplnit právník nebo pověřenec pro ochranu osobních údajů. Místa k doplnění jsou zvýrazněná.</div>
 </div>

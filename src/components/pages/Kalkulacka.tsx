@@ -4,9 +4,11 @@ import KalkulackaInteraktivni from '@/components/KalkulackaInteraktivni'
 export default function KalkulackaPage() {
   return (
     <>
-<section style={{ backgroundColor: "#F5F8FA", backgroundImage: "linear-gradient(#E3EAF0 1px, transparent 1px), linear-gradient(90deg, #E3EAF0 1px, transparent 1px)", backgroundSize: "32px 32px", borderBottom: "1px solid #E3E8ED" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "72px 24px 56px", display: "flex", flexDirection: "column", gap: "22px" }}>
-<div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
+
+
+<KalkulackaInteraktivni
+  uvod={<>
+<div className="kalk-nizko-skryt" style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
 <span style={{ flex: "55", background: "#006699" }}>
 </span>
@@ -15,13 +17,11 @@ export default function KalkulackaPage() {
 </span>
 <span>Kalkulačka úspor</span>
 </div>
-<h1 style={{ margin: "0", fontSize: "clamp(2.3rem, 4.4vw, 3.6rem)", lineHeight: "1.06", letterSpacing: "-0.025em", fontWeight: "700", maxWidth: "18em", textWrap: "balance" }}>Kolik ušetříte s automatickým plánováním směn</h1>
-<p style={{ margin: "0", fontSize: "1.15rem", color: "#33424F", maxWidth: "40em" }}>Zadejte čtyři čísla o svém provozu. Kalkulačka odhadne roční úsporu ve čtyřech oblastech, které jde spočítat hned. Podrobný business case s návratností připravíme s vámi.</p>
-</div>
-</section>
-
-<KalkulackaInteraktivni>
-<section style={{ padding: "104px 0", background: "#F5F8FA", borderTop: "1px solid #E3E8ED", borderBottom: "1px solid #E3E8ED" }}>
+<h1 className="kalk-h1" style={{ margin: "0", lineHeight: "1.08", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Kolik ušetříte s automatickým plánováním směn</h1>
+<p style={{ margin: "0", fontSize: "1.05rem", lineHeight: "1.5", color: "#33424F", maxWidth: "62em" }}>Zadejte čtyři čísla o svém provozu a hned uvidíte odhad roční úspory. Vychází z předpokladů, se kterými počítáme v nabídkách. Podrobný business case s návratností připravíme s vámi.</p>
+</>}
+>
+<section id="jak-pocitame" style={{ padding: "96px 0", background: "#FFFFFF" }}>
 <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "48px" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "16px", maxWidth: "760px" }}>
 <div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
