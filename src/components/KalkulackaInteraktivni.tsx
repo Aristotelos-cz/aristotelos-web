@@ -4,28 +4,28 @@ import { useEffect, useMemo, useRef, useState, type FormEvent, type ReactNode, t
 import { cislo, spocitej } from '@/lib/odhadUspor'
 
 const MONO = "'IBM Plex Mono', Menlo, monospace"
-const label: CSSProperties = { fontWeight: 600, fontSize: '15.5px' }
-const input: CSSProperties = { width: '100%', boxSizing: 'border-box', minHeight: '48px', padding: '0 14px', border: '1px solid #C5D0D9', borderRadius: '8px', font: 'inherit', fontSize: '17px', color: '#0E1A24', background: '#FFFFFF', maxWidth: '160px' }
-const range: CSSProperties = { width: '100%', accentColor: '#0072A3', minHeight: '32px', margin: 0 }
+const label: CSSProperties = { fontWeight: 600, fontSize: '15px', lineHeight: 1.3 }
+const input: CSSProperties = { width: '100%', boxSizing: 'border-box', minHeight: '44px', padding: '0 12px', border: '1px solid #C5D0D9', borderRadius: '8px', font: 'inherit', fontSize: '17px', color: '#0E1A24', background: '#FFFFFF', maxWidth: '140px' }
+const range: CSSProperties = { width: '100%', accentColor: '#0072A3', minHeight: '26px', margin: 0 }
 const finput: CSSProperties = { width: '100%', boxSizing: 'border-box', minHeight: '48px', padding: '0 14px', border: '1px solid #4A5866', borderRadius: '8px', font: 'inherit', fontSize: '16px', color: '#0E1A24', background: '#FFFFFF' }
 
 type FieldProps = { id: string; label: string; hint: string; value: string; onChange: (v: string) => void; min: number; max: number; step: number; unit: string }
 function Field({ id, label: l, hint, value, onChange, min, max, step, unit }: FieldProps) {
   const n = Math.min(max, cislo(value, 0))
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', minWidth: 0 }}>
       <label htmlFor={id} style={label}>{l}</label>
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-        <input id={id} type="number" inputMode="decimal" min={min} step={step} value={value} onChange={(e) => onChange(e.target.value)} style={input} />
-        <span style={{ fontSize: '15px', color: '#4A5866' }}>{unit}</span>
+        <input id={id} type="number" inputMode="decimal" min={min} step={step} value={value} onChange={(e) => onChange(e.target.value)} aria-describedby={`${id}-napoveda`} style={input} />
+        <span style={{ fontSize: '14.5px', color: '#4A5866' }}>{unit}</span>
       </div>
       <input type="range" min={min} max={max} step={step} value={n} onChange={(e) => onChange(e.target.value)} aria-label={`${l} – posuvník`} style={range} />
-      <span style={{ fontSize: '13.5px', color: '#4A5866' }}>{hint}</span>
+      <span id={`${id}-napoveda`} className="kalk-nizko-skryt" style={{ fontSize: '12.5px', lineHeight: 1.35, color: '#4A5866' }}>{hint}</span>
     </div>
   )
 }
 
-export default function KalkulackaInteraktivni({ children }: { children: ReactNode }) {
+export default function KalkulackaInteraktivni({ uvod, children }: { uvod?: ReactNode; children: ReactNode }) {
   const [n, setN] = useState('550')
   const [w, setW] = useState('200')
   const [hpp, setHpp] = useState('90')
@@ -81,39 +81,55 @@ export default function KalkulackaInteraktivni({ children }: { children: ReactNo
 
   return (
     <>
-      <section aria-label="Kalkulačka" style={{ padding: '56px 0 96px', background: '#FFFFFF' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(420px, 100%), 1fr))', gap: '32px', alignItems: 'start' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '26px', padding: '32px', border: '1px solid #DCE3E9', borderRadius: '14px', background: '#F5F8FA' }}>
-            <h2 style={{ margin: 0, fontSize: '1.4rem', fontWeight: 700 }}>Váš provoz</h2>
-            <Field id="k-n" label="Počet lidí ve směnách" hint="Všichni, kterým se plánují směny, včetně brigádníků." value={n} onChange={setN} min={10} max={3000} step={10} unit="lidí" />
-            <Field id="k-w" label="Průměrné hodinové mzdové náklady" hint="Mzda včetně odvodů zaměstnavatele, průměr za všechny lidi ve směnách." value={w} onChange={setW} min={120} max={600} step={5} unit="Kč/h" />
-            <Field id="k-h" label="Podíl zaměstnanců na HPP" hint="Zbytek jsou DPP, DPČ a další zkrácené úvazky." value={hpp} onChange={setHpp} min={0} max={100} step={5} unit="%" />
-            <Field id="k-m" label="Počet vedoucích, kteří plánují směny" hint="Vedoucí směn, prodejen, týmů nebo plánovači." value={m} onChange={setM} min={1} max={100} step={1} unit="lidí" />
-          </div>
-          <div aria-live="polite" style={{ display: 'flex', flexDirection: 'column', gap: '22px', padding: '32px', borderRadius: '14px', background: '#0E1A24', color: '#FFFFFF' }}>
-            <span style={{ fontFamily: MONO, fontSize: '13px', letterSpacing: '0.06em', textTransform: 'uppercase', color: '#C3CED7' }}>Odhad roční úspory</span>
-            <span style={{ fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', fontWeight: 700, letterSpacing: '-0.02em', lineHeight: 1.05, color: '#FF8A2B' }}>{r.total}</span>
-            <p style={{ margin: 0, fontSize: '15px', color: '#C3CED7' }}>Rozpětí od opatrného po realistický odhad. Měsíčně zhruba {r.month}.</p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '18px', paddingTop: '20px', borderTop: '1px solid rgba(255, 255, 255, 0.16)' }}>
-              {r.areas.map((a) => (
-                <div key={a.title} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '12px', fontSize: '15.5px' }}>
-                    <span style={{ fontWeight: 600 }}>{a.title}</span>
-                    <span style={{ fontFamily: MONO, fontSize: '14px', whiteSpace: 'nowrap' }}>{a.range}</span>
-                  </div>
-                  <div aria-hidden="true" style={{ position: 'relative', height: '10px', borderRadius: '5px', background: 'rgba(255, 255, 255, 0.1)' }}>
-                    <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, borderRadius: '5px', background: 'rgba(255, 138, 43, 0.45)', width: a.hiW }} />
-                    <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, borderRadius: '5px', background: '#FF8A2B', width: a.loW }} />
-                  </div>
-                </div>
-              ))}
+      {/* První obrazovka: nadpis a celá kalkulačka (zadání i výsledek) najednou */}
+      <section aria-label="Kalkulačka" style={{ backgroundColor: '#F5F8FA', backgroundImage: 'linear-gradient(#E3EAF0 1px, transparent 1px), linear-gradient(90deg, #E3EAF0 1px, transparent 1px)', backgroundSize: '32px 32px', borderBottom: '1px solid #E3E8ED' }}>
+        <div className="kalk-sekce" style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', flexDirection: 'column' }}>
+          <div className="kalk-uvod" style={{ display: 'flex', flexDirection: 'column' }}>{uvod}</div>
+          <div className="kalk-mrizka" style={{ display: 'grid', gap: '20px', alignItems: 'stretch' }}>
+            <div className="kalk-panel" style={{ display: 'flex', flexDirection: 'column', gap: '14px', border: '1px solid #DCE3E9', borderRadius: '14px', background: '#FFFFFF' }}>
+              <h2 style={{ margin: 0, fontSize: '1.15rem', fontWeight: 700 }}>Váš provoz</h2>
+              <div className="kalk-pole" style={{ display: 'grid', gap: '16px 22px' }}>
+                <Field id="k-n" label="Počet lidí ve směnách" hint="Všichni ve směnách, i brigádníci." value={n} onChange={setN} min={10} max={3000} step={10} unit="lidí" />
+                <Field id="k-w" label="Hodinové mzdové náklady" hint="Průměr včetně odvodů zaměstnavatele." value={w} onChange={setW} min={120} max={600} step={5} unit="Kč/h" />
+                <Field id="k-h" label="Podíl zaměstnanců na HPP" hint="Zbytek jsou DPP, DPČ a zkrácené úvazky." value={hpp} onChange={setHpp} min={0} max={100} step={5} unit="%" />
+                <Field id="k-m" label="Vedoucí, kteří plánují směny" hint="Vedoucí směn, prodejen nebo plánovači." value={m} onChange={setM} min={1} max={100} step={1} unit="lidí" />
+              </div>
+              <a href="#jak-pocitame" className="kalk-nizko-skryt" style={{ marginTop: 'auto', paddingTop: '12px', borderTop: '1px solid #E3E8ED', fontSize: '14px', fontWeight: 600 }}>Jak kalkulačka počítá a s jakými předpoklady ↓</a>
+              {/* Na mobilu zůstane souhrn při vyplňování přichycený dole na obrazovce */}
+              <a href="#k-vysledek" className="kalk-lista" style={{ alignItems: 'center', justifyContent: 'space-between', gap: '12px', margin: '4px -4px -4px', padding: '12px 16px', borderRadius: '10px', background: '#0E1A24', color: '#FFFFFF', textDecoration: 'none', boxShadow: '0 -8px 24px -12px rgba(14, 26, 36, 0.4)' }}>
+                <span style={{ fontSize: '13.5px', color: '#C3CED7' }}>Odhad roční úspory</span>
+                <span style={{ fontWeight: 700, fontSize: '17px', color: '#FF8A2B', whiteSpace: 'nowrap' }}>{r.total} ↓</span>
+              </a>
             </div>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 18px', fontSize: '13px', color: '#C3CED7' }}>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}><span aria-hidden="true" style={{ width: '14px', height: '8px', borderRadius: '3px', background: '#FF8A2B' }} />opatrný odhad</span>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}><span aria-hidden="true" style={{ width: '14px', height: '8px', borderRadius: '3px', background: 'rgba(255, 138, 43, 0.45)' }} />realistický odhad</span>
+            <div id="k-vysledek" aria-live="polite" className="kalk-panel" style={{ display: 'flex', flexDirection: 'column', gap: '12px', borderRadius: '14px', background: '#0E1A24', color: '#FFFFFF' }}>
+              <span style={{ fontFamily: MONO, fontSize: '12.5px', letterSpacing: '0.06em', textTransform: 'uppercase', color: '#C3CED7' }}>Odhad roční úspory</span>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                <span className="kalk-celkem" style={{ fontWeight: 700, letterSpacing: '-0.02em', lineHeight: 1.05, color: '#FF8A2B' }}>{r.total}</span>
+                <span style={{ fontSize: '13.5px', color: '#C3CED7' }}>Od opatrného po realistický odhad, měsíčně zhruba {r.month}.</span>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', paddingTop: '14px', borderTop: '1px solid rgba(255, 255, 255, 0.16)' }}>
+                {r.areas.map((a) => (
+                  <div key={a.title} style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '12px', fontSize: '14.5px' }}>
+                      <span style={{ fontWeight: 600 }}>{a.title}</span>
+                      <span style={{ fontFamily: MONO, fontSize: '13px', whiteSpace: 'nowrap' }}>{a.range}</span>
+                    </div>
+                    <div aria-hidden="true" style={{ position: 'relative', height: '8px', borderRadius: '4px', background: 'rgba(255, 255, 255, 0.1)' }}>
+                      <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, borderRadius: '4px', background: 'rgba(255, 138, 43, 0.45)', width: a.hiW }} />
+                      <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, borderRadius: '4px', background: '#FF8A2B', width: a.loW }} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="kalk-nizko-skryt" style={{ display: 'flex', flexWrap: 'wrap', gap: '6px 18px', fontSize: '12.5px', color: '#C3CED7' }}>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}><span aria-hidden="true" style={{ width: '14px', height: '8px', borderRadius: '3px', background: '#FF8A2B' }} />opatrný odhad</span>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}><span aria-hidden="true" style={{ width: '14px', height: '8px', borderRadius: '3px', background: 'rgba(255, 138, 43, 0.45)' }} />realistický odhad</span>
+              </div>
+              <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '10px 16px', marginTop: 'auto' }}>
+                <a href="#business-case" style={{ display: 'inline-flex', alignItems: 'center', minHeight: '44px', padding: '0 20px', borderRadius: '8px', background: '#FFFFFF', color: '#0E1A24', fontWeight: 600, fontSize: '15.5px', textDecoration: 'none' }}>Chci business case na míru</a>
+                <span className="kalk-nizko-skryt" style={{ flex: '1 1 220px', fontSize: '12.5px', lineHeight: 1.4, color: '#C3CED7' }}>Víkendové příplatky, agenturní pracovníky a riziko pokut spočítáme v business casu.</span>
+              </div>
             </div>
-            <p style={{ margin: 0, fontSize: '13.5px', color: '#C3CED7' }}>Odhad počítá s předpoklady, které používáme v nabídkách. Skutečná úspora závisí na vašem provozu. Víkendové příplatky, agenturní pracovníky a riziko pokut spočítáme v business casu.</p>
-            <a href="#business-case" style={{ alignSelf: 'flex-start', display: 'inline-flex', alignItems: 'center', minHeight: '48px', padding: '0 22px', borderRadius: '8px', background: '#FFFFFF', color: '#0E1A24', fontWeight: 600, fontSize: '16px', textDecoration: 'none' }}>Chci business case na míru</a>
           </div>
         </div>
       </section>
