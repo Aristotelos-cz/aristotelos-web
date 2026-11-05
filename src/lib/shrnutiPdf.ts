@@ -171,13 +171,9 @@ export async function vytvorShrnuti(o: OdhadOboru, datum = new Date(), web = 'ht
   const aktivni = new Set([...o.oblasti, ...o.mimoSoucet].map((a) => a.klic))
   const opory = nast.oblasti.filter((x) => aktivni.has(x.klic) && x.opora)
   nadpis('Z čeho vycházíme')
-  if (opory.length) {
-    for (const x of opory) odstavec(`${x.nazev}: ${x.opora}${x.odkazy.length ? ` Zdroj: ${x.odkazy.map((z) => z.nazev).join(', ')}.` : ''}`, { velikost: 9, barva: INK, radkovani: 1.3 }, 2)
-    if (nast.nastrojText && o.hodnoty.planovani !== 'excel') odstavec(nast.nastrojText, { velikost: 9, barva: TICHA, radkovani: 1.3 }, 3)
-    odstavec(`Odkazy na zdroje najdete na ${web.replace(/^https?:\/\//, '')}${ADRESA[o.obor]}.`, { velikost: 9, barva: TICHA }, 3)
-  } else {
-    odstavec('Z předpokladů, se kterými počítáme v nabídkách. Opatrný odhad počítá s polovičními hodnotami. Měsíční fond pracovní doby: 38 h týdně na HPP a 20 h týdně na zkrácený úvazek.', { velikost: 9.5 }, 4)
-  }
+  for (const x of opory) odstavec(`${x.nazev}: ${x.opora}${x.odkazy.length ? ` Zdroj: ${x.odkazy.map((z) => z.nazev).join(', ')}.` : ''}`, { velikost: 9, barva: INK, radkovani: 1.3 }, 2)
+  if (nast.nastrojText && o.hodnoty.planovani !== 'excel') odstavec(nast.nastrojText, { velikost: 9, barva: TICHA, radkovani: 1.3 }, 3)
+  odstavec(`Odkazy na zdroje najdete na ${web.replace(/^https?:\/\//, '')}${ADRESA[o.obor]}.`, { velikost: 9, barva: TICHA }, 3)
 
   // Co dál
   nadpis('Co dál: business case z vašich čísel')
