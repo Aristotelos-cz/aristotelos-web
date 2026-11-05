@@ -100,7 +100,7 @@ function emailObchod(k: { jmeno: string; firma: string; email: string; telefon: 
   ${upravenePredpoklady(o)}
   <p style="margin: 0 0 8px;">${
     sExcelem
-      ? 'V příloze je komplexní business case předvyplněný těmito údaji (firma, datum, počet lidí, podíl HPP, hodinová mzda, mzda vedoucího jako 1,4násobek a počet vedoucích). Doplňte víkendy, agenturní pracovníky, fluktuaci a ceny.'
+      ? 'V příloze je komplexní business case předvyplněný těmito údaji (firma, datum, počet pracovníků, podíl HPP, hodinová mzda, mzda vedoucího jako 1,4násobek a počet vedoucích). Doplňte víkendy, agenturní pracovníky, fluktuaci a ceny.'
       : 'Údaje výše přepište do komplexního business casu v Excelu (list Vstupy) a doplňte víkendy, agenturní pracovníky, fluktuaci a ceny.'
   }</p>
   <p style="margin: 0; color: #4A5866; font-size: 13px;">Zájemci odešlo automatické potvrzení s jeho odhadem. Odpovědí na tento e-mail píšete přímo jemu.</p>
@@ -115,7 +115,7 @@ function emailZajemce(o: OdhadOboru) {
   ${tabulkaOdhadu(o)}
   <p style="margin: 0 0 6px; font-weight: 600;">Co bude následovat</p>
   <ol style="margin: 0 0 16px; padding-left: 20px;">
-    <li style="margin-bottom: 4px;">Krátce si zavoláme a domluvíme, jaká data budeme potřebovat: počty lidí podle směn a úvazků, mzdové náklady, přesčasy, víkendovou práci a agenturní pracovníky.</li>
+    <li style="margin-bottom: 4px;">Krátce si zavoláme a domluvíme, jaká data budeme potřebovat: počty pracovníků podle směn a úvazků, mzdové náklady, přesčasy, víkendovou práci a agenturní pracovníky.</li>
     <li style="margin-bottom: 4px;">Z vašich čísel připravíme business case ve třech scénářích, s náklady, dobou návratnosti a pětiletým cash flow.</li>
     <li>Výsledek s vámi projdeme, aby ho šlo rovnou předložit vedení.</li>
   </ol>
