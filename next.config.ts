@@ -3,8 +3,10 @@ import type { NextConfig } from 'next'
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   // Šablona Excelu pro business case se čte ze souboru, musí být součástí serverové funkce
+  // Písmo pro shrnutí v PDF se čte také ze souborů
   outputFileTracingIncludes: {
     '/api/business-case': ['./src/assets/business-case-sablona.xlsx'],
+    '/api/shrnuti': ['./src/assets/fonts/*.ttf'],
   },
   async headers() {
     return [
