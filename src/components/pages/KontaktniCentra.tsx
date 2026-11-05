@@ -157,7 +157,7 @@ export default function KontaktniCentraPage() {
 </div>
 <div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Linka i back office v jednom plánu</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Více typů činností v rámci jedné směny, každá se svou předpovědí a potřebou lidí.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Více typů činností v rámci jedné směny, každá se svou předpovědí a potřebou pracovníků.</p>
 </div>
 </div>
 </div>

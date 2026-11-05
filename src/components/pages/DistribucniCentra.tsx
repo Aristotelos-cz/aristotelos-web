@@ -72,7 +72,7 @@ export default function DistribucniCentraPage() {
 </div>
 <div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Spravedlivé noci a víkendy</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Noční, denní i víkendové směny rozdělí mezi lidi rovnoměrně a ukáže to v reportu.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Noční, denní i víkendové směny rozdělí mezi pracovníky rovnoměrně a ukáže to v reportu.</p>
 </div>
 <div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Kdo s kým jezdí do práce</h3>
@@ -103,7 +103,7 @@ export default function DistribucniCentraPage() {
 <span>Případová studie</span>
 </div>
 <h2 style={{ margin: "0", fontSize: "clamp(1.65rem, min(3vw, 4.9vh), 2.6rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Z Excelu na automatický plán ve dvou distribučních centrech</h2>
-<p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Obchodní řetězec plánoval směny pro asi 800 lidí ve dvou distribučních centrech v Excelu. Šlo o dvousměnný provoz se šestitýdenní rotací. Třetina pracovníků byla na smlouvu o dílo, mzdy a výroba běží v SAP.</p>
+<p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Obchodní řetězec plánoval směny pro asi 800 pracovníků ve dvou distribučních centrech v Excelu. Šlo o dvousměnný provoz se šestitýdenní rotací. Třetina z nich byla na smlouvu o dílo, mzdy a výroba běží v SAP.</p>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Vedoucím trval jeden plán 2 až 3 dny a nikdo nekontroloval, jestli splňuje zákoník práce. S AristoTelem trvá 2 až 3 hodiny.</p>
 </div>
 <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>

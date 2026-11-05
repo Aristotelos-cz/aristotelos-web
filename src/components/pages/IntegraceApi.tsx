@@ -156,7 +156,7 @@ export default function IntegraceApiPage() {
 </div>
 <div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Pokladní a obchodní systémy</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Návštěvnost a prodeje po prodejnách jako podklad pro předpověď potřeby lidí.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Návštěvnost a prodeje po prodejnách jako podklad pro předpověď potřeby pracovníků.</p>
 </div>
 <div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Docházkové systémy</h3>

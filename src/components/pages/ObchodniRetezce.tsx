@@ -29,15 +29,15 @@ export default function ObchodniRetezcePage() {
 <div style={{ display: "flex", flexDirection: "column" }}>
 <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1.6fr)", gap: "12px", padding: "12px 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px", alignItems: "baseline" }}>
 <span style={{ fontWeight: "600" }}>Albert ČR</span>
-<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 17 000 lidí · 350 prodejen · 3 DC</span>
+<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 17 000 pracovníků · 350 prodejen · 3 DC</span>
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1.6fr)", gap: "12px", padding: "12px 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px", alignItems: "baseline" }}>
 <span style={{ fontWeight: "600" }}>Benu Lékárny</span>
-<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 2 500 lidí · 350 lékáren</span>
+<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 2 500 pracovníků · 350 lékáren</span>
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1.6fr)", gap: "12px", padding: "12px 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px", alignItems: "baseline" }}>
 <span style={{ fontWeight: "600" }}>T-Mobile</span>
-<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 250 lidí ve značkových prodejnách</span>
+<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 250 pracovníků ve značkových prodejnách</span>
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1.6fr)", gap: "12px", padding: "12px 0", fontSize: "15px", alignItems: "baseline" }}>
 <span style={{ fontWeight: "600" }}>Sconto Nábytek</span>
@@ -99,7 +99,7 @@ export default function ObchodniRetezcePage() {
 </div>
 <div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Výpomoc mezi prodejnami</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Přehled volných lidí ze sousedních poboček a směna na jiné prodejně na pár kliknutí.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Přehled volných pracovníků ze sousedních poboček a směna na jiné prodejně na pár kliknutí.</p>
 </div>
 <div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Sezóna a vyrovnávací období</h3>
@@ -207,7 +207,7 @@ export default function ObchodniRetezcePage() {
 <div style={{ border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(18px, 3vh, 32px)", display: "flex", flexDirection: "column", gap: "14px" }}>
 <img src="/logos/benu.svg" alt="Benu Lékárny" style={{ height: "34px", width: "auto", alignSelf: "flex-start" }} loading="lazy" />
 <h3 style={{ margin: "0", fontSize: "1.3rem", fontWeight: "600" }}>Lékárny</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Benu plánuje s AristoTelem směny asi 2 500 lidí ve 350 lékárnách, napojeně na své interní systémy. Plán počítá s recepty, volným prodejem, závozy i počtem pokladních míst.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Benu plánuje s AristoTelem směny asi 2 500 pracovníků ve 350 lékárnách, napojeně na své interní systémy. Plán počítá s recepty, volným prodejem, závozy i počtem pokladních míst.</p>
 </div>
 <div style={{ border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(18px, 3vh, 32px)", display: "flex", flexDirection: "column", gap: "14px" }}>
 <img src="/logos/sconto.svg" alt="Sconto Nábytek" style={{ height: "40px", width: "auto", alignSelf: "flex-start" }} loading="lazy" />
@@ -217,7 +217,7 @@ export default function ObchodniRetezcePage() {
 <div style={{ border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(18px, 3vh, 32px)", display: "flex", flexDirection: "column", gap: "14px", background: "#0E1A24", color: "#FFFFFF" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "2.2rem", fontWeight: "600", lineHeight: "1", color: "#FF8A2B" }}>2–3 h</span>
 <h3 style={{ margin: "0", fontSize: "1.3rem", fontWeight: "600" }}>Distribuční centra</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#C3CED7" }}>Ve dvou distribučních centrech obchodního řetězce s 800 lidmi trvá plán směn 2 až 3 hodiny místo 2 až 3 dnů v Excelu.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#C3CED7" }}>Ve dvou distribučních centrech obchodního řetězce s 800 pracovníky trvá plán směn 2 až 3 hodiny místo 2 až 3 dnů v Excelu.</p>
 </div>
 </div>
 </section>

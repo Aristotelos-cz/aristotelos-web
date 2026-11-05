@@ -18,7 +18,7 @@ export default function EnergetikaTelcoPage() {
 <span>Řešení pro energetiku a telekomunikace</span>
 </div>
 <h1 className="hero-h1-stranka" style={{ margin: "0", lineHeight: "1.04", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Kontaktní centra, kanceláře i prodejny v jednom plánu</h1>
-<p style={{ margin: "0", fontSize: "1.2rem", color: "#33424F", maxWidth: "34em" }}>Zákazníci energetických a telekomunikačních firem volají na linku, chodí do zákaznických kanceláří i do značkových prodejen. AristoTelos naplánuje lidi ve všech třech kanálech v jednom systému, podle předpovědi poptávky a vždy v souladu se zákoníkem práce.</p>
+<p style={{ margin: "0", fontSize: "1.2rem", color: "#33424F", maxWidth: "34em" }}>Zákazníci energetických a telekomunikačních firem volají na linku, chodí do zákaznických kanceláří i do značkových prodejen. AristoTelos naplánuje pracovníky ve všech třech kanálech v jednom systému, podle předpovědi poptávky a vždy v souladu se zákoníkem práce.</p>
 <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
 <a href="#demo" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 26px", borderRadius: "8px", background: "#0072A3", color: "#FFFFFF", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Domluvit ukázku</a>
 <a href="#reference" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 24px", borderRadius: "8px", background: "#FFFFFF", border: "1px solid #C5D0D9", color: "#0E1A24", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Zkušenost T-Mobile</a>
@@ -29,7 +29,7 @@ export default function EnergetikaTelcoPage() {
 <div style={{ display: "flex", flexDirection: "column" }}>
 <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.1fr) minmax(0, 1.4fr) minmax(0, 1fr)", gap: "12px", padding: "0 0 8px", borderBottom: "1px solid #D5DEE6", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "12px", color: "#4A5866", letterSpacing: "0.04em", textTransform: "uppercase" }}>
 <span>Klient</span>
-<span>Lidé v plánu</span>
+<span>Pracovníci v plánu</span>
 <span>Napojení</span>
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.1fr) minmax(0, 1.4fr) minmax(0, 1fr)", gap: "12px", padding: "12px 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px", alignItems: "baseline" }}>
@@ -77,7 +77,7 @@ export default function EnergetikaTelcoPage() {
 <span>Tři kanály, jeden systém</span>
 </div>
 <h2 id="et-kanaly" style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Každý kanál má svá pravidla. Plán je jeden.</h2>
-<p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Linka se plánuje po 15 minutách, kancelář podle otevírací doby, prodejna podle návštěvnosti a prodejních cílů. AristoTelos to zvládne najednou, s jedněmi daty o lidech a jednou docházkou.</p>
+<p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Linka se plánuje po 15 minutách, kancelář podle otevírací doby, prodejna podle návštěvnosti a prodejních cílů. AristoTelos to zvládne najednou, s jedněmi daty o pracovnících a jednou docházkou.</p>
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(330px, 100%), 1fr))", gap: "20px" }}>
 <div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(18px, 3vh, 32px)", display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -185,7 +185,7 @@ export default function EnergetikaTelcoPage() {
 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(340px, 100%), 1fr))", gap: "20px" }}>
 <div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Špičky po vyúčtování a změnách cen</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Předpověď z historie odhalí, kdy poptávka vyskočí, a naplánuje na ni lidi dřív, než začnou zákazníci čekat.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Předpověď z historie odhalí, kdy poptávka vyskočí, a naplánuje na ni pracovníky dřív, než začnou zákazníci čekat.</p>
 </div>
 <div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Různé úvazky a pravidla v každém kanálu</h3>
@@ -200,7 +200,7 @@ export default function EnergetikaTelcoPage() {
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Odpracované hodiny a výkon jako podklad pro mzdy a odměny, bez ručního přepisování.</p>
 </div>
 <div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
-<h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Lidé v terénu a na pobočkách</h3>
+<h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Pracovníci v terénu a na pobočkách</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Rozpis, výměny směn, přání a docházka v mobilní aplikaci pro iOS a Android.</p>
 </div>
 <div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -224,7 +224,7 @@ export default function EnergetikaTelcoPage() {
 <span>Reference</span>
 </div>
 <h2 style={{ margin: "0", fontSize: "clamp(1.65rem, min(3vw, 4.9vh), 2.6rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Docházka, ze které se dá počítat výkon</h2>
-<p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>T-Mobile plánuje v AristoTelu asi 450 lidí v kontaktním centru a 250 konzultantů ve značkových prodejnách. Data z ústředny Sprinkl jdou do předpovědi, docházka a podklady pro mzdy do SAP.</p>
+<p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>T-Mobile plánuje v AristoTelu asi 450 pracovníků v kontaktním centru a 250 konzultantů ve značkových prodejnách. Data z ústředny Sprinkl jdou do předpovědi, docházka a podklady pro mzdy do SAP.</p>
 <figure style={{ margin: "8px 0 0", display: "flex", flexDirection: "column", gap: "14px", padding: "24px", background: "#F5F8FA", border: "1px solid #DCE3E9", borderRadius: "14px" }}>
 <blockquote style={{ margin: "0", fontSize: "1.15rem", lineHeight: "1.5", fontWeight: "500" }}>„… dle docházky dokážeme počítat efektivitu našich konzultantů na prodejnách nebo dopočítat výsledek plnění prodeje podle naplánované docházky …“</blockquote>
 <figcaption style={{ fontSize: "14.5px", color: "#4A5866" }}>
@@ -243,7 +243,7 @@ export default function EnergetikaTelcoPage() {
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>≈ 450 lidí v kontaktním centru</span>
+<span>≈ 450 pracovníků v kontaktním centru</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
@@ -272,14 +272,14 @@ export default function EnergetikaTelcoPage() {
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>≈ 500 lidí v kontaktním centru</span>
+<span>≈ 500 pracovníků v kontaktním centru</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>≈ 200 lidí v zákaznických kancelářích</span>
+<span>≈ 200 pracovníků v zákaznických kancelářích</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
