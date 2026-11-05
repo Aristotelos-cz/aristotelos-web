@@ -17,6 +17,8 @@ import ReferencePage from '@/components/pages/Reference'
 import BezpecnostPage from '@/components/pages/Bezpecnost'
 import ONasPage from '@/components/pages/ONas'
 import KalkulackaPage from '@/components/pages/Kalkulacka'
+import KalkulackaKontaktniCentrumPage from '@/components/pages/KalkulackaKontaktniCentrum'
+import KalkulackaRetailPage from '@/components/pages/KalkulackaRetail'
 import OchranaUdajuPage from '@/components/pages/OchranaUdaju'
 
 // Všechny stránky webu: adresa → komponenta
@@ -34,6 +36,8 @@ const COMPONENTS: Record<string, ComponentType> = {
   '/bezpecnost': BezpecnostPage,
   '/o-nas': ONasPage,
   '/kalkulacka-uspor': KalkulackaPage,
+  '/kalkulacka-uspor/kontaktni-centrum': KalkulackaKontaktniCentrumPage,
+  '/kalkulacka-uspor/retail': KalkulackaRetailPage,
   '/ochrana-osobnich-udaju': OchranaUdajuPage,
 }
 
