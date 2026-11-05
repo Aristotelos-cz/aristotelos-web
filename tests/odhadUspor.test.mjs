@@ -58,7 +58,7 @@ test('retail, úspora času vedoucího nejvýš zadaný čas, doplňky a tržby 
   blizko(oblast(o, 'vedouci').hi, 1_092_000, 'strop hi')
   assert.equal(o.poznamka, 'Každý vedoucí získá zpět 1,5 h týdně pro zákazníky a tým.')
 
-  const d = spocitejObor('retail', { predpoklady: { fluktuace: 40, trzby: 20 } })
+  const d = spocitejObor('retail', { hodnoty: { fluktuace: 40 }, predpoklady: { trzby: 20 } })
   // 600 lidí × 40 % × 10 % × 15 % × (34 h × 52 × 200 Kč)
   blizko(oblast(d, 'fluktuace').lo, 1_272_960, 'fluktuace lo')
   blizko(oblast(d, 'fluktuace').hi, 3_182_400, 'fluktuace hi')
@@ -71,25 +71,29 @@ test('retail, úspora času vedoucího nejvýš zadaný čas, doplňky a tržby 
   blizko(n.lo, (1_456_000 + 4_243_200) / 2, 'jiný nástroj: polovina')
 })
 
-test('obecná kalkulačka počítá stejně jako původní', () => {
-  // Původní vzorce z kalkulátoru pro nabídky
-  const puvodni = (N, W, hpp, M) => {
-    const H = hpp / 100
-    const fond = (H * 38 + (1 - H) * 20) * 4.345
-    return [
-      [N * fond * W * 0.005 * 0.7 * 12, N * fond * W * 0.01 * 0.7 * 12],
-      [N * H * (0.05 * W * 1.25 + 0.005 * W) * 12, N * H * (0.1 * W * 1.25 + 0.01 * W) * 12],
-      [M * 16 * W * 1.4 * 12, M * 32 * W * 1.4 * 12],
-      [N * 0.01 * 30000, N * 0.02 * 30000],
-    ]
-  }
-  for (const [N, W, hpp, M] of [[550, 200, 90, 5], [120, 310, 40, 12]]) {
-    const o = spocitejObor('obecny', { hodnoty: { lide: N, mzda: W, hpp, vedouci: M } })
-    puvodni(N, W, hpp, M).forEach(([lo, hi], i) => {
-      blizko(o.oblasti[i].lo, lo, `oblast ${i} lo`)
-      blizko(o.oblasti[i].hi, hi, `oblast ${i} hi`)
-    })
-  }
+test('kontaktní centrum, čas plánovače a ostatní náklady', () => {
+  // Čas plánovače na rozpisy 4 h: ušetří se nejvýš 4 h místo 6 h
+  const c = spocitejObor('kontaktni-centrum', { hodnoty: { hodinyPlanovani: 4 } })
+  blizko(oblast(c, 'planovaci').lo, 218_400, 'plánovači lo beze změny (3 h)')
+  blizko(oblast(c, 'planovaci').hi, 5 * 4 * 200 * 1.4 * 52, 'plánovači hi omezeno na 4 h')
+  // Ostatní náklady 5 000 Kč měsíčně: 100 × 60 000 Kč × 50 % / 100 % × 3 % / 5 %
+  const o = spocitejObor('kontaktni-centrum', { hodnoty: { ostatniNaklady: 5000 } })
+  blizko(oblast(o, 'intervaly').lo, 1_185_600 + 90_000, 'intervaly lo s polovinou ostatních nákladů')
+  blizko(oblast(o, 'intervaly').hi, 1_976_000 + 300_000, 'intervaly hi s celými ostatními náklady')
+  blizko(oblast(o, 'fluktuace').lo, 355_680, 'fluktuace se nemění')
+  assert.match(o.poznamka, /^Odpovídá to nákladům na /)
+  assert.ok(spocitejObor('kontaktni-centrum').zadani.some((r) => r.hodnota === 'nezadáno'), 'ostatní náklady 0 = nezadáno')
+})
+
+test('retail, fluktuace v zadání a ostatní náklady', () => {
+  const f = spocitejObor('retail', { hodnoty: { fluktuace: 40 } })
+  blizko(oblast(f, 'fluktuace').lo, 1_272_960, 'fluktuace lo')
+  blizko(oblast(f, 'fluktuace').hi, 3_182_400, 'fluktuace hi')
+  // Ostatní náklady 2 000 Kč měsíčně: 600 lidí × 24 000 Kč × 50 % / 100 % × 2 % / 4 %
+  const o = spocitejObor('retail', { hodnoty: { ostatniNaklady: 2000 } })
+  blizko(oblast(o, 'hodiny').lo, 4_243_200 + 144_000, 'hodiny lo s polovinou ostatních nákladů')
+  blizko(oblast(o, 'hodiny').hi, 8_486_400 + 576_000, 'hodiny hi s celými ostatními náklady')
+  blizko(oblast(o, 'vedouci').lo, 1_456_000, 'čas vedoucích se nemění')
 })
 
 test('neplatné vstupy se opraví na povolené hodnoty', () => {
@@ -111,5 +115,4 @@ test('neplatné vstupy se opraví na povolené hodnoty', () => {
 test('údaje pro Excel', () => {
   assert.deepEqual(vstupyProExcel(spocitejObor('kontaktni-centrum')), { lide: 100, mzda: 200, hppProcent: 100, vedouci: 5 })
   assert.deepEqual(vstupyProExcel(spocitejObor('retail')), { lide: 600, mzda: 200, hppProcent: 78, vedouci: 50 })
-  assert.deepEqual(vstupyProExcel(spocitejObor('obecny')), { lide: 550, mzda: 200, hppProcent: 90, vedouci: 5 })
 })
