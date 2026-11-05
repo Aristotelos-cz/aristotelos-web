@@ -151,8 +151,12 @@
   ],
   "/kalkulacka-uspor": [
     {
+      "q": "Kterou kalkulačku vybrat?",
+      "a": "Kontaktní centra, včetně bank, pojišťoven a energetiky, vyberou kalkulačku pro kontaktní centra. Obchodní řetězce a lékárny kalkulačku pro retail. U skladů a dalších provozů spočítáme úsporu s vámi v business casu."
+    },
+    {
       "q": "Jak přesný je odhad?",
-      "a": "Je to orientační odhad z průměrných předpokladů. Přesná čísla spočítáme v business casu z dat o vašem provozu."
+      "a": "Je to orientační rozpětí od opatrného po realistický odhad z veřejných studií a benchmarků. Přesná čísla spočítáme v business casu z dat o vašem provozu."
     },
     {
       "q": "Proč kalkulačka nepočítá s cenou AristoTela?",
@@ -160,7 +164,7 @@
     },
     {
       "q": "Co když nemám všechna čísla?",
-      "a": "Stačí odhad. Chybějící údaje doplníme spolu při přípravě business casu."
+      "a": "Stačí odhad. Kde údaj neznáte, nechte výchozí hodnotu nebo 0 = nevím. Chybějící údaje doplníme spolu při přípravě business casu."
     }
   ],
   "/kalkulacka-uspor/kontaktni-centrum": [
