@@ -62,7 +62,7 @@ export default function OchranaUdajuPage() {
 <li>jméno a příjmení, firmu, pracovní e-mail a telefon,</li>
 <li>odvětví a přibližný počet lidí ve směnách,</li>
 <li>text zprávy, pokud ji napíšete,</li>
-<li>u business casu a shrnutí v PDF čísla, která zadáte do kalkulačky úspor: například počet lidí, prodejen nebo operátorů, průměrné hodinové mzdové náklady, fluktuaci a počet vedoucích.</li>
+<li>u business casu a shrnutí v PDF čísla, která zadáte do kalkulačky úspor: například počet pracovníků, prodejen nebo operátorů, průměrné hodinové mzdové náklady, fluktuaci a počet vedoucích.</li>
 </ul>
 <p style={{ margin: "0", color: "#33424F" }}>Dále údaje z e-mailové a telefonické komunikace s námi a <mark style={{ background: "#FFF1D6", color: "#7A4A12", padding: "1px 4px", borderRadius: "4px" }}>[technické údaje podle nastavení měření návštěvnosti]</mark>.</p>
 </section>
