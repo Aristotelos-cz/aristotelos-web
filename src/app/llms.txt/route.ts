@@ -9,7 +9,7 @@ export function GET() {
     .join('\n')
   const body = `# AristoTelos
 
-> AristoTelos je český software pro automatické plánování směn a evidenci docházky (workforce management). Plán směn sestaví za hodiny místo dnů a vždy dodrží zákoník práce. Vyvíjí ho firma Matematické a Statistické Projekty a Software s.r.o. v Praze od roku 2009. Používají ho Albert, Benu, ČSOB, T-Mobile, innogy, Kooperativa a další; plánuje směny pro více než 20 000 lidí v Česku a na Slovensku.
+> AristoTelos je český software pro automatické plánování směn a evidenci docházky (workforce management). Plán směn sestaví za hodiny místo dnů a vždy dodrží zákoník práce. Vyvíjí ho firma Matematické a Statistické Projekty a Software s.r.o. v Praze od roku 2009. Používají ho Albert, Benu, ČSOB, T-Mobile, innogy, Kooperativa a další; plánuje směny pro více než 20 000 pracovníků v Česku a na Slovensku.
 
 Klíčová fakta:
 - Předpověď objemu práce po 15, 30 nebo 60 minutách, automatické plánování směn matematickým modelem, přání zaměstnanců, řízení provozu, docházka a podklady pro mzdy.
