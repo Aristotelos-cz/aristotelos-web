@@ -91,7 +91,7 @@ const ps = (k: Kontext, klic: string, s: 0 | 1) => k.p[klic]?.[s] ?? 0
 const PRESCAS_OPORA = 'Případové studie dodavatelů uvádějí pokles přesčasů o 16–70 %, nezávislý zdroj chybí. Proto jen volitelně a opatrně.'
 /** Ostatní náklady na zaměstnance (místo, technika, licence, benefity) se připočítají k ušetřeným hodinám. Opatrně polovina, realisticky celé. */
 const PODIL_OSTATNICH: Predpoklad = { klic: 'podilOstatnich', label: 'Započtené ostatní náklady', jednotka: '%', min: 0, max: 100, krok: 10, opatrne: 50, realisticky: 100, napoveda: 'jen když jsou zadané' }
-const OSTATNI_OPORA = ' Ostatní náklady na zaměstnance počítáme opatrně z poloviny: místo nebo počítač ušetříte, jen když opravdu ubyde lidí.'
+const OSTATNI_OPORA = ' Ostatní náklady na zaměstnance počítáme opatrně z poloviny: místo nebo počítač ušetříte, jen když opravdu ubyde pracovníků.'
 
 // ----- Kontaktní centrum -----
 const ROK_H = FOND_HPP * TYDNU_V_ROCE // 1 976 h ročně na plný úvazek
@@ -110,7 +110,7 @@ const KONTAKTNI_CENTRUM: Nastaveni = {
     MZDA,
     { typ: 'cislo', klic: 'ostatniNaklady', label: 'Ostatní náklady na operátora', napoveda: 'Místo, technika, licence, benefity.', jednotka: 'Kč/měsíc', min: 0, max: 50000, krok: 500, vychozi: 5500, posuvnik: 20000 },
     { typ: 'cislo', klic: 'fluktuace', label: 'Roční fluktuace operátorů', napoveda: 'Odchody za rok, běžně 23–38 %.', jednotka: '%', min: 0, max: 100, krok: 1, vychozi: 30 },
-    { typ: 'cislo', klic: 'planovaci', label: 'Plánovači a team leadeři', napoveda: 'Ti, kdo sestavují a mění rozpisy.', jednotka: 'lidí', min: 1, max: 500, krok: 1, vychozi: 5, posuvnik: 60 },
+    { typ: 'cislo', klic: 'planovaci', label: 'Plánovači a team leadeři', napoveda: 'Ti, kdo sestavují a mění rozpisy.', jednotka: 'pracovníků', min: 1, max: 500, krok: 1, vychozi: 5, posuvnik: 60 },
     { typ: 'cislo', klic: 'hodinyPlanovani', label: 'Čas plánovače na rozpisy', napoveda: 'Za týden, včetně volna a výměn směn.', jednotka: 'h týdně', min: 0.5, max: 40, krok: 0.5, vychozi: 8, posuvnik: 40 },
     {
       typ: 'volba', klic: 'planovani', label: 'Dnes plánujete', vychozi: 'excel',
@@ -181,11 +181,11 @@ const RETAIL: Nastaveni = {
   nastrojText: 'Když už plánujete v jiném nástroji, počítáme s poloviční úsporou ve všech oblastech. Mzdové náklady vedoucího prodejny jsou 1,4násobek průměru.',
   pole: [
     { typ: 'cislo', klic: 'prodejny', label: 'Počet prodejen', napoveda: 'Prodejny nebo lékárny.', jednotka: 'prodejen', min: 1, max: 5000, krok: 1, vychozi: 50, posuvnik: 600 },
-    { typ: 'cislo', klic: 'lide', label: 'Lidí na prodejnu', napoveda: 'Průměrně, včetně brigádníků.', jednotka: 'lidí', min: 1, max: 500, krok: 1, vychozi: 12, posuvnik: 60 },
+    { typ: 'cislo', klic: 'lide', label: 'Pracovníků na prodejnu', napoveda: 'Průměrně, včetně brigádníků.', jednotka: 'pracovníků', min: 1, max: 500, krok: 1, vychozi: 12, posuvnik: 60 },
     MZDA,
     { typ: 'cislo', klic: 'ostatniNaklady', label: 'Ostatní náklady na zaměstnance', napoveda: 'Oblečení, benefity, školení, technika.', jednotka: 'Kč/měsíc', min: 0, max: 50000, krok: 500, vychozi: 5500, posuvnik: 20000 },
     { typ: 'cislo', klic: 'hodinyVedouci', label: 'Čas vedoucího na rozpisy', napoveda: 'Plánování a změny směn za týden.', jednotka: 'h týdně', min: 0.5, max: 40, krok: 0.5, vychozi: 4, posuvnik: 20 },
-    { typ: 'cislo', klic: 'fluktuace', label: 'Roční fluktuace', napoveda: 'Kolik lidí za rok odejde.', jednotka: '%', min: 0, max: 200, krok: 1, vychozi: 15, posuvnik: 100 },
+    { typ: 'cislo', klic: 'fluktuace', label: 'Roční fluktuace', napoveda: 'Kolik pracovníků za rok odejde.', jednotka: '%', min: 0, max: 200, krok: 1, vychozi: 15, posuvnik: 100 },
     {
       typ: 'volba', klic: 'planovani', label: 'Dnes plánujete', vychozi: 'excel',
       moznosti: [
@@ -197,10 +197,10 @@ const RETAIL: Nastaveni = {
   predpoklady: [
     { klic: 'hodinyVedouciho', label: 'Ušetřený čas vedoucího týdně', jednotka: 'h', min: 0, max: 40, krok: 0.5, opatrne: 2, realisticky: 3, napoveda: 'nejvýš zadaný čas na rozpisy' },
     { klic: 'usporaHodin', label: 'Úspora odpracovaných hodin', jednotka: '%', min: 0, max: 20, krok: 0.5, opatrne: 2, realisticky: 4 },
-    { klic: 'uvazek', label: 'Průměrný úvazek na člověka', jednotka: 'h týdně', min: 4, max: 48, krok: 1, opatrne: 34, realisticky: 34, jedna: true, napoveda: 'plný úvazek 38 h, část lidí má zkrácený' },
+    { klic: 'uvazek', label: 'Průměrný úvazek na pracovníka', jednotka: 'h týdně', min: 4, max: 48, krok: 1, opatrne: 34, realisticky: 34, jedna: true, napoveda: 'plný úvazek 38 h, část pracovníků má zkrácený' },
     PODIL_OSTATNICH,
     { klic: 'poklesFluktuace', label: 'Pokles fluktuace', jednotka: '%', min: 0, max: 60, krok: 1, opatrne: 10, realisticky: 15 },
-    { klic: 'nahrazeni', label: 'Nahrazení člověka (z roční mzdy)', jednotka: '%', min: 0, max: 150, krok: 5, opatrne: 15, realisticky: 25 },
+    { klic: 'nahrazeni', label: 'Nahrazení pracovníka (z roční mzdy)', jednotka: '%', min: 0, max: 150, krok: 5, opatrne: 15, realisticky: 25 },
     { klic: 'prescasHodiny', label: 'Přesčasové hodiny měsíčně (všechny prodejny)', jednotka: 'h', min: 0, max: 200000, krok: 10, opatrne: 0, realisticky: 0, jedna: true, napoveda: '0 = nepočítat' },
     { klic: 'poklesPrescasu', label: 'Pokles přesčasů', jednotka: '%', min: 0, max: 100, krok: 5, opatrne: 10, realisticky: 20 },
     { klic: 'trzby', label: 'Roční tržby na prodejnu', jednotka: 'mil. Kč', min: 0, max: 10000, krok: 0.5, opatrne: 0, realisticky: 0, jedna: true, napoveda: '0 = nepočítat' },
@@ -220,15 +220,15 @@ const RETAIL: Nastaveni = {
     },
     {
       klic: 'hodiny', nazev: 'Pracovní doba podle návštěvnosti', skupina: 'hlavni', predpoklady: ['usporaHodin', 'uvazek', 'podilOstatnich'],
-      vzorec: 'prodejny × lidé × (úvazek × 52 × Kč/h + ostatní náklady × 12 × podíl) × úspora',
+      vzorec: 'prodejny × pracovníci × (úvazek × 52 × Kč/h + ostatní náklady × 12 × podíl) × úspora',
       opora: 'McKinsey: plánování podle práce ušetří 4–12 % mezd, v pilotu evropského řetězce 6 %. Počítáme pod spodní hranicí.' + OSTATNI_OPORA,
       odkazy: [{ nazev: 'McKinsey 2015', url: 'https://www.mckinsey.com/~/media/McKinsey/Industries/Retail/Our%20Insights/Smarter%20schedules%20better%20budgets%20How%20to%20improve%20store%20operations/Smarter%20schedules%20better%20budgets%20How%20to%20improve%20store%20operations.pdf' }],
       spocti: (k, s) => n(k, 'prodejny') * n(k, 'lide') * (rocniMzdaR(k) + n(k, 'ostatniNaklady') * 12 * (ps(k, 'podilOstatnich', s) / 100)) * (ps(k, 'usporaHodin', s) / 100) * faktorR(k),
     },
     {
       klic: 'fluktuace', nazev: 'Nižší fluktuace', skupina: 'hlavni', predpoklady: ['poklesFluktuace', 'nahrazeni'], neaktivni: 'zadejte fluktuaci nahoře',
-      vzorec: 'lidé × fluktuace × pokles × náklady na nahrazení',
-      opora: 'Shift Project (1 725 lidí v retailu): při rušených směnách odchází 41 % lidí, při stabilních 27 %.',
+      vzorec: 'pracovníci × fluktuace × pokles × náklady na nahrazení',
+      opora: 'Shift Project (1 725 pracovníků v retailu): při rušených směnách odchází 41 % pracovníků, při stabilních 27 %.',
       odkazy: [{ nazev: 'Shift Project', url: 'https://equitablegrowth.org/wp-content/uploads/2019/10/WP-Choper-Schneider-and-Harknett-Uncertain-Time.pdf' }],
       aktivni: (k) => n(k, 'fluktuace') > 0,
       spocti: (k, s) => n(k, 'prodejny') * n(k, 'lide') * (n(k, 'fluktuace') / 100) * (ps(k, 'poklesFluktuace', s) / 100) * (ps(k, 'nahrazeni', s) / 100) * rocniMzdaR(k) * faktorR(k),
@@ -243,7 +243,7 @@ const RETAIL: Nastaveni = {
     {
       klic: 'trzby', nazev: 'Růst tržeb (mimo součet)', skupina: 'doplnek', mimoSoucet: true, predpoklady: ['trzby', 'rustTrzeb'],
       vzorec: 'prodejny × tržby × růst',
-      opora: 'Gap (randomizovaný pokus): +7 % při stabilních rozpisech. Fisher a kol.: +4,5 % s personálem podle prodejny. Prodejny ale zároveň nabíraly lidi, proto jen 0,5–2 % a mimo součet.',
+      opora: 'Gap (randomizovaný pokus): +7 % při stabilních rozpisech. Fisher a kol.: +4,5 % s personálem podle prodejny. Prodejny ale zároveň nabíraly pracovníky, proto jen 0,5–2 % a mimo součet.',
       odkazy: [
         { nazev: 'Gap, University of Chicago', url: 'https://news.uchicago.edu/story/stable-scheduling-increases-sales-and-employee-productivity-study-finds' },
         { nazev: 'Fisher, Gallino, Netessine 2021', url: 'https://ideas.repec.org/a/inm/ormsom/v23y2021i6p1562-1579.html' },
@@ -257,7 +257,7 @@ const RETAIL: Nastaveni = {
     const b = hodinyVedouciho(k, 1)
     return b > 0 ? `Každý vedoucí získá zpět ${odDo(Math.min(a, b), Math.max(a, b), 'h')} týdně pro zákazníky a tým.` : null
   },
-  shrnuti: (k, rocne) => `${nf(n(k, 'prodejny'))} prodejen po ${nf(n(k, 'lide'))} lidech, ${nf(n(k, 'mzda'))} Kč/h, vedoucí ${nfp(n(k, 'hodinyVedouci'))} h týdně na rozpisy, odhad ${rocne} ročně`,
+  shrnuti: (k, rocne) => `${nf(n(k, 'prodejny'))} prodejen po ${nf(n(k, 'lide'))} pracovnících, ${nf(n(k, 'mzda'))} Kč/h, vedoucí ${nfp(n(k, 'hodinyVedouci'))} h týdně na rozpisy, odhad ${rocne} ročně`,
 }
 
 export const NASTAVENI: Record<Obor, Nastaveni> = { 'kontaktni-centrum': KONTAKTNI_CENTRUM, retail: RETAIL }
