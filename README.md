@@ -37,7 +37,12 @@ musí být vidět celá hned po otevření, bez posouvání, na každé velikost
 Kontroluje se v oknech 1920 × 960, 1536 × 730, 1470 × 835, 1440 × 780, 1366 × 625, 1280 × 680, 1280 × 600
 a 1024 × 700. Na tabletu na výšku a na telefonech (768 × 950, 390 × 700, 360 × 640) musí být vidět nadpis,
 text a hlavní tlačítko, u kalkulačky zadání a souhrn výsledku.
-Mezery a velikost nadpisů v úvodu se proto řídí výškou okna (třídy `hero-*` a `kalk-*` v `src/app/globals.css`).
+Navíc platí „jedna část = jedna obrazovka“: každá část stránky (`main > section`) vyplní celou viditelnou
+plochu pod hlavičkou, obsah je svisle uprostřed a posouvání se zastaví na začátku části, takže z další části
+není nic vidět. Na počítači se každá část vejde celá na jednu obrazovku (mezery, nadpisy a snímky se řídí výškou
+okna, na nízkých oknech se obsah mírně zmenší). Na telefonu jsou delší části vyšší než obrazovka.
+Mezery a velikost nadpisů se proto řídí výškou okna (třídy `hero-*`, `kalk-*` a pravidla pro `main > section`
+v `src/app/globals.css`).
 
 ## Proměnné prostředí
 
