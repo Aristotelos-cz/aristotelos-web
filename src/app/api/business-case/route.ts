@@ -3,7 +3,7 @@
 // 2) zájemci přijde potvrzení s jeho odhadem a dalším postupem.
 import { vytvorBusinessCase } from '@/lib/businessCaseExcel'
 import { PISMO, PODPIS, radek, tabulkaOdhadu, upravenePredpoklady } from '@/lib/emailOdhad'
-import { chyba, EMAIL_RE, html, NEJDE_ODESLAT, PRIJEMCI_OBCHOD, prilisMnoho, robot, text, zCizihoWebu } from '@/lib/formular'
+import { chyba, EMAIL_RE, html, NEJDE_ODESLAT, PRIJEMCI_OBCHOD, prilisMnoho, robot, text, ZMENA_STRANKY, zCizihoWebu } from '@/lib/formular'
 import { jeObor, NAZEV_OBORU, spocitejObor, vstupyProExcel, type OdhadOboru } from '@/lib/odhadUspor'
 import { posliEmail, postaNastavena } from '@/lib/posta'
 
@@ -31,10 +31,9 @@ export async function POST(request: Request) {
     return chyba(400, 'Vyplňte prosím jméno, firmu a platný pracovní e-mail.')
   }
 
-  const obor = jeObor(d.obor) ? d.obor : 'obecny'
-  // Starší stránka posílala zadání obecné kalkulačky přímo (lide, mzda, hpp, vedouci)
-  const hodnoty = d.hodnoty ?? { lide: d.lide, mzda: d.mzda, hpp: d.hpp, vedouci: d.vedouci }
-  const odhad = spocitejObor(obor, { hodnoty, predpoklady: d.predpoklady })
+  // Obor musí být jedna ze stávajících kalkulaček (stránka otevřená před změnou webu ho mít nemusí)
+  if (!jeObor(d.obor)) return chyba(400, ZMENA_STRANKY)
+  const odhad = spocitejObor(d.obor, { hodnoty: d.hodnoty, predpoklady: d.predpoklady })
 
   if (!postaNastavena()) {
     if (!process.env.VERCEL_ENV) {
