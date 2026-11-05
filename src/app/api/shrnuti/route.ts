@@ -2,7 +2,7 @@
 // 1) zájemci přijde e-mail s PDF (odhad, předpoklady, zdroje, další postup),
 // 2) obchodu přijde upozornění se zadáním, aby se mohl ozvat.
 import { PISMO, PODPIS, radek, tabulkaOdhadu, upravenePredpoklady } from '@/lib/emailOdhad'
-import { chyba, EMAIL_RE, html, NEJDE_ODESLAT, PRIJEMCI_OBCHOD, prilisMnoho, robot, text, zCizihoWebu } from '@/lib/formular'
+import { chyba, EMAIL_RE, html, NEJDE_ODESLAT, PRIJEMCI_OBCHOD, prilisMnoho, robot, text, ZMENA_STRANKY, zCizihoWebu } from '@/lib/formular'
 import { jeObor, NAZEV_OBORU, spocitejObor, type OdhadOboru } from '@/lib/odhadUspor'
 import { posliEmail, postaNastavena } from '@/lib/posta'
 import { SITE_URL } from '@/lib/site'
@@ -24,7 +24,9 @@ export async function POST(request: Request) {
   const email = text(d.email, 200).toLowerCase()
   if (!EMAIL_RE.test(email)) return chyba(400, 'Zadejte prosím platný e-mail.')
 
-  const obor = jeObor(d.obor) ? d.obor : 'obecny'
+  // Obor musí být jedna ze stávajících kalkulaček (stránka otevřená před změnou webu ho mít nemusí)
+  if (!jeObor(d.obor)) return chyba(400, ZMENA_STRANKY)
+  const obor = d.obor
   const odhad = spocitejObor(obor, { hodnoty: d.hodnoty, predpoklady: d.predpoklady })
 
   let pdf: Uint8Array
