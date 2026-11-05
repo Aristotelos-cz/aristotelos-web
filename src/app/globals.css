@@ -113,6 +113,13 @@ summary::-webkit-details-marker { display: none; }
 @media (min-width: 1001px) and (max-height: 720px) {
   .kalk-nizko-skryt { display: none !important; }
 }
+/* Kalkulačky mají tři řady polí: na nižších oknech schovat nápovědy, na nízkých i posuvníky */
+@media (min-width: 1001px) and (max-height: 800px) {
+  .kalk-napoveda { display: none !important; }
+}
+@media (min-width: 1001px) and (max-height: 700px) {
+  .kalk-posuvnik { display: none !important; }
+}
 @media (min-width: 1001px) and (max-height: 680px) {
   .kalk-sekce { padding-top: 12px; padding-bottom: 16px; }
 }
@@ -128,10 +135,10 @@ summary::-webkit-details-marker { display: none; }
 .kalk-titulek { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px; }
 .kalk-perex { margin: 0; max-width: 62em; font-size: 1.05rem; line-height: 1.5; color: #33424F; }
 /* Tři kalkulačky mají zadání i výsledek na stejném místě a ve stejné velikosti, aby při přepínání nic neposkakovalo:
-   na počítači má kalkulačka výšku okna (nejvýš 700 px), nadpis a úvod mají vždy jeden řádek,
+   na počítači má kalkulačka výšku okna (nejvýš 800 px), nadpis a úvod mají vždy jeden řádek,
    na užších oknech je přepínač nad nadpisem. */
 @media (min-width: 1001px) {
-  .kalk-sekce { box-sizing: border-box; min-height: min(calc(100vh - var(--hlavicka) - 1px), 700px); min-height: min(calc(100svh - var(--hlavicka) - 1px), 700px); }
+  .kalk-sekce { box-sizing: border-box; min-height: min(calc(100vh - var(--hlavicka) - 1px), 800px); min-height: min(calc(100svh - var(--hlavicka) - 1px), 800px); }
   .kalk-mrizka { flex: 1 0 auto; }
   .kalk-titulek { flex-wrap: nowrap; }
   .kalk-titulek .kalk-h1 { white-space: nowrap; }
@@ -140,6 +147,18 @@ summary::-webkit-details-marker { display: none; }
 @media (max-width: 1000px) {
   .kalk-titulek { flex-direction: column-reverse; align-items: flex-start; }
 }
+/* Rozcestník kalkulaček (/kalkulacka-uspor) */
+.rozcestnik { justify-content: center; }
+.rozcestnik-karty { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.rozcestnik-karta { display: flex; flex-direction: column; gap: 10px; padding: clamp(18px, 3vh, 32px) clamp(20px, 2.4vw, 32px); border: 1px solid #DCE3E9; border-radius: 14px; background: #FFFFFF; color: #0E1A24; text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s; }
+.rozcestnik-karta:hover { border-color: #0072A3; box-shadow: 0 16px 32px -20px rgba(14, 26, 36, 0.35); }
+.rozcestnik-karta:focus-visible { outline: 3px solid #0072A3; outline-offset: 2px; }
+.rozcestnik-nazev { font-size: clamp(1.5rem, min(2.4vw, 4vh), 2rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; }
+.rozcestnik-tlacitko { align-self: flex-start; display: inline-flex; align-items: center; min-height: 44px; margin-top: 6px; padding: 0 20px; border-radius: 8px; background: #0072A3; color: #FFFFFF; font-size: 15.5px; font-weight: 600; }
+@media (max-width: 760px) {
+  .rozcestnik-karty { grid-template-columns: minmax(0, 1fr); }
+}
+
 /* Přepínač oboru nad kalkulačkou (každý obor má vlastní adresu) */
 .kalk-prepinac { display: inline-flex; flex: none; max-width: 100%; gap: 2px; padding: 3px; border: 1px solid #C5D0D9; border-radius: 10px; background: #FFFFFF; }
 .kalk-prepinac a { display: inline-flex; align-items: center; min-height: 36px; padding: 0 14px; border-radius: 7px; font-size: 14.5px; font-weight: 600; color: #33424F; text-decoration: none; white-space: nowrap; }
@@ -171,7 +190,7 @@ summary::-webkit-details-marker { display: none; }
 .predp-uspora { display: flex; flex-direction: column; gap: 4px; padding-top: 8px; }
 .predp-opora { display: flex; flex-direction: column; gap: 4px; padding-top: 2px; font-size: 13px; line-height: 1.45; color: #33424F; }
 .predp-mobil { display: none; }
-@media (min-width: 1001px) and (max-height: 720px) {
+@media (min-width: 1001px) and (max-height: 760px) {
   .predp-nizko-skryt { display: none !important; }
 }
 @media (max-width: 860px) {
