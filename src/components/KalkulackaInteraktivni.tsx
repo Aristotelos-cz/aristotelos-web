@@ -13,20 +13,21 @@ const eyebrow: CSSProperties = { display: 'flex', alignItems: 'center', gap: '12
 const h2: CSSProperties = { margin: 0, fontSize: 'clamp(1.5rem, min(3vw, 4.2vh), 2.4rem)', lineHeight: 1.1, letterSpacing: '-0.02em', fontWeight: 700, textWrap: 'balance' }
 
 // Texty sekcí s předpoklady podle oboru
-const TEXTY: Partial<Record<Obor, { hlavni: { nadpis: string; text: string }; doplnek: { nadpis: string; text: string; navic: string } }>> = {
+const TEXTY: Record<Obor, { hlavni: { nadpis: string; text: string }; doplnek: { nadpis: string; text: string; navic: string } }> = {
   'kontaktni-centrum': {
     hlavni: { nadpis: 'Výpočet a předpoklady, které můžete upravit', text: 'Vlevo opatrný, vpravo realistický odhad. Procenta jsou nižší, než uvádějí studie objednané dodavateli. Když je přepíšete, výsledek nahoře se hned přepočítá.' },
     doplnek: { nadpis: 'Doplňte přesčasy, pokud je znáte', text: 'Přesčasy počítáme, jen když zadáte, kolik jich operátoři měsíčně odpracují. Bez toho zůstávají mimo odhad.', navic: 'V business casu navíc spočítáme úroveň obsluhy při stejném počtu lidí, víkendové a noční příplatky a agenturní pracovníky.' },
   },
   retail: {
     hlavni: { nadpis: 'Výpočet a předpoklady, které můžete upravit', text: 'Vlevo opatrný, vpravo realistický odhad. Procenta jsou pod spodní hranicí veřejných studií. Když je přepíšete, výsledek nahoře se hned přepočítá.' },
-    doplnek: { nadpis: 'Doplňte, co o prodejnách víte', text: 'Fluktuaci, přesčasy a tržby počítáme, jen když zadáte výchozí údaj. Bez něj zůstávají mimo odhad.', navic: 'Růst tržeb ukazujeme zvlášť a do celkové úspory ho nezapočítáváme.' },
+    doplnek: { nadpis: 'Doplňte, co o prodejnách víte', text: 'Přesčasy a tržby počítáme, jen když zadáte výchozí údaj. Bez něj zůstávají mimo odhad.', navic: 'Růst tržeb ukazujeme zvlášť a do celkové úspory ho nezapočítáváme.' },
   },
 }
 
 type Hodnoty = Record<string, string>
 type Predp = Record<string, [string, string]>
-const vychoziHodnoty = (n: Nastaveni): Hodnoty => Object.fromEntries(n.pole.map((p) => [p.klic, String(p.vychozi)]))
+// Pole s „0 = nevím“ začínají prázdná, s nápisem „nevím“
+const vychoziHodnoty = (n: Nastaveni): Hodnoty => Object.fromEntries(n.pole.map((p) => [p.klic, p.typ === 'cislo' && p.nula && p.vychozi === 0 ? '' : String(p.vychozi)]))
 const vychoziPredp = (n: Nastaveni): Predp => Object.fromEntries(n.predpoklady.map((p) => [p.klic, [String(p.opatrne), String(p.realisticky)]]))
 
 function Field({ pole, value, onChange }: { pole: PoleCislo; value: string; onChange: (v: string) => void }) {
@@ -36,11 +37,11 @@ function Field({ pole, value, onChange }: { pole: PoleCislo; value: string; onCh
     <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', minWidth: 0 }}>
       <label htmlFor={id} style={label}>{pole.label}</label>
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-        <input id={id} type="number" inputMode="decimal" min={pole.min} max={pole.max} step={pole.krok} value={value} onChange={(e) => onChange(e.target.value)} aria-describedby={`${id}-napoveda`} style={input} />
+        <input id={id} type="number" inputMode="decimal" min={pole.min} max={pole.max} step={pole.krok} value={value} placeholder={pole.nula ? 'nevím' : undefined} onChange={(e) => onChange(e.target.value)} aria-describedby={`${id}-napoveda`} style={input} />
         <span style={{ fontSize: '14.5px', color: '#4A5866' }}>{pole.jednotka}</span>
       </div>
-      <input type="range" min={pole.min} max={max} step={pole.krok} value={Math.min(max, cislo(value, 0))} onChange={(e) => onChange(e.target.value)} aria-label={`${pole.label} – posuvník`} style={range} />
-      <span id={`${id}-napoveda`} className="kalk-nizko-skryt" style={{ fontSize: '12.5px', lineHeight: 1.35, color: '#4A5866' }}>{pole.napoveda}</span>
+      <input type="range" className="kalk-posuvnik" min={pole.min} max={max} step={pole.krok} value={Math.min(max, cislo(value, 0))} onChange={(e) => onChange(e.target.value)} aria-label={`${pole.label} – posuvník`} style={range} />
+      <span id={`${id}-napoveda`} className="kalk-napoveda" style={{ fontSize: '12.5px', lineHeight: 1.35, color: '#4A5866' }}>{pole.napoveda}</span>
     </div>
   )
 }
@@ -112,7 +113,7 @@ function Predpoklady({ nast, skupina, odhad, predp, setPredp }: { nast: Nastaven
               {vysledek ? (
                 <span style={{ fontWeight: 700, fontFamily: MONO, fontSize: '14.5px', color: '#0E1A24' }}>{vysledek.rozpeti}{o.mimoSoucet && <span style={{ display: 'block', fontFamily: 'inherit', fontWeight: 400, fontSize: '13px', color: '#4A5866' }}>mimo součet</span>}</span>
               ) : (
-                <span style={{ fontSize: '14px', color: '#4A5866' }}>zadejte údaj</span>
+                <span style={{ fontSize: '14px', color: '#4A5866' }}>{o.neaktivni || 'zadejte údaj'}</span>
               )}
             </div>
             <div className="predp-opora">
