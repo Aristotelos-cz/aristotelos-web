@@ -258,7 +258,10 @@ export default function KontaktniCentraPage() {
 <h2 style={{ margin: "0", fontSize: "clamp(1.65rem, min(3.2vw, 5vh), 2.7rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Ukážeme vám plán pro vaše kontaktní centrum</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#C3CED7" }}>Projdeme vaše fronty, úroveň obsluhy a pravidla směn a ukážeme, co by se změnilo. Bez závazků.</p>
 </div>
+<div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "12px" }}>
 <Link href="/" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 26px", borderRadius: "8px", background: "#FFFFFF", color: "#0E1A24", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Domluvit ukázku</Link>
+<Link href="/kalkulacka-uspor/kontaktni-centrum" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 24px", borderRadius: "8px", border: "1px solid rgba(255, 255, 255, 0.55)", color: "#FFFFFF", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Spočítat úsporu</Link>
+</div>
 </div>
 </section>
     </>
