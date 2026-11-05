@@ -75,7 +75,7 @@ export default function ObchodniRetezcePage() {
 </section>
 
 <section style={{ padding: "104px 0", background: "#FFFFFF" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "48px" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "clamp(20px, 4.2vh, 48px)" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "16px", maxWidth: "760px" }}>
 <div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
@@ -86,30 +86,30 @@ export default function ObchodniRetezcePage() {
 </span>
 <span>Co řešíte</span>
 </div>
-<h2 style={{ margin: "0", fontSize: "clamp(2rem, 3.2vw, 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Stovky prodejen, jeden spravedlivý plán</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Stovky prodejen, jeden spravedlivý plán</h2>
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(340px, 100%), 1fr))", gap: "20px" }}>
-<div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Návštěvnost se mění po hodinách</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Předpověď počtu zákazníků a prodejů pro každou prodejnu a sortiment, včetně promoakcí a svátků.</p>
 </div>
-<div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Pokladny, závozy, přecenění</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Kapacitní modely pro všechny činnosti na prodejně. V lékárnách i pro recepty, volný prodej a počet pokladních míst.</p>
 </div>
-<div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Výpomoc mezi prodejnami</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Přehled volných lidí ze sousedních poboček a směna na jiné prodejně na pár kliknutí.</p>
 </div>
-<div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Sezóna a vyrovnávací období</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Roční fond pracovní doby rozdělí do měsíců podle předpovědi návštěvnosti, bez neodpracovaných hodin na konci roku.</p>
 </div>
-<div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Brigádníci a nábor</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Volné směny k rezervaci v mobilu. Noví zájemci se mohou registrovat přímo z nabídky volných směn.</p>
 </div>
-<div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Dohled regionálních manažerů</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Plány, obsazení a čerpání hodin všech prodejen v regionu na jednom místě a jednotná metodika pro celou síť.</p>
 </div>
@@ -118,7 +118,7 @@ export default function ObchodniRetezcePage() {
 </section>
 
 <section id="albert" style={{ padding: "104px 0", background: "#F5F8FA", borderTop: "1px solid #E3E8ED", borderBottom: "1px solid #E3E8ED" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(440px, 100%), 1fr))", gap: "56px", alignItems: "start" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(440px, 100%), 1fr))", gap: "clamp(24px, 4.8vh, 56px)", alignItems: "start" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
 <div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
@@ -130,7 +130,7 @@ export default function ObchodniRetezcePage() {
 <span>Případová studie</span>
 </div>
 <img src="/logos/albert.png" alt="Albert" style={{ height: "48px", width: "auto", alignSelf: "flex-start" }} loading="lazy" />
-<h2 style={{ margin: "0", fontSize: "clamp(1.9rem, 3vw, 2.6rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>17 000 zaměstnanců, 350 prodejen a 3 distribuční centra v jednom systému</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.65rem, min(3vw, 4.9vh), 2.6rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>17 000 zaměstnanců, 350 prodejen a 3 distribuční centra v jednom systému</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Albert s AristoTelem plánuje směny a eviduje docházku na prodejnách, v distribučních centrech i na centrále. Mzdové podklady po uzavření měsíce odcházejí automaticky do SAP.</p>
 <figure style={{ margin: "8px 0 0", display: "flex", flexDirection: "column", gap: "14px", padding: "24px", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px" }}>
 <blockquote style={{ margin: "0", fontSize: "1.15rem", lineHeight: "1.5", fontWeight: "500" }}>„Řešení je pro uživatele jednoduché, automaticky generované plány pokrývají potřeby provozu, řadoví zaměstnanci si chválí mobilní aplikaci.“</blockquote>
@@ -204,17 +204,17 @@ export default function ObchodniRetezcePage() {
 
 <section style={{ padding: "104px 0", background: "#FFFFFF" }}>
 <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(340px, 100%), 1fr))", gap: "20px" }}>
-<div style={{ border: "1px solid #DCE3E9", borderRadius: "14px", padding: "32px", display: "flex", flexDirection: "column", gap: "14px" }}>
+<div style={{ border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(18px, 3vh, 32px)", display: "flex", flexDirection: "column", gap: "14px" }}>
 <img src="/logos/benu.svg" alt="Benu Lékárny" style={{ height: "34px", width: "auto", alignSelf: "flex-start" }} loading="lazy" />
 <h3 style={{ margin: "0", fontSize: "1.3rem", fontWeight: "600" }}>Lékárny</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Benu plánuje s AristoTelem směny asi 2 500 lidí ve 350 lékárnách, napojeně na své interní systémy. Plán počítá s recepty, volným prodejem, závozy i počtem pokladních míst.</p>
 </div>
-<div style={{ border: "1px solid #DCE3E9", borderRadius: "14px", padding: "32px", display: "flex", flexDirection: "column", gap: "14px" }}>
+<div style={{ border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(18px, 3vh, 32px)", display: "flex", flexDirection: "column", gap: "14px" }}>
 <img src="/logos/sconto.svg" alt="Sconto Nábytek" style={{ height: "40px", width: "auto", alignSelf: "flex-start" }} loading="lazy" />
 <h3 style={{ margin: "0", fontSize: "1.3rem", fontWeight: "600" }}>Sezónní prodej</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Sconto pracuje s ročním vyrovnávacím obdobím. AristoTelos rozdělí roční fond pracovní doby podle předpovědi návštěvnosti a porovnává plán s docházkou ze systému Astea.</p>
 </div>
-<div style={{ border: "1px solid #DCE3E9", borderRadius: "14px", padding: "32px", display: "flex", flexDirection: "column", gap: "14px", background: "#0E1A24", color: "#FFFFFF" }}>
+<div style={{ border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(18px, 3vh, 32px)", display: "flex", flexDirection: "column", gap: "14px", background: "#0E1A24", color: "#FFFFFF" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "2.2rem", fontWeight: "600", lineHeight: "1", color: "#FF8A2B" }}>2–3 h</span>
 <h3 style={{ margin: "0", fontSize: "1.3rem", fontWeight: "600" }}>Distribuční centra</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#C3CED7" }}>Ve dvou distribučních centrech obchodního řetězce s 800 lidmi trvá plán směn 2 až 3 hodiny místo 2 až 3 dnů v Excelu.</p>
@@ -224,19 +224,19 @@ export default function ObchodniRetezcePage() {
 
 <section aria-labelledby="r-faq" style={{ padding: "104px 0", background: "#F5F8FA", borderTop: "1px solid #E3E8ED" }}>
 <div style={{ maxWidth: "880px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "32px" }}>
-<h2 id="r-faq" style={{ margin: "0", fontSize: "clamp(2rem, 3.2vw, 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }}>Časté otázky z obchodu a lékáren</h2>
-<div style={{ display: "flex", flexDirection: "column", borderTop: "1px solid #D5DEE6" }}>
-<details open style={{ borderBottom: "1px solid #D5DEE6", padding: "14px 0" }}>
+<h2 id="r-faq" style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }}>Časté otázky z obchodu a lékáren</h2>
+<div className="faq-mrizka" style={{ display: "flex", flexDirection: "column", borderTop: "1px solid #D5DEE6" }}>
+<details open style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Zvládne AristoTelos stovky prodejen?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
 </summary>
 <p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Ano. Albert v něm má 350 prodejen a 3 distribuční centra, Benu 350 lékáren. Organizační strukturu nastavíme podle vaší sítě a regionů.</p>
 </details>
-<details style={{ borderBottom: "1px solid #D5DEE6", padding: "14px 0" }}>
+<details style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Odkud bere AristoTelos data o návštěvnosti a prodejích?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
 </summary>
 <p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Z vašich pokladních nebo obchodních systémů, automaticky přes API, nebo ze souborů CSV a XLS.</p>
 </details>
-<details style={{ borderBottom: "1px solid #D5DEE6", padding: "14px 0" }}>
+<details style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Umí plánovat podle kvalifikace zaměstnanců?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
 </summary>
 <p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Ano. Každý zaměstnanec může mít více znalostí a AristoTelos je při plánování činností zohlední.</p>
@@ -254,7 +254,7 @@ export default function ObchodniRetezcePage() {
 <span style={{ flex: "45", background: "#FF6633" }}>
 </span>
 </span>
-<h2 style={{ margin: "0", fontSize: "clamp(1.9rem, 3.2vw, 2.7rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Ukážeme vám plán pro vaši prodejní síť</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.65rem, min(3.2vw, 5vh), 2.7rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Ukážeme vám plán pro vaši prodejní síť</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#C3CED7" }}>Projdeme vaše prodejny, činnosti a pravidla směn a ukážeme, co by se změnilo. Bez závazků.</p>
 </div>
 <Link href="/" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 26px", borderRadius: "8px", background: "#FFFFFF", color: "#0E1A24", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Domluvit ukázku</Link>

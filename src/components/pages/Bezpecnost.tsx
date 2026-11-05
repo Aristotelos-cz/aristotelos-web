@@ -59,7 +59,7 @@ export default function BezpecnostPage() {
 </section>
 
 <section id="it" aria-labelledby="s-it" style={{ padding: "104px 0", background: "#FFFFFF" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "48px" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "clamp(20px, 4.2vh, 48px)" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "16px", maxWidth: "760px" }}>
 <div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
@@ -70,22 +70,22 @@ export default function BezpecnostPage() {
 </span>
 <span>Co ověří vaše IT</span>
 </div>
-<h2 id="s-it" style={{ margin: "0", fontSize: "clamp(2rem, 3.2vw, 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Odpovědi na otázky z každého výběrového řízení</h2>
+<h2 id="s-it" style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Odpovědi na otázky z každého výběrového řízení</h2>
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(440px, 100%), 1fr))", gap: "20px" }}>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Penetrační testy</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Každý rok velký test nezávislou firmou podle metodiky OWASP, nové funkce testujeme průběžně. Poslední velký test proběhl v roce 2026.</p>
 </div>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Přihlášení</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Integrované přihlášení přes Active Directory a LDAP. Jednotné přihlášení přes Microsoft nebo Google (SAML, OpenID Connect).</p>
 </div>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Role a oprávnění</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Každý vidí jen to, co mu přísluší podle organizační struktury. Role mohou být synchronizované s vaším personálním systémem.</p>
 </div>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Audit všech změn</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Každá změna dat je zaznamenaná a dohledatelná v reportech. Významné události se zapisují i do logu serveru.</p>
 </div>
@@ -94,7 +94,7 @@ export default function BezpecnostPage() {
 </section>
 
 <section style={{ padding: "104px 0", background: "#F5F8FA", borderTop: "1px solid #E3E8ED", borderBottom: "1px solid #E3E8ED" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "48px" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "clamp(20px, 4.2vh, 48px)" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "16px", maxWidth: "760px" }}>
 <div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
@@ -105,10 +105,10 @@ export default function BezpecnostPage() {
 </span>
 <span>Provoz a podpora</span>
 </div>
-<h2 style={{ margin: "0", fontSize: "clamp(2rem, 3.2vw, 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Kde AristoTelos poběží, rozhodnete vy</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Kde AristoTelos poběží, rozhodnete vy</h2>
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(440px, 100%), 1fr))", gap: "20px" }}>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "32px", display: "flex", flexDirection: "column", gap: "14px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(18px, 3vh, 32px)", display: "flex", flexDirection: "column", gap: "14px" }}>
 <h3 style={{ margin: "0", fontSize: "1.4rem", fontWeight: "700", letterSpacing: "-0.01em" }}>Jako služba</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>AristoTelos provozujeme my, v zabezpečeném datovém centru Českých Radiokomunikací (ČRa) s úrovní Tier III. Provoz řídíme podle ISO/IEC 27001.</p>
 <ul style={{ listStyle: "none", margin: "4px 0 0", padding: "0", display: "flex", flexDirection: "column", gap: "10px", fontSize: "15.5px" }}>
@@ -142,7 +142,7 @@ export default function BezpecnostPage() {
 </li>
 </ul>
 </div>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "32px", display: "flex", flexDirection: "column", gap: "14px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(18px, 3vh, 32px)", display: "flex", flexDirection: "column", gap: "14px" }}>
 <h3 style={{ margin: "0", fontSize: "1.4rem", fontWeight: "700", letterSpacing: "-0.01em" }}>Ve vaší infrastruktuře</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Instalace na vašich serverech, pod dohledem a podle pravidel vašeho IT.</p>
 <ul style={{ listStyle: "none", margin: "4px 0 0", padding: "0", display: "flex", flexDirection: "column", gap: "10px", fontSize: "15.5px" }}>
@@ -184,7 +184,7 @@ export default function BezpecnostPage() {
 </section>
 
 <section style={{ padding: "104px 0", background: "#FFFFFF" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "48px" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "clamp(20px, 4.2vh, 48px)" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "16px", maxWidth: "760px" }}>
 <div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
@@ -195,18 +195,18 @@ export default function BezpecnostPage() {
 </span>
 <span>Soulad s předpisy</span>
 </div>
-<h2 style={{ margin: "0", fontSize: "clamp(2rem, 3.2vw, 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Zákony hlídá systém, ne vedoucí</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Zákony hlídá systém, ne vedoucí</h2>
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(320px, 100%), 1fr))", gap: "20px" }}>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Zákoník práce</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Dodržení garantujeme na 100 %. Novelu nasadíme předem a pravidla se přepnou ke dni účinnosti. Pracovní právo je nastavené pro Česko, Slovensko, Německo a Rakousko.</p>
 </div>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Zákonná potvrzení</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Plán, jeho změny i docházku potvrzují zaměstnanci v mobilní aplikaci, jak vyžaduje zákon.</p>
 </div>
-<div style={{ background: "#FFFBF5", border: "1.5px dashed #E0A060", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ background: "#FFFBF5", border: "1.5px dashed #E0A060", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>NIS2 a DORA</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#7A4A12" }}>[Doplnit po ověření: co AristoTelos zajišťuje pro soulad s NIS2 a DORA a jakým dokumentem to dokládáme.]</p>
 </div>
@@ -216,24 +216,24 @@ export default function BezpecnostPage() {
 
 <section aria-labelledby="s-faq" style={{ padding: "104px 0", background: "#F5F8FA" }}>
 <div style={{ maxWidth: "880px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "32px" }}>
-<h2 id="s-faq" style={{ margin: "0", fontSize: "clamp(2rem, 3.2vw, 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Časté otázky k bezpečnosti</h2>
-<div style={{ display: "flex", flexDirection: "column", borderTop: "1px solid #D5DEE6" }}>
-<details open style={{ borderBottom: "1px solid #D5DEE6", padding: "14px 0" }}>
+<h2 id="s-faq" style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Časté otázky k bezpečnosti</h2>
+<div className="faq-mrizka" style={{ display: "flex", flexDirection: "column", borderTop: "1px solid #D5DEE6" }}>
+<details open style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Kde jsou naše data?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
 </summary>
 <p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Ve službě v datovém centru Českých Radiokomunikací (ČRa) v Česku, s úrovní Tier III a provozem podle ISO/IEC 27001. Nebo ve vaší vlastní infrastruktuře. Vyberete si při nasazení.</p>
 </details>
-<details style={{ borderBottom: "1px solid #D5DEE6", padding: "14px 0" }}>
+<details style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Můžeme AristoTelos provozovat ve vlastní infrastruktuře?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
 </summary>
 <p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Ano. AristoTelos nabízíme jako službu i jako instalaci ve vaší infrastruktuře, pod dohledem vašeho IT.</p>
 </details>
-<details style={{ borderBottom: "1px solid #D5DEE6", padding: "14px 0" }}>
+<details style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Jak často testujete bezpečnost aplikace?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
 </summary>
 <p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Velký penetrační test nezávislou firmou podle metodiky OWASP provádíme každý rok, nové funkce testujeme průběžně.</p>
 </details>
-<details style={{ borderBottom: "1px solid #D5DEE6", padding: "14px 0" }}>
+<details style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Splňuje AristoTelos požadavky NIS2 a DORA?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
 </summary>
 <p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>[Doplnit po ověření.]</p>
@@ -251,7 +251,7 @@ export default function BezpecnostPage() {
 <span style={{ flex: "45", background: "#FF6633" }}>
 </span>
 </span>
-<h2 style={{ margin: "0", fontSize: "clamp(1.9rem, 3.2vw, 2.7rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Projdeme bezpečnost s vaším IT</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.65rem, min(3.2vw, 5vh), 2.7rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Projdeme bezpečnost s vaším IT</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#C3CED7" }}>Ukážeme plánování na vašem provozu a odpovíme na otázky vašeho IT a bezpečnosti. Bez závazků.</p>
 </div>
 <Link href="/" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 26px", borderRadius: "8px", background: "#FFFFFF", color: "#0E1A24", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Domluvit ukázku</Link>

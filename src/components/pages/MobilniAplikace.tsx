@@ -45,7 +45,7 @@ export default function MobilniAplikacePage() {
 </section>
 
 <section style={{ padding: "104px 0", background: "#FFFFFF" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "48px" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "clamp(20px, 4.2vh, 48px)" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "16px", maxWidth: "760px" }}>
 <div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
@@ -56,30 +56,30 @@ export default function MobilniAplikacePage() {
 </span>
 <span>Pro zaměstnance</span>
 </div>
-<h2 style={{ margin: "0", fontSize: "clamp(2rem, 3.2vw, 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Co zaměstnanci v aplikaci udělají sami</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Co zaměstnanci v aplikaci udělají sami</h2>
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(320px, 100%), 1fr))", gap: "20px" }}>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Aktuální plán kdekoli</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Své směny a jejich změny vidí hned v mobilu. Bez nástěnky a bez telefonování.</p>
 </div>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Přání, dovolené a volna</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Zadávají je na celý rok dopředu. Nároky na dovolenou hlídá systém.</p>
 </div>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Výměny směn</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Domluví se s kolegou přímo v aplikaci. Jestli výměna splňuje pravidla, zkontroluje AristoTelos.</p>
 </div>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Volné směny</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Volnou směnu si vezmou jedním klepnutím, podle pravidel, která nastavíte.</p>
 </div>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Potvrzení podle zákona</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Plán, jeho změny i docházku potvrzují v aplikaci, jak vyžaduje zákoník práce.</p>
 </div>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Odpracovaný čas</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Přehled odpracovaných hodin a nepřítomností mají vždy po ruce.</p>
 </div>
@@ -88,7 +88,7 @@ export default function MobilniAplikacePage() {
 </section>
 
 <section aria-labelledby="m-list" style={{ padding: "104px 0", background: "#F5F8FA", borderTop: "1px solid #E3E8ED", borderBottom: "1px solid #E3E8ED" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(420px, 100%), 1fr))", gap: "64px", alignItems: "center" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(420px, 100%), 1fr))", gap: "clamp(28px, 5.4vh, 64px)", alignItems: "center" }}>
 <figure style={{ margin: "0", display: "flex", justifyContent: "center" }}>
 <div style={{ width: "280px", maxWidth: "100%", flex: "none", border: "9px solid #0E1A24", borderRadius: "36px", background: "#FFFFFF", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.45)" }}>
 <img src="/screens/mobil-pracovni-list.webp" alt="Aplikace AristoTelos: pracovní list za měsíc s fondem pracovní doby, odpracovanými směnami a souhlasem zaměstnance" width="585" height="1266" loading="lazy" style={{ display: "block", width: "100%", height: "auto" }} />
@@ -104,7 +104,7 @@ export default function MobilniAplikacePage() {
 </span>
 <span>Potvrzení podle zákona</span>
 </div>
-<h2 id="m-list" style={{ margin: "0", fontSize: "clamp(2rem, 3.2vw, 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Pracovní list potvrdí zaměstnanec v mobilu</h2>
+<h2 id="m-list" style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Pracovní list potvrdí zaměstnanec v mobilu</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Po uzavření měsíce vidí zaměstnanec v aplikaci svůj pracovní list a jedním klepnutím potvrdí souhlas s odpracovanými směnami.</p>
 <ul style={{ listStyle: "none", margin: "0", padding: "0", display: "flex", flexDirection: "column", gap: "12px" }}>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
@@ -134,7 +134,7 @@ export default function MobilniAplikacePage() {
 </section>
 
 <section style={{ padding: "104px 0", background: "#FFFFFF" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "48px" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "clamp(20px, 4.2vh, 48px)" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "16px", maxWidth: "760px" }}>
 <div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
@@ -145,10 +145,10 @@ export default function MobilniAplikacePage() {
 </span>
 <span>Pro vedoucí a brigádníky</span>
 </div>
-<h2 style={{ margin: "0", fontSize: "clamp(2rem, 3.2vw, 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Méně telefonátů, víc obsazených směn</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Méně telefonátů, víc obsazených směn</h2>
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(440px, 100%), 1fr))", gap: "20px" }}>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "32px", display: "flex", flexDirection: "column", gap: "14px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(18px, 3vh, 32px)", display: "flex", flexDirection: "column", gap: "14px" }}>
 <h3 style={{ margin: "0", fontSize: "1.4rem", fontWeight: "700", letterSpacing: "-0.01em" }}>Vedoucí</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Žádosti a výměny schvalují v aplikaci, plán mají pod kontrolou i mimo kancelář.</p>
 <ul style={{ listStyle: "none", margin: "4px 0 0", padding: "0", display: "flex", flexDirection: "column", gap: "10px", fontSize: "15.5px" }}>
@@ -175,7 +175,7 @@ export default function MobilniAplikacePage() {
 </li>
 </ul>
 </div>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "32px", display: "flex", flexDirection: "column", gap: "14px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(18px, 3vh, 32px)", display: "flex", flexDirection: "column", gap: "14px" }}>
 <h3 style={{ margin: "0", fontSize: "1.4rem", fontWeight: "700", letterSpacing: "-0.01em" }}>Brigádníci</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Volné směny si rezervují sami, podle pravidel, která nastavíte.</p>
 <ul style={{ listStyle: "none", margin: "4px 0 0", padding: "0", display: "flex", flexDirection: "column", gap: "10px", fontSize: "15.5px" }}>
@@ -203,7 +203,7 @@ export default function MobilniAplikacePage() {
 </ul>
 </div>
 </div>
-<figure style={{ margin: "0", display: "flex", flexDirection: "column", gap: "16px", padding: "28px", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px" }}>
+<figure style={{ margin: "0", display: "flex", flexDirection: "column", gap: "16px", padding: "clamp(16px, 2.6vh, 28px)", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px" }}>
 <blockquote style={{ margin: "0", fontSize: "1.12rem", lineHeight: "1.5", fontWeight: "500" }}>„Řešení je pro uživatele jednoduché, automaticky generované plány pokrývají potřeby provozu, řadoví zaměstnanci si chválí mobilní aplikaci.“</blockquote>
 <figcaption style={{ marginTop: "auto", fontSize: "14.5px", color: "#4A5866" }}>
 <span style={{ fontWeight: "600", color: "#0E1A24" }}>Ivana Šťastníková</span>, Operations Support Director, Albert</figcaption>
@@ -213,19 +213,19 @@ export default function MobilniAplikacePage() {
 
 <section aria-labelledby="m-faq" style={{ padding: "104px 0", background: "#F5F8FA", borderTop: "1px solid #E3E8ED" }}>
 <div style={{ maxWidth: "880px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "32px" }}>
-<h2 id="m-faq" style={{ margin: "0", fontSize: "clamp(2rem, 3.2vw, 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Časté otázky k mobilní aplikaci</h2>
-<div style={{ display: "flex", flexDirection: "column", borderTop: "1px solid #D5DEE6" }}>
-<details open style={{ borderBottom: "1px solid #D5DEE6", padding: "14px 0" }}>
+<h2 id="m-faq" style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Časté otázky k mobilní aplikaci</h2>
+<div className="faq-mrizka" style={{ display: "flex", flexDirection: "column", borderTop: "1px solid #D5DEE6" }}>
+<details open style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Je aplikace pro iOS i Android?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
 </summary>
 <p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Ano. Stáhnete ji v App Store i na Google Play.</p>
 </details>
-<details style={{ borderBottom: "1px solid #D5DEE6", padding: "14px 0" }}>
+<details style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>V jakých jazycích aplikace je?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
 </summary>
 <p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>V češtině, slovenštině, angličtině a maďarštině.</p>
 </details>
-<details style={{ borderBottom: "1px solid #D5DEE6", padding: "14px 0" }}>
+<details style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Co když zaměstnanec v aplikaci zadá něco, co nejde?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
 </summary>
 <p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Vše, co zaměstnanec v mobilu udělá, AristoTelos hned zkontroluje podle pravidel. Výměna nebo převzetí směny, které by pravidla porušily, neprojdou.</p>
@@ -243,7 +243,7 @@ export default function MobilniAplikacePage() {
 <span style={{ flex: "45", background: "#FF6633" }}>
 </span>
 </span>
-<h2 style={{ margin: "0", fontSize: "clamp(1.9rem, 3.2vw, 2.7rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Ukážeme vám aplikaci na vašem plánu</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.65rem, min(3.2vw, 5vh), 2.7rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Ukážeme vám aplikaci na vašem plánu</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#C3CED7" }}>Na ukázce projdeme, jak by aplikaci používali vaši zaměstnanci a vedoucí. Bez závazků.</p>
 </div>
 <Link href="/" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 26px", borderRadius: "8px", background: "#FFFFFF", color: "#0E1A24", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Domluvit ukázku</Link>

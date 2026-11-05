@@ -65,7 +65,7 @@ export default function EnergetikaTelcoPage() {
 </section>
 
 <section aria-labelledby="et-kanaly" style={{ padding: "104px 0", background: "#FFFFFF" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "48px" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "clamp(20px, 4.2vh, 48px)" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "16px", maxWidth: "760px" }}>
 <div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
@@ -76,11 +76,11 @@ export default function EnergetikaTelcoPage() {
 </span>
 <span>Tři kanály, jeden systém</span>
 </div>
-<h2 id="et-kanaly" style={{ margin: "0", fontSize: "clamp(2rem, 3.2vw, 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Každý kanál má svá pravidla. Plán je jeden.</h2>
+<h2 id="et-kanaly" style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Každý kanál má svá pravidla. Plán je jeden.</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Linka se plánuje po 15 minutách, kancelář podle otevírací doby, prodejna podle návštěvnosti a prodejních cílů. AristoTelos to zvládne najednou, s jedněmi daty o lidech a jednou docházkou.</p>
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(330px, 100%), 1fr))", gap: "20px" }}>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "32px", display: "flex", flexDirection: "column", gap: "16px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(18px, 3vh, 32px)", display: "flex", flexDirection: "column", gap: "16px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", color: "#FF6633", fontWeight: "600" }}>01</span>
 <h3 style={{ margin: "0", fontSize: "1.4rem", fontWeight: "700", letterSpacing: "-0.01em" }}>Kontaktní centrum</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Předpověď hovorů, chatů a e-mailů po 15 minutách a z ní potřebný počet operátorů na vaši úroveň obsluhy.</p>
@@ -108,7 +108,7 @@ export default function EnergetikaTelcoPage() {
 </li>
 </ul>
 </div>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "32px", display: "flex", flexDirection: "column", gap: "16px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(18px, 3vh, 32px)", display: "flex", flexDirection: "column", gap: "16px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", color: "#FF6633", fontWeight: "600" }}>02</span>
 <h3 style={{ margin: "0", fontSize: "1.4rem", fontWeight: "700", letterSpacing: "-0.01em" }}>Zákaznické kanceláře</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Plán podle otevírací doby a návštěvnosti jednotlivých poboček, s ohledem na úvazky a dovolené.</p>
@@ -136,7 +136,7 @@ export default function EnergetikaTelcoPage() {
 </li>
 </ul>
 </div>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "32px", display: "flex", flexDirection: "column", gap: "16px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(18px, 3vh, 32px)", display: "flex", flexDirection: "column", gap: "16px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", color: "#FF6633", fontWeight: "600" }}>03</span>
 <h3 style={{ margin: "0", fontSize: "1.4rem", fontWeight: "700", letterSpacing: "-0.01em" }}>Značkové prodejny</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Směny podle návštěvnosti a prodejů. Z plánu a docházky spočítáte výkon konzultantů i plnění prodejních cílů.</p>
@@ -169,7 +169,7 @@ export default function EnergetikaTelcoPage() {
 </section>
 
 <section style={{ padding: "104px 0", background: "#F5F8FA", borderTop: "1px solid #E3E8ED", borderBottom: "1px solid #E3E8ED" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "48px" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "clamp(20px, 4.2vh, 48px)" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "16px", maxWidth: "760px" }}>
 <div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
@@ -180,30 +180,30 @@ export default function EnergetikaTelcoPage() {
 </span>
 <span>Co řešíte</span>
 </div>
-<h2 style={{ margin: "0", fontSize: "clamp(2rem, 3.2vw, 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Co dnes stojí čas a co pohlídá AristoTelos</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Co dnes stojí čas a co pohlídá AristoTelos</h2>
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(340px, 100%), 1fr))", gap: "20px" }}>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Špičky po vyúčtování a změnách cen</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Předpověď z historie odhalí, kdy poptávka vyskočí, a naplánuje na ni lidi dřív, než začnou zákazníci čekat.</p>
 </div>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Různé úvazky a pravidla v každém kanálu</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Plné i zkrácené úvazky, brigádníci, otevírací doby poboček. Plán vždy splní zákoník práce.</p>
 </div>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Výkon konzultantů na prodejnách</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Z plánu a skutečné docházky spočítáte efektivitu konzultantů a plnění prodeje.</p>
 </div>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Variabilní složka mzdy</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Odpracované hodiny a výkon jako podklad pro mzdy a odměny, bez ručního přepisování.</p>
 </div>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Lidé v terénu a na pobočkách</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Rozpis, výměny směn, přání a docházka v mobilní aplikaci pro iOS a Android.</p>
 </div>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "28px", display: "flex", flexDirection: "column", gap: "10px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Napojení na ústřednu, HR a SAP</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Data z ústředny dovnitř, docházka a podklady pro mzdy ven. Přes otevřené API nebo výměnou souborů.</p>
 </div>
@@ -212,7 +212,7 @@ export default function EnergetikaTelcoPage() {
 </section>
 
 <section id="reference" style={{ padding: "104px 0", background: "#FFFFFF" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(440px, 100%), 1fr))", gap: "56px", alignItems: "start" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(440px, 100%), 1fr))", gap: "clamp(24px, 4.8vh, 56px)", alignItems: "start" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
 <div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
@@ -223,7 +223,7 @@ export default function EnergetikaTelcoPage() {
 </span>
 <span>Reference</span>
 </div>
-<h2 style={{ margin: "0", fontSize: "clamp(1.9rem, 3vw, 2.6rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Docházka, ze které se dá počítat výkon</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.65rem, min(3vw, 4.9vh), 2.6rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Docházka, ze které se dá počítat výkon</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>T-Mobile plánuje v AristoTelu asi 450 lidí v kontaktním centru a 250 konzultantů ve značkových prodejnách. Data z ústředny Sprinkl jdou do předpovědi, docházka a podklady pro mzdy do SAP.</p>
 <figure style={{ margin: "8px 0 0", display: "flex", flexDirection: "column", gap: "14px", padding: "24px", background: "#F5F8FA", border: "1px solid #DCE3E9", borderRadius: "14px" }}>
 <blockquote style={{ margin: "0", fontSize: "1.15rem", lineHeight: "1.5", fontWeight: "500" }}>„… dle docházky dokážeme počítat efektivitu našich konzultantů na prodejnách nebo dopočítat výsledek plnění prodeje podle naplánované docházky …“</blockquote>
@@ -232,7 +232,7 @@ export default function EnergetikaTelcoPage() {
 </figure>
 </div>
 <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-<div style={{ border: "1px solid #DCE3E9", borderRadius: "14px", padding: "28px", display: "flex", flexDirection: "column", gap: "14px" }}>
+<div style={{ border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "14px" }}>
 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "16px" }}>
 <img src="/logos/t-mobile.svg" alt="T-Mobile" style={{ height: "34px", width: "auto" }} loading="lazy" />
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", color: "#4A5866" }}>Sprinkl · SAP</span>
@@ -261,7 +261,7 @@ export default function EnergetikaTelcoPage() {
 </li>
 </ul>
 </div>
-<div style={{ border: "1px solid #DCE3E9", borderRadius: "14px", padding: "28px", display: "flex", flexDirection: "column", gap: "14px" }}>
+<div style={{ border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "14px" }}>
 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "16px" }}>
 <img src="/logos/innogy.svg" alt="innogy" style={{ height: "40px", width: "auto" }} loading="lazy" />
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", color: "#4A5866" }}>Cisco</span>
@@ -290,7 +290,7 @@ export default function EnergetikaTelcoPage() {
 </li>
 </ul>
 </div>
-<div style={{ border: "1px solid #DCE3E9", borderRadius: "14px", padding: "28px", display: "flex", flexDirection: "column", gap: "14px" }}>
+<div style={{ border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "14px" }}>
 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "16px" }}>
 <img src="/logos/prazska-energetika.svg" alt="Pražská energetika" style={{ height: "34px", width: "auto" }} loading="lazy" />
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", color: "#4A5866" }}>Kontaktní centrum</span>
@@ -303,19 +303,19 @@ export default function EnergetikaTelcoPage() {
 
 <section aria-labelledby="et-faq" style={{ padding: "104px 0", background: "#F5F8FA", borderTop: "1px solid #E3E8ED" }}>
 <div style={{ maxWidth: "880px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "32px" }}>
-<h2 id="et-faq" style={{ margin: "0", fontSize: "clamp(2rem, 3.2vw, 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }}>Časté otázky z energetiky a telekomunikací</h2>
-<div style={{ display: "flex", flexDirection: "column", borderTop: "1px solid #D5DEE6" }}>
-<details open style={{ borderBottom: "1px solid #D5DEE6", padding: "14px 0" }}>
+<h2 id="et-faq" style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }}>Časté otázky z energetiky a telekomunikací</h2>
+<div className="faq-mrizka" style={{ display: "flex", flexDirection: "column", borderTop: "1px solid #D5DEE6" }}>
+<details open style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Zvládne AristoTelos kontaktní centrum i prodejny zároveň?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
 </summary>
 <p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Ano. Všechny kanály jsou v jednom systému a každý má svá pravidla: linka se plánuje po 15 minutách, kanceláře podle otevírací doby, prodejny podle návštěvnosti a prodejů.</p>
 </details>
-<details style={{ borderBottom: "1px solid #D5DEE6", padding: "14px 0" }}>
+<details style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Na jaké systémy se napojíte?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
 </summary>
 <p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>U klientů z energetiky a telekomunikací jsou to ústředny Cisco a Sprinkl a SAP. Další systémy napojíme přes otevřené API, nebo výměnou souborů.</p>
 </details>
-<details style={{ borderBottom: "1px solid #D5DEE6", padding: "14px 0" }}>
+<details style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Jak dlouho trvá nasazení?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
 </summary>
 <p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Obvykle 3 až 9 měsíců podle počtu kanálů, poboček a napojení. Začít se dá jedním kanálem a další přidat později.</p>
@@ -333,7 +333,7 @@ export default function EnergetikaTelcoPage() {
 <span style={{ flex: "45", background: "#FF6633" }}>
 </span>
 </span>
-<h2 style={{ margin: "0", fontSize: "clamp(1.9rem, 3.2vw, 2.7rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Ukážeme vám jeden plán pro linku, kanceláře i prodejny</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.65rem, min(3.2vw, 5vh), 2.7rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Ukážeme vám jeden plán pro linku, kanceláře i prodejny</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#C3CED7" }}>Projdeme vaše kanály, směny a napojení a ukážeme, co by se změnilo. Bez závazků.</p>
 </div>
 <Link href="/" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 26px", borderRadius: "8px", background: "#FFFFFF", color: "#0E1A24", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Domluvit ukázku</Link>

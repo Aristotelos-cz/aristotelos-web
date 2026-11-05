@@ -134,10 +134,10 @@ export default function FunkcePage() {
 </section>
 
 <section id="predpoved" style={{ padding: "88px 0", background: "#FFFFFF" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(420px, 100%), 1fr))", gap: "48px", alignItems: "start" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(420px, 100%), 1fr))", gap: "clamp(20px, 4.2vh, 48px)", alignItems: "start" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px", fontWeight: "600", color: "#006E99" }}>01</span>
-<h2 style={{ margin: "0", fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Předpověď objemu práce</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.6rem, min(2.8vw, 4.6vh), 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Předpověď objemu práce</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Přesná předpověď je základ dobrého plánu. AristoTelos ji počítá z vašich historických dat a rozloží na jednotlivé vlivy.</p>
 </div>
 <ul style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))", gap: "14px 28px" }}>
@@ -195,10 +195,10 @@ export default function FunkcePage() {
 </section>
 
 <section id="kapacity" style={{ padding: "88px 0", background: "#F5F8FA", borderTop: "1px solid #E3E8ED", borderBottom: "1px solid #E3E8ED" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(420px, 100%), 1fr))", gap: "48px", alignItems: "start" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(420px, 100%), 1fr))", gap: "clamp(20px, 4.2vh, 48px)", alignItems: "start" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px", fontWeight: "600", color: "#006E99" }}>02</span>
-<h2 style={{ margin: "0", fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Plánování kapacit</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.6rem, min(2.8vw, 4.6vh), 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Plánování kapacit</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>AristoTelos spočítá, kolik lidí a s jakými znalostmi potřebujete v každém intervalu, aby seděla úroveň obsluhy a náklady byly co nejnižší.</p>
 </div>
 <ul style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))", gap: "14px 28px" }}>
@@ -256,10 +256,10 @@ export default function FunkcePage() {
 </section>
 
 <section id="planovani" style={{ padding: "88px 0", background: "#FFFFFF" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(420px, 100%), 1fr))", gap: "48px", alignItems: "start" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(420px, 100%), 1fr))", gap: "clamp(20px, 4.2vh, 48px)", alignItems: "start" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px", fontWeight: "600", color: "#006E99" }}>03</span>
-<h2 style={{ margin: "0", fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Automatické plánování směn</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.6rem, min(2.8vw, 4.6vh), 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Automatické plánování směn</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Stačí zadat období. Matematický model vybere z miliard kombinací nejlepší plán a vždy splní zákoník práce i vaše pravidla.</p>
 </div>
 <ul style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))", gap: "14px 28px" }}>
@@ -338,10 +338,10 @@ export default function FunkcePage() {
 </section>
 
 <section id="prani" style={{ padding: "88px 0", background: "#F5F8FA", borderTop: "1px solid #E3E8ED", borderBottom: "1px solid #E3E8ED" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(420px, 100%), 1fr))", gap: "48px", alignItems: "start" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(420px, 100%), 1fr))", gap: "clamp(20px, 4.2vh, 48px)", alignItems: "start" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px", fontWeight: "600", color: "#006E99" }}>04</span>
-<h2 style={{ margin: "0", fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Přání zaměstnanců</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.6rem, min(2.8vw, 4.6vh), 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Přání zaměstnanců</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Zaměstnanci zadávají dovolené, volna a preferované směny sami. Systém hlídá nároky a limity, vedoucí jen schvalují.</p>
 </div>
 <ul style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))", gap: "14px 28px" }}>
@@ -406,10 +406,10 @@ export default function FunkcePage() {
 </section>
 
 <section id="rizeni" style={{ padding: "88px 0", background: "#FFFFFF" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(420px, 100%), 1fr))", gap: "48px", alignItems: "start" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(420px, 100%), 1fr))", gap: "clamp(20px, 4.2vh, 48px)", alignItems: "start" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px", fontWeight: "600", color: "#006E99" }}>05</span>
-<h2 style={{ margin: "0", fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Řízení provozu</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.6rem, min(2.8vw, 4.6vh), 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Řízení provozu</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Plán se mění každý den. AristoTelos pomůže reagovat na absence, výměny i změny objemu práce, aniž by se porušila pravidla.</p>
 </div>
 <ul style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))", gap: "14px 28px" }}>
@@ -474,10 +474,10 @@ export default function FunkcePage() {
 </section>
 
 <section id="dochazka" style={{ padding: "88px 0", background: "#F5F8FA", borderTop: "1px solid #E3E8ED", borderBottom: "1px solid #E3E8ED" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(420px, 100%), 1fr))", gap: "48px", alignItems: "start" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(420px, 100%), 1fr))", gap: "clamp(20px, 4.2vh, 48px)", alignItems: "start" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px", fontWeight: "600", color: "#006E99" }}>06</span>
-<h2 style={{ margin: "0", fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Docházka</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.6rem, min(2.8vw, 4.6vh), 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Docházka</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Docházka a plán směn v jednom systému. Odchylky od plánu vidíte hned a podklady pro mzdy se připraví samy.</p>
 </div>
 <ul style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))", gap: "14px 28px" }}>
@@ -542,10 +542,10 @@ export default function FunkcePage() {
 </section>
 
 <section id="aplikace" style={{ padding: "88px 0", background: "#0E1A24", color: "#FFFFFF" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(420px, 100%), 1fr))", gap: "48px", alignItems: "start" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(420px, 100%), 1fr))", gap: "clamp(20px, 4.2vh, 48px)", alignItems: "start" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px", fontWeight: "600", color: "#FF8A2B" }}>07</span>
-<h2 style={{ margin: "0", fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Mobilní aplikace pro iOS a Android</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.6rem, min(2.8vw, 4.6vh), 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Mobilní aplikace pro iOS a Android</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#C3CED7" }}>Zaměstnanci mají plán směn v kapse a vedoucí ušetří desítky telefonátů. Vše, co zaměstnanec udělá v mobilu, AristoTelos hned zkontroluje podle pravidel.</p>
 <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", marginTop: "8px" }}>
 <a href="https://apps.apple.com/cz/app/aristotelos/id1549846465" style={{ display: "inline-flex", flexDirection: "column", justifyContent: "center", minHeight: "52px", padding: "6px 20px", borderRadius: "10px", background: "#FFFFFF", color: "#0E1A24", textDecoration: "none", lineHeight: "1.2" }}>
@@ -607,10 +607,10 @@ export default function FunkcePage() {
 </section>
 
 <section id="reporty" style={{ padding: "88px 0", background: "#FFFFFF" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(420px, 100%), 1fr))", gap: "48px", alignItems: "start" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(420px, 100%), 1fr))", gap: "clamp(20px, 4.2vh, 48px)", alignItems: "start" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px", fontWeight: "600", color: "#006E99" }}>08</span>
-<h2 style={{ margin: "0", fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Reporty a mzdy</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.6rem, min(2.8vw, 4.6vh), 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Reporty a mzdy</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Hotové reporty pro vedoucí i mzdovou účtárnu, vlastní reporty bez programování a data pro vaše BI.</p>
 </div>
 <ul style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))", gap: "14px 28px" }}>
@@ -689,10 +689,10 @@ export default function FunkcePage() {
 </section>
 
 <section id="sprava" style={{ padding: "88px 0", background: "#F5F8FA", borderTop: "1px solid #E3E8ED" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(420px, 100%), 1fr))", gap: "48px", alignItems: "start" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(420px, 100%), 1fr))", gap: "clamp(20px, 4.2vh, 48px)", alignItems: "start" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px", fontWeight: "600", color: "#006E99" }}>09</span>
-<h2 style={{ margin: "0", fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Správa a přihlášení</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.6rem, min(2.8vw, 4.6vh), 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Správa a přihlášení</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>AristoTelos zvládne jednu pobočku i skupinu firem s mnoha lokalitami a vlastními pravidly.</p>
 <Link href="/" style={{ alignSelf: "flex-start", fontWeight: "600", fontSize: "16px", textDecoration: "none", display: "inline-flex", alignItems: "center", minHeight: "44px" }}>Integrace, API a bezpečnost →</Link>
 </div>
@@ -766,7 +766,7 @@ export default function FunkcePage() {
 <span style={{ flex: "45", background: "#FF6633" }}>
 </span>
 </span>
-<h2 style={{ margin: "0", fontSize: "clamp(1.9rem, 3.2vw, 2.7rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Ukážeme vám funkce na datech podobných vašim</h2>
+<h2 style={{ margin: "0", fontSize: "clamp(1.65rem, min(3.2vw, 5vh), 2.7rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Ukážeme vám funkce na datech podobných vašim</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#C3CED7" }}>Na ukázce projdeme váš způsob plánování a ukážeme, co by se změnilo. Bez závazků.</p>
 </div>
 <Link href="/" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 26px", borderRadius: "8px", background: "#FFFFFF", color: "#0E1A24", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Domluvit ukázku</Link>
