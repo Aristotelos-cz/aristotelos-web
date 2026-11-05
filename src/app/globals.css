@@ -127,6 +127,19 @@ summary::-webkit-details-marker { display: none; }
 /* Nadpis kalkulačky a vedle něj přepínač oboru (na užších oknech pod sebou) */
 .kalk-titulek { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px; }
 .kalk-perex { margin: 0; max-width: 62em; font-size: 1.05rem; line-height: 1.5; color: #33424F; }
+/* Tři kalkulačky mají zadání i výsledek na stejném místě a ve stejné velikosti, aby při přepínání nic neposkakovalo:
+   na počítači má kalkulačka výšku okna (nejvýš 700 px), nadpis a úvod mají vždy jeden řádek,
+   na užších oknech je přepínač nad nadpisem. */
+@media (min-width: 1001px) {
+  .kalk-sekce { box-sizing: border-box; min-height: min(calc(100vh - var(--hlavicka) - 1px), 700px); min-height: min(calc(100svh - var(--hlavicka) - 1px), 700px); }
+  .kalk-mrizka { flex: 1 0 auto; }
+  .kalk-titulek { flex-wrap: nowrap; }
+  .kalk-titulek .kalk-h1 { white-space: nowrap; }
+  .kalk-perex { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+}
+@media (max-width: 1000px) {
+  .kalk-titulek { flex-direction: column-reverse; align-items: flex-start; }
+}
 /* Přepínač oboru nad kalkulačkou (každý obor má vlastní adresu) */
 .kalk-prepinac { display: inline-flex; flex: none; max-width: 100%; gap: 2px; padding: 3px; border: 1px solid #C5D0D9; border-radius: 10px; background: #FFFFFF; }
 .kalk-prepinac a { display: inline-flex; align-items: center; min-height: 36px; padding: 0 14px; border-radius: 7px; font-size: 14.5px; font-weight: 600; color: #33424F; text-decoration: none; white-space: nowrap; }
