@@ -164,7 +164,7 @@
     },
     {
       "q": "Co když nemám všechna čísla?",
-      "a": "Stačí odhad. Kde údaj neznáte, nechte výchozí hodnotu nebo 0 = nevím. Chybějící údaje doplníme spolu při přípravě business casu."
+      "a": "Stačí odhad. Kde údaj neznáte, nechte výchozí hodnotu. Chybějící údaje doplníme spolu při přípravě business casu."
     }
   ],
   "/kalkulacka-uspor/kontaktni-centrum": [
