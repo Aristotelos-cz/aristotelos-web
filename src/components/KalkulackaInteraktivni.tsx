@@ -226,7 +226,7 @@ export default function KalkulackaInteraktivni({ obor, uvod, children }: { obor:
           <div className="kalk-uvod" style={{ display: 'flex', flexDirection: 'column' }}>{uvod}</div>
           <div className="kalk-mrizka" style={{ display: 'grid', gap: '20px', alignItems: 'stretch' }}>
             <div className="kalk-panel" style={{ display: 'flex', flexDirection: 'column', gap: '14px', border: '1px solid #DCE3E9', borderRadius: '14px', background: '#FFFFFF' }}>
-              <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '8px 16px' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '8px 16px', minHeight: '40px' }}>
                 <h2 style={{ margin: 0, fontSize: '1.15rem', fontWeight: 700 }}>Váš provoz</h2>
                 {volba && volba.typ === 'volba' && (
                   <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14.5px', fontWeight: 600 }}>
