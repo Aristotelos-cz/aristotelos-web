@@ -47,6 +47,8 @@ není nic vidět. Na počítači se každá část vejde celá na jednu obrazovk
 okna, na nízkých oknech se obsah mírně zmenší). Na telefonu jsou delší části vyšší než obrazovka.
 Mezery a velikost nadpisů se proto řídí výškou okna (třídy `hero-*`, `kalk-*` a pravidla pro `main > section`
 v `src/app/globals.css`).
+Tři kalkulačky mají zadání i výsledek na stejném místě a ve stejné velikosti, aby při přepínání nic neposkakovalo
+(nadpis a úvodní věta na jeden řádek, kalkulačka vysoká jako okno, nejvýš 700 px).
 
 ## Proměnné prostředí
 
