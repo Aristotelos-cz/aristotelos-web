@@ -69,7 +69,9 @@ Tři kalkulačky na vlastních adresách, mezi nimiž se přepíná nad zadání
 
 Vstupy, výchozí hodnoty, procenta (opatrně a realisticky) a zdroje jsou na jednom místě v `src/lib/odhadUspor.ts`.
 Po změně čísel spusťte `npm test` a upravte ručně spočítané příklady v testech.
-Návrh a zdroje předpokladů: dokument „Kalkulačky úspor pro kontaktní centra a retail – návrh“.
+Jak kalkulačky fungují (vzorce, výchozí hodnoty, zdroje, e-maily, převod do Excelu, návod pro obchod) popisuje
+dokument [Kalkulačky úspor – jak fungují](https://claude.ai/artifact/JcKC8bD72qHweAQEBNdWNL).
+**Při každé změně kalkulaček ho aktualizujte** spolu s testy a změnu zapište do jeho Historie změn.
 
 ## Odesílání e-mailů z formulářů (Microsoft 365)
 
