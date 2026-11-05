@@ -13,7 +13,7 @@ export default function KalkulackaKontaktniCentrumPage() {
               <h1 className="kalk-h1" style={{ margin: 0, lineHeight: 1.08, letterSpacing: '-0.025em', fontWeight: 700, textWrap: 'balance' }}>Kolik ušetří vaše kontaktní centrum</h1>
               <PrepinacOboru aktivni="kontaktni-centrum" />
             </div>
-            <p className="kalk-perex">Zadejte pět údajů o kontaktním centru a hned uvidíte odhad roční úspory.</p>
+            <p className="kalk-perex">Zadejte údaje o kontaktním centru a hned uvidíte odhad roční úspory.</p>
           </>
         }
       />
