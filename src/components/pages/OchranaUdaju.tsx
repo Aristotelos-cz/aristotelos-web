@@ -60,7 +60,7 @@ export default function OchranaUdajuPage() {
 <p style={{ margin: "0", color: "#33424F" }}>Údaje, které nám sami pošlete ve formuláři pro ukázku, pro business case nebo pro shrnutí z kalkulačky:</p>
 <ul style={{ margin: "0", paddingLeft: "22px", color: "#33424F", display: "flex", flexDirection: "column", gap: "6px" }}>
 <li>jméno a příjmení, firmu, pracovní e-mail a telefon,</li>
-<li>odvětví a přibližný počet lidí ve směnách,</li>
+<li>odvětví a přibližný počet pracovníků ve směnách,</li>
 <li>text zprávy, pokud ji napíšete,</li>
 <li>u business casu a shrnutí v PDF čísla, která zadáte do kalkulačky úspor: například počet pracovníků, prodejen nebo operátorů, průměrné hodinové mzdové náklady, fluktuaci a počet vedoucích.</li>
 </ul>

@@ -30,7 +30,7 @@ export default function ONasPage() {
 </div>
 <div style={{ display: "flex", flexDirection: "column", gap: "4px", padding: "20px 0", borderBottom: "1px solid rgba(255, 255, 255, 0.16)" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "2rem", fontWeight: "600", lineHeight: "1" }}>20 000+</span>
-<span style={{ color: "#C3CED7", fontSize: "15px" }}>lidí, kterým plánujeme směny</span>
+<span style={{ color: "#C3CED7", fontSize: "15px" }}>pracovníků, kterým plánujeme směny</span>
 </div>
 <div style={{ display: "flex", flexDirection: "column", gap: "4px", padding: "20px 0", borderBottom: "1px solid rgba(255, 255, 255, 0.16)" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "2rem", fontWeight: "600", lineHeight: "1" }}>CZ · SK · DE · AT</span>
@@ -122,7 +122,7 @@ export default function ONasPage() {
 </span>
 <span>Milníky</span>
 </div>
-<h2 id="o-milniky" style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Od prvního modelu po 20 000 lidí</h2>
+<h2 id="o-milniky" style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Od prvního modelu po 20 000 pracovníků</h2>
 </div>
 <ol style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(200px, 100%), 1fr))", gap: "28px 24px" }}>
 <li style={{ display: "flex", flexDirection: "column", gap: "10px", paddingTop: "22px", borderTop: "3px solid #006699" }}>
@@ -143,7 +143,7 @@ export default function ONasPage() {
 </li>
 <li style={{ display: "flex", flexDirection: "column", gap: "10px", paddingTop: "22px", borderTop: "3px solid #FF6633" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "1.5rem", fontWeight: "600", lineHeight: "1" }}>Dnes</span>
-<span style={{ fontSize: "15.5px", color: "#33424F" }}>Plánujeme směny pro více než 20 000 lidí</span>
+<span style={{ fontSize: "15.5px", color: "#33424F" }}>Plánujeme směny pro více než 20 000 pracovníků</span>
 </li>
 </ol>
 </div>

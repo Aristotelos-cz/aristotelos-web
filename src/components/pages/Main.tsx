@@ -19,7 +19,7 @@ export default function MainPage() {
 </div>
 <h1 className="hero-h1" style={{ margin: "0", lineHeight: "1.05", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Plán směn za hodiny, ne za dny. <span style={{ color: "#006E99" }}>S jistotou zákoníku práce.</span>
 </h1>
-<p className="hero-lead" style={{ margin: "0", fontSize: "1.1rem", lineHeight: "1.5", color: "#33424F", maxWidth: "36em" }}>AristoTelos předpoví objem práce, spočítá potřebný počet lidí a sám naplánuje směny tak, aby seděl provoz, náklady i přání zaměstnanců. Docházka a podklady pro mzdy jsou ve stejném systému.</p>
+<p className="hero-lead" style={{ margin: "0", fontSize: "1.1rem", lineHeight: "1.5", color: "#33424F", maxWidth: "36em" }}>AristoTelos předpoví objem práce, spočítá potřebný počet pracovníků a sám naplánuje směny tak, aby seděl provoz, náklady i přání zaměstnanců. Docházka a podklady pro mzdy jsou ve stejném systému.</p>
 <ul className="hero-body" style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "minmax(0, 1fr)", gap: "8px", fontSize: "15px", fontWeight: "500", color: "#33424F" }}>
 <li style={{ display: "flex", alignItems: "flex-start", gap: "10px" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "2px" }}>
@@ -74,7 +74,7 @@ export default function MainPage() {
 <section aria-labelledby="loga-nadpis" style={{ padding: "72px 0", background: "#FFFFFF", borderBottom: "1px solid #E3E8ED" }}>
 <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "32px" }}>
 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "6px", textAlign: "center" }}>
-<h2 id="loga-nadpis" style={{ margin: "0", fontSize: "1.4rem", fontWeight: "600", letterSpacing: "-0.01em" }}>Plánujeme směny pro více než 20 000 lidí</h2>
+<h2 id="loga-nadpis" style={{ margin: "0", fontSize: "1.4rem", fontWeight: "600", letterSpacing: "-0.01em" }}>Plánujeme směny pro více než 20 000 pracovníků</h2>
 <p style={{ margin: "0", color: "#4A5866", fontSize: "15.5px" }}>Banky, pojišťovny, obchodní řetězce, lékárny, energetika i státní správa</p>
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(128px, 100%), 1fr))", gap: "10px" }}>
@@ -167,7 +167,7 @@ export default function MainPage() {
 <span>Problém</span>
 </div>
 <h2 style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Plánování směn v Excelu stojí vedoucí dny práce</h2>
-<p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F", maxWidth: "32em" }}>Ruční plán zabere dny, a přesto neohlídá zákoník práce, vyrovnávací období ani přání lidí. Ve špičce pak lidé chybí a v klidných hodinách přebývají.</p>
+<p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F", maxWidth: "32em" }}>Ruční plán zabere dny, a přesto neohlídá zákoník práce, vyrovnávací období ani přání pracovníků. Ve špičce pak pracovníci chybí a v klidných hodinách přebývají.</p>
 </div>
 <div style={{ background: "#F5F8FA", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(18px, 3vh, 32px)", display: "flex", flexDirection: "column", gap: "24px" }}>
 <span style={{ fontWeight: "600", fontSize: "15px" }}>Kolik trvá měsíční plán směn</span>
@@ -216,12 +216,12 @@ export default function MainPage() {
 <li style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "12px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px", fontWeight: "600", color: "#006E99" }}>02</span>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Plánování kapacit</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Kolik lidí a s jakými znalostmi potřebujete v každém intervalu, aby seděla úroveň obsluhy.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Kolik pracovníků a s jakými znalostmi potřebujete v každém intervalu, aby seděla úroveň obsluhy.</p>
 </li>
 <li style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "12px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px", fontWeight: "600", color: "#006E99" }}>03</span>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Přání zaměstnanců</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Dovolené, volna a preferované směny zadávají lidé sami v mobilu. Nároky hlídá systém.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Dovolené, volna a preferované směny zadávají pracovníci sami v mobilu. Nároky hlídá systém.</p>
 </li>
 <li style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "12px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px", fontWeight: "600", color: "#006E99" }}>04</span>
@@ -680,7 +680,7 @@ export default function MainPage() {
 </select>
 </div>
 <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-<label htmlFor="f-pocet" style={{ fontSize: "14px", fontWeight: "600" }}>Lidí ve směnách</label>
+<label htmlFor="f-pocet" style={{ fontSize: "14px", fontWeight: "600" }}>Pracovníků ve směnách</label>
 <select id="f-pocet" style={{ minHeight: "44px", border: "1px solid #B8C4CE", borderRadius: "8px", padding: "0 10px", font: "inherit", fontSize: "15px", background: "#FFFFFF" }}>
 <option value="">Vyberte</option>
 <option>do 50</option>

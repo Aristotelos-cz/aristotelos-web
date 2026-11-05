@@ -199,7 +199,7 @@ export default function FunkcePage() {
 <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px", fontWeight: "600", color: "#006E99" }}>02</span>
 <h2 style={{ margin: "0", fontSize: "clamp(1.6rem, min(2.8vw, 4.6vh), 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Plánování kapacit</h2>
-<p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>AristoTelos spočítá, kolik lidí a s jakými znalostmi potřebujete v každém intervalu, aby seděla úroveň obsluhy a náklady byly co nejnižší.</p>
+<p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>AristoTelos spočítá, kolik pracovníků a s jakými znalostmi potřebujete v každém intervalu, aby seděla úroveň obsluhy a náklady byly co nejnižší.</p>
 </div>
 <ul style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))", gap: "14px 28px" }}>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
@@ -207,7 +207,7 @@ export default function FunkcePage() {
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>Počet lidí pro požadovanou kvalitu obsluhy</span>
+<span>Počet pracovníků pro požadovanou kvalitu obsluhy</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>

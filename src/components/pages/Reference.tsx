@@ -17,8 +17,8 @@ export default function ReferencePage() {
 </span>
 <span>Reference</span>
 </div>
-<h1 className="hero-h1-stranka" style={{ margin: "0", lineHeight: "1.04", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Plánujeme směny pro více než 20 000 lidí</h1>
-<p style={{ margin: "0", fontSize: "1.2rem", color: "#33424F", maxWidth: "34em" }}>Banky, pojišťovny, obchodní řetězce, lékárny, energetika, telekomunikace i státní správa. Tady najdete, kolik lidí u nich plánujeme, na co jsme AristoTelos napojili a co na něj říkají.</p>
+<h1 className="hero-h1-stranka" style={{ margin: "0", lineHeight: "1.04", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Plánujeme směny pro více než 20 000 pracovníků</h1>
+<p style={{ margin: "0", fontSize: "1.2rem", color: "#33424F", maxWidth: "34em" }}>Banky, pojišťovny, obchodní řetězce, lékárny, energetika, telekomunikace i státní správa. Tady najdete, kolik pracovníků u nich plánujeme, na co jsme AristoTelos napojili a co na něj říkají.</p>
 <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
 <a href="#demo" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 26px", borderRadius: "8px", background: "#0072A3", color: "#FFFFFF", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Domluvit ukázku</a>
 <a href="#pripady" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 24px", borderRadius: "8px", background: "#FFFFFF", border: "1px solid #C5D0D9", color: "#0E1A24", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Případové studie</a>
@@ -27,7 +27,7 @@ export default function ReferencePage() {
 <div style={{ background: "#0E1A24", color: "#FFFFFF", borderRadius: "14px", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.4)", padding: "36px", display: "grid", gap: "28px" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "2.6rem", fontWeight: "600", color: "#FF8A2B", lineHeight: "1" }}>20 000+</span>
-<span style={{ color: "#C3CED7" }}>lidí, kterým AristoTelos plánuje směny</span>
+<span style={{ color: "#C3CED7" }}>pracovníků, kterým AristoTelos plánuje směny</span>
 </div>
 <div style={{ display: "flex", flexDirection: "column", gap: "4px", paddingTop: "24px", borderTop: "1px solid rgba(255, 255, 255, 0.16)" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "2.6rem", fontWeight: "600", lineHeight: "1" }}>od 2009</span>
@@ -53,17 +53,17 @@ export default function ReferencePage() {
 </span>
 <span>Klienti</span>
 </div>
-<h2 id="r-tabulka" style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Kolik lidí plánujeme a na co jsme napojení</h2>
-<p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Počty jsou přibližné a zahrnují lidi, kterým AristoTelos plánuje směny nebo eviduje docházku.</p>
+<h2 id="r-tabulka" style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Pracovníci v plánu a napojení na systémy</h2>
+<p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Počty jsou přibližné a zahrnují plánování směn i evidenci docházky.</p>
 </div>
 <div style={{ overflowX: "auto", WebkitOverflowScrolling: "touch" }}>
 <table style={{ width: "100%", minWidth: "720px", borderCollapse: "collapse", fontSize: "15.5px" }}>
-<caption style={{ position: "absolute", width: "1px", height: "1px", overflow: "hidden", clip: "rect(0 0 0 0)" }}>Klienti AristoTela podle počtu lidí v plánu</caption>
+<caption style={{ position: "absolute", width: "1px", height: "1px", overflow: "hidden", clip: "rect(0 0 0 0)" }}>Klienti AristoTela podle počtu pracovníků v plánu</caption>
 <thead>
 <tr>
 <th scope="col" style={{ padding: "0 16px 10px", borderBottom: "1px solid #C5D0D9", textAlign: "left", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "12px", fontWeight: "500", letterSpacing: "0.05em", textTransform: "uppercase", color: "#4A5866" }}>Klient</th>
 <th scope="col" style={{ padding: "0 16px 10px", borderBottom: "1px solid #C5D0D9", textAlign: "left", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "12px", fontWeight: "500", letterSpacing: "0.05em", textTransform: "uppercase", color: "#4A5866" }}>Odvětví</th>
-<th scope="col" style={{ padding: "0 16px 10px", borderBottom: "1px solid #C5D0D9", textAlign: "left", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "12px", fontWeight: "500", letterSpacing: "0.05em", textTransform: "uppercase", color: "#4A5866" }}>Lidé v plánu</th>
+<th scope="col" style={{ padding: "0 16px 10px", borderBottom: "1px solid #C5D0D9", textAlign: "left", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "12px", fontWeight: "500", letterSpacing: "0.05em", textTransform: "uppercase", color: "#4A5866" }}>Pracovníci v plánu</th>
 <th scope="col" style={{ padding: "0 16px 10px", borderBottom: "1px solid #C5D0D9", textAlign: "left", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "12px", fontWeight: "500", letterSpacing: "0.05em", textTransform: "uppercase", color: "#4A5866" }}>Napojení</th>
 </tr>
 </thead>
@@ -73,7 +73,7 @@ export default function ReferencePage() {
 <Link href="/reseni/obchodni-retezce-a-lekarny" style={{ color: "#0E1A24" }}>Albert ČR</Link>
 </th>
 <td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", color: "#33424F" }}>Obchodní řetězec</td>
-<td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 17 000 lidí · 350 prodejen · 3 DC</td>
+<td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 17 000 · 350 prodejen · 3 DC</td>
 <td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", color: "#4A5866" }}>SAP (mzdy)</td>
 </tr>
 <tr>
@@ -81,7 +81,7 @@ export default function ReferencePage() {
 <Link href="/reseni/obchodni-retezce-a-lekarny" style={{ color: "#0E1A24" }}>Benu Lékárny</Link>
 </th>
 <td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", color: "#33424F" }}>Lékárny</td>
-<td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 2 500 lidí · 350 lékáren</td>
+<td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 2 500 · 350 lékáren</td>
 <td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", color: "#4A5866" }}>interní systémy</td>
 </tr>
 <tr>
@@ -114,7 +114,7 @@ export default function ReferencePage() {
 <Link href="/reseni/obchodni-retezce-a-lekarny" style={{ color: "#0E1A24" }}>Sconto Nábytek</Link>
 </th>
 <td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", color: "#33424F" }}>Obchod</td>
-<td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>500+ lidí · 13 prodejen v CZ a SK</td>
+<td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>500+ · 13 prodejen v CZ a SK</td>
 <td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", color: "#4A5866" }}>docházka Astea</td>
 </tr>
 <tr>
@@ -192,7 +192,7 @@ export default function ReferencePage() {
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.06em", textTransform: "uppercase", color: "#4A5866" }}>Obchodní řetězec</span>
 </div>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "2.2rem", fontWeight: "600", lineHeight: "1.05", color: "#0E1A24" }}>2–3 h</span>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>místo 2–3 dnů na měsíční plán ve dvou distribučních centrech s 800 lidmi.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>místo 2–3 dnů na měsíční plán ve dvou distribučních centrech s 800 pracovníky.</p>
 <span style={{ marginTop: "auto", fontWeight: "600", color: "#006E99", fontSize: "15px" }}>Případová studie →</span>
 </Link>
 <Link href="/reseni/energetika-a-telekomunikace" style={{ display: "flex", flexDirection: "column", gap: "14px", padding: "clamp(16px, 2.6vh, 28px)", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", color: "#0E1A24", textDecoration: "none" }}>
@@ -200,7 +200,7 @@ export default function ReferencePage() {
 <img src="/logos/t-mobile.svg" alt="T-Mobile" style={{ maxHeight: "30px", maxWidth: "140px", width: "auto" }} loading="lazy" />
 </div>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "2.2rem", fontWeight: "600", lineHeight: "1.05", color: "#0E1A24" }}>450 + 250</span>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>lidí na lince a ve značkových prodejnách. Výkon konzultantů počítají z docházky.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>pracovníků na lince a ve značkových prodejnách. Výkon konzultantů počítají z docházky.</p>
 <span style={{ marginTop: "auto", fontWeight: "600", color: "#006E99", fontSize: "15px" }}>Zkušenost T-Mobile →</span>
 </Link>
 </div>
