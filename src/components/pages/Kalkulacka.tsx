@@ -14,7 +14,7 @@ export default function KalkulackaPage() {
 <h1 className="kalk-h1" style={{ margin: "0", lineHeight: "1.08", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Kolik ušetří váš provoz</h1>
 <PrepinacOboru aktivni="obecny" />
 </div>
-<p className="kalk-perex">Pro sklady, distribuční centra a další provozy. Zadejte čtyři čísla a hned uvidíte, kolik ušetříte automatickým plánováním směn.</p>
+<p className="kalk-perex">Zadejte čtyři údaje o skladu nebo jiném provozu a hned uvidíte odhad roční úspory.</p>
 </>}
 >
 <section id="jak-pocitame" style={{ padding: "96px 0", background: "#FFFFFF" }}>
