@@ -16,7 +16,7 @@ const h2: CSSProperties = { margin: 0, fontSize: 'clamp(1.5rem, min(3vw, 4.2vh),
 const TEXTY: Record<Obor, { hlavni: { nadpis: string; text: string }; doplnek: { nadpis: string; text: string; navic: string } }> = {
   'kontaktni-centrum': {
     hlavni: { nadpis: 'Výpočet a předpoklady, které můžete upravit', text: 'Vlevo opatrný, vpravo realistický odhad. Procenta jsou nižší, než uvádějí studie objednané dodavateli. Když je přepíšete, výsledek nahoře se hned přepočítá.' },
-    doplnek: { nadpis: 'Doplňte přesčasy, pokud je znáte', text: 'Přesčasy počítáme, jen když zadáte, kolik jich operátoři měsíčně odpracují. Bez toho zůstávají mimo odhad.', navic: 'V business casu navíc spočítáme úroveň obsluhy při stejném počtu lidí, víkendové a noční příplatky a agenturní pracovníky.' },
+    doplnek: { nadpis: 'Doplňte přesčasy, pokud je znáte', text: 'Přesčasy počítáme, jen když zadáte, kolik jich operátoři měsíčně odpracují. Bez toho zůstávají mimo odhad.', navic: 'V business casu navíc spočítáme úroveň obsluhy při stejném počtu pracovníků, víkendové a noční příplatky a agenturní pracovníky.' },
   },
   retail: {
     hlavni: { nadpis: 'Výpočet a předpoklady, které můžete upravit', text: 'Vlevo opatrný, vpravo realistický odhad. Procenta jsou pod spodní hranicí veřejných studií. Když je přepíšete, výsledek nahoře se hned přepočítá.' },
