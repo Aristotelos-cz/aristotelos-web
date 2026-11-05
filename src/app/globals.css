@@ -38,7 +38,6 @@ summary::-webkit-details-marker { display: none; }
 .menu-reseni-odkaz:hover { background: #F5F8FA; }
 @media (min-width: 1200px) {
   .site-header { position: sticky; top: 0; z-index: 50; }
-  [id] { scroll-margin-top: 96px; }
 }
 @media (max-width: 1199px) {
   .nav-toggle { display: inline-flex; }
@@ -123,4 +122,79 @@ summary::-webkit-details-marker { display: none; }
 }
 @media (max-width: 560px) {
   .kalk-pole { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Pravidlo „jedna část = jedna obrazovka“: každá část stránky vyplní aspoň celou viditelnou plochu
+   pod hlavičkou, obsah je svisle uprostřed a posouvání se zastaví na začátku části.
+   Úvod (první část) tak vyplní přesně první obrazovku a z další části není nic vidět. */
+:root { --hlavicka: 73px; }
+html { scroll-snap-type: y proximity; }
+main > section {
+  min-height: calc(100vh - var(--hlavicka));
+  min-height: calc(100svh - var(--hlavicka));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+main > section > * { width: 100%; }
+[id] { scroll-margin-top: 24px; }
+main > section[id] { scroll-margin-top: 0; }
+/* Široké obrazovky: hlavička je přichycená, části začínají pod ní */
+@media (min-width: 1200px) {
+  html { scroll-padding-top: var(--hlavicka); }
+}
+/* Užší obrazovky: hlavička odjede, další části mají výšku celé obrazovky */
+@media (max-width: 1199px) {
+  main > section:not(:first-child) { min-height: 100vh; min-height: 100svh; }
+  /* první zastávka je hlavička s úvodem, jinak by prohlížeč hlavičku při načtení odsunul */
+  .site-header { scroll-snap-align: start; }
+  main > section:first-child { scroll-snap-align: none; }
+}
+/* Části jsou svisle vycentrované, proto stačí menší okraje, které se řídí výškou okna */
+main > section:not(:first-child) {
+  padding-top: clamp(24px, 4.6vh, 96px) !important;
+  padding-bottom: clamp(24px, 4.6vh, 96px) !important;
+}
+/* Časté otázky ve dvou sloupcích na širších obrazovkách, aby se část vešla na obrazovku */
+@media (min-width: 1000px) {
+  div:has(> .faq-mrizka) { max-width: 1200px !important; }
+  .faq-mrizka { display: block !important; column-count: 2; column-gap: 56px; }
+  .faq-mrizka > details { break-inside: avoid; }
+}
+/* Snímky aplikace v částech: výška podle okna, rámeček se zúží spolu se snímkem */
+main > section:not(:first-child) img[src^="/screens/funkce-"],
+main > section:not(:first-child) img[src^="/screens/plan-"] {
+  max-height: clamp(170px, 33vh, 520px);
+  width: auto !important;
+  max-width: 100%;
+}
+main > section:not(:first-child) div:has(> img[src^="/screens/funkce-"]),
+main > section:not(:first-child) div:has(> img[src^="/screens/plan-"]) {
+  width: fit-content;
+  max-width: 100%;
+}
+/* Úvodní stránka, část Integrace: popisy systémů jen na vysokých obrazovkách (podrobně jsou na stránce Integrace a API) */
+@media (min-width: 1001px) and (max-height: 1000px) {
+  .flow-popis-domu { display: none; }
+}
+@media (min-width: 1001px) and (max-height: 900px) {
+  .praxe-domu { display: none !important; }
+}
+/* Úvodní stránka, Jak to funguje: číslo kroku na řádku s nadpisem */
+@media (min-width: 700px) {
+  #produkt ol > li { display: grid !important; grid-template-columns: auto 1fr; column-gap: 10px; align-items: baseline; }
+  #produkt ol > li > p { grid-column: 1 / -1; }
+}
+/* Telefony v částech: šířka podle výšky okna */
+main > section:not(:first-child) div:has(> img[src^="/screens/mobil-"]) { max-width: clamp(150px, 27vh, 260px) !important; }
+/* Nízká okna notebooků: obsah částí se mírně zmenší, aby se každá část vešla na jednu obrazovku */
+@media (min-width: 1001px) and (max-height: 800px) {
+  main > section:not(:first-child) > * { zoom: 0.94; }
+}
+@media (min-width: 1001px) and (max-height: 680px) {
+  main > section:not(:first-child) > * { zoom: 0.88; }
+}
+@media (min-width: 1001px) and (max-height: 640px) {
+  main > section:not(:first-child) > * { zoom: 0.84; }
 }
