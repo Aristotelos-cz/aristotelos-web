@@ -108,7 +108,7 @@ const KONTAKTNI_CENTRUM: Nastaveni = {
   pole: [
     { typ: 'cislo', klic: 'operatori', label: 'Počet operátorů', napoveda: 'Přepočtené plné úvazky.', jednotka: 'úvazků', min: 10, max: 10000, krok: 5, vychozi: 100, posuvnik: 1500 },
     MZDA,
-    { typ: 'cislo', klic: 'ostatniNaklady', label: 'Ostatní náklady na operátora', napoveda: 'Místo, technika, licence, benefity.', jednotka: 'Kč/měsíc', min: 0, max: 50000, krok: 500, vychozi: 0, posuvnik: 20000, nula: 'nezadáno' },
+    { typ: 'cislo', klic: 'ostatniNaklady', label: 'Ostatní náklady na operátora', napoveda: 'Místo, technika, licence, benefity.', jednotka: 'Kč/měsíc', min: 0, max: 50000, krok: 500, vychozi: 5500, posuvnik: 20000 },
     { typ: 'cislo', klic: 'fluktuace', label: 'Roční fluktuace operátorů', napoveda: 'Odchody za rok, běžně 23–38 %.', jednotka: '%', min: 0, max: 100, krok: 1, vychozi: 30 },
     { typ: 'cislo', klic: 'planovaci', label: 'Plánovači a team leadeři', napoveda: 'Ti, kdo sestavují a mění rozpisy.', jednotka: 'lidí', min: 1, max: 500, krok: 1, vychozi: 5, posuvnik: 60 },
     { typ: 'cislo', klic: 'hodinyPlanovani', label: 'Čas plánovače na rozpisy', napoveda: 'Za týden, včetně volna a výměn směn.', jednotka: 'h týdně', min: 0.5, max: 40, krok: 0.5, vychozi: 8, posuvnik: 40 },
@@ -183,9 +183,9 @@ const RETAIL: Nastaveni = {
     { typ: 'cislo', klic: 'prodejny', label: 'Počet prodejen', napoveda: 'Prodejny nebo lékárny.', jednotka: 'prodejen', min: 1, max: 5000, krok: 1, vychozi: 50, posuvnik: 600 },
     { typ: 'cislo', klic: 'lide', label: 'Lidí na prodejnu', napoveda: 'Průměrně, včetně brigádníků.', jednotka: 'lidí', min: 1, max: 500, krok: 1, vychozi: 12, posuvnik: 60 },
     MZDA,
-    { typ: 'cislo', klic: 'ostatniNaklady', label: 'Ostatní náklady na zaměstnance', napoveda: 'Oblečení, benefity, školení, technika.', jednotka: 'Kč/měsíc', min: 0, max: 50000, krok: 500, vychozi: 0, posuvnik: 10000, nula: 'nezadáno' },
+    { typ: 'cislo', klic: 'ostatniNaklady', label: 'Ostatní náklady na zaměstnance', napoveda: 'Oblečení, benefity, školení, technika.', jednotka: 'Kč/měsíc', min: 0, max: 50000, krok: 500, vychozi: 5500, posuvnik: 20000 },
     { typ: 'cislo', klic: 'hodinyVedouci', label: 'Čas vedoucího na rozpisy', napoveda: 'Plánování a změny směn za týden.', jednotka: 'h týdně', min: 0.5, max: 40, krok: 0.5, vychozi: 4, posuvnik: 20 },
-    { typ: 'cislo', klic: 'fluktuace', label: 'Roční fluktuace', napoveda: 'Kolik lidí za rok odejde.', jednotka: '%', min: 0, max: 200, krok: 1, vychozi: 0, posuvnik: 100, nula: 'nezadáno' },
+    { typ: 'cislo', klic: 'fluktuace', label: 'Roční fluktuace', napoveda: 'Kolik lidí za rok odejde.', jednotka: '%', min: 0, max: 200, krok: 1, vychozi: 15, posuvnik: 100 },
     {
       typ: 'volba', klic: 'planovani', label: 'Dnes plánujete', vychozi: 'excel',
       moznosti: [
