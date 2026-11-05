@@ -60,7 +60,7 @@ test('retail bez ostatních nákladů a fluktuace', () => {
   // 50 prodejen × 2 h / 3 h × 200 Kč × 1,4 × 52
   blizko(oblast(o, 'vedouci').lo, 1_456_000, 'vedoucí lo')
   blizko(oblast(o, 'vedouci').hi, 2_184_000, 'vedoucí hi')
-  // 50 × 12 lidí × 34 h × 52 × 200 Kč × 2 % / 4 %
+  // 50 × 12 pracovníků × 34 h × 52 × 200 Kč × 2 % / 4 %
   blizko(oblast(o, 'hodiny').lo, 4_243_200, 'hodiny lo')
   blizko(oblast(o, 'hodiny').hi, 8_486_400, 'hodiny hi')
   assert.equal(o.oblasti.length, 2, 'fluktuace 0 se nepočítá')
@@ -70,10 +70,10 @@ test('retail bez ostatních nákladů a fluktuace', () => {
 
 test('retail, výchozí hodnoty (ostatní náklady 5 500 Kč, fluktuace 15 %)', () => {
   const o = spocitejObor('retail')
-  // Ostatní náklady: 600 lidí × 66 000 Kč ročně × 50 % × 2 % = 396 000 Kč, × 100 % × 4 % = 1 584 000 Kč
+  // Ostatní náklady: 600 pracovníků × 66 000 Kč ročně × 50 % × 2 % = 396 000 Kč, × 100 % × 4 % = 1 584 000 Kč
   blizko(oblast(o, 'hodiny').lo, 4_243_200 + 396_000, 'hodiny lo')
   blizko(oblast(o, 'hodiny').hi, 8_486_400 + 1_584_000, 'hodiny hi')
-  // 600 lidí × 15 % × 10 % × 15 % × 353 600 Kč / × 15 % × 25 %
+  // 600 pracovníků × 15 % × 10 % × 15 % × 353 600 Kč / × 15 % × 25 %
   blizko(oblast(o, 'fluktuace').lo, 477_360, 'fluktuace lo')
   blizko(oblast(o, 'fluktuace').hi, 1_193_400, 'fluktuace hi')
   blizko(o.lo, 6_572_560, 'celkem lo')
@@ -88,7 +88,7 @@ test('retail, strop času vedoucího, doplňky, tržby mimo součet a jiný nás
   assert.equal(o.poznamka, 'Každý vedoucí získá zpět 1,5 h týdně pro zákazníky a tým.')
 
   const d = spocitejObor('retail', { hodnoty: { fluktuace: 40 }, predpoklady: { trzby: 20 } })
-  // 600 lidí × 40 % × 10 % × 15 % × (34 h × 52 × 200 Kč)
+  // 600 pracovníků × 40 % × 10 % × 15 % × (34 h × 52 × 200 Kč)
   blizko(oblast(d, 'fluktuace').lo, 1_272_960, 'fluktuace lo')
   blizko(oblast(d, 'fluktuace').hi, 3_182_400, 'fluktuace hi')
   // 50 prodejen × 20 mil. Kč × 0,5 % / 2 %
