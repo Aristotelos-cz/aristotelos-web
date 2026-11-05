@@ -124,6 +124,52 @@ summary::-webkit-details-marker { display: none; }
   .kalk-pole { grid-template-columns: minmax(0, 1fr); }
 }
 
+/* Nadpis kalkulačky a vedle něj přepínač oboru (na užších oknech pod sebou) */
+.kalk-titulek { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px; }
+.kalk-perex { margin: 0; max-width: 62em; font-size: 1.05rem; line-height: 1.5; color: #33424F; }
+/* Přepínač oboru nad kalkulačkou (každý obor má vlastní adresu) */
+.kalk-prepinac { display: inline-flex; flex: none; max-width: 100%; gap: 2px; padding: 3px; border: 1px solid #C5D0D9; border-radius: 10px; background: #FFFFFF; }
+.kalk-prepinac a { display: inline-flex; align-items: center; min-height: 36px; padding: 0 14px; border-radius: 7px; font-size: 14.5px; font-weight: 600; color: #33424F; text-decoration: none; white-space: nowrap; }
+.kalk-prepinac a:hover { background: #EEF5F9; color: #006E99; }
+.kalk-prepinac a[aria-current="page"] { background: #0E1A24; color: #FFFFFF; }
+@media (max-width: 400px) {
+  .kalk-prepinac a { padding: 0 9px; font-size: 13.5px; }
+}
+.kalk-volba { max-width: 100%; min-height: 40px; padding: 0 10px; border: 1px solid #C5D0D9; border-radius: 8px; background: #FFFFFF; color: #0E1A24; font: inherit; font-size: 15px; font-weight: 400; }
+.kalk-odkaz-tlacitko { min-height: 44px; padding: 0 6px; border: 0; background: none; color: #FFFFFF; font: inherit; font-size: 14.5px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.kalk-odkaz-svetle { color: #006E99; }
+
+/* Výpočet a upravitelné předpoklady (kalkulačky pro obory) */
+.predp-sekce { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: clamp(12px, 2.2vh, 28px); }
+.predp-uvod { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 32px; }
+.predp-akce { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+.predp-souhrn { margin: 0; padding: 10px 14px; border-radius: 10px; background: #0E1A24; color: #FFFFFF; font-size: 15px; }
+.predp-souhrn strong { color: #FF8A2B; white-space: nowrap; }
+.predp { border: 1px solid #DCE3E9; border-radius: 14px; background: #FFFFFF; overflow: hidden; }
+.predp-radek { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 2.3fr) minmax(0, 0.8fr) minmax(0, 1.6fr); gap: 0 24px; align-items: start; padding: clamp(8px, 1.4vh, 16px) 20px; border-top: 1px solid #E3E8ED; }
+.predp-hlavicka { align-items: center; padding-top: 10px; padding-bottom: 10px; border-top: 0; background: #F5F8FA; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #4A5866; }
+.predp-vstupy { display: grid; grid-template-columns: minmax(0, 1fr) 96px 96px; gap: 6px 12px; align-items: center; }
+.predp-label { font-size: 14.5px; line-height: 1.3; }
+.predp-napoveda { display: block; font-size: 12.5px; color: #4A5866; }
+.predp-vstup { display: flex; align-items: center; gap: 6px; }
+.predp-vstup input { box-sizing: border-box; width: 100%; min-width: 0; min-height: 38px; padding: 0 8px; border: 1px solid #C5D0D9; border-radius: 8px; background: #FFFFFF; color: #0E1A24; font: inherit; font-size: 15.5px; }
+.predp-vstup > span { flex: none; min-width: 1em; font-size: 14px; color: #4A5866; }
+.predp-vzorec { font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 12.5px; line-height: 1.5; color: #4A5866; }
+.predp-uspora { display: flex; flex-direction: column; gap: 4px; padding-top: 8px; }
+.predp-opora { display: flex; flex-direction: column; gap: 4px; padding-top: 2px; font-size: 13px; line-height: 1.45; color: #33424F; }
+.predp-mobil { display: none; }
+@media (min-width: 1001px) and (max-height: 720px) {
+  .predp-nizko-skryt { display: none !important; }
+}
+@media (max-width: 860px) {
+  .predp-hlavicka { display: none; }
+  .predp-radek { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .predp-vstupy { grid-template-columns: minmax(0, 1fr) 84px 84px; }
+  .predp-mobil { display: block; font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; color: #4A5866; }
+  .predp-uspora { padding-top: 0; }
+  .predp-akce { align-items: flex-start; }
+}
+
 /* Pravidlo „jedna část = jedna obrazovka“: každá část stránky vyplní aspoň celou viditelnou plochu
    pod hlavičkou, obsah je svisle uprostřed a posouvání se zastaví na začátku části.
    Úvod (první část) tak vyplní přesně první obrazovku a z další části není nic vidět. */
