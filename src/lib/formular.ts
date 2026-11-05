@@ -4,6 +4,7 @@ export const KONTAKT_TELEFON = '+420 606 337 182'
 export const KONTAKT_EMAIL = 'info@aristotelos.com'
 export const PRIJEMCI_OBCHOD = () => (process.env.LEAD_EMAIL_TO || KONTAKT_EMAIL).split(',').map((s) => s.trim()).filter(Boolean)
 export const NEJDE_ODESLAT = `Formulář se teď nepodařilo odeslat. Napište nám prosím na ${KONTAKT_EMAIL} nebo zavolejte na ${KONTAKT_TELEFON}.`
+export const ZMENA_STRANKY = 'Stránka se mezitím změnila. Načtěte ji prosím znovu a odešlete formulář ještě jednou.'
 
 export const text = (v: unknown, max: number) => String(v ?? '').replace(/[\u0000-\u001F\u007F]/g, ' ').trim().slice(0, max)
 export const html = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
