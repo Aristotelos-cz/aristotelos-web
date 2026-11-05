@@ -29,7 +29,7 @@ const base = { color: '#0E1A24', textDecoration: 'none', padding: '10px 0' }
 const active = { color: '#006E99', textDecoration: 'none', padding: '10px 0', boxShadow: 'inset 0 -2px 0 #FF6633' }
 
 function Odkaz({ p, pathname }: { p: Polozka; pathname: string }) {
-  const on = pathname === p.href
+  const on = pathname === p.href || pathname.startsWith(p.href + '/')
   return (
     <Link href={p.href} aria-current={on ? 'page' : undefined} style={on ? active : base}>
       {p.label}
