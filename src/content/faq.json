@@ -162,5 +162,49 @@
       "q": "Co když nemám všechna čísla?",
       "a": "Stačí odhad. Chybějící údaje doplníme spolu při přípravě business casu."
     }
+  ],
+  "/kalkulacka-uspor/kontaktni-centrum": [
+    {
+      "q": "Z čeho kalkulačka pro kontaktní centra vychází?",
+      "a": "Z veřejných studií a benchmarků: náklady na nahrazení operátora 30–50 % roční mzdy (SQM), fluktuace operátorů 23–38 % (ContactBabel, SQM) a 8 hodin týdně, které plánovači tráví žádostmi o volno a výměnami (ICMI). Procenta úspor volíme nižší, než uvádějí studie objednané dodavateli, a všechna si můžete upravit."
+    },
+    {
+      "q": "Proč kalkulačka nepočítá úroveň obsluhy?",
+      "a": "Úroveň obsluhy při stejném počtu operátorů závisí na vašich frontách, objemu hovorů a jejich délce. Spočítáme ji v business casu z vašich dat."
+    },
+    {
+      "q": "Co když už plánujeme v jiném nástroji?",
+      "a": "Vyberte to v poli „Dnes plánujete“. U nástroje bez předpovědi hovorů počítáme s polovičním ušetřeným časem plánovačů, u nástroje s předpovědí s poloviční úsporou ve všech oblastech."
+    },
+    {
+      "q": "Proč kalkulačka nepočítá s cenou AristoTela?",
+      "a": "Cenu připravujeme na míru podle počtu uživatelů a rozsahu nasazení. Náklady, návratnost a ROI proto počítáme až v business casu."
+    },
+    {
+      "q": "Jak přesný je odhad?",
+      "a": "Je to orientační rozpětí od opatrného po realistický odhad. Přesná čísla spočítáme v business casu z dat o vašem kontaktním centru."
+    }
+  ],
+  "/kalkulacka-uspor/retail": [
+    {
+      "q": "Z čeho kalkulačka pro retail vychází?",
+      "a": "Z veřejných studií: McKinsey uvádí úsporu mzdových nákladů 4–12 % díky plánování podle práce, v pilotu evropského řetězce 6 %. Studie Forrester uvádějí, že vedoucí prodejny ušetří 2–4 hodiny týdně. Kalkulačka počítá opatrněji, s 2–4 % hodin a 2–3 hodinami vedoucího."
+    },
+    {
+      "q": "Hodí se kalkulačka i pro lékárny?",
+      "a": "Ano. Počítá s počtem provozoven, lidmi na provozovnu a časem vedoucího na rozpisy, což platí pro prodejny i lékárny. Pravidla lékáren, třeba přítomnost farmaceuta, zohledníme v business casu."
+    },
+    {
+      "q": "Proč nejsou tržby v celkové úspoře?",
+      "a": "Studie uvádějí růst tržeb o 4,5–7 % při lepším obsazení, ale prodejny přitom často zároveň nabíraly lidi. Růst tržeb proto ukazujeme zvlášť, jen 0,5–2 % a mimo celkovou úsporu."
+    },
+    {
+      "q": "Co když už plánujeme v jiném nástroji?",
+      "a": "Vyberte to v poli „Dnes plánujete“. S jiným nástrojem počítáme s poloviční úsporou ve všech oblastech."
+    },
+    {
+      "q": "Proč kalkulačka nepočítá s cenou AristoTela?",
+      "a": "Cenu připravujeme na míru podle počtu prodejen, uživatelů a rozsahu nasazení. Náklady, návratnost a ROI proto počítáme až v business casu."
+    }
   ]
 }
