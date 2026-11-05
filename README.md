@@ -22,7 +22,8 @@ Potřebujete Node.js 20.9 nebo novější.
 | `src/components/pages/` | Obsah jednotlivých stránek (převedený z návrhu na plátně) |
 | `src/components/SiteHeader.tsx`, `SiteFooter.tsx` | Hlavička a patička |
 | `src/components/KalkulackaInteraktivni.tsx` | Kalkulačky úspor: zadání, výsledek, upravitelné předpoklady, shrnutí v PDF a formulář pro business case |
-| `src/lib/odhadUspor.ts` | Výpočet a nastavení tří kalkulaček (kontaktní centrum, retail, jiný provoz): pole, výchozí hodnoty, předpoklady, zdroje. Sdílí ho stránka i server |
+| `src/components/pages/Kalkulacka.tsx` | Rozcestník kalkulaček na `/kalkulacka-uspor` |
+| `src/lib/odhadUspor.ts` | Výpočet a nastavení obou kalkulaček (kontaktní centrum, retail): pole, výchozí hodnoty, předpoklady, zdroje. Sdílí ho stránka i server |
 | `tests/odhadUspor.test.mjs` | Testy výpočtu (`npm test`) |
 | `src/app/api/business-case/` | Odeslání žádosti o business case: e-mail obchodu s Excelem, potvrzení zájemci |
 | `src/app/api/shrnuti/` | Shrnutí z kalkulačky za e-mail: zájemci PDF, obchodu upozornění |
@@ -47,8 +48,9 @@ není nic vidět. Na počítači se každá část vejde celá na jednu obrazovk
 okna, na nízkých oknech se obsah mírně zmenší). Na telefonu jsou delší části vyšší než obrazovka.
 Mezery a velikost nadpisů se proto řídí výškou okna (třídy `hero-*`, `kalk-*` a pravidla pro `main > section`
 v `src/app/globals.css`).
-Tři kalkulačky mají zadání i výsledek na stejném místě a ve stejné velikosti, aby při přepínání nic neposkakovalo
-(nadpis a úvodní věta na jeden řádek, kalkulačka vysoká jako okno, nejvýš 700 px).
+Obě kalkulačky mají zadání i výsledek na stejném místě a ve stejné velikosti, aby při přepínání nic neposkakovalo
+(nadpis a úvodní věta na jeden řádek, kalkulačka vysoká jako okno, nejvýš 800 px). Na oknech nižších než 800 px
+se schovají nápovědy u polí, pod 700 px i posuvníky.
 
 ## Proměnné prostředí
 
@@ -61,13 +63,15 @@ Ručně to lze přepnout proměnnou `SITE_INDEXING=on` nebo `off`.
 
 ## Kalkulačky úspor
 
-Tři kalkulačky na vlastních adresách, mezi nimiž se přepíná nad zadáním:
+Dvě kalkulačky na vlastních adresách, mezi nimiž se přepíná vedle nadpisu, a rozcestník:
 
-| Adresa | Pro koho | Odkazují na ni |
+| Adresa | Co tam je | Odkazují na ni |
 | --- | --- | --- |
-| `/kalkulacka-uspor/kontaktni-centrum` | kontaktní centra | Kontaktní centra, Banky a pojišťovny, Energetika a telekomunikace |
-| `/kalkulacka-uspor/retail` | obchody a lékárny | Obchodní řetězce a lékárny |
-| `/kalkulacka-uspor` | sklady a další provozy (původní kalkulačka) | hlavní menu, Distribuční centra |
+| `/kalkulacka-uspor` | rozcestník: karty Kontaktní centrum a Retail, časté otázky | hlavní menu, patička, úvodní stránka, Produkt |
+| `/kalkulacka-uspor/kontaktni-centrum` | kalkulačka pro kontaktní centra | Kontaktní centra, Banky a pojišťovny, Energetika a telekomunikace |
+| `/kalkulacka-uspor/retail` | kalkulačka pro obchody a lékárny | Obchodní řetězce a lékárny |
+
+Obecná kalkulačka pro sklady a další provozy byla zrušena (5. 11. 2026), úsporu pro ně spočítá obchod v business casu.
 
 Vstupy, výchozí hodnoty, procenta (opatrně a realisticky) a zdroje jsou na jednom místě v `src/lib/odhadUspor.ts`.
 Po změně čísel spusťte `npm test` a upravte ručně spočítané příklady v testech.
