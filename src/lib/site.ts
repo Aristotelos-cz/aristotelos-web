@@ -26,6 +26,8 @@ export const PAGES: PageInfo[] = [
   { path: '/bezpecnost', title: 'Bezpečnost a ISO/IEC 27001', description: 'Certifikace ISO/IEC 27001:2022, každoroční penetrační testy, jednotné přihlášení, audit změn a provoz v datovém centru ČRa s úrovní Tier III.' },
   { path: '/o-nas', title: 'O nás', description: 'AristoTelos vyvíjíme sami v Praze od roku 2009. Tým matematiků a fyziků, vlastní optimalizační model a plánování směn do hloubky.' },
   { path: '/kalkulacka-uspor', title: 'Kalkulačka úspor z plánování směn', description: 'Spočítejte si, kolik ušetříte automatickým plánováním směn: obsazení provozu, přesčasy, čas vedoucích a fluktuace.' },
+  { path: '/kalkulacka-uspor/kontaktni-centrum', title: 'Kalkulačka úspor pro kontaktní centra', description: 'Spočítejte si, kolik kontaktní centrum ušetří automatickým plánováním směn: přesnější obsazení intervalů, nižší fluktuace operátorů a čas plánovačů. Předpoklady se zdroji.' },
+  { path: '/kalkulacka-uspor/retail', title: 'Kalkulačka úspor pro obchody a lékárny', description: 'Spočítejte si, kolik obchodní řetězec nebo síť lékáren ušetří automatickým plánováním směn: čas vedoucích prodejen a pracovní doba podle návštěvnosti.' },
   { path: '/ochrana-osobnich-udaju', title: 'Ochrana osobních údajů', description: 'Jak AristoTelos zachází s osobními údaji z webu, formuláře pro ukázku a obchodní komunikace.', noindex: true },
 ]
 
