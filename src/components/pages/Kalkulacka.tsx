@@ -1,5 +1,6 @@
 // Vygenerováno z návrhu na plátně (Kalkulacka.dc.html); interaktivní část je v KalkulackaInteraktivni.tsx
 import KalkulackaInteraktivni from '@/components/KalkulackaInteraktivni'
+import PrepinacOboru from '@/components/PrepinacOboru'
 
 export default function KalkulackaPage() {
   return (
@@ -7,22 +8,17 @@ export default function KalkulackaPage() {
 
 
 <KalkulackaInteraktivni
+  obor="obecny"
   uvod={<>
-<div className="kalk-nizko-skryt" style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
-<span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
-<span style={{ flex: "55", background: "#006699" }}>
-</span>
-<span style={{ flex: "45", background: "#FF6633" }}>
-</span>
-</span>
-<span>Kalkulačka úspor</span>
+<div className="kalk-titulek">
+<h1 className="kalk-h1" style={{ margin: "0", lineHeight: "1.08", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Kolik ušetří váš provoz</h1>
+<PrepinacOboru aktivni="obecny" />
 </div>
-<h1 className="kalk-h1" style={{ margin: "0", lineHeight: "1.08", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Kolik ušetříte s automatickým plánováním směn</h1>
-<p style={{ margin: "0", fontSize: "1.05rem", lineHeight: "1.5", color: "#33424F", maxWidth: "62em" }}>Zadejte čtyři čísla o svém provozu a hned uvidíte odhad roční úspory. Vychází z předpokladů, se kterými počítáme v nabídkách. Podrobný business case s návratností připravíme s vámi.</p>
+<p className="kalk-perex">Pro sklady, distribuční centra a další provozy. Zadejte čtyři čísla a hned uvidíte, kolik ušetříte automatickým plánováním směn.</p>
 </>}
 >
 <section id="jak-pocitame" style={{ padding: "96px 0", background: "#FFFFFF" }}>
-<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "clamp(20px, 4.2vh, 48px)" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "clamp(14px, 3vh, 48px)" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "16px", maxWidth: "760px" }}>
 <div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#4A5866" }}>
 <span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
@@ -36,7 +32,7 @@ export default function KalkulackaPage() {
 <h2 style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Čtyři oblasti, které jde spočítat hned</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Opatrný odhad počítá s polovičními hodnotami předpokladů. Měsíční fond pracovní doby: 38 h týdně na HPP a 20 h týdně na zkrácený úvazek.</p>
 </div>
-<div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(260px, 100%), 1fr))", gap: "20px" }}>
+<div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(215px, 100%), 1fr))", gap: "20px" }}>
 <div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "12px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", color: "#FF6633", fontWeight: "600" }}>01</span>
 <h3 style={{ margin: "0", fontSize: "1.25rem", fontWeight: "700" }}>Obsazení provozu</h3>

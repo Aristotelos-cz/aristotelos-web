@@ -15,7 +15,7 @@ export default function OchranaUdajuPage() {
 <span>Ochrana osobních údajů</span>
 </div>
 <h1 className="hero-h1-stranka" style={{ margin: "0", lineHeight: "1.08", letterSpacing: "-0.02em", fontWeight: "700" }}>Jak zacházíme s vašimi osobními údaji</h1>
-<p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Platí od <mark style={{ background: "#FFF1D6", color: "#7A4A12", padding: "1px 4px", borderRadius: "4px" }}>[datum]</mark>. Týká se webu aristotelos.com, formulářů pro ukázku a business case a obchodní komunikace.</p>
+<p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Platí od <mark style={{ background: "#FFF1D6", color: "#7A4A12", padding: "1px 4px", borderRadius: "4px" }}>[datum]</mark>. Týká se webu aristotelos.com, formulářů pro ukázku, business case a shrnutí z kalkulačky a obchodní komunikace.</p>
 <div role="note" style={{ background: "#FFFBF5", border: "1.5px dashed #E0A060", borderRadius: "12px", padding: "18px 20px", color: "#7A4A12", fontSize: "15px" }}>Návrh struktury. Text musí před zveřejněním zkontrolovat a doplnit právník nebo pověřenec pro ochranu osobních údajů. Místa k doplnění jsou zvýrazněná.</div>
 </div>
 </section>
@@ -57,12 +57,12 @@ export default function OchranaUdajuPage() {
 </section>
 <section aria-labelledby="g-udaje" style={{ display: "flex", flexDirection: "column", gap: "14px", paddingTop: "36px", borderTop: "1px solid #E3E8ED" }}>
 <h2 id="g-udaje" style={{ margin: "0", fontSize: "1.6rem", lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "700" }}>Jaké údaje zpracováváme</h2>
-<p style={{ margin: "0", color: "#33424F" }}>Údaje, které nám sami pošlete ve formuláři pro ukázku nebo pro business case:</p>
+<p style={{ margin: "0", color: "#33424F" }}>Údaje, které nám sami pošlete ve formuláři pro ukázku, pro business case nebo pro shrnutí z kalkulačky:</p>
 <ul style={{ margin: "0", paddingLeft: "22px", color: "#33424F", display: "flex", flexDirection: "column", gap: "6px" }}>
 <li>jméno a příjmení, firmu, pracovní e-mail a telefon,</li>
 <li>odvětví a přibližný počet lidí ve směnách,</li>
 <li>text zprávy, pokud ji napíšete,</li>
-<li>u business casu čísla z kalkulačky úspor: počet lidí ve směnách, průměrné hodinové mzdové náklady, podíl HPP a počet vedoucích.</li>
+<li>u business casu a shrnutí v PDF čísla, která zadáte do kalkulačky úspor: například počet lidí, prodejen nebo operátorů, průměrné hodinové mzdové náklady, fluktuaci a počet vedoucích.</li>
 </ul>
 <p style={{ margin: "0", color: "#33424F" }}>Dále údaje z e-mailové a telefonické komunikace s námi a <mark style={{ background: "#FFF1D6", color: "#7A4A12", padding: "1px 4px", borderRadius: "4px" }}>[technické údaje podle nastavení měření návštěvnosti]</mark>.</p>
 </section>
