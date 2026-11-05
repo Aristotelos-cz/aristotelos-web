@@ -196,11 +196,11 @@
     },
     {
       "q": "Hodí se kalkulačka i pro lékárny?",
-      "a": "Ano. Počítá s počtem provozoven, lidmi na provozovnu a časem vedoucího na rozpisy, což platí pro prodejny i lékárny. Pravidla lékáren, třeba přítomnost farmaceuta, zohledníme v business casu."
+      "a": "Ano. Počítá s počtem provozoven, pracovníky na provozovnu a časem vedoucího na rozpisy, což platí pro prodejny i lékárny. Pravidla lékáren, třeba přítomnost farmaceuta, zohledníme v business casu."
     },
     {
       "q": "Proč nejsou tržby v celkové úspoře?",
-      "a": "Studie uvádějí růst tržeb o 4,5–7 % při lepším obsazení, ale prodejny přitom často zároveň nabíraly lidi. Růst tržeb proto ukazujeme zvlášť, jen 0,5–2 % a mimo celkovou úsporu."
+      "a": "Studie uvádějí růst tržeb o 4,5–7 % při lepším obsazení, ale prodejny přitom často zároveň nabíraly pracovníky. Růst tržeb proto ukazujeme zvlášť, jen 0,5–2 % a mimo celkovou úsporu."
     },
     {
       "q": "Co když už plánujeme v jiném nástroji?",
