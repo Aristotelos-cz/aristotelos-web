@@ -127,6 +127,9 @@ export default function MainPage() {
 <img src="/logos/prazska-energetika.svg" alt="Pražská energetika" style={{ maxHeight: "40px", maxWidth: "112px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />
 </div>
 <div style={{ height: "72px", display: "flex", alignItems: "center", justifyContent: "center", padding: "10px" }}>
+<img src="/logos/eon.svg" alt="E.ON" style={{ maxHeight: "26px", maxWidth: "92px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />
+</div>
+<div style={{ height: "72px", display: "flex", alignItems: "center", justifyContent: "center", padding: "10px" }}>
 <img src="/logos/flyok.png" alt="FlyOK" style={{ maxHeight: "40px", maxWidth: "104px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />
 </div>
 <div style={{ height: "72px", display: "flex", alignItems: "center", justifyContent: "center", padding: "10px" }}>
@@ -285,7 +288,7 @@ export default function MainPage() {
 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(340px, 100%), 1fr))", gap: "20px" }}>
 <Link href="/reseni/kontaktni-centra" style={{ display: "flex", flexDirection: "column", gap: "12px", padding: "clamp(16px, 2.6vh, 28px)", border: "1px solid #DCE3E9", borderRadius: "12px", color: "#0E1A24", textDecoration: "none", background: "#FFFFFF" }}>
 <h3 style={{ margin: "0", fontSize: "1.25rem", fontWeight: "600" }}>Kontaktní centra</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Předpověď hovorů, počet agentů na požadovanou úroveň obsluhy a napojení na Genesys, Cisco nebo Daktelu.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Předpověď hovorů, počet operátorů na požadovanou úroveň obsluhy a napojení na Genesys, Cisco nebo Daktelu.</p>
 <span style={{ marginTop: "auto", fontSize: "14px", color: "#4A5866" }}>Používají ČSOB, Kooperativa, Conectart</span>
 <span style={{ fontWeight: "600", color: "#006E99", fontSize: "15px" }}>Více o řešení →</span>
 </Link>
@@ -310,7 +313,7 @@ export default function MainPage() {
 <Link href="/reseni/energetika-a-telekomunikace" style={{ display: "flex", flexDirection: "column", gap: "12px", padding: "clamp(16px, 2.6vh, 28px)", border: "1px solid #DCE3E9", borderRadius: "12px", color: "#0E1A24", textDecoration: "none", background: "#FFFFFF" }}>
 <h3 style={{ margin: "0", fontSize: "1.25rem", fontWeight: "600" }}>Energetika a telekomunikace</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Kontaktní centra, zákaznické kanceláře i značkové prodejny v jednom plánu.</p>
-<span style={{ marginTop: "auto", fontSize: "14px", color: "#4A5866" }}>Používají innogy, T-Mobile, Pražská energetika</span>
+<span style={{ marginTop: "auto", fontSize: "14px", color: "#4A5866" }}>Používají innogy, E.ON, T-Mobile, Pražská energetika</span>
 <span style={{ fontWeight: "600", color: "#006E99", fontSize: "15px" }}>Více o řešení →</span>
 </Link>
 </div>

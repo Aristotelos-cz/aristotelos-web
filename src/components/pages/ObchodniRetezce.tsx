@@ -29,7 +29,7 @@ export default function ObchodniRetezcePage() {
 <div style={{ display: "flex", flexDirection: "column" }}>
 <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1.6fr)", gap: "12px", padding: "12px 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px", alignItems: "baseline" }}>
 <span style={{ fontWeight: "600" }}>Albert ČR</span>
-<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 17 000 pracovníků · 350 prodejen · 3 DC</span>
+<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 17 000 pracovníků · 350 prodejen · 3 distribuční centra</span>
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1.6fr)", gap: "12px", padding: "12px 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px", alignItems: "baseline" }}>
 <span style={{ fontWeight: "600" }}>Benu Lékárny</span>

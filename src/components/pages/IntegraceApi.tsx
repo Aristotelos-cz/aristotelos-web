@@ -152,7 +152,7 @@ export default function IntegraceApiPage() {
 </div>
 <div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Telefonní platformy</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Genesys, Cisco, Daktela a Sprinkl. Historie hovorů pro předpověď a online stavy agentů pro kontrolu plánu.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Genesys, Cisco, Daktela a Sprinkl. Historie hovorů pro předpověď a online stavy operátorů pro kontrolu plánu.</p>
 </div>
 <div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Pokladní a obchodní systémy</h3>
