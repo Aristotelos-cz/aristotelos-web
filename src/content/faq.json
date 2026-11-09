@@ -67,8 +67,8 @@
   ],
   "/reseni/kontaktni-centra": [
     {
-      "q": "Spočítá AristoTelos počet agentů na naši úroveň obsluhy?",
-      "a": "Ano. Z předpovědi hovorů a průměrné doby obsluhy spočítá potřebný počet agentů pro každý interval tak, aby byla splněna požadovaná úroveň obsluhy."
+      "q": "Spočítá AristoTelos počet operátorů na naši úroveň obsluhy?",
+      "a": "Ano. Z předpovědi hovorů a průměrné doby obsluhy spočítá potřebný počet operátorů pro každý interval tak, aby byla splněna požadovaná úroveň obsluhy."
     },
     {
       "q": "Napojí se na naši telefonní platformu?",
