@@ -34,22 +34,28 @@ export default function EnergetikaTelcoPage() {
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.1fr) minmax(0, 1.4fr) minmax(0, 1fr)", gap: "12px", padding: "12px 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px", alignItems: "baseline" }}>
 <span style={{ fontWeight: "600" }}>innogy</span>
-<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 500 linka + 200 kanceláře</span>
+<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 500 operátorů + 200 v kancelářích</span>
 <span style={{ color: "#4A5866", fontSize: "14px" }}>Cisco</span>
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.1fr) minmax(0, 1.4fr) minmax(0, 1fr)", gap: "12px", padding: "12px 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px", alignItems: "baseline" }}>
 <span style={{ fontWeight: "600" }}>T-Mobile</span>
-<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 450 linka + 250 prodejny</span>
+<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 450 operátorů + 250 v prodejnách</span>
 <span style={{ color: "#4A5866", fontSize: "14px" }}>Sprinkl, SAP</span>
 </div>
-<div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.1fr) minmax(0, 1.4fr) minmax(0, 1fr)", gap: "12px", padding: "12px 0", fontSize: "15px", alignItems: "baseline" }}>
+<div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.1fr) minmax(0, 1.4fr) minmax(0, 1fr)", gap: "12px", padding: "12px 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px", alignItems: "baseline" }}>
 <span style={{ fontWeight: "600" }}>Pražská energetika</span>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>kontaktní centrum</span>
 <span>
 </span>
 </div>
+<div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.1fr) minmax(0, 1.4fr) minmax(0, 1fr)", gap: "12px", padding: "12px 0", fontSize: "15px", alignItems: "baseline" }}>
+<span style={{ fontWeight: "600" }}>E.ON</span>
+<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>kontaktní centrum</span>
+<span>
+</span>
 </div>
-<div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: "8px", paddingTop: "14px", borderTop: "1px solid #E3E8ED" }}>
+</div>
+<div style={{ display: "grid", gridTemplateColumns: "repeat(4, minmax(0, 1fr))", gap: "8px", paddingTop: "14px", borderTop: "1px solid #E3E8ED" }}>
 <div style={{ height: "56px", display: "flex", alignItems: "center", justifyContent: "center", padding: "8px" }}>
 <img src="/logos/innogy.svg" alt="innogy" style={{ maxHeight: "42px", maxWidth: "112px", filter: "grayscale(1)", opacity: "0.72" }} />
 </div>
@@ -58,6 +64,9 @@ export default function EnergetikaTelcoPage() {
 </div>
 <div style={{ height: "56px", display: "flex", alignItems: "center", justifyContent: "center", padding: "8px" }}>
 <img src="/logos/prazska-energetika.svg" alt="Pražská energetika" style={{ maxHeight: "36px", maxWidth: "112px", filter: "grayscale(1)", opacity: "0.72" }} />
+</div>
+<div style={{ height: "56px", display: "flex", alignItems: "center", justifyContent: "center", padding: "8px" }}>
+<img src="/logos/eon.svg" alt="E.ON" style={{ maxHeight: "24px", maxWidth: "84px", filter: "grayscale(1)", opacity: "0.72" }} />
 </div>
 </div>
 </div>
@@ -224,7 +233,7 @@ export default function EnergetikaTelcoPage() {
 <span>Reference</span>
 </div>
 <h2 style={{ margin: "0", fontSize: "clamp(1.65rem, min(3vw, 4.9vh), 2.6rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Docházka, ze které se dá počítat výkon</h2>
-<p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>T-Mobile plánuje v AristoTelu asi 450 pracovníků v kontaktním centru a 250 konzultantů ve značkových prodejnách. Data z ústředny Sprinkl jdou do předpovědi, docházka a podklady pro mzdy do SAP.</p>
+<p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>T-Mobile plánuje v AristoTelu asi 450 operátorů v kontaktním centru a 250 konzultantů ve značkových prodejnách. Data z ústředny Sprinkl jdou do předpovědi, docházka a podklady pro mzdy do SAP.</p>
 <figure style={{ margin: "8px 0 0", display: "flex", flexDirection: "column", gap: "14px", padding: "24px", background: "#F5F8FA", border: "1px solid #DCE3E9", borderRadius: "14px" }}>
 <blockquote style={{ margin: "0", fontSize: "1.15rem", lineHeight: "1.5", fontWeight: "500" }}>„… dle docházky dokážeme počítat efektivitu našich konzultantů na prodejnách nebo dopočítat výsledek plnění prodeje podle naplánované docházky …“</blockquote>
 <figcaption style={{ fontSize: "14.5px", color: "#4A5866" }}>
@@ -243,7 +252,7 @@ export default function EnergetikaTelcoPage() {
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>≈ 450 pracovníků v kontaktním centru</span>
+<span>≈ 450 operátorů v kontaktním centru</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
@@ -272,7 +281,7 @@ export default function EnergetikaTelcoPage() {
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>≈ 500 pracovníků v kontaktním centru</span>
+<span>≈ 500 operátorů v kontaktním centru</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
@@ -292,10 +301,13 @@ export default function EnergetikaTelcoPage() {
 </div>
 <div style={{ border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "14px" }}>
 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "16px" }}>
+<span style={{ display: "flex", alignItems: "center", gap: "24px", flexWrap: "wrap" }}>
 <img src="/logos/prazska-energetika.svg" alt="Pražská energetika" style={{ height: "34px", width: "auto" }} loading="lazy" />
-<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", color: "#4A5866" }}>Kontaktní centrum</span>
+<img src="/logos/eon.svg" alt="E.ON" style={{ height: "26px", width: "auto" }} loading="lazy" />
+</span>
+<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", color: "#4A5866" }}>Kontaktní centra</span>
 </div>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Pražská energetika plánuje v AristoTelu směny svého kontaktního centra.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Pražská energetika a E.ON plánují v AristoTelu směny svých kontaktních center.</p>
 </div>
 </div>
 </div>

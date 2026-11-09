@@ -39,7 +39,7 @@ export default function BankyPojistovnyPage() {
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.1fr) minmax(0, 1.4fr) minmax(0, 1fr)", gap: "12px", padding: "12px 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px", alignItems: "baseline" }}>
 <span style={{ fontWeight: "600" }}>AXA Assistance</span>
-<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 100 + 200 back office</span>
+<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 100 operátorů + 200 v back office</span>
 <span style={{ color: "#4A5866", fontSize: "14px" }}>Sprinkl</span>
 </div>
 <div style={{ display: "flex", flexWrap: "wrap", gap: "6px 14px", paddingTop: "14px", fontSize: "14.5px", color: "#4A5866" }}>

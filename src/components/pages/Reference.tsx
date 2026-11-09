@@ -73,7 +73,7 @@ export default function ReferencePage() {
 <Link href="/reseni/obchodni-retezce-a-lekarny" style={{ color: "#0E1A24" }}>Albert ČR</Link>
 </th>
 <td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", color: "#33424F" }}>Obchodní řetězec</td>
-<td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 17 000 · 350 prodejen · 3 DC</td>
+<td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 17 000 · 350 prodejen · 3 distribuční centra</td>
 <td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", color: "#4A5866" }}>SAP (mzdy)</td>
 </tr>
 <tr>
@@ -89,7 +89,7 @@ export default function ReferencePage() {
 <Link href="/reseni/kontaktni-centra" style={{ color: "#0E1A24" }}>Conectart</Link>
 </th>
 <td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", color: "#33424F" }}>Kontaktní centra</td>
-<td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 1 500 v docházce · 250 agentů</td>
+<td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 1 500 v docházce · 250 operátorů</td>
 <td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", color: "#4A5866" }}>
 </td>
 </tr>
@@ -98,7 +98,7 @@ export default function ReferencePage() {
 <Link href="/reseni/energetika-a-telekomunikace" style={{ color: "#0E1A24" }}>innogy</Link>
 </th>
 <td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", color: "#33424F" }}>Energetika</td>
-<td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 500 linka · 200 kanceláře</td>
+<td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 500 operátorů · 200 v kancelářích</td>
 <td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", color: "#4A5866" }}>Cisco</td>
 </tr>
 <tr>
@@ -106,7 +106,7 @@ export default function ReferencePage() {
 <Link href="/reseni/energetika-a-telekomunikace" style={{ color: "#0E1A24" }}>T-Mobile</Link>
 </th>
 <td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", color: "#33424F" }}>Telekomunikace</td>
-<td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 450 linka · 250 prodejny</td>
+<td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 450 operátorů · 250 v prodejnách</td>
 <td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", color: "#4A5866" }}>Sprinkl, SAP</td>
 </tr>
 <tr>
@@ -130,7 +130,7 @@ export default function ReferencePage() {
 <Link href="/reseni/banky-a-pojistovny" style={{ color: "#0E1A24" }}>AXA Assistance</Link>
 </th>
 <td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", color: "#33424F" }}>Asistenční služby</td>
-<td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 100 linka · 200 back office</td>
+<td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 100 operátorů · 200 v back office</td>
 <td style={{ padding: "clamp(5px, 1vh, 14px) 16px", borderBottom: "1px solid #E3E8ED", verticalAlign: "top", color: "#4A5866" }}>Sprinkl</td>
 </tr>
 <tr>
@@ -184,7 +184,7 @@ export default function ReferencePage() {
 <img src="/logos/conectart.svg" alt="Conectart" style={{ maxHeight: "28px", maxWidth: "140px", width: "auto" }} loading="lazy" />
 </div>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "2.2rem", fontWeight: "600", lineHeight: "1.05", color: "#0E1A24" }}>≈ 250</span>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>agentů s automatickým plánem. Zbytek provozu si brigádníci rezervují jako volné směny.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>operátorů s automatickým plánem. Zbytek provozu si brigádníci rezervují jako volné směny.</p>
 <span style={{ marginTop: "auto", fontWeight: "600", color: "#006E99", fontSize: "15px" }}>Případová studie Conectart →</span>
 </Link>
 <Link href="/reseni/distribucni-centra" style={{ display: "flex", flexDirection: "column", gap: "14px", padding: "clamp(16px, 2.6vh, 28px)", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", color: "#0E1A24", textDecoration: "none" }}>
@@ -200,7 +200,7 @@ export default function ReferencePage() {
 <img src="/logos/t-mobile.svg" alt="T-Mobile" style={{ maxHeight: "30px", maxWidth: "140px", width: "auto" }} loading="lazy" />
 </div>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "2.2rem", fontWeight: "600", lineHeight: "1.05", color: "#0E1A24" }}>450 + 250</span>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>pracovníků na lince a ve značkových prodejnách. Výkon konzultantů počítají z docházky.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>operátorů v kontaktním centru a konzultantů v prodejnách. Výkon konzultantů počítají z docházky.</p>
 <span style={{ marginTop: "auto", fontWeight: "600", color: "#006E99", fontSize: "15px" }}>Zkušenost T-Mobile →</span>
 </Link>
 </div>
@@ -308,6 +308,9 @@ export default function ReferencePage() {
 </div>
 <div style={{ height: "72px", display: "flex", alignItems: "center", justifyContent: "center", padding: "10px", background: "#FFFFFF", border: "1px solid #E3E8ED", borderRadius: "10px" }}>
 <img src="/logos/prazska-energetika.svg" alt="Pražská energetika" style={{ maxHeight: "40px", maxWidth: "112px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />
+</div>
+<div style={{ height: "72px", display: "flex", alignItems: "center", justifyContent: "center", padding: "10px", background: "#FFFFFF", border: "1px solid #E3E8ED", borderRadius: "10px" }}>
+<img src="/logos/eon.svg" alt="E.ON" style={{ maxHeight: "26px", maxWidth: "92px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />
 </div>
 <div style={{ height: "72px", display: "flex", alignItems: "center", justifyContent: "center", padding: "10px", background: "#FFFFFF", border: "1px solid #E3E8ED", borderRadius: "10px" }}>
 <img src="/logos/flyok.png" alt="FlyOK" style={{ maxHeight: "40px", maxWidth: "112px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />

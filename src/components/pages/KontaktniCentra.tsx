@@ -17,8 +17,8 @@ export default function KontaktniCentraPage() {
 </span>
 <span>Řešení pro kontaktní centra</span>
 </div>
-<h1 className="hero-h1-stranka" style={{ margin: "0", lineHeight: "1.04", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Správný počet agentů ve správnou chvíli</h1>
-<p style={{ margin: "0", fontSize: "1.2rem", color: "#33424F", maxWidth: "34em" }}>AristoTelos předpoví hovory a další komunikaci po 15 minutách, spočítá potřebný počet agentů na vaši úroveň obsluhy a naplánuje směny včetně přestávek a porad. Napojí se na Genesys, Cisco, Daktelu i Sprinkl.</p>
+<h1 className="hero-h1-stranka" style={{ margin: "0", lineHeight: "1.04", letterSpacing: "-0.025em", fontWeight: "700", textWrap: "balance" }}>Správný počet operátorů ve správnou chvíli</h1>
+<p style={{ margin: "0", fontSize: "1.2rem", color: "#33424F", maxWidth: "34em" }}>AristoTelos předpoví hovory a další komunikaci po 15 minutách, spočítá potřebný počet operátorů na vaši úroveň obsluhy a naplánuje směny včetně přestávek a porad. Napojí se na Genesys, Cisco, Daktelu i Sprinkl.</p>
 <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
 <a href="#demo" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 26px", borderRadius: "8px", background: "#0072A3", color: "#FFFFFF", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Domluvit ukázku</a>
 <a href="#conectart" style={{ display: "inline-flex", alignItems: "center", minHeight: "52px", padding: "0 24px", borderRadius: "8px", background: "#FFFFFF", border: "1px solid #C5D0D9", color: "#0E1A24", fontWeight: "600", fontSize: "16px", textDecoration: "none" }}>Případová studie Conectart</a>
@@ -34,23 +34,36 @@ export default function KontaktniCentraPage() {
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.1fr) minmax(0, 1.4fr) minmax(0, 1fr)", gap: "12px", padding: "12px 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px", alignItems: "baseline" }}>
 <span style={{ fontWeight: "600" }}>innogy</span>
-<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 500 + 200 kanceláře</span>
+<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 500 operátorů + 200 v kancelářích</span>
 <span style={{ color: "#4A5866", fontSize: "14px" }}>Cisco</span>
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.1fr) minmax(0, 1.4fr) minmax(0, 1fr)", gap: "12px", padding: "12px 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px", alignItems: "baseline" }}>
 <span style={{ fontWeight: "600" }}>T-Mobile</span>
-<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 450 + 250 prodejny</span>
+<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 450 operátorů + 250 v prodejnách</span>
 <span style={{ color: "#4A5866", fontSize: "14px" }}>Sprinkl, SAP</span>
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.1fr) minmax(0, 1.4fr) minmax(0, 1fr)", gap: "12px", padding: "12px 0", borderBottom: "1px solid #E3E8ED", fontSize: "15px", alignItems: "baseline" }}>
-<span style={{ fontWeight: "600" }}>Kooperativa</span>
-<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 200 operátorů</span>
-<span style={{ color: "#4A5866", fontSize: "14px" }}>Cisco</span>
-</div>
-<div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.1fr) minmax(0, 1.4fr) minmax(0, 1fr)", gap: "12px", padding: "12px 0", fontSize: "15px", alignItems: "baseline" }}>
 <span style={{ fontWeight: "600" }}>AXA Assistance</span>
-<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 100 + 200 back office</span>
+<span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px" }}>≈ 100 operátorů + 200 v back office</span>
 <span style={{ color: "#4A5866", fontSize: "14px" }}>Sprinkl</span>
+</div>
+<div style={{ display: "flex", flexWrap: "wrap", gap: "6px 14px", paddingTop: "14px", fontSize: "14.5px", color: "#4A5866" }}>
+<span>Dále: Conectart</span>
+<span>Kooperativa</span>
+<span>Pražská energetika</span>
+<span>E.ON</span>
+<span>Air Bank</span>
+<span>Generali Česká pojišťovna</span>
+<span>Allianz</span>
+<span>UNIQA</span>
+<span>ČSOB Stavební spořitelna</span>
+<span>Redion</span>
+<span>Allianz Partners</span>
+<span>Kiwi.com</span>
+<span>Alza.cz</span>
+<span>Rohlik.cz</span>
+<span>FlyOK</span>
+<span>Interhome</span>
 </div>
 </div>
 </div>
@@ -59,7 +72,7 @@ export default function KontaktniCentraPage() {
 
 <section aria-labelledby="kc-loga" style={{ padding: "56px 0", background: "#FFFFFF", borderBottom: "1px solid #E3E8ED" }}>
 <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "24px" }}>
-<h2 id="kc-loga" style={{ margin: "0", fontSize: "1.15rem", fontWeight: "600", textAlign: "center" }}>Plánují s námi kontaktní centra bank, pojišťoven, energetiky i e-commerce</h2>
+<h2 id="kc-loga" style={{ margin: "0", fontSize: "1.15rem", fontWeight: "600", textAlign: "center" }}>Plánují s námi kontaktní centra bank, pojišťoven, energetiky, e-commerce i cestovního ruchu</h2>
 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(128px, 100%), 1fr))", gap: "10px" }}>
 <div style={{ height: "64px", display: "flex", alignItems: "center", justifyContent: "center", padding: "8px" }}>
 <img src="/logos/csob.svg" alt="ČSOB" style={{ maxHeight: "38px", maxWidth: "112px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />
@@ -75,6 +88,9 @@ export default function KontaktniCentraPage() {
 </div>
 <div style={{ height: "64px", display: "flex", alignItems: "center", justifyContent: "center", padding: "8px" }}>
 <img src="/logos/prazska-energetika.svg" alt="Pražská energetika" style={{ maxHeight: "34px", maxWidth: "112px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />
+</div>
+<div style={{ height: "64px", display: "flex", alignItems: "center", justifyContent: "center", padding: "8px" }}>
+<img src="/logos/eon.svg" alt="E.ON" style={{ maxHeight: "26px", maxWidth: "92px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />
 </div>
 <div style={{ height: "64px", display: "flex", alignItems: "center", justifyContent: "center", padding: "8px" }}>
 <img src="/logos/axa-assistance.svg" alt="AXA Assistance" style={{ maxHeight: "36px", maxWidth: "112px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />
@@ -98,7 +114,25 @@ export default function KontaktniCentraPage() {
 <img src="/logos/uniqa.svg" alt="UNIQA" style={{ maxHeight: "24px", maxWidth: "112px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />
 </div>
 <div style={{ height: "64px", display: "flex", alignItems: "center", justifyContent: "center", padding: "8px" }}>
+<img src="/logos/csob-stavebni-sporitelna.png" alt="ČSOB Stavební spořitelna" style={{ maxHeight: "38px", maxWidth: "112px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />
+</div>
+<div style={{ height: "64px", display: "flex", alignItems: "center", justifyContent: "center", padding: "8px" }}>
+<img src="/logos/allianz-partners.png" alt="Allianz Partners" style={{ maxHeight: "24px", maxWidth: "120px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />
+</div>
+<div style={{ height: "64px", display: "flex", alignItems: "center", justifyContent: "center", padding: "8px" }}>
 <img src="/logos/kiwi.svg" alt="Kiwi.com" style={{ maxHeight: "36px", maxWidth: "112px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />
+</div>
+<div style={{ height: "64px", display: "flex", alignItems: "center", justifyContent: "center", padding: "8px" }}>
+<img src="/logos/alza.svg" alt="Alza.cz" style={{ maxHeight: "32px", maxWidth: "112px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />
+</div>
+<div style={{ height: "64px", display: "flex", alignItems: "center", justifyContent: "center", padding: "8px" }}>
+<img src="/logos/rohlik.svg" alt="Rohlik.cz" style={{ maxHeight: "36px", maxWidth: "96px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />
+</div>
+<div style={{ height: "64px", display: "flex", alignItems: "center", justifyContent: "center", padding: "8px" }}>
+<img src="/logos/flyok.png" alt="FlyOK" style={{ maxHeight: "38px", maxWidth: "104px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />
+</div>
+<div style={{ height: "64px", display: "flex", alignItems: "center", justifyContent: "center", padding: "8px" }}>
+<img src="/logos/interhome.svg" alt="Interhome" style={{ maxHeight: "24px", maxWidth: "120px", filter: "grayscale(1)", opacity: "0.72" }} loading="lazy" />
 </div>
 </div>
 </div>
@@ -141,15 +175,15 @@ export default function KontaktniCentraPage() {
 </div>
 <div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Úroveň obsluhy proti nákladům</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Přesný počet agentů pro požadovanou úroveň obsluhy v každém intervalu. Méně podstavu i zbytečných hodin.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Přesný počet operátorů pro požadovanou úroveň obsluhy v každém intervalu. Méně podstavu i zbytečných hodin.</p>
 </div>
 <div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Přestávky, porady a školení</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>AristoTelos je rozmístí do časů, kdy agenti na lince chybí nejméně.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>AristoTelos je rozmístí do časů, kdy operátoři na lince chybí nejméně.</p>
 </div>
 <div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Dodržování plánu</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Stavy agentů z telefonní platformy porovná s plánem online a vedoucího upozorní na odchylky.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Stavy operátorů z telefonní platformy porovná s plánem online a vedoucího upozorní na odchylky.</p>
 </div>
 <div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Brigádníci a částečné úvazky</h3>
@@ -176,8 +210,8 @@ export default function KontaktniCentraPage() {
 <span>Případová studie</span>
 </div>
 <img src="/logos/conectart.svg" alt="Conectart" style={{ height: "40px", width: "auto", alignSelf: "flex-start" }} loading="lazy" />
-<h2 style={{ margin: "0", fontSize: "clamp(1.65rem, min(3vw, 4.9vh), 2.6rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Kmenoví agenti jmenovitě, zbytek provozu jako volné směny</h2>
-<p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Conectart je největší provozovatel kontaktních center v Česku. AristoTelos plánuje směny kmenovým agentům na plný úvazek. Zbytek provozu nabídne jako volné směny brigádníkům, kteří si je rezervují podle nastavených pravidel: kdy se nabídka otevře a kolik směn si kdo může vzít.</p>
+<h2 style={{ margin: "0", fontSize: "clamp(1.65rem, min(3vw, 4.9vh), 2.6rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Kmenoví operátoři jmenovitě, zbytek provozu jako volné směny</h2>
+<p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Conectart je největší provozovatel kontaktních center v Česku. AristoTelos plánuje směny kmenovým operátorům na plný úvazek. Zbytek provozu nabídne jako volné směny brigádníkům, kteří si je rezervují podle nastavených pravidel: kdy se nabídka otevře a kolik směn si kdo může vzít.</p>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Docházku přitom eviduje pro všechny zaměstnance firmy.</p>
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(200px, 100%), 1fr))", gap: "16px" }}>
@@ -187,7 +221,7 @@ export default function KontaktniCentraPage() {
 </div>
 <div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "8px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "clamp(2.2rem, 3.4vw, 2.8rem)", fontWeight: "600", lineHeight: "1", color: "#006E99" }}>≈ 250</span>
-<span style={{ fontSize: "15px", color: "#4A5866" }}>agentů s automatickým plánem směn</span>
+<span style={{ fontSize: "15px", color: "#4A5866" }}>operátorů s automatickým plánem směn</span>
 </div>
 <div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "8px", gridColumn: "1 / -1" }}>
 <span style={{ fontWeight: "600" }}>Ocenění</span>
@@ -217,7 +251,7 @@ export default function KontaktniCentraPage() {
 <span style={{ padding: "10px 16px", background: "#FFFFFF", border: "1px solid #CBD5DE", borderRadius: "10px" }}>Daktela</span>
 <span style={{ padding: "10px 16px", background: "#FFFFFF", border: "1px solid #CBD5DE", borderRadius: "10px" }}>Sprinkl</span>
 </div>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Z platformy načítáme historii hovorů pro předpověď a online stavy agentů pro kontrolu plánu. Další systémy napojíme přes API.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Z platformy načítáme historii hovorů pro předpověď a online stavy operátorů pro kontrolu plánu. Další systémy napojíme přes API.</p>
 <Link href="/integrace-a-api" style={{ alignSelf: "flex-start", fontWeight: "600", fontSize: "16px", textDecoration: "none", display: "inline-flex", alignItems: "center", minHeight: "44px" }}>Integrace a API →</Link>
 </div>
 </div>
@@ -228,9 +262,9 @@ export default function KontaktniCentraPage() {
 <h2 id="kc-faq" style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }}>Časté otázky kontaktních center</h2>
 <div className="faq-mrizka" style={{ display: "flex", flexDirection: "column", borderTop: "1px solid #D5DEE6" }}>
 <details open style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
-<summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Spočítá AristoTelos počet agentů na naši úroveň obsluhy?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
+<summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Spočítá AristoTelos počet operátorů na naši úroveň obsluhy?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
 </summary>
-<p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Ano. Z předpovědi hovorů a průměrné doby obsluhy spočítá potřebný počet agentů pro každý interval tak, aby byla splněna požadovaná úroveň obsluhy.</p>
+<p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Ano. Z předpovědi hovorů a průměrné doby obsluhy spočítá potřebný počet operátorů pro každý interval tak, aby byla splněna požadovaná úroveň obsluhy.</p>
 </details>
 <details style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Napojí se na naši telefonní platformu?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
