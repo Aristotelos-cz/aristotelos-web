@@ -191,6 +191,20 @@ export default function FunkcePage() {
 <span>Automatický import dat nebo soubory CSV a XLS</span>
 </li>
 </ul>
+<figure style={{ gridColumn: "1 / -1", margin: "8px 0 0", display: "flex", flexDirection: "column", gap: "12px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.32)" }}>
+<div aria-hidden="true" style={{ display: "flex", alignItems: "center", gap: "6px", height: "28px", padding: "0 12px", background: "#EEF2F5", borderBottom: "1px solid #DCE3E9" }}>
+<span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
+</span>
+<span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
+</span>
+<span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
+</span>
+</div>
+<img src="/screens/funkce-predpoved.webp" alt="Graf skutečného a předpovězeného objemu práce po dnech s čárou chyby předpovědi" width="1662" height="288" loading="lazy" style={{ display: "block", width: "100%", height: "auto" }} />
+</div>
+<figcaption style={{ fontSize: "14px", color: "#4A5866" }}>Předpověď proti skutečnosti: zelené sloupce ukazují skutečný objem práce, modré předpověď a červená čára chybu předpovědi v procentech.</figcaption>
+</figure>
 </div>
 </section>
 
@@ -252,6 +266,20 @@ export default function FunkcePage() {
 <span>Zohlednění mzdových nákladů</span>
 </li>
 </ul>
+<figure style={{ gridColumn: "1 / -1", margin: "8px 0 0", display: "flex", flexDirection: "column", gap: "12px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.32)" }}>
+<div aria-hidden="true" style={{ display: "flex", alignItems: "center", gap: "6px", height: "28px", padding: "0 12px", background: "#EEF2F5", borderBottom: "1px solid #DCE3E9" }}>
+<span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
+</span>
+<span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
+</span>
+<span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
+</span>
+</div>
+<img src="/screens/funkce-naplneni-potreb.webp" alt="Graf naplnění potřeb provozu během jednoho dne po půlhodinách: obsazení, podstav a nadstav" width="1655" height="568" loading="lazy" style={{ display: "block", width: "100%", height: "auto" }} />
+</div>
+<figcaption style={{ fontSize: "14px", color: "#4A5866" }}>Naplnění potřeb provozu během dne: modře obsazení, které kryje potřebu, červeně podstav a zeleně nadstav.</figcaption>
+</figure>
 </div>
 </section>
 
@@ -470,6 +498,20 @@ export default function FunkcePage() {
 <span>Úplná historie změn s možností vrácení</span>
 </li>
 </ul>
+<figure style={{ gridColumn: "1 / -1", margin: "8px 0 0", display: "flex", flexDirection: "column", gap: "12px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.32)" }}>
+<div aria-hidden="true" style={{ display: "flex", alignItems: "center", gap: "6px", height: "28px", padding: "0 12px", background: "#EEF2F5", borderBottom: "1px solid #DCE3E9" }}>
+<span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
+</span>
+<span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
+</span>
+<span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
+</span>
+</div>
+<img src="/screens/funkce-plan-soucty.webp" alt="Plán směn a pod ním součty po dnech: kolik pracovníků je na jednotlivých činnostech" width="1667" height="547" loading="lazy" style={{ display: "block", width: "100%", height: "auto" }} />
+</div>
+<figcaption style={{ fontSize: "14px", color: "#4A5866" }}>Pod plánem směn vidí vedoucí součty za každý den, například kolik pracovníků je na které činnosti.</figcaption>
+</figure>
 </div>
 </section>
 

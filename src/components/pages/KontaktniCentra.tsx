@@ -197,6 +197,38 @@ export default function KontaktniCentraPage() {
 </div>
 </section>
 
+<section id="ukazka" aria-labelledby="kc-ukazka" style={{ padding: "104px 0", background: "#0E1A24", color: "#FFFFFF" }}>
+<div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "clamp(16px, 3.4vh, 40px)" }}>
+<div style={{ display: "flex", flexDirection: "column", gap: "14px", maxWidth: "820px" }}>
+<div style={{ display: "flex", alignItems: "center", gap: "12px", fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", color: "#C3CED7" }}>
+<span aria-hidden="true" style={{ display: "flex", width: "44px", height: "4px" }}>
+<span style={{ flex: "55", background: "#33A7D8" }}>
+</span>
+<span style={{ flex: "45", background: "#FF6633" }}>
+</span>
+</span>
+<span>Ukázka z aplikace</span>
+</div>
+<h2 id="kc-ukazka" style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Obsazení proti potřebě po 15 minutách</h2>
+<p style={{ margin: "0", fontSize: "1.1rem", color: "#C3CED7" }}>AristoTelos porovná naplánované operátory s předpovědí hovorů v každém intervalu. Kde operátoři chybí a kde přebývají, vidíte hned a pro celý týden najednou.</p>
+</div>
+<figure style={{ margin: "0", display: "flex", flexDirection: "column", gap: "12px" }}>
+<div style={{ background: "#FFFFFF", border: "1px solid #2A3B49", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(0, 0, 0, 0.6)" }}>
+<div aria-hidden="true" style={{ display: "flex", alignItems: "center", gap: "6px", height: "28px", padding: "0 12px", background: "#EEF2F5", borderBottom: "1px solid #DCE3E9" }}>
+<span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
+</span>
+<span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
+</span>
+<span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
+</span>
+</div>
+<img src="/screens/kc-naplneni-potreb.webp" alt="Graf naplnění potřeb provozu kontaktního centra za šest dní po 15 minutách: obsazení, podstav, nadstav a skutečný objem práce" width="1653" height="562" loading="lazy" style={{ display: "block", width: "100%", height: "auto" }} />
+</div>
+<figcaption style={{ fontSize: "14px", color: "#C3CED7" }}>Naplnění potřeb provozu během týdne: modře obsazení, které kryje potřebu, červeně podstav a zeleně nadstav. Čára ukazuje skutečný objem práce.</figcaption>
+</figure>
+</div>
+</section>
+
 <section id="conectart" style={{ padding: "104px 0", background: "#F5F8FA", borderTop: "1px solid #E3E8ED", borderBottom: "1px solid #E3E8ED" }}>
 <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(440px, 100%), 1fr))", gap: "clamp(24px, 4.8vh, 56px)", alignItems: "center" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
