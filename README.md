@@ -33,7 +33,7 @@ Potřebujete Node.js 20.9 nebo novější.
 | `src/lib/site.ts` | Seznam stránek, titulky a popisy pro vyhledávače, adresa webu |
 | `src/content/faq.json` | Časté otázky pro strukturovaná data (schema.org FAQPage) |
 | `src/app/robots.ts`, `sitemap.ts`, `llms.txt/` | robots.txt (AI boti povoleni), mapa webu, přehled pro AI asistenty |
-| `public/` | Logo, loga zákazníků, snímky aplikace |
+| `public/` | Logo, loga zákazníků, snímky aplikace (`public/screens`). Snímky z ostrého provozu se před použitím anonymizují: název klienta, názvy front a jména zaměstnanců se nahradí neutrálními |
 
 ## Pravidlo: první obrazovka
 
