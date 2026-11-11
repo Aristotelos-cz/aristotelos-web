@@ -252,6 +252,16 @@ main > section:not(:first-child) div:has(> img[src^="/screens/plan-"]) {
   width: fit-content;
   max-width: 100%;
 }
+/* Kontaktní centra, ukázka z aplikace: část má jen nadpis a graf, snímek proto může být vyšší */
+main > section:not(:first-child) img[src^="/screens/kc-"] {
+  max-height: clamp(180px, 44vh, 560px);
+  width: auto !important;
+  max-width: 100%;
+}
+main > section:not(:first-child) div:has(> img[src^="/screens/kc-"]) {
+  width: fit-content;
+  max-width: 100%;
+}
 /* Úvodní stránka, část Integrace: popisy systémů jen na vysokých obrazovkách (podrobně jsou na stránce Integrace a API) */
 @media (min-width: 1001px) and (max-height: 1000px) {
   .flow-popis-domu { display: none; }
