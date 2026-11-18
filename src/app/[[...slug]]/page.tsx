@@ -6,6 +6,7 @@ import { INDEXABLE, PAGES, SITE_URL } from '@/lib/site'
 import faq from '@/content/faq.json'
 import MainPage from '@/components/pages/Main'
 import FunkcePage from '@/components/pages/Funkce'
+import PrehledFunkciPage from '@/components/pages/PrehledFunkci'
 import MobilniAplikacePage from '@/components/pages/MobilniAplikace'
 import IntegraceApiPage from '@/components/pages/IntegraceApi'
 import KontaktniCentraPage from '@/components/pages/KontaktniCentra'
@@ -25,6 +26,7 @@ import OchranaUdajuPage from '@/components/pages/OchranaUdaju'
 const COMPONENTS: Record<string, ComponentType> = {
   '/': MainPage,
   '/funkce': FunkcePage,
+  '/prehled-funkci': PrehledFunkciPage,
   '/mobilni-aplikace': MobilniAplikacePage,
   '/integrace-a-api': IntegraceApiPage,
   '/reseni/kontaktni-centra': KontaktniCentraPage,
