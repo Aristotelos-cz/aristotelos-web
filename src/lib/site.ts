@@ -15,6 +15,7 @@ export type PageInfo = { path: string; title: string; description: string; noind
 export const PAGES: PageInfo[] = [
   { path: '/', title: 'Plánování směn a docházka', description: 'AristoTelos naplánuje směny za hodiny místo dnů, vždy podle zákoníku práce. Docházka, mobilní aplikace pro iOS a Android a otevřené API.' },
   { path: '/funkce', title: 'Funkce plánování směn a docházky', description: 'Předpověď objemu práce, automatické plánování směn, přání zaměstnanců, řízení provozu, docházka, mobilní aplikace, reporty a podklady pro mzdy.' },
+  { path: '/prehled-funkci', title: 'Přehled funkcí AristoTela', description: 'Úplný přehled funkcí AristoTela: předpověď, plánování směn, docházka, požadavky, reporty, podklady pro mzdy, integrace, API a správa. Více než 200 funkcí ve 21 oblastech.' },
   { path: '/mobilni-aplikace', title: 'Mobilní aplikace pro plánování směn', description: 'Zaměstnanci v aplikaci pro iOS a Android vidí své směny, zadávají přání, vyměňují si směny a potvrzují plán i docházku.' },
   { path: '/integrace-a-api', title: 'Integrace a API', description: 'AristoTelos se napojí na personální, mzdové a docházkové systémy, na Genesys, Cisco, Daktelu, Sprinkl i SAP. Přes API, databázi nebo soubory.' },
   { path: '/reseni/kontaktni-centra', title: 'Plánování směn pro kontaktní centra', description: 'Předpověď hovorů po 15 minutách, počet operátorů na úroveň obsluhy a napojení na Genesys, Cisco, Daktelu a Sprinkl. Používají ČSOB, Kooperativa a Conectart.' },
