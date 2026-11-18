@@ -50,7 +50,7 @@
   "/integrace-a-api": [
     {
       "q": "Má AristoTelos API?",
-      "a": "Ano. Import i export dat přes API a webové služby. Výsledky všech reportů jsou přes API dostupné i pro vaše další systémy. Dokumentaci API poskytujeme zákazníkům."
+      "a": "Ano. Import i export dat přes API a webové služby. API pokrývá plán směn a požadavky, agentury a volné směny, reporty, objem práce a předpovědi, stavy zaměstnanců a hromadnou synchronizaci zaměstnanců a organizace. Dokumentaci API poskytujeme zákazníkům."
     },
     {
       "q": "Nemáme volnou kapacitu IT. Jde to i bez ní?",
@@ -61,8 +61,16 @@
       "a": "Import běží automaticky v nastavených intervalech. Příchody a odchody z docházkových systémů mohou přicházet online."
     },
     {
+      "q": "Jak poznáme, že se import nepovedl?",
+      "a": "Každý import AristoTelos zkontroluje a zapíše do logu. U každé úlohy vidíte stav, počty zpracovaných záznamů a chyby, které je potřeba opravit ve zdrojových datech."
+    },
+    {
       "q": "Na jaké telefonní platformy se napojíte?",
       "a": "Máme napojení na Genesys, Cisco, Daktelu a Sprinkl. Další platformy napojíme přes API."
+    },
+    {
+      "q": "Umí AristoTelos synchronizaci s Office 365?",
+      "a": "Ano. Plán směn umí synchronizovat s Office 365. Přihlášení funguje přes Microsoft Entra ID."
     }
   ],
   "/reseni/kontaktni-centra": [
@@ -77,6 +85,10 @@
     {
       "q": "Můžeme plánovat i brigádníky a částečné úvazky?",
       "a": "Ano. Kmenové zaměstnance naplánujeme jmenovitě a zbytek provozu nabídneme jako volné směny k rezervaci v mobilní aplikaci."
+    },
+    {
+      "q": "Umí AristoTelos nasimulovat jiný objem hovorů nebo jiné obsazení?",
+      "a": "Ano. Simulace provozu ukáže, jak jiný objem práce nebo jiné obsazení ovlivní očekávanou úroveň obsluhy. AristoTelos spočítá i potřebné obsazení pro kampaně."
     }
   ],
   "/reseni/obchodni-retezce-a-lekarny": [
@@ -100,11 +112,15 @@
     },
     {
       "q": "Umí pracovat s agenturními pracovníky?",
-      "a": "Ano. Neobsazené směny může předat jako objednávku agentuře práce, nebo je nabídnout brigádníkům a kmenovým zaměstnancům jako přesčas."
+      "a": "Ano. Neobsazené směny nabídne brigádníkům, kmenovým zaměstnancům jako přesčas, nebo agentuře práce. Agentura má vlastního koordinátora a své pracovníky na směny rezervuje sama, v aplikaci nebo přes API. Jejich odpracovaný čas AristoTelos vyveze zvlášť."
     },
     {
       "q": "Jak se AristoTelos napojí na SAP?",
       "a": "Přes API, nebo výměnou souborů. U jednoho z klientů stačila výměna přes Excel, bez zásahu do IT."
+    },
+    {
+      "q": "Napojí se AristoTelos na skladový systém?",
+      "a": "Ano. Ze skladového systému načítá pracovní položky a údaje o činnosti pracovníků. Počítá z nich potřebné obsazení, sleduje provoz a reportuje produktivitu."
     }
   ],
   "/reseni/banky-a-pojistovny": [
