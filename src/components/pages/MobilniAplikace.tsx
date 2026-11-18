@@ -150,7 +150,7 @@ export default function MobilniAplikacePage() {
 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(440px, 100%), 1fr))", gap: "20px" }}>
 <div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(18px, 3vh, 32px)", display: "flex", flexDirection: "column", gap: "14px" }}>
 <h3 style={{ margin: "0", fontSize: "1.4rem", fontWeight: "700", letterSpacing: "-0.01em" }}>Vedoucí</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Žádosti a výměny schvalují v aplikaci, plán mají pod kontrolou i mimo kancelář.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Žádosti a výměny schvalují v aplikaci. Plán týmu i reporty mají po ruce i mimo kancelář.</p>
 <ul style={{ listStyle: "none", margin: "4px 0 0", padding: "0", display: "flex", flexDirection: "column", gap: "10px", fontSize: "15.5px" }}>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>

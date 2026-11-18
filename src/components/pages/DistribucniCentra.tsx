@@ -80,7 +80,7 @@ export default function DistribucniCentraPage() {
 </div>
 <div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Kmenoví i agenturní pracovníci</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Neobsazené směny nabídne jako přesčas, brigádníkům, nebo je předá jako objednávku agentuře práce.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Neobsazené směny nabídne jako přesčas nebo brigádníkům. Agentury si je rezervují samy, přes svého koordinátora nebo přes API.</p>
 </div>
 <div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Několik variant plánu</h3>
@@ -175,12 +175,17 @@ export default function DistribucniCentraPage() {
 <details style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Umí pracovat s agenturními pracovníky?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
 </summary>
-<p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Ano. Neobsazené směny může předat jako objednávku agentuře práce, nebo je nabídnout brigádníkům a kmenovým zaměstnancům jako přesčas.</p>
+<p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Ano. Neobsazené směny nabídne brigádníkům, kmenovým zaměstnancům jako přesčas, nebo agentuře práce. Agentura má vlastního koordinátora a své pracovníky na směny rezervuje sama, v aplikaci nebo přes API. Jejich odpracovaný čas AristoTelos vyveze zvlášť.</p>
 </details>
 <details style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Jak se AristoTelos napojí na SAP?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
 </summary>
 <p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Přes API, nebo výměnou souborů. U jednoho z klientů stačila výměna přes Excel, bez zásahu do IT.</p>
+</details>
+<details style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
+<summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Napojí se AristoTelos na skladový systém?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
+</summary>
+<p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Ano. Ze skladového systému načítá pracovní položky a údaje o činnosti pracovníků. Počítá z nich potřebné obsazení, sleduje provoz a reportuje produktivitu.</p>
 </details>
 </div>
 </div>

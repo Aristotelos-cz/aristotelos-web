@@ -139,6 +139,7 @@ export default function FunkcePage() {
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px", fontWeight: "600", color: "#006E99" }}>01</span>
 <h2 style={{ margin: "0", fontSize: "clamp(1.6rem, min(2.8vw, 4.6vh), 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Předpověď objemu práce</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Přesná předpověď je základ dobrého plánu. AristoTelos ji počítá z vašich historických dat a rozloží na jednotlivé vlivy.</p>
+<Link href="/prehled-funkci#predpoved" style={{ alignSelf: "flex-start", fontWeight: "600", fontSize: "15.5px", textDecoration: "none", display: "inline-flex", alignItems: "center", minHeight: "32px" }}>Všechny funkce předpovědi →</Link>
 </div>
 <ul style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))", gap: "14px 28px" }}>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
@@ -146,7 +147,7 @@ export default function FunkcePage() {
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>Interval 15, 30 nebo 60 minut</span>
+<span>Intervaly po 15, 30 nebo 60 minutách</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
@@ -190,9 +191,16 @@ export default function FunkcePage() {
 </svg>
 <span>Automatický import dat nebo soubory CSV a XLS</span>
 </li>
+<li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
+<path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
+</path>
+</svg>
+<span>Předpověď pro jednotlivé fronty</span>
+</li>
 </ul>
 <figure style={{ gridColumn: "1 / -1", margin: "8px 0 0", display: "flex", flexDirection: "column", gap: "12px" }}>
-<div style={{ background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.32)" }}>
+<div className="snimek-pas snimek-graf" style={{ background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.32)" }}>
 <div aria-hidden="true" style={{ display: "flex", alignItems: "center", gap: "6px", height: "28px", padding: "0 12px", background: "#EEF2F5", borderBottom: "1px solid #DCE3E9" }}>
 <span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
 </span>
@@ -214,6 +222,7 @@ export default function FunkcePage() {
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px", fontWeight: "600", color: "#006E99" }}>02</span>
 <h2 style={{ margin: "0", fontSize: "clamp(1.6rem, min(2.8vw, 4.6vh), 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Plánování kapacit</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>AristoTelos spočítá, kolik pracovníků a s jakými znalostmi potřebujete v každém intervalu, aby seděla úroveň obsluhy a náklady byly co nejnižší.</p>
+<Link href="/prehled-funkci#predpoved" style={{ alignSelf: "flex-start", fontWeight: "600", fontSize: "15.5px", textDecoration: "none", display: "inline-flex", alignItems: "center", minHeight: "32px" }}>Všechny funkce pro potřebu obsazení →</Link>
 </div>
 <ul style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))", gap: "14px 28px" }}>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
@@ -256,7 +265,7 @@ export default function FunkcePage() {
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>Méně podstavu i nadstavu</span>
+<span>Méně podstavu i nadstavu v každém intervalu</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
@@ -265,9 +274,16 @@ export default function FunkcePage() {
 </svg>
 <span>Zohlednění mzdových nákladů</span>
 </li>
+<li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
+<path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
+</path>
+</svg>
+<span>Simulace dopadů na úroveň obsluhy</span>
+</li>
 </ul>
 <figure style={{ gridColumn: "1 / -1", margin: "8px 0 0", display: "flex", flexDirection: "column", gap: "12px" }}>
-<div style={{ background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.32)" }}>
+<div className="snimek-pas snimek-graf" style={{ background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.32)" }}>
 <div aria-hidden="true" style={{ display: "flex", alignItems: "center", gap: "6px", height: "28px", padding: "0 12px", background: "#EEF2F5", borderBottom: "1px solid #DCE3E9" }}>
 <span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
 </span>
@@ -276,9 +292,12 @@ export default function FunkcePage() {
 <span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
 </span>
 </div>
+<div className="snimek-dvojice">
 <img src="/screens/funkce-naplneni-potreb.webp" alt="Graf naplnění potřeb provozu během jednoho dne po půlhodinách: obsazení, podstav a nadstav" width="1655" height="568" loading="lazy" style={{ display: "block", width: "100%", height: "auto" }} />
+<img src="/screens/funkce-naplneni-potreb-tyden.webp" alt="Graf naplnění potřeb provozu za celý týden: obsazení, podstav a nadstav v jednotlivých dnech" width="1655" height="568" loading="lazy" style={{ display: "block", width: "100%", height: "auto" }} />
 </div>
-<figcaption style={{ fontSize: "14px", color: "#4A5866" }}>Naplnění potřeb provozu během dne: modře obsazení, které kryje potřebu, červeně podstav a zeleně nadstav.</figcaption>
+</div>
+<figcaption style={{ fontSize: "14px", color: "#4A5866" }}>Naplnění potřeb provozu během jednoho dne a celého týdne: modře obsazení, které kryje potřebu, červeně podstav a zeleně nadstav.</figcaption>
 </figure>
 </div>
 </section>
@@ -289,6 +308,7 @@ export default function FunkcePage() {
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px", fontWeight: "600", color: "#006E99" }}>03</span>
 <h2 style={{ margin: "0", fontSize: "clamp(1.6rem, min(2.8vw, 4.6vh), 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Automatické plánování směn</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Stačí zadat období. Matematický model vybere z miliard kombinací nejlepší plán a vždy splní zákoník práce i vaše pravidla.</p>
+<Link href="/prehled-funkci#planovani" style={{ alignSelf: "flex-start", fontWeight: "600", fontSize: "15.5px", textDecoration: "none", display: "inline-flex", alignItems: "center", minHeight: "32px" }}>Všechny funkce plánování směn →</Link>
 </div>
 <ul style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))", gap: "14px 28px" }}>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
@@ -303,7 +323,7 @@ export default function FunkcePage() {
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>Fond pracovní doby a vyrovnávací období</span>
+<span>Volné směny pro brigádníky, přesčasy nebo agenturní pracovníky</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
@@ -324,7 +344,7 @@ export default function FunkcePage() {
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>Rotace směn a seniorita</span>
+<span>Rotace směn a zohlednění seniority</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
@@ -338,7 +358,7 @@ export default function FunkcePage() {
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>Volné směny pro brigádníky, přesčasy nebo agenturu</span>
+<span>Fond pracovní doby a vyrovnávací období</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
@@ -349,7 +369,7 @@ export default function FunkcePage() {
 </li>
 </ul>
 <figure style={{ gridColumn: "1 / -1", margin: "8px 0 0", display: "flex", flexDirection: "column", gap: "12px" }}>
-<div style={{ background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.32)" }}>
+<div className="snimek-pas" style={{ background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.32)" }}>
 <div aria-hidden="true" style={{ display: "flex", alignItems: "center", gap: "6px", height: "28px", padding: "0 12px", background: "#EEF2F5", borderBottom: "1px solid #DCE3E9" }}>
 <span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
 </span>
@@ -358,7 +378,7 @@ export default function FunkcePage() {
 <span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
 </span>
 </div>
-<img src="/screens/funkce-kontrola-zakoniku.webp" alt="Plán směn s kontrolou zákoníku práce: seznam porušení u vybraného zaměstnance" width="1722" height="545" loading="lazy" style={{ display: "block", width: "100%", height: "auto" }} />
+<img src="/screens/funkce-kontrola-zakoniku.webp" alt="Plán směn a pod ním seznam porušení zákoníku práce u vybraného zaměstnance, například chybějící přestávka" width="1722" height="346" loading="lazy" style={{ display: "block", width: "100%", height: "auto" }} />
 </div>
 <figcaption style={{ fontSize: "14px", color: "#4A5866" }}>Kontrola zákoníku práce: při ruční úpravě plánu AristoTelos hned ukáže každé porušení, třeba chybějící přestávku nebo krátký odpočinek.</figcaption>
 </figure>
@@ -371,6 +391,7 @@ export default function FunkcePage() {
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px", fontWeight: "600", color: "#006E99" }}>04</span>
 <h2 style={{ margin: "0", fontSize: "clamp(1.6rem, min(2.8vw, 4.6vh), 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Přání zaměstnanců</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Zaměstnanci zadávají dovolené, volna a preferované směny sami. Systém hlídá nároky a limity, vedoucí jen schvalují.</p>
+<Link href="/prehled-funkci#samoobsluha" style={{ alignSelf: "flex-start", fontWeight: "600", fontSize: "15.5px", textDecoration: "none", display: "inline-flex", alignItems: "center", minHeight: "32px" }}>Všechny funkce pro zaměstnance →</Link>
 </div>
 <ul style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))", gap: "14px 28px" }}>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
@@ -378,7 +399,7 @@ export default function FunkcePage() {
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>Zadání z webu i z mobilu</span>
+<span>Zadání z webu i z mobilní aplikace</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
@@ -392,7 +413,7 @@ export default function FunkcePage() {
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>Kontrola nároků na dovolenou, sick days a náhradní volno</span>
+<span>Nároky na dovolenou, sick days a náhradní volno</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
@@ -415,9 +436,23 @@ export default function FunkcePage() {
 </svg>
 <span>Přílohy k doloženým nepřítomnostem</span>
 </li>
+<li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
+<path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
+</path>
+</svg>
+<span>Dvoustupňové a hromadné schvalování</span>
+</li>
+<li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
+<path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
+</path>
+</svg>
+<span>Oblíbené směny a preferované časy</span>
+</li>
 </ul>
 <figure style={{ gridColumn: "1 / -1", margin: "8px 0 0", display: "flex", flexDirection: "column", gap: "12px" }}>
-<div style={{ background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.32)" }}>
+<div className="snimek-pas" style={{ background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.32)" }}>
 <div aria-hidden="true" style={{ display: "flex", alignItems: "center", gap: "6px", height: "28px", padding: "0 12px", background: "#EEF2F5", borderBottom: "1px solid #DCE3E9" }}>
 <span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
 </span>
@@ -426,7 +461,7 @@ export default function FunkcePage() {
 <span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
 </span>
 </div>
-<img src="/screens/funkce-pozadavky.webp" alt="Plán směn s řádkem požadavků pod každým zaměstnancem" width="1667" height="733" loading="lazy" style={{ display: "block", width: "100%", height: "auto" }} />
+<img src="/screens/funkce-pozadavky.webp" alt="Plán směn s řádkem požadavků pod každým zaměstnancem" width="1667" height="399" loading="lazy" style={{ display: "block", width: "100%", height: "auto" }} />
 </div>
 <figcaption style={{ fontSize: "14px", color: "#4A5866" }}>Požadavky zaměstnanců na dovolenou a volno vidí vedoucí přímo pod plánem směn.</figcaption>
 </figure>
@@ -439,6 +474,7 @@ export default function FunkcePage() {
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px", fontWeight: "600", color: "#006E99" }}>05</span>
 <h2 style={{ margin: "0", fontSize: "clamp(1.6rem, min(2.8vw, 4.6vh), 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Řízení provozu</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Plán se mění každý den. AristoTelos pomůže reagovat na absence, výměny i změny objemu práce, aniž by se porušila pravidla.</p>
+<Link href="/prehled-funkci#rizeni" style={{ alignSelf: "flex-start", fontWeight: "600", fontSize: "15.5px", textDecoration: "none", display: "inline-flex", alignItems: "center", minHeight: "32px" }}>Všechny funkce řízení provozu →</Link>
 </div>
 <ul style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))", gap: "14px 28px" }}>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
@@ -453,14 +489,14 @@ export default function FunkcePage() {
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>Změna směny na dvě kliknutí</span>
+<span>Změna směny na dvě kliknutí myší</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>Návrh vhodných zaměstnanců při náhlé absenci</span>
+<span>Návrh náhradníků při náhlé absenci</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
@@ -474,21 +510,21 @@ export default function FunkcePage() {
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>Schvalování v aplikaci i z e-mailu</span>
+<span>Schvalování v aplikaci <span style={{ whiteSpace: "nowrap" }}>i z e-mailu</span></span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>Verze plánu a scénáře „co když“</span>
+<span>Verze plánu, scénáře a předběžné zveřejnění</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>Výpomoc mezi pobočkami</span>
+<span>Výpomoc mezi sousedními pobočkami</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
@@ -499,7 +535,7 @@ export default function FunkcePage() {
 </li>
 </ul>
 <figure style={{ gridColumn: "1 / -1", margin: "8px 0 0", display: "flex", flexDirection: "column", gap: "12px" }}>
-<div style={{ background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.32)" }}>
+<div className="snimek-pas" style={{ background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.32)" }}>
 <div aria-hidden="true" style={{ display: "flex", alignItems: "center", gap: "6px", height: "28px", padding: "0 12px", background: "#EEF2F5", borderBottom: "1px solid #DCE3E9" }}>
 <span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
 </span>
@@ -508,7 +544,7 @@ export default function FunkcePage() {
 <span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
 </span>
 </div>
-<img src="/screens/funkce-plan-soucty.webp" alt="Plán směn a pod ním součty po dnech: kolik pracovníků je na jednotlivých činnostech" width="1667" height="547" loading="lazy" style={{ display: "block", width: "100%", height: "auto" }} />
+<img src="/screens/funkce-plan-soucty.webp" alt="Plán směn a pod ním součty po dnech: kolik pracovníků je na jednotlivých činnostech" width="1667" height="312" loading="lazy" style={{ display: "block", width: "100%", height: "auto" }} />
 </div>
 <figcaption style={{ fontSize: "14px", color: "#4A5866" }}>Pod plánem směn vidí vedoucí součty za každý den, například kolik pracovníků je na které činnosti.</figcaption>
 </figure>
@@ -521,6 +557,7 @@ export default function FunkcePage() {
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px", fontWeight: "600", color: "#006E99" }}>06</span>
 <h2 style={{ margin: "0", fontSize: "clamp(1.6rem, min(2.8vw, 4.6vh), 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Docházka</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Docházka a plán směn v jednom systému. Odchylky od plánu vidíte hned a podklady pro mzdy se připraví samy.</p>
+<Link href="/prehled-funkci#dochazka" style={{ alignSelf: "flex-start", fontWeight: "600", fontSize: "15.5px", textDecoration: "none", display: "inline-flex", alignItems: "center", minHeight: "32px" }}>Všechny funkce docházky →</Link>
 </div>
 <ul style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))", gap: "14px 28px" }}>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
@@ -565,9 +602,23 @@ export default function FunkcePage() {
 </svg>
 <span>Uzávěrka měsíce a export do mezd</span>
 </li>
+<li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
+<path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
+</path>
+</svg>
+<span>Schvalování přesčasů a vyrovnání salda hodin</span>
+</li>
+<li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
+<path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
+</path>
+</svg>
+<span>Zamčení a znovuotevření uzavřeného období</span>
+</li>
 </ul>
 <figure style={{ gridColumn: "1 / -1", margin: "8px 0 0", display: "flex", flexDirection: "column", gap: "12px" }}>
-<div style={{ background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.32)" }}>
+<div className="snimek-pas" style={{ background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.32)" }}>
 <div aria-hidden="true" style={{ display: "flex", alignItems: "center", gap: "6px", height: "28px", padding: "0 12px", background: "#EEF2F5", borderBottom: "1px solid #DCE3E9" }}>
 <span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
 </span>
@@ -607,7 +658,7 @@ export default function FunkcePage() {
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#FF8A2B", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>Aktuální plán směn kdekoli</span>
+<span>Aktuální plán směn kdekoli a kdykoli</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
@@ -654,6 +705,7 @@ export default function FunkcePage() {
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "14px", fontWeight: "600", color: "#006E99" }}>08</span>
 <h2 style={{ margin: "0", fontSize: "clamp(1.6rem, min(2.8vw, 4.6vh), 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Reporty a mzdy</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>Hotové reporty pro vedoucí i mzdovou účtárnu, vlastní reporty bez programování a data pro vaše BI.</p>
+<Link href="/prehled-funkci#reporty" style={{ alignSelf: "flex-start", fontWeight: "600", fontSize: "15.5px", textDecoration: "none", display: "inline-flex", alignItems: "center", minHeight: "32px" }}>Všechny reporty a podklady pro mzdy →</Link>
 </div>
 <ul style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))", gap: "14px 28px" }}>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
@@ -661,7 +713,7 @@ export default function FunkcePage() {
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>Přehledy směn, nepřítomností a čerpání dovolené</span>
+<span>Přehledy směn, absencí a čerpání dovolené</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
@@ -675,14 +727,14 @@ export default function FunkcePage() {
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>Generátor vlastních reportů</span>
+<span>Generátor vlastních reportů bez programování</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>Export do XLS a CSV</span>
+<span>Export každého reportu do XLS a CSV</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
@@ -710,11 +762,11 @@ export default function FunkcePage() {
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>Automatický export do datového skladu a přes API</span>
+<span>Rozesílání e-mailem, do datového skladu i přes API</span>
 </li>
 </ul>
 <figure style={{ gridColumn: "1 / -1", margin: "8px 0 0", display: "flex", flexDirection: "column", gap: "12px" }}>
-<div style={{ background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.32)" }}>
+<div className="snimek-pas" style={{ background: "#FFFFFF", border: "1px solid #D5DEE6", borderRadius: "12px", overflow: "hidden", boxShadow: "0 28px 56px -28px rgba(14, 26, 36, 0.32)" }}>
 <div aria-hidden="true" style={{ display: "flex", alignItems: "center", gap: "6px", height: "28px", padding: "0 12px", background: "#EEF2F5", borderBottom: "1px solid #DCE3E9" }}>
 <span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
 </span>
@@ -723,9 +775,9 @@ export default function FunkcePage() {
 <span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#C5D0D9" }}>
 </span>
 </div>
-<img src="/screens/funkce-report.webp" alt="Report Denní přehled s odpracovaným časem a tlačítky pro export do Excelu a CSV" width="1672" height="804" loading="lazy" style={{ display: "block", width: "100%", height: "auto" }} />
+<img src="/screens/funkce-report.webp" alt="Report Denní přehled: odpracovaný čas, nepřítomnosti a přestávky jednotlivých zaměstnanců se součtem" width="1672" height="404" loading="lazy" style={{ display: "block", width: "100%", height: "auto" }} />
 </div>
-<figcaption style={{ fontSize: "14px", color: "#4A5866" }}>Denní přehled odpracovaného času s exportem do Excelu a CSV.</figcaption>
+<figcaption style={{ fontSize: "14px", color: "#4A5866" }}>Report Denní přehled: odpracovaný čas, nepřítomnosti a přestávky. Každý report jde vyexportovat do Excelu a CSV.</figcaption>
 </figure>
 </div>
 </section>
@@ -737,6 +789,7 @@ export default function FunkcePage() {
 <h2 style={{ margin: "0", fontSize: "clamp(1.6rem, min(2.8vw, 4.6vh), 2.4rem)", lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "700" }}>Správa a přihlášení</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#33424F" }}>AristoTelos zvládne jednu pobočku i skupinu firem s mnoha lokalitami a vlastními pravidly.</p>
 <Link href="/" style={{ alignSelf: "flex-start", fontWeight: "600", fontSize: "16px", textDecoration: "none", display: "inline-flex", alignItems: "center", minHeight: "44px" }}>Integrace, API a bezpečnost →</Link>
+<Link href="/prehled-funkci#sprava" style={{ alignSelf: "flex-start", fontWeight: "600", fontSize: "15.5px", textDecoration: "none", display: "inline-flex", alignItems: "center", minHeight: "32px" }}>Všechny funkce správy →</Link>
 </div>
 <ul style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))", gap: "14px 28px" }}>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
@@ -758,7 +811,7 @@ export default function FunkcePage() {
 <path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
 </path>
 </svg>
-<span>Hotové i vlastní role a oprávnění</span>
+<span>Hotové i vlastní role, včetně koordinátora agentury</span>
 </li>
 <li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>

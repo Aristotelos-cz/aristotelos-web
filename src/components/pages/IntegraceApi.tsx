@@ -155,8 +155,8 @@ export default function IntegraceApiPage() {
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Genesys, Cisco, Daktela a Sprinkl. Historie hovorů pro předpověď a online stavy operátorů pro kontrolu plánu.</p>
 </div>
 <div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
-<h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Pokladní a obchodní systémy</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Návštěvnost a prodeje po prodejnách jako podklad pro předpověď potřeby pracovníků.</p>
+<h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Pokladní, obchodní a skladové systémy</h3>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Návštěvnost a prodeje po prodejnách nebo pracovní položky ze skladu jako podklad pro předpověď potřeby pracovníků.</p>
 </div>
 <div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Docházkové systémy</h3>
@@ -324,6 +324,13 @@ export default function IntegraceApiPage() {
 </svg>
 <span>Výsledky všech reportů přes API</span>
 </li>
+<li style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" style={{ flex: "none", marginTop: "3px" }}>
+<path d="M4 10.5l4 4 8-9" style={{ fill: "none", stroke: "#006E99", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round" }}>
+</path>
+</svg>
+<span>API pro plán směn a požadavky, agentury, objem práce, stavy zaměstnanců i hromadnou synchronizaci</span>
+</li>
 </ul>
 <p style={{ margin: "0", padding: "clamp(5px, 1vh, 14px) 16px", background: "#F5F8FA", borderRadius: "10px", fontSize: "15px", color: "#33424F" }}>
 <strong style={{ color: "#0E1A24" }}>Dokumentace API:</strong> dostanete ji jako zákazník.</p>
@@ -339,7 +346,7 @@ export default function IntegraceApiPage() {
 <details open style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Má AristoTelos API?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
 </summary>
-<p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Ano. Import i export dat přes API a webové služby. Výsledky všech reportů jsou přes API dostupné i pro vaše další systémy. Dokumentaci API poskytujeme zákazníkům.</p>
+<p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Ano. Import i export dat přes API a webové služby. API pokrývá plán směn a požadavky, agentury a volné směny, reporty, objem práce a předpovědi, stavy zaměstnanců a hromadnou synchronizaci zaměstnanců a organizace. Dokumentaci API poskytujeme zákazníkům.</p>
 </details>
 <details style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Nemáme volnou kapacitu IT. Jde to i bez ní?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
@@ -352,9 +359,19 @@ export default function IntegraceApiPage() {
 <p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Import běží automaticky v nastavených intervalech. Příchody a odchody z docházkových systémů mohou přicházet online.</p>
 </details>
 <details style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
+<summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Jak poznáme, že se import nepovedl?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
+</summary>
+<p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Každý import AristoTelos zkontroluje a zapíše do logu. U každé úlohy vidíte stav, počty zpracovaných záznamů a chyby, které je potřeba opravit ve zdrojových datech.</p>
+</details>
+<details style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Na jaké telefonní platformy se napojíte?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
 </summary>
 <p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Máme napojení na Genesys, Cisco, Daktelu a Sprinkl. Další platformy napojíme přes API.</p>
+</details>
+<details style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
+<summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Umí AristoTelos synchronizaci s Office 365?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
+</summary>
+<p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Ano. Plán směn umí synchronizovat s Office 365. Přihlášení funguje přes Microsoft Entra ID.</p>
 </details>
 </div>
 </div>

@@ -171,11 +171,11 @@ export default function KontaktniCentraPage() {
 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(340px, 100%), 1fr))", gap: "20px" }}>
 <div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Hovory kolísají během dne i roku</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Předpověď po 15, 30 nebo 60 minutách se sezónou, kampaněmi a mimořádnými událostmi.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Předpověď po 15, 30 nebo 60 minutách pro každou frontu, se sezónou, kampaněmi a mimořádnými událostmi.</p>
 </div>
 <div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Úroveň obsluhy proti nákladům</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Přesný počet operátorů pro požadovanou úroveň obsluhy v každém intervalu. Méně podstavu i zbytečných hodin.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Přesný počet operátorů pro požadovanou úroveň obsluhy v každém intervalu. Simulace ukáže, co s ní udělá jiný objem hovorů nebo jiné obsazení.</p>
 </div>
 <div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Přestávky, porady a školení</h3>
@@ -191,7 +191,7 @@ export default function KontaktniCentraPage() {
 </div>
 <div style={{ border: "1px solid #DCE3E9", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <h3 style={{ margin: "0", fontSize: "1.2rem", fontWeight: "600" }}>Linka i back office v jednom plánu</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Více typů činností v rámci jedné směny, každá se svou předpovědí a potřebou pracovníků.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Více typů činností v jedné směně, každá se svou předpovědí. AristoTelos počítá i s kampaněmi a s tím, jak se práce z front rozděluje mezi operátory.</p>
 </div>
 </div>
 </div>
@@ -307,6 +307,11 @@ export default function KontaktniCentraPage() {
 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Můžeme plánovat i brigádníky a částečné úvazky?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
 </summary>
 <p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Ano. Kmenové zaměstnance naplánujeme jmenovitě a zbytek provozu nabídneme jako volné směny k rezervaci v mobilní aplikaci.</p>
+</details>
+<details style={{ borderBottom: "1px solid #D5DEE6", padding: "clamp(8px, 1.4vh, 14px) 0" }}>
+<summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "24px", minHeight: "44px", fontWeight: "600", fontSize: "1.12rem" }}>Umí AristoTelos nasimulovat jiný objem hovorů nebo jiné obsazení?<span aria-hidden="true" style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", color: "#006E99", fontSize: "20px" }}>+</span>
+</summary>
+<p style={{ margin: "6px 0 8px", color: "#33424F", maxWidth: "44em" }}>Ano. Simulace provozu ukáže, jak jiný objem práce nebo jiné obsazení ovlivní očekávanou úroveň obsluhy. AristoTelos spočítá i potřebné obsazení pro kampaně.</p>
 </details>
 </div>
 </div>

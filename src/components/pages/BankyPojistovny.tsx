@@ -161,7 +161,7 @@ export default function BankyPojistovnyPage() {
 </Link>
 <div style={{ display: "flex", flexDirection: "column", gap: "12px", padding: "clamp(16px, 2.6vh, 28px)", border: "1px solid #DCE3E9", borderRadius: "12px" }}>
 <h3 style={{ margin: "0", fontSize: "1.25rem", fontWeight: "600" }}>Back office a zpracování</h3>
-<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Více typů činností v jedné směně, výkonnostní ukazatele a variabilní složka mzdy podle výsledků.</p>
+<p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Z položek ke zpracování spočítá potřebné obsazení a předpoví úroveň obsluhy. Více typů činností v jedné směně, výkonnostní ukazatele a variabilní složka mzdy.</p>
 </div>
 <div style={{ display: "flex", flexDirection: "column", gap: "12px", padding: "clamp(16px, 2.6vh, 28px)", border: "1px solid #DCE3E9", borderRadius: "12px" }}>
 <h3 style={{ margin: "0", fontSize: "1.25rem", fontWeight: "600" }}>Asistenční služby</h3>
