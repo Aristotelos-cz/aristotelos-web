@@ -17,6 +17,7 @@ export default function SiteFooter() {
           <nav aria-label="Produkt" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <span style={head}>Produkt</span>
             <Link href="/funkce" style={link}>Funkce</Link>
+            <Link href="/prehled-funkci" style={link}>Přehled funkcí</Link>
             <Link href="/mobilni-aplikace" style={link}>Mobilní aplikace</Link>
             <Link href="/integrace-a-api" style={link}>Integrace a API</Link>
             <Link href="/bezpecnost" style={link}>Bezpečnost</Link>
