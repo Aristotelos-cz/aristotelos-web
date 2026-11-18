@@ -13,8 +13,10 @@ export function GET() {
 
 Klíčová fakta:
 - Předpověď objemu práce po 15, 30 nebo 60 minutách, automatické plánování směn matematickým modelem, přání zaměstnanců, řízení provozu, docházka a podklady pro mzdy.
+- Simulace provozu, kampaně, pracovní položky pro back office, volné směny a rezervace pro brigádníky i agentury práce.
 - Mobilní aplikace pro iOS a Android (česky, slovensky, anglicky, maďarsky).
-- Otevřené API, napojení na Genesys, Cisco, Daktelu, Sprinkl, SAP a personální a docházkové systémy.
+- Otevřené API, napojení na Genesys, Cisco, Daktelu, Sprinkl, SAP, Office 365 a personální, docházkové a skladové systémy.
+- Úplný přehled více než 200 funkcí ve 21 oblastech: ${SITE_URL}/prehled-funkci
 - Pracovní právo nastavené pro Česko, Slovensko, Německo a Rakousko.
 - Certifikace ISO/IEC 27001:2022, každoroční penetrační testy, provoz v datovém centru ČRa (Tier III) nebo u zákazníka.
 - Nasazení typicky 3 až 9 měsíců. Ceny se připravují na míru.
