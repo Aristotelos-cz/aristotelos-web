@@ -21,6 +21,9 @@ Potřebujete Node.js 20.9 nebo novější.
 | `src/app/[[...slug]]/page.tsx` | Všechny stránky webu: adresa → komponenta, metadata, FAQ pro vyhledávače |
 | `src/components/pages/` | Obsah jednotlivých stránek (převedený z návrhu na plátně) |
 | `src/components/SiteHeader.tsx`, `SiteFooter.tsx` | Hlavička a patička |
+| `src/content/prehled-funkci.json` | Úplný přehled funkcí pro stránku `/prehled-funkci`: části, oblasti, skupiny a funkce (název a jedna věta), role |
+| `src/components/pages/PrehledFunkci.tsx`, `src/components/PrehledFunkciSeznam.tsx` | Stránka Přehled funkcí: úvod s počty, rozbalovací oblasti s hledáním, role |
+| `docs/slovnik-en.md` | Slovník pojmů pro anglickou verzi webu (český pojem ↔ anglický pojem z aplikace) |
 | `src/components/KalkulackaInteraktivni.tsx` | Kalkulačky úspor: zadání, výsledek, upravitelné předpoklady, shrnutí v PDF a formulář pro business case |
 | `src/components/pages/Kalkulacka.tsx` | Rozcestník kalkulaček na `/kalkulacka-uspor` |
 | `src/lib/odhadUspor.ts` | Výpočet a nastavení obou kalkulaček (kontaktní centrum, retail): pole, výchozí hodnoty, předpoklady, zdroje. Sdílí ho stránka i server |
@@ -48,9 +51,32 @@ není nic vidět. Na počítači se každá část vejde celá na jednu obrazovk
 okna, na nízkých oknech se obsah mírně zmenší). Na telefonu jsou delší části vyšší než obrazovka.
 Mezery a velikost nadpisů se proto řídí výškou okna (třídy `hero-*`, `kalk-*` a pravidla pro `main > section`
 v `src/app/globals.css`).
+Snímky aplikace na stránce Funkce jsou široké pásy (poměr stran zhruba 4 : 1 až 5 : 1), aby vyplnily celou šířku
+části a vedle snímku nezůstávalo prázdné místo. V nízkém okně se pás nezužuje, jen se zespodu ořízne (třída
+`snimek-pas`), grafy se neořezávají (`snimek-graf`). Nový snímek proto ořízněte na pás a to důležité dejte nahoru.
+Body v seznamech jsou v každé části po osmi a každý na dva řádky, aby řádky seznamu byly stejně vysoké.
 Obě kalkulačky mají zadání i výsledek na stejném místě a ve stejné velikosti, aby při přepínání nic neposkakovalo
 (nadpis a úvodní věta na jeden řádek, kalkulačka vysoká jako okno, nejvýš 800 px). Na oknech nižších než 800 px
 se schovají nápovědy u polí, pod 700 px i posuvníky.
+
+## Přehled funkcí
+
+Stránka `/prehled-funkci` ukazuje všechny funkce AristoTela v rozbalovacích oblastech s hledáním.
+Vede na ni odkaz ze stránky Funkce (pod každou částí „Všechny funkce … →“) a z patičky, v hlavním menu není.
+Odkaz s kotvou, například `/prehled-funkci#dochazka`, oblast rovnou rozbalí.
+
+Obsah je v `src/content/prehled-funkci.json`. Novou funkci přidáte jako `{ "n": "Název", "p": "Jedna věta, co umí." }`
+do správné oblasti; počty na stránce, v hledání i ve strukturovaných datech se přepočítají samy.
+Když přibude nebo ubude celá oblast, zkontrolujte rozložení (levý sloupec má prvních 7 oblastí části Funkce)
+a pravidlo „jedna část = jedna obrazovka“.
+
+Pravidla pro obsah:
+
+- Platí to, co je na ostatních stránkách webu (například 100% hlídání zákoníku práce). Přehled tvrzení webu jen doplňuje, nikdy nezeslabuje.
+- Všechny funkce jsou součástí AristoTela. Které zákazník využije, záleží na typu provozu, proto se nepíše „modul navíc“.
+- API se popisuje oblastmi (plán směn a požadavky, agentury, objem práce, stavy zaměstnanců, hromadná synchronizace, příjem souborů).
+  Technické názvy rozhraní se nezveřejňují, dostane je zákazník v dokumentaci.
+- Slovník: pracovníci (ne lidé), operátoři (ne agenti), distribuční centra (ne DC), „Veřejný plán“ pro anglické „Main schedule“.
 
 ## Proměnné prostředí
 
