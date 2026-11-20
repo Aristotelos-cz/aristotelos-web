@@ -1,12 +1,14 @@
 {
-  "casti": [
+  "faze": [
     {
-      "id": "funkce",
-      "nazev": "Funkce",
+      "id": "zaklad",
+      "nazev": "Základ",
+      "popis": "Organizace, zaměstnanci a pravidla, podle kterých se plánuje.",
       "oblasti": [
         {
           "id": "organizace",
           "nazev": "Organizace a struktura",
+          "popis": "Firmy, jednotky, týmy, pracoviště a provozní doba.",
           "skupiny": [
             {
               "funkce": [
@@ -25,6 +27,7 @@
         {
           "id": "zamestnanci",
           "nazev": "Zaměstnanci, smlouvy a znalosti",
+          "popis": "Karty zaměstnanců, smlouvy, pracovní režimy a znalosti.",
           "skupiny": [
             {
               "nazev": "Zaměstnanci a zařazení",
@@ -55,8 +58,41 @@
           ]
         },
         {
+          "id": "pravidla",
+          "nazev": "Pravidla a kontroly",
+          "popis": "Zákoník práce a vaše vlastní pravidla, hlídané při plánování i úpravách.",
+          "skupiny": [
+            {
+              "funkce": [
+                { "n": "Zákoník práce", "p": "100% dodržení zákoníku práce, kolektivní smlouvy a vnitřních předpisů. Novelu nasadíme předem a pravidla se přepnou ke dni účinnosti." },
+                { "n": "Pracovní právo čtyř zemí", "p": "Pravidla jsou nastavená pro Česko, Slovensko, Německo a Rakousko." },
+                { "n": "Nastavení plánovacích pravidel", "p": "Stromy pravidel, filtry, fáze výpočtu a omezení pro automatické plánování." },
+                { "n": "Kontrola vstupů před plánováním", "p": "Smlouvy, požadavky, znalosti, pokrytí a pracovní doba se zkontrolují před výpočtem i během něj." },
+                { "n": "Kontrola plánu", "p": "Směny a nepřítomnosti včetně navrhovaných změn se kontrolují proti pravidlům zaměstnance, smlouvy, požadavků, pracovní doby a obsazení." },
+                { "n": "Denní a týdenní odpočinek", "p": "Minimální nepřetržitý odpočinek mezi směnami a v týdnu." },
+                { "n": "Pracovní doba a limity přesčasů", "p": "Denní, týdenní a roční limity i limity za období." },
+                { "n": "Pokrytí a přiřazení", "p": "Kontroly pokrytí potřeb, pracovišť a omezení přiřazení." },
+                { "n": "Limity požadavků", "p": "Kolik a jakých požadavků může zadat tým nebo jednotlivec." },
+                { "n": "Limity rezervací", "p": "Kdy se nabídka volných směn otevře a kolik směn si kdo může vzít." },
+                { "n": "Kontrola nároků", "p": "Zůstatky a platnost nároků se kontrolují při vytvoření, změně i zpracování směn a požadavků." },
+                { "n": "Přestávky a činnosti", "p": "Povinné přestávky a povolené kombinace, umístění a délky částí směny." },
+                { "n": "Noc, víkendy a svátky", "p": "Pravidla pro noční práci, víkendy a svátky v plánování i ve výpočtu pracovní doby." },
+                { "n": "Chyby a varování", "p": "Chyba změnu zastaví. Varování může potvrdit jen uživatel s oprávněním." }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "planovani",
+      "nazev": "Plánování",
+      "popis": "Od předpovědi objemu práce po zveřejněný plán směn.",
+      "oblasti": [
+        {
           "id": "predpoved",
           "nazev": "Předpověď a potřeba obsazení",
+          "popis": "Objem práce, předpověď a výpočet, kolik pracovníků je kdy potřeba.",
           "skupiny": [
             {
               "nazev": "Objem práce, fronty a směrování",
@@ -101,6 +137,7 @@
         {
           "id": "planovani",
           "nazev": "Plánování směn",
+          "popis": "Automatické sestavení plánu, volné směny, zveřejnění a ruční úpravy.",
           "skupiny": [
             {
               "nazev": "Plánovací období a nastavení",
@@ -159,10 +196,18 @@
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "provoz",
+      "nazev": "Provoz",
+      "popis": "Každodenní práce s plánem: zaměstnanci, vedoucí a schvalování.",
+      "oblasti": [
         {
           "id": "rizeni",
           "nazev": "Řízení provozu během dne",
+          "popis": "Dodržování plánu, obsazení v reálném čase a náhradníci při absenci.",
           "skupiny": [
             {
               "funkce": [
@@ -177,46 +222,9 @@
           ]
         },
         {
-          "id": "dochazka",
-          "nazev": "Docházka",
-          "skupiny": [
-            {
-              "funkce": [
-                { "n": "Otevřená docházka", "p": "Zveřejněné směny a nepřítomnosti ve stavu Otevřeno. Do budoucna obsahují plán, zpětně se upravují podle skutečnosti." },
-                { "n": "Pozitivní i negativní evidence", "p": "Docházka podle plánu, nebo podle příchodů a odchodů z docházkového systému. Pozdní příchody, dřívější odchody i přestávky." },
-                { "n": "Úpravy směn a nepřítomností", "p": "Oprávnění uživatelé upraví časy směn, přestávky, činnosti a nepřítomnosti podle skutečně odvedené práce." },
-                { "n": "Pracovní listy", "p": "Denní i souhrnné údaje o pracovní době, salda a výsledky kontrol." },
-                { "n": "Přesčasy", "p": "Zadání, kontrola, schválení nebo zamítnutí přesčasů." },
-                { "n": "Vyrovnání salda pracovní doby", "p": "Kontrola salda za období, převod do dalšího období a jeho vyrovnání nebo proplacení při uzávěrce." },
-                { "n": "Kontroly docházky", "p": "Kontroly směn, nepřítomností, pracovní doby a sald. Chyby a varování se vyřeší před uzávěrkou." },
-                { "n": "Uzávěrka docházky", "p": "Po kontrolách se docházka za období uzavře a je připravená pro mzdy." },
-                { "n": "Zamčení a odemčení", "p": "Docházku lze zamknout pro vybrané jednotky a období, otevřenou i uzavřenou." },
-                { "n": "Znovuotevření", "p": "Uzavřené období lze s oprávněním znovu otevřít a opravit." }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "nepritomnosti",
-          "nazev": "Nepřítomnosti a dovolené",
-          "skupiny": [
-            {
-              "funkce": [
-                { "n": "Typy nepřítomností a volna", "p": "Typy používané v požadavcích, plánech, výpočtech a reportech." },
-                { "n": "Kategorie nároků", "p": "Typy a kategorie nároků, například dovolená, sick days a náhradní volno." },
-                { "n": "Nároky zaměstnanců", "p": "Nároky s platností, vyčerpaným a zbývajícím množstvím." },
-                { "n": "Výpočet čerpání", "p": "Čerpání a zůstatky se počítají ze směn a požadavků podle nastavených pravidel." },
-                { "n": "Volno během směny", "p": "Volno na celou směnu, na její část nebo na určený interval." },
-                { "n": "Nepřítomnosti z jiných systémů", "p": "Nepřítomnosti načtené odjinud se započítají do plánování i do pracovní doby." },
-                { "n": "Import nároků", "p": "Nároky lze zadat ručně nebo je načítat ze souborů a z jiných systémů." },
-                { "n": "Dočerpání zbytku dovolené", "p": "Vedoucí může na směnu použít zbytek dovolené, i když nestačí na celý den nebo půlden." }
-              ]
-            }
-          ]
-        },
-        {
           "id": "samoobsluha",
           "nazev": "Samoobsluha zaměstnanců",
+          "popis": "Plán, přání, požadavky a výměny směn přímo od zaměstnanců.",
           "skupiny": [
             {
               "nazev": "Plán a zůstatky",
@@ -254,6 +262,7 @@
         {
           "id": "vedouci",
           "nazev": "Nástroje pro vedoucí",
+          "popis": "Přehled plánů, zpracování požadavků, zastupování a úkoly.",
           "skupiny": [
             {
               "funkce": [
@@ -272,32 +281,9 @@
           ]
         },
         {
-          "id": "pravidla",
-          "nazev": "Pravidla a kontroly",
-          "skupiny": [
-            {
-              "funkce": [
-                { "n": "Zákoník práce", "p": "100% dodržení zákoníku práce, kolektivní smlouvy a vnitřních předpisů. Novelu nasadíme předem a pravidla se přepnou ke dni účinnosti." },
-                { "n": "Pracovní právo čtyř zemí", "p": "Pravidla jsou nastavená pro Česko, Slovensko, Německo a Rakousko." },
-                { "n": "Nastavení plánovacích pravidel", "p": "Stromy pravidel, filtry, fáze výpočtu a omezení pro automatické plánování." },
-                { "n": "Kontrola vstupů před plánováním", "p": "Smlouvy, požadavky, znalosti, pokrytí a pracovní doba se zkontrolují před výpočtem i během něj." },
-                { "n": "Kontrola plánu", "p": "Směny a nepřítomnosti včetně navrhovaných změn se kontrolují proti pravidlům zaměstnance, smlouvy, požadavků, pracovní doby a obsazení." },
-                { "n": "Denní a týdenní odpočinek", "p": "Minimální nepřetržitý odpočinek mezi směnami a v týdnu." },
-                { "n": "Pracovní doba a limity přesčasů", "p": "Denní, týdenní a roční limity i limity za období." },
-                { "n": "Pokrytí a přiřazení", "p": "Kontroly pokrytí potřeb, pracovišť a omezení přiřazení." },
-                { "n": "Limity požadavků", "p": "Kolik a jakých požadavků může zadat tým nebo jednotlivec." },
-                { "n": "Limity rezervací", "p": "Kdy se nabídka volných směn otevře a kolik směn si kdo může vzít." },
-                { "n": "Kontrola nároků", "p": "Zůstatky a platnost nároků se kontrolují při vytvoření, změně i zpracování směn a požadavků." },
-                { "n": "Přestávky a činnosti", "p": "Povinné přestávky a povolené kombinace, umístění a délky částí směny." },
-                { "n": "Noc, víkendy a svátky", "p": "Pravidla pro noční práci, víkendy a svátky v plánování i ve výpočtu pracovní doby." },
-                { "n": "Chyby a varování", "p": "Chyba změnu zastaví. Varování může potvrdit jen uživatel s oprávněním." }
-              ]
-            }
-          ]
-        },
-        {
           "id": "schvalovani",
           "nazev": "Schvalování a upozornění",
+          "popis": "Vícestupňové schvalování, úkoly a upozornění v aplikaci, e-mailem i do mobilu.",
           "skupiny": [
             {
               "nazev": "Požadavky, schvalování a úkoly",
@@ -320,10 +306,77 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "dochazka",
+      "nazev": "Docházka a mzdy",
+      "popis": "Od odpracované směny po podklady pro výplatu a reporty.",
+      "oblasti": [
+        {
+          "id": "dochazka",
+          "nazev": "Docházka",
+          "popis": "Evidence docházky, přesčasy, pracovní listy a uzávěrka.",
+          "skupiny": [
+            {
+              "funkce": [
+                { "n": "Otevřená docházka", "p": "Zveřejněné směny a nepřítomnosti ve stavu Otevřeno. Do budoucna obsahují plán, zpětně se upravují podle skutečnosti." },
+                { "n": "Pozitivní i negativní evidence", "p": "Docházka podle plánu, nebo podle příchodů a odchodů z docházkového systému. Pozdní příchody, dřívější odchody i přestávky." },
+                { "n": "Úpravy směn a nepřítomností", "p": "Oprávnění uživatelé upraví časy směn, přestávky, činnosti a nepřítomnosti podle skutečně odvedené práce." },
+                { "n": "Pracovní listy", "p": "Denní i souhrnné údaje o pracovní době, salda a výsledky kontrol." },
+                { "n": "Přesčasy", "p": "Zadání, kontrola, schválení nebo zamítnutí přesčasů." },
+                { "n": "Vyrovnání salda pracovní doby", "p": "Kontrola salda za období, převod do dalšího období a jeho vyrovnání nebo proplacení při uzávěrce." },
+                { "n": "Kontroly docházky", "p": "Kontroly směn, nepřítomností, pracovní doby a sald. Chyby a varování se vyřeší před uzávěrkou." },
+                { "n": "Uzávěrka docházky", "p": "Po kontrolách se docházka za období uzavře a je připravená pro mzdy." },
+                { "n": "Zamčení a odemčení", "p": "Docházku lze zamknout pro vybrané jednotky a období, otevřenou i uzavřenou." },
+                { "n": "Znovuotevření", "p": "Uzavřené období lze s oprávněním znovu otevřít a opravit." }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nepritomnosti",
+          "nazev": "Nepřítomnosti a dovolené",
+          "popis": "Typy volna, nároky zaměstnanců a výpočet čerpání.",
+          "skupiny": [
+            {
+              "funkce": [
+                { "n": "Typy nepřítomností a volna", "p": "Typy používané v požadavcích, plánech, výpočtech a reportech." },
+                { "n": "Kategorie nároků", "p": "Typy a kategorie nároků, například dovolená, sick days a náhradní volno." },
+                { "n": "Nároky zaměstnanců", "p": "Nároky s platností, vyčerpaným a zbývajícím množstvím." },
+                { "n": "Výpočet čerpání", "p": "Čerpání a zůstatky se počítají ze směn a požadavků podle nastavených pravidel." },
+                { "n": "Volno během směny", "p": "Volno na celou směnu, na její část nebo na určený interval." },
+                { "n": "Nepřítomnosti z jiných systémů", "p": "Nepřítomnosti načtené odjinud se započítají do plánování i do pracovní doby." },
+                { "n": "Import nároků", "p": "Nároky lze zadat ručně nebo je načítat ze souborů a z jiných systémů." },
+                { "n": "Dočerpání zbytku dovolené", "p": "Vedoucí může na směnu použít zbytek dovolené, i když nestačí na celý den nebo půlden." }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mzdy",
+          "nazev": "Podklady pro mzdy",
+          "popis": "Odpracovaný čas, příplatky a odměny připravené pro mzdový systém.",
+          "skupiny": [
+            {
+              "funkce": [
+                { "n": "Směny a pracovní doba", "p": "Export ve formátu vašeho mzdového systému." },
+                { "n": "Nepřítomnosti", "p": "Export volna a nepřítomností pro zpracování mezd." },
+                { "n": "Přesčasy", "p": "Export přesčasů ve formátu, který váš mzdový systém čeká." },
+                { "n": "Příplatky", "p": "Příplatky podle pracovní doby a podmínek směny, například za noc, víkend nebo svátek." },
+                { "n": "Odměny a variabilní složka mzdy", "p": "Variabilní složka mzdy, schvalování odměn a jejich export do mezd." },
+                { "n": "Agenturní pracovníci", "p": "Odpracovaný čas a mzdové podklady za agenturní pracovníky." },
+                { "n": "Měsíční souhrny", "p": "Měsíční souhrnné výstupy pro kontrolu provozu a mezd." },
+                { "n": "Předání do mezd", "p": "Přes API, soubory, FTP nebo rozhraní mzdového systému, například do SAP." }
+              ]
+            }
+          ]
         },
         {
           "id": "reporty",
           "nazev": "Reporty",
+          "popis": "Hotové i vlastní reporty, export a automatické rozesílání.",
           "skupiny": [
             {
               "funkce": [
@@ -342,50 +395,18 @@
               ]
             }
           ]
-        },
-        {
-          "id": "mzdy",
-          "nazev": "Podklady pro mzdy",
-          "skupiny": [
-            {
-              "funkce": [
-                { "n": "Směny a pracovní doba", "p": "Export ve formátu vašeho mzdového systému." },
-                { "n": "Nepřítomnosti", "p": "Export volna a nepřítomností pro zpracování mezd." },
-                { "n": "Přesčasy", "p": "Export přesčasů ve formátu, který váš mzdový systém čeká." },
-                { "n": "Příplatky", "p": "Příplatky podle pracovní doby a podmínek směny, například za noc, víkend nebo svátek." },
-                { "n": "Odměny a variabilní složka mzdy", "p": "Variabilní složka mzdy, schvalování odměn a jejich export do mezd." },
-                { "n": "Agenturní pracovníci", "p": "Odpracovaný čas a mzdové podklady za agenturní pracovníky." },
-                { "n": "Měsíční souhrny", "p": "Měsíční souhrnné výstupy pro kontrolu provozu a mezd." },
-                { "n": "Předání do mezd", "p": "Přes API, soubory, FTP nebo rozhraní mzdového systému, například do SAP." }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "spolecne",
-          "nazev": "Společné nástroje",
-          "skupiny": [
-            {
-              "funkce": [
-                { "n": "Štítky", "p": "Štítky pro zaměstnance, směny, činnosti a další objekty." },
-                { "n": "Vlastní údaje", "p": "Vlastní pole u zaměstnanců, směn, požadavků a dalších objektů, použitelná v plánování i reportech." },
-                { "n": "Filtry a výběrová pravidla", "p": "Filtry, kterými se vybírají zaměstnanci, objekty plánování nebo pravidla." },
-                { "n": "Osobní nastavení", "p": "Jazyk, filtry a zobrazení podle uživatele." },
-                { "n": "Historie změn", "p": "Historie plánu, požadavků a schvalování přímo tam, kde s nimi pracujete." },
-                { "n": "Nápověda", "p": "Nápověda u každé stránky, manuál a výuková videa. Informace o verzi a licenci." }
-              ]
-            }
-          ]
         }
       ]
     },
     {
       "id": "integrace",
-      "nazev": "Integrace a výměna dat",
+      "nazev": "Integrace",
+      "popis": "Napojení na vaše systémy a výměna dat.",
       "oblasti": [
         {
           "id": "napojeni",
           "nazev": "Napojení na další systémy",
+          "popis": "Personální, mzdové, docházkové, telefonní i skladové systémy.",
           "skupiny": [
             {
               "funkce": [
@@ -406,6 +427,7 @@
         {
           "id": "api",
           "nazev": "API",
+          "popis": "Rozhraní pro plán směn, agentury, objem práce a synchronizaci.",
           "skupiny": [
             {
               "funkce": [
@@ -423,6 +445,7 @@
         {
           "id": "importy",
           "nazev": "Importy, exporty a synchronizace",
+          "popis": "API, databáze nebo soubory. Synchronizace zaměstnanců, organizace i dat.",
           "skupiny": [
             {
               "funkce": [
@@ -440,6 +463,7 @@
         {
           "id": "dohled",
           "nazev": "Dohled nad integracemi",
+          "popis": "Kontrola importů, logy a sledování úloh.",
           "skupiny": [
             {
               "funkce": [
@@ -456,11 +480,13 @@
     },
     {
       "id": "platforma",
-      "nazev": "Platforma a provoz",
+      "nazev": "Platforma",
+      "popis": "Aplikace, přístupy, správa a provoz.",
       "oblasti": [
         {
           "id": "web-a-mobil",
           "nazev": "Web a mobilní aplikace",
+          "popis": "Aplikace v prohlížeči a mobilní aplikace pro iOS a Android.",
           "skupiny": [
             {
               "nazev": "Webová aplikace",
@@ -494,6 +520,7 @@
         {
           "id": "prihlaseni",
           "nazev": "Přihlášení a oprávnění",
+          "popis": "Jednotné přihlášení, role, oprávnění a audit změn.",
           "skupiny": [
             {
               "funkce": [
@@ -511,6 +538,7 @@
         {
           "id": "sprava",
           "nazev": "Správa, nastavení a provoz",
+          "popis": "Nastavení, nasazení jako služba nebo u vás a provoz systému.",
           "skupiny": [
             {
               "nazev": "Správa a nastavení",
@@ -545,10 +573,28 @@
               ]
             }
           ]
+        },
+        {
+          "id": "spolecne",
+          "nazev": "Společné nástroje",
+          "popis": "Štítky, filtry, vlastní údaje, historie změn a nápověda.",
+          "skupiny": [
+            {
+              "funkce": [
+                { "n": "Štítky", "p": "Štítky pro zaměstnance, směny, činnosti a další objekty." },
+                { "n": "Vlastní údaje", "p": "Vlastní pole u zaměstnanců, směn, požadavků a dalších objektů, použitelná v plánování i reportech." },
+                { "n": "Filtry a výběrová pravidla", "p": "Filtry, kterými se vybírají zaměstnanci, objekty plánování nebo pravidla." },
+                { "n": "Osobní nastavení", "p": "Jazyk, filtry a zobrazení podle uživatele." },
+                { "n": "Historie změn", "p": "Historie plánu, požadavků a schvalování přímo tam, kde s nimi pracujete." },
+                { "n": "Nápověda", "p": "Nápověda u každé stránky, manuál a výuková videa. Informace o verzi a licenci." }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
+  "casti": [{"id": "funkce", "nazev": "Funkce", "oblasti": [{"id": "organizace", "nazev": "Organizace a struktura", "skupiny": [{"funkce": [{"n": "Organizační struktura", "p": "Organizační jednotky v libovolném počtu úrovní. Jednotky i jejich vazby mají platnost od–do, takže změny organizace v čase zůstanou zachované."}, {"n": "Více firem ve skupině", "p": "Skupina firem s mnoha lokalitami, jednotnou metodikou a vlastními pravidly každé firmy."}, {"n": "Typy organizačních jednotek", "p": "Typy, podtypy a vlastnosti jednotek podle toho, jak je váš provoz uspořádaný."}, {"n": "Týmy", "p": "Zaměstnanci se v jednotkách sdružují do týmů. Podle týmů se plánuje, filtruje a řídí přístup."}, {"n": "Pracoviště", "p": "Místa výkonu práce, která lze přiřadit směně nebo její části."}, {"n": "Nákladová střediska", "p": "Střediska přiřazená jednotkám, zaměstnancům nebo činnostem pro třídění a reporty."}, {"n": "Provozní doba", "p": "Otevírací doba provozoven a omezení, se kterými plánování počítá."}, {"n": "Kalendáře svátků", "p": "Svátky pro jednotlivé organizační jednotky. Počítá s nimi plán, výpočet pracovní doby i přehledy zaměstnanců."}]}]}, {"id": "zamestnanci", "nazev": "Zaměstnanci, smlouvy a znalosti", "skupiny": [{"nazev": "Zaměstnanci a zařazení", "funkce": [{"n": "Karta zaměstnance", "p": "Osobní a kontaktní údaje, údaje o pracovním poměru a vlastní nastavitelné údaje."}, {"n": "Pozice a role", "p": "Pozice a role, které popisují zařazení a odpovědnost zaměstnance v organizaci."}, {"n": "Zařazení do jednotek a týmů", "p": "Zaměstnanec může patřit do více jednotek a týmů. Každé zařazení má platnost od–do."}, {"n": "Agentury a agenturní pracovníci", "p": "Agentury práce, jejich pracovníci a vazby potřebné pro plánování."}, {"n": "Vlastní údaje o zaměstnancích", "p": "Vlastní pole u zaměstnanců, která lze využít napříč aplikací."}, {"n": "Dostupné typy požadavků", "p": "Které typy požadavků může zadávat skupina zaměstnanců nebo jednotlivec."}]}, {"nazev": "Smlouvy a pracovní režimy", "funkce": [{"n": "Pracovní smlouvy", "p": "Plné, částečné a kombinované úvazky i agenturní smlouvy."}, {"n": "Pracovní režimy", "p": "Opakovaně použitelné režimy s pracovní dobou, pracovními dny, limity přesčasů, směnným režimem a omezeními pro plánování."}, {"n": "Směnné režimy a rotace", "p": "Směnné režimy se vzory střídání směn a jejich pravidly."}]}, {"nazev": "Znalosti", "funkce": [{"n": "Seznam znalostí", "p": "Znalosti, které lze přiřadit zaměstnancům a vyžadovat v potřebách obsazení."}, {"n": "Znalosti zaměstnanců", "p": "Každý zaměstnanec může mít více znalostí. Plánování podle nich páruje zaměstnance s potřebou provozu."}]}]}, {"id": "predpoved", "nazev": "Předpověď a potřeba obsazení", "skupiny": [{"nazev": "Objem práce, fronty a směrování", "funkce": [{"n": "Import historie objemu práce", "p": "Historická data pro analýzy, předpověď a plánování kapacit. Automaticky, nebo ze souborů CSV a XLS."}, {"n": "Fronty", "p": "Fronty a jejich stromy, podle kterých se třídí objem práce a potřeba obsazení."}, {"n": "Směrování", "p": "Pravidla, jak se práce z front rozděluje mezi zaměstnance."}]}, {"nazev": "Předpověď", "funkce": [{"n": "Tvorba a úprava předpovědi", "p": "Předpověď objemu práce pro vybrané fronty a období, po 15, 30 nebo 60 minutách."}, {"n": "Vlivy v předpovědi", "p": "Sezóna, den v týdnu, měsíc i průběh dne. Dlouhodobé, střednědobé i krátkodobé předpovědi."}, {"n": "Události", "p": "Promoakce, kampaně a mimořádné události, které předpověď upraví."}, {"n": "Ruční úpravy a scénáře", "p": "Předpověď lze ručně upravit a připravit několik scénářů vývoje."}, {"n": "Import předpovědi", "p": "Předpověď připravenou jinde lze načíst a použít pro plánování kapacit."}, {"n": "Export předpovědi", "p": "Předpověď lze vyvézt pro další analýzy."}, {"n": "Analýza objemu práce", "p": "Skutečný objem práce proti předpovědi, včetně vyhodnocení přesnosti."}]}, {"nazev": "Potřeba obsazení a pokrytí", "funkce": [{"n": "Potřeby obsazení", "p": "Kolik pracovníků a s jakými znalostmi je potřeba: minima, maxima, priority a časová okna."}, {"n": "Počet pracovníků pro úroveň obsluhy", "p": "Potřebný počet pracovníků v každém intervalu tak, aby seděla úroveň obsluhy a mzdové náklady byly co nejnižší."}, {"n": "Typy a délky směn", "p": "Nejvhodnější typy a délky směn pro váš provoz, včetně návrhu nových."}, {"n": "Pokrytí potřeb plánem", "p": "Naplánované obsazení proti potřebě. Hned je vidět podstav i nadstav."}, {"n": "Kampaně", "p": "Výpočet potřebného obsazení pro kampaně."}, {"n": "Pracovní položky", "p": "Položky ke zpracování načtené ze zdrojových systémů, výpočet obsazení potřebného k jejich vyřízení a předpověď úrovně obsluhy."}]}, {"nazev": "Simulace", "funkce": [{"n": "Simulace provozu", "p": "Ukáže, jak objem práce a obsazení ovlivní očekávanou úroveň obsluhy."}, {"n": "Simulace potřeby obsazení", "p": "Scénáře potřeby a pokrytí pro zvolenou poptávku a vstupy plánování."}]}]}, {"id": "planovani", "nazev": "Plánování směn", "skupiny": [{"nazev": "Plánovací období a nastavení", "funkce": [{"n": "Plánovací období", "p": "Období, ke kterým se váží plány, požadavky zaměstnanců a výpočty."}, {"n": "Šablony směn", "p": "Opakovaně použitelné směny, které zrychlí ruční plánování a sjednotí definice směn."}, {"n": "Činnosti", "p": "Činnosti používané ve směnách, požadavcích, výpočtech obsazení a reportech. V jedné směně jich může být víc."}, {"n": "Přestávky", "p": "Typy přestávek a pravidla pro jejich plánování ve směnách."}]}, {"nazev": "Automatické plánování a výpočty", "funkce": [{"n": "Automatické sestavení plánu", "p": "Stačí zadat období. Matematický model sestaví směny z pracovních režimů, potřeb obsazení a pravidel a vždy splní zákoník práce."}, {"n": "Fond pracovní doby a vyrovnávací období", "p": "Libovolně dlouhá vyrovnávací období. Fond pracovní doby se rozloží tak, aby na konci nikomu hodiny nechyběly ani nepřebývaly."}, {"n": "Spravedlivé rozdělení", "p": "Směny, víkendy a noci se rozdělí rovnoměrně, s ohledem na rotaci směn a senioritu."}, {"n": "Přání zaměstnanců v plánu", "p": "Plán počítá se schválenými požadavky a preferencemi zaměstnanců."}, {"n": "Přestávky, porady a školení", "p": "Umístí se do časů, kdy pracovníci v provozu chybí nejméně."}, {"n": "Typy výpočtů", "p": "Denní výpočet, výpočet na plánovací období a dlouhodobé plánování."}, {"n": "Správa výpočtů", "p": "Spuštění, opakování a sledování výpočtů a přehled jejich výsledků."}, {"n": "Průběh a výsledek výpočtu", "p": "Stav, průběh, varování a chyby. Když pravidla nejdou splnit, AristoTelos srozumitelně vysvětlí proč."}]}, {"nazev": "Volné směny a rezervace", "funkce": [{"n": "Volné směny", "p": "Veřejná nabídka volných směn pro brigádníky, přesčasy nebo agentury."}, {"n": "Rezervace zaměstnanců", "p": "Zaměstnanci a brigádníci si rezervují volné směny. Přijatá rezervace se změní ve směnu."}, {"n": "Registrace nových brigádníků", "p": "Noví zájemci se registrují přímo z nabídky volných směn."}, {"n": "Rezervace agentur", "p": "Agentura rezervuje své pracovníky na volné směny nebo na potřeby obsazení."}, {"n": "Zpracování rezervací", "p": "Potvrzení, zamítnutí, zrušení nebo úprava rezervace."}]}, {"nazev": "Správa a zveřejnění plánu", "funkce": [{"n": "Veřejný plán", "p": "Průběžný provozní plán směn a nepřítomností. Zaměstnanci ho vidí podle stavu zveřejnění a postupně se mění ve skutečnou docházku."}, {"n": "Pracovní plány", "p": "Pracovní verze plánu, ve kterých plánovač připravuje a porovnává varianty „co když“."}, {"n": "Správa pracovních plánů", "p": "Vytvoření, přejmenování, kopie, sloučení a smazání pracovních plánů v plánovacím období."}, {"n": "Předběžné zveřejnění", "p": "Mezistav před konečným zveřejněním plánu."}, {"n": "Zveřejnění plánu", "p": "Vybrané směny a nepřítomnosti z pracovního plánu se zveřejní do veřejného plánu."}, {"n": "Historie změn a vrácení", "p": "Úplná historie změn plánu, směn a nepřítomností s možností změnu vrátit."}, {"n": "Export plánu", "p": "Plán směn lze vyvézt pro další zpracování."}]}, {"nazev": "Zobrazení a ruční úpravy", "funkce": [{"n": "Plán směn v tabulce", "p": "Přehledná tabulka podobná Excelu, ve které oprávnění uživatelé prohlížejí a upravují směny a nepřítomnosti."}, {"n": "Pohledy a rozvržení", "p": "Vlastní pohledy, výběr zaměstnanců, filtry, řazení, časová měřítka a formáty zobrazení."}, {"n": "Statistiky u plánu", "p": "Ukazatele plánování a statistiky pracovní doby přímo pod plánem."}, {"n": "Ruční úpravy", "p": "Vytvoření, úprava, rozdělení, přesun, kopírování a smazání směn a nepřítomností."}, {"n": "Hromadné úpravy", "p": "Jedna změna pro více směn, nepřítomností nebo zaměstnanců najednou."}, {"n": "Poznámky a štítky", "p": "Poznámky, porady, vlastní údaje a štítky u směn a nepřítomností."}, {"n": "Rychlé změny", "p": "Úprava času směny, přestávek a volna během směny na dvě kliknutí."}]}]}, {"id": "rizeni", "nazev": "Řízení provozu během dne", "skupiny": [{"funkce": [{"n": "Dodržování plánu", "p": "Skutečné stavy zaměstnanců porovná s naplánovanými činnostmi a přestávkami a upozorní na rozdíly."}, {"n": "Vyhodnocení stavů", "p": "Stavy z jiných systémů převede na vlastní stavy a určí, jestli odpovídají plánu."}, {"n": "Sledování obsazení", "p": "Obsazení proti potřebě během dne. Vedoucí hned vidí, kde pracovníci chybí."}, {"n": "Náhradník při absenci", "p": "Při náhlé absenci navrhne vhodné zaměstnance."}, {"n": "Výpomoc mezi pobočkami", "p": "Přehled volných pracovníků ze sousedních poboček a směna na jiné pobočce na pár kliknutí."}, {"n": "Spolujízda", "p": "Při změnách plánu zohlední, kdo s kým jezdí do práce."}]}]}, {"id": "dochazka", "nazev": "Docházka", "skupiny": [{"funkce": [{"n": "Otevřená docházka", "p": "Zveřejněné směny a nepřítomnosti ve stavu Otevřeno. Do budoucna obsahují plán, zpětně se upravují podle skutečnosti."}, {"n": "Pozitivní i negativní evidence", "p": "Docházka podle plánu, nebo podle příchodů a odchodů z docházkového systému. Pozdní příchody, dřívější odchody i přestávky."}, {"n": "Úpravy směn a nepřítomností", "p": "Oprávnění uživatelé upraví časy směn, přestávky, činnosti a nepřítomnosti podle skutečně odvedené práce."}, {"n": "Pracovní listy", "p": "Denní i souhrnné údaje o pracovní době, salda a výsledky kontrol."}, {"n": "Přesčasy", "p": "Zadání, kontrola, schválení nebo zamítnutí přesčasů."}, {"n": "Vyrovnání salda pracovní doby", "p": "Kontrola salda za období, převod do dalšího období a jeho vyrovnání nebo proplacení při uzávěrce."}, {"n": "Kontroly docházky", "p": "Kontroly směn, nepřítomností, pracovní doby a sald. Chyby a varování se vyřeší před uzávěrkou."}, {"n": "Uzávěrka docházky", "p": "Po kontrolách se docházka za období uzavře a je připravená pro mzdy."}, {"n": "Zamčení a odemčení", "p": "Docházku lze zamknout pro vybrané jednotky a období, otevřenou i uzavřenou."}, {"n": "Znovuotevření", "p": "Uzavřené období lze s oprávněním znovu otevřít a opravit."}]}]}, {"id": "nepritomnosti", "nazev": "Nepřítomnosti a dovolené", "skupiny": [{"funkce": [{"n": "Typy nepřítomností a volna", "p": "Typy používané v požadavcích, plánech, výpočtech a reportech."}, {"n": "Kategorie nároků", "p": "Typy a kategorie nároků, například dovolená, sick days a náhradní volno."}, {"n": "Nároky zaměstnanců", "p": "Nároky s platností, vyčerpaným a zbývajícím množstvím."}, {"n": "Výpočet čerpání", "p": "Čerpání a zůstatky se počítají ze směn a požadavků podle nastavených pravidel."}, {"n": "Volno během směny", "p": "Volno na celou směnu, na její část nebo na určený interval."}, {"n": "Nepřítomnosti z jiných systémů", "p": "Nepřítomnosti načtené odjinud se započítají do plánování i do pracovní doby."}, {"n": "Import nároků", "p": "Nároky lze zadat ručně nebo je načítat ze souborů a z jiných systémů."}, {"n": "Dočerpání zbytku dovolené", "p": "Vedoucí může na směnu použít zbytek dovolené, i když nestačí na celý den nebo půlden."}]}]}, {"id": "samoobsluha", "nazev": "Samoobsluha zaměstnanců", "skupiny": [{"nazev": "Plán a zůstatky", "funkce": [{"n": "Vlastní plán směn", "p": "Zaměstnanec vidí svůj plán, směny a plánovací období."}, {"n": "Zůstatky nároků", "p": "Zbývající dovolená a další volno."}]}, {"nazev": "Přání a požadavky", "funkce": [{"n": "Preference směn a časů", "p": "Oblíbené směny, časy a další preference, se kterými plánování počítá."}, {"n": "Oblíbenost směn", "p": "Zaměstnanci označují, jak jim které směny vyhovují."}, {"n": "Požadavky na směny", "p": "Požadavek na směnu, pracovní dobu, činnost nebo volný den."}, {"n": "Požadavky na volno", "p": "Dovolená, nepřítomnost a další typy volna."}, {"n": "Dlouhodobé požadavky", "p": "Požadavky na delší nebo budoucí období. Dovolenou lze zadat na celý rok dopředu."}, {"n": "Priorita podle seniority", "p": "Když se požadavky sejdou, rozhoduje nastavená priorita, například seniorita."}, {"n": "Požadavky na změnu plánu", "p": "Zaměstnanec navrhne změnu své směny nebo nepřítomnosti."}, {"n": "Přílohy", "p": "K požadavku lze přiložit doklad, například k doložené nepřítomnosti."}, {"n": "Zrušení požadavku", "p": "Čekající požadavek zaměstnanec zruší sám, u schváleného požádá o zrušení."}, {"n": "Výměny směn", "p": "Zaměstnanec nabídne směnu, vidí vhodné výměny a výměnu přijme nebo odmítne. Pravidla zkontroluje AristoTelos."}, {"n": "Rezervace volných směn", "p": "Volnou směnu si zaměstnanec vezme sám, podle pravidel, která nastavíte."}]}, {"nazev": "Potvrzení", "funkce": [{"n": "Potvrzení plánu směn", "p": "Zaměstnanec potvrdí zveřejněný plán, jak vyžaduje zákoník práce."}, {"n": "Potvrzení změny směny", "p": "Zaměstnanec potvrdí nebo odmítne změnu zveřejněné směny."}, {"n": "Potvrzení pracovního listu", "p": "Po uzávěrce zaměstnanec potvrdí svůj pracovní list."}]}]}, {"id": "vedouci", "nazev": "Nástroje pro vedoucí", "skupiny": [{"funkce": [{"n": "Přehled plánů", "p": "Plány, pracovní doba a údaje zaměstnanců v rozsahu oprávnění vedoucího."}, {"n": "Dohled regionálních manažerů", "p": "Plány, obsazení a čerpání hodin všech poboček v regionu na jednom místě."}, {"n": "Zpracování požadavků", "p": "Schválení, zamítnutí nebo předběžné zpracování požadavků zaměstnanců."}, {"n": "Změny plánu a výměny", "p": "Posouzení požadavků na změnu plánu a výměn směn, které vyžadují schválení."}, {"n": "Zpracování rezervací", "p": "Rezervace zaměstnanců i agentur a jejich převod na směny."}, {"n": "Schvalování přesčasů", "p": "Kontrola přesčasů a jejich schválení nebo zamítnutí."}, {"n": "Docházka a pracovní listy", "p": "Kontrola docházky, pracovních listů, chyb a sald a uzávěrka období."}, {"n": "Zastupování", "p": "Vedoucí předá svá oprávnění a odpovědnost zástupci na dobu nepřítomnosti."}, {"n": "Úkoly", "p": "Seznam věcí k vyřízení: požadavky, změny a potvrzení."}, {"n": "Schvalování dokladů", "p": "Kontrola a schválení dokladů přiložených k požadavkům."}]}]}, {"id": "pravidla", "nazev": "Pravidla a kontroly", "skupiny": [{"funkce": [{"n": "Zákoník práce", "p": "100% dodržení zákoníku práce, kolektivní smlouvy a vnitřních předpisů. Novelu nasadíme předem a pravidla se přepnou ke dni účinnosti."}, {"n": "Pracovní právo čtyř zemí", "p": "Pravidla jsou nastavená pro Česko, Slovensko, Německo a Rakousko."}, {"n": "Nastavení plánovacích pravidel", "p": "Stromy pravidel, filtry, fáze výpočtu a omezení pro automatické plánování."}, {"n": "Kontrola vstupů před plánováním", "p": "Smlouvy, požadavky, znalosti, pokrytí a pracovní doba se zkontrolují před výpočtem i během něj."}, {"n": "Kontrola plánu", "p": "Směny a nepřítomnosti včetně navrhovaných změn se kontrolují proti pravidlům zaměstnance, smlouvy, požadavků, pracovní doby a obsazení."}, {"n": "Denní a týdenní odpočinek", "p": "Minimální nepřetržitý odpočinek mezi směnami a v týdnu."}, {"n": "Pracovní doba a limity přesčasů", "p": "Denní, týdenní a roční limity i limity za období."}, {"n": "Pokrytí a přiřazení", "p": "Kontroly pokrytí potřeb, pracovišť a omezení přiřazení."}, {"n": "Limity požadavků", "p": "Kolik a jakých požadavků může zadat tým nebo jednotlivec."}, {"n": "Limity rezervací", "p": "Kdy se nabídka volných směn otevře a kolik směn si kdo může vzít."}, {"n": "Kontrola nároků", "p": "Zůstatky a platnost nároků se kontrolují při vytvoření, změně i zpracování směn a požadavků."}, {"n": "Přestávky a činnosti", "p": "Povinné přestávky a povolené kombinace, umístění a délky částí směny."}, {"n": "Noc, víkendy a svátky", "p": "Pravidla pro noční práci, víkendy a svátky v plánování i ve výpočtu pracovní doby."}, {"n": "Chyby a varování", "p": "Chyba změnu zastaví. Varování může potvrdit jen uživatel s oprávněním."}]}]}, {"id": "schvalovani", "nazev": "Schvalování a upozornění", "skupiny": [{"nazev": "Požadavky, schvalování a úkoly", "funkce": [{"n": "Nastavitelné typy požadavků", "p": "Chování, stavy, intervaly, vlastní údaje a oprávnění pro každý typ požadavku."}, {"n": "Životní cyklus požadavku", "p": "Vytvoření, úprava, schválení, zamítnutí, zrušení a zpracování."}, {"n": "Vícestupňové schvalování", "p": "Předběžné schválení nebo zamítnutí před konečným rozhodnutím. Každý stupeň má vlastní oprávnění."}, {"n": "Hromadné zpracování", "p": "Jedna akce pro více požadavků najednou."}, {"n": "Seznamy úkolů", "p": "Čekající akce u požadavků, změn směn, potvrzení a zastupování."}]}, {"nazev": "Upozornění a historie", "funkce": [{"n": "Upozornění v aplikaci", "p": "Výsledky zpracování a události s odkazem na příslušné místo."}, {"n": "Upozornění do mobilu", "p": "Oznámení v mobilní aplikaci."}, {"n": "E-mailová upozornění", "p": "E-maily s odkazy, ze kterých lze požadavek rovnou vyřídit."}, {"n": "Výsledek výpočtu", "p": "Zpráva, když výpočet plánu skončí úspěšně nebo chybou."}, {"n": "Historie schvalování", "p": "Záznam všech rozhodnutí u schvalovaných požadavků."}]}]}, {"id": "reporty", "nazev": "Reporty", "skupiny": [{"funkce": [{"n": "Přehled reportů", "p": "Hotové reporty pro vedoucí i mzdovou účtárnu, dostupné z přehledů a nabídek."}, {"n": "Generátor vlastních reportů", "p": "Obsah, rozměry, ukazatele, parametry a filtry reportu bez programování."}, {"n": "Kategorie a oprávnění", "p": "Reporty v kategoriích, s přístupem nastaveným pro každý zvlášť."}, {"n": "Zaměstnanci a smlouvy", "p": "Reporty o zaměstnancích, smlouvách a souvisejících údajích."}, {"n": "Plán a docházka", "p": "Směny, docházka, pracovní doba a přesčasy za vybrané jednotky a období."}, {"n": "Dodržování plánu a spravedlnost", "p": "Jak se plán dodržuje a jak rovnoměrně jsou rozdělené směny, víkendy a noci."}, {"n": "Dovolená a nároky", "p": "Čerpání, nároky a zůstatky."}, {"n": "Pracovní listy", "p": "Pracovní listy a stav jejich potvrzení zaměstnanci."}, {"n": "Výkonnostní ukazatele", "p": "Výkonnostní ukazatele, skóre karty a školení."}, {"n": "Export", "p": "Každý report lze vyvézt do CSV nebo Excelu."}, {"n": "Naplánované reporty", "p": "Reporty se generují samy v nastavený čas, za zvolené dny nebo období."}, {"n": "Rozesílání", "p": "Hotové reporty se posílají e-mailem, ukládají na určené místo nebo předávají do datového skladu."}]}]}, {"id": "mzdy", "nazev": "Podklady pro mzdy", "skupiny": [{"funkce": [{"n": "Směny a pracovní doba", "p": "Export ve formátu vašeho mzdového systému."}, {"n": "Nepřítomnosti", "p": "Export volna a nepřítomností pro zpracování mezd."}, {"n": "Přesčasy", "p": "Export přesčasů ve formátu, který váš mzdový systém čeká."}, {"n": "Příplatky", "p": "Příplatky podle pracovní doby a podmínek směny, například za noc, víkend nebo svátek."}, {"n": "Odměny a variabilní složka mzdy", "p": "Variabilní složka mzdy, schvalování odměn a jejich export do mezd."}, {"n": "Agenturní pracovníci", "p": "Odpracovaný čas a mzdové podklady za agenturní pracovníky."}, {"n": "Měsíční souhrny", "p": "Měsíční souhrnné výstupy pro kontrolu provozu a mezd."}, {"n": "Předání do mezd", "p": "Přes API, soubory, FTP nebo rozhraní mzdového systému, například do SAP."}]}]}, {"id": "spolecne", "nazev": "Společné nástroje", "skupiny": [{"funkce": [{"n": "Štítky", "p": "Štítky pro zaměstnance, směny, činnosti a další objekty."}, {"n": "Vlastní údaje", "p": "Vlastní pole u zaměstnanců, směn, požadavků a dalších objektů, použitelná v plánování i reportech."}, {"n": "Filtry a výběrová pravidla", "p": "Filtry, kterými se vybírají zaměstnanci, objekty plánování nebo pravidla."}, {"n": "Osobní nastavení", "p": "Jazyk, filtry a zobrazení podle uživatele."}, {"n": "Historie změn", "p": "Historie plánu, požadavků a schvalování přímo tam, kde s nimi pracujete."}, {"n": "Nápověda", "p": "Nápověda u každé stránky, manuál a výuková videa. Informace o verzi a licenci."}]}]}]}, {"id": "integrace", "nazev": "Integrace a výměna dat", "oblasti": [{"id": "napojeni", "nazev": "Napojení na další systémy", "skupiny": [{"funkce": [{"n": "Personální systém", "p": "Zaměstnanci a pracovní poměry. Změny v personálním systému se do plánu propíšou samy."}, {"n": "Telefonní platformy", "p": "Genesys, Cisco, Daktela a Sprinkl. Objem práce, fronty a stavy operátorů."}, {"n": "Pokladní a obchodní systémy", "p": "Návštěvnost a prodeje po prodejnách jako podklad pro předpověď."}, {"n": "Skladové systémy", "p": "Pracovní položky a údaje o činnosti pracovníků pro analýzu objemu práce, výpočet obsazení, sledování provozu a reporty produktivity."}, {"n": "Docházkové a přístupové systémy", "p": "Příchody, odchody a stavy zaměstnanců online, třeba ze systému Astea."}, {"n": "Nepřítomnosti", "p": "Výměna nepřítomností s napojenými systémy."}, {"n": "Mzdové systémy", "p": "Odpracovaný čas, příplatky a odměny po uzavření měsíce, například do SAP."}, {"n": "Datový sklad a BI", "p": "Výsledky reportů pro nástroje, které už používáte."}, {"n": "Office 365", "p": "Synchronizace plánu směn s Office 365."}, {"n": "Microsoft Entra ID", "p": "Přihlášení přes Microsoft Entra ID (dříve Azure AD)."}]}]}, {"id": "api", "nazev": "API", "skupiny": [{"funkce": [{"n": "Plán směn a požadavky", "p": "Plán, směny, požadavky a údaje o zaměstnancích pro vaše další systémy."}, {"n": "Agentury a volné směny", "p": "Agentury, jejich pracovníci, rezervace a volné směny."}, {"n": "Reporty", "p": "Výsledky všech reportů."}, {"n": "Objem práce a předpovědi", "p": "Historické objemy, předpovědi a data o objemu práce."}, {"n": "Stavy zaměstnanců", "p": "Dostupnost, stavy operátorů a stavy z jiných systémů."}, {"n": "Hromadná synchronizace", "p": "Zaměstnanci a organizační struktura podle stavu ve zdrojovém systému."}, {"n": "Dokumentace API", "p": "Dostanete ji jako zákazník."}]}]}, {"id": "importy", "nazev": "Importy, exporty a synchronizace", "skupiny": [{"funkce": [{"n": "Tři způsoby výměny dat", "p": "API a webové služby, přímé napojení na databázi, nebo soubory CSV a XLS načítané v nastavených intervalech."}, {"n": "Synchronizace zaměstnanců", "p": "Zaměstnanci a jejich pracovní poměry podle zdrojového systému."}, {"n": "Synchronizace organizace", "p": "Organizační jednotky, týmy a další kmenová data."}, {"n": "Synchronizace objemu práce", "p": "Historie objemu práce, předpovědi a události z provozu."}, {"n": "Synchronizace nepřítomností", "p": "Nepřítomnosti a volno vedené v jiném systému."}, {"n": "Importy spouštěné správcem", "p": "Správce spustí nastavený import zaměstnanců, objemu práce, událostí a dalších dat."}, {"n": "Synchronizace s platností od–do", "p": "Hromadná synchronizace srovná období platnosti a historii mimo spravovaný rozsah zachová."}]}]}, {"id": "dohled", "nazev": "Dohled nad integracemi", "skupiny": [{"funkce": [{"n": "Kontrola importovaných dat", "p": "Najde neplatné hodnoty, nedohledatelné odkazy a kolize v zařazení."}, {"n": "Logy pro uživatele", "p": "Srozumitelný přehled změn, varování a chyb, které je potřeba opravit ve zdrojových datech."}, {"n": "Technické logy", "p": "Technické chyby a diagnostika pro řešení problémů s napojením."}, {"n": "Výsledek hromadné synchronizace", "p": "Úspěch, částečný úspěch nebo chyba, s počty zpracovaných záznamů a zprávami."}, {"n": "Sledování úloh", "p": "Stav běhu, logy a vytvořené soubory u každé úlohy importu a synchronizace."}]}]}]}, {"id": "platforma", "nazev": "Platforma a provoz", "oblasti": [{"id": "web-a-mobil", "nazev": "Web a mobilní aplikace", "skupiny": [{"nazev": "Webová aplikace", "funkce": [{"n": "Aplikace v prohlížeči", "p": "Plánování, funkce pro zaměstnance, reporty i správa v prohlížeči, podle oprávnění."}, {"n": "Přizpůsobení šířce obrazovky", "p": "Rozvržení a navigace se přizpůsobí šířce obrazovky."}, {"n": "Nastavitelné zobrazení plánu", "p": "Filtry, řazení, sloupce a formát zobrazení plánu směn."}]}, {"nazev": "Mobilní aplikace pro iOS a Android", "funkce": [{"n": "Vlastní plán směn", "p": "Směny, nepřítomnosti, pracovní režim a plánovací období v mobilu."}, {"n": "Plán týmu", "p": "Plán ostatních zaměstnanců v rozsahu oprávnění, s filtry podle pracovníků a data."}, {"n": "Požadavky", "p": "Zadání, zobrazení, změna a zrušení požadavků."}, {"n": "Výměny směn", "p": "Vhodné výměny, jejich nabídnutí a odpověď na ně."}, {"n": "Změny směn", "p": "Úprava času směny a volno během směny, pokud to pravidla dovolí."}, {"n": "Reporty", "p": "Reporty připravené pro mobil."}, {"n": "Úkoly a upozornění", "p": "Úkoly a upozornění se schválením nebo zamítnutím jedním klepnutím."}]}, {"nazev": "Jazyky", "funkce": [{"n": "Více jazyků", "p": "Nastavitelné jazyky rozhraní na webu i v mobilu. Mobilní aplikace je česky, slovensky, anglicky a maďarsky."}, {"n": "Regionální nastavení", "p": "Formát data, času a čísel podle uživatele a nastavení aplikace."}]}]}, {"id": "prihlaseni", "nazev": "Přihlášení a oprávnění", "skupiny": [{"funkce": [{"n": "Jednotné přihlášení", "p": "Active Directory a LDAP, jednotné přihlášení přes Microsoft nebo Google (SAML, OpenID Connect)."}, {"n": "OAuth", "p": "Přístup oprávněných klientských aplikací přes OAuth."}, {"n": "Správa hesel", "p": "Správa hesel a účtů, včetně vynucené změny hesla."}, {"n": "Zamykání účtů", "p": "Účet lze zamknout ručně nebo automaticky podle ochrany přihlášení."}, {"n": "Role a skupiny oprávnění", "p": "Hotové i vlastní role a skupiny oprávnění. Každý vidí jen to, co mu přísluší."}, {"n": "Dědění oprávnění", "p": "Výsledná oprávnění vycházejí z přidělených rolí a z organizační struktury."}, {"n": "Audit změn", "p": "Každá změna dat je zaznamenaná a dohledatelná v reportech."}]}]}, {"id": "sprava", "nazev": "Správa, nastavení a provoz", "skupiny": [{"nazev": "Správa a nastavení", "funkce": [{"n": "Nastavení aplikace a organizace", "p": "Společné parametry aplikace a nastavení pro každou organizaci."}, {"n": "Nastavení provozoven", "p": "Zapnutí nebo vypnutí funkcí a vlastní parametry pro každou provozovnu."}, {"n": "Kategorie a definice vlastních údajů", "p": "Vlastní pole pro zaměstnance, provozovny, požadavky, směny a nepřítomnosti."}, {"n": "Správa překladů", "p": "Úprava popisků, textů a překladů v aplikaci."}, {"n": "Registrace klientských aplikací", "p": "Aplikace, které smějí používat API, a jejich přístup."}, {"n": "Nastavení stavů", "p": "Vlastní stavy, stavy z jiných systémů a jejich převod pro sledování provozu."}, {"n": "Licence", "p": "Přehled licencí a nastavení licenčních pravidel."}]}, {"nazev": "Nasazení", "funkce": [{"n": "Služba, nebo vaše infrastruktura", "p": "AristoTelos provozujeme jako službu v datovém centru v Česku, nebo běží na vašich serverech."}, {"n": "Samostatné služby na pozadí", "p": "Úlohy, integrace, upozornění a výpočty plánu běží v oddělených službách."}, {"n": "Mobilní aplikace pro vaši organizaci", "p": "Mobilní aplikace se připojí k serveru vaší organizace a načte její nastavení."}]}, {"nazev": "Provoz systému", "funkce": [{"n": "Úlohy na pozadí", "p": "Importy, synchronizace, reporty a další úlohy běží na pozadí."}, {"n": "Spouštění podle rozvrhu", "p": "Každé úloze lze nastavit, kdy a jak často se spustí."}, {"n": "Záznamy o běhu úloh", "p": "U každého běhu je stav a diagnostické údaje."}, {"n": "Logy a výstupní soubory", "p": "Logy a vytvořené soubory pro kontrolu výsledku a hledání chyb."}, {"n": "Údržba mezipaměti", "p": "Správce může mezipaměť vyprázdnit."}, {"n": "Kontroly stavu synchronizace", "p": "Kontroly, které udržují synchronizovaná data v souladu."}, {"n": "Diagnostika", "p": "Testy systému, kontroly dostupnosti a technická diagnostika."}]}]}]}],
   "role": [
     { "n": "Zaměstnanci", "p": "Vidí svůj plán, zadávají přání a požadavky, vyměňují si směny a potvrzují plán i docházku." },
     { "n": "Vedoucí týmů", "p": "Kontrolují plán svého týmu a vyřizují požadavky zaměstnanců." },
