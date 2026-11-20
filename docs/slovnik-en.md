@@ -21,12 +21,5 @@ aby web mluvil stejně jako aplikace.
 | Fronty | Queues | |
 | Výpočty | Calculations | Automatické sestavení plánu. |
 
-## Pojmy, které web používá jednotně
-
-| Používáme | Nepoužíváme |
-| --- | --- |
-| pracovníci | lidé (výjimky: „mluvíte přímo s lidmi, kteří systém navrhli“, „Slovy lidí, kteří s AristoTelem plánují“) |
-| operátoři | agenti, linka (jako počet osob) |
-| distribuční centra | DC |
-
+Česká pravidla psaní (pracovníci, operátoři, distribuční centra…) jsou v [obsahu a textech](obsah-a-texty.md#slovník-webu).
 Slovník doplňujte, kdykoli se na webu objeví nový pojem z aplikace.
