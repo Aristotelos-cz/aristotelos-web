@@ -1,6 +1,6 @@
 // Odesílání e-mailů z webu přes firemní Microsoft 365 (Microsoft Graph, přihlášení aplikace přes OAuth).
 // Starší SMTP s heslem Microsoft od konce roku 2026 vypíná, Graph je náhrada, kterou doporučuje.
-// Nastavení: MS_TENANT_ID, MS_CLIENT_ID, MS_CLIENT_SECRET, MAIL_FROM (viz README).
+// Nastavení: MS_TENANT_ID, MS_CLIENT_ID, MS_CLIENT_SECRET, MAIL_FROM (viz docs/formulare-a-emaily.md).
 
 export type Priloha = { nazev: string; typ: string; data: Uint8Array }
 export type Zprava = {
