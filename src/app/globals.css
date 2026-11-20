@@ -296,6 +296,22 @@ main > section:not(:first-child) div:has(> img[src^="/screens/kc-"]) {
 }
 /* Telefony v částech: šířka podle výšky okna */
 main > section:not(:first-child) div:has(> img[src^="/screens/mobil-"]) { max-width: clamp(150px, 27vh, 260px) !important; }
+/* Úvodní stránka, Pro váš typ provozu: na počítači vždy tři sloupce, aby se pět karet vešlo do dvou řad */
+@media (min-width: 1001px) { .reseni-mrizka { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; } }
+/* Banky a pojišťovny, Co ověří vaše IT: na počítači tři sloupce, na nízkých oknech těsnější karty */
+@media (min-width: 1001px) { .it-mrizka { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; } }
+@media (min-width: 1001px) and (max-height: 760px) { .it-mrizka { gap: 12px !important; } }
+@media (min-width: 1001px) and (max-height: 640px) { .it-mrizka > div { padding: 14px 18px !important; gap: 8px !important; } }
+/* Bezpečnost, Kde AristoTelos poběží: na nízkých oknech číslo a popis SLA vedle sebe a těsnější seznamy */
+@media (min-width: 1001px) and (max-height: 680px) {
+  .sla-karta { flex-direction: row !important; align-items: baseline; gap: 14px !important; padding: 16px 20px !important; }
+  .sla-karta > span:first-child { flex: none; white-space: nowrap; }
+}
+@media (min-width: 1001px) and (max-height: 640px) {
+  .provoz-karta { gap: 10px !important; }
+  .provoz-karta ul { gap: 6px !important; }
+  .sla-blok { gap: 10px !important; }
+}
 /* Nízká okna notebooků: obsah částí se mírně zmenší, aby se každá část vešla na jednu obrazovku */
 @media (min-width: 1001px) and (max-height: 800px) {
   main > section:not(:first-child) > * { zoom: 0.94; }
