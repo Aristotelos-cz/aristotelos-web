@@ -21,8 +21,8 @@ Potřebujete Node.js 20.9 nebo novější.
 | `src/app/[[...slug]]/page.tsx` | Všechny stránky webu: adresa → komponenta, metadata, FAQ pro vyhledávače |
 | `src/components/pages/` | Obsah jednotlivých stránek (převedený z návrhu na plátně) |
 | `src/components/SiteHeader.tsx`, `SiteFooter.tsx` | Hlavička a patička |
-| `src/content/prehled-funkci.json` | Úplný přehled funkcí pro stránku `/prehled-funkci`: části, oblasti, skupiny a funkce (název a jedna věta), role |
-| `src/components/pages/PrehledFunkci.tsx`, `src/components/PrehledFunkciSeznam.tsx` | Stránka Přehled funkcí: úvod s počty, rozbalovací oblasti s hledáním, role |
+| `src/content/prehled-funkci.json` | Úplný přehled funkcí pro stránku `/prehled-funkci`: šest fází, v nich oblasti (název a jedna věta), skupiny a funkce (název a jedna věta), role |
+| `src/components/pages/PrehledFunkci.tsx`, `src/components/PrehledFunkciSeznam.tsx` | Stránka Přehled funkcí: úvod s hledáním, záložky podle fází a pod nimi funkce vybrané fáze, role |
 | `docs/slovnik-en.md` | Slovník pojmů pro anglickou verzi webu (český pojem ↔ anglický pojem z aplikace) |
 | `src/components/KalkulackaInteraktivni.tsx` | Kalkulačky úspor: zadání, výsledek, upravitelné předpoklady, shrnutí v PDF a formulář pro business case |
 | `src/components/pages/Kalkulacka.tsx` | Rozcestník kalkulaček na `/kalkulacka-uspor` |
@@ -61,16 +61,20 @@ se schovají nápovědy u polí, pod 700 px i posuvníky.
 
 ## Přehled funkcí
 
-Stránka `/prehled-funkci` ukazuje všechny funkce AristoTela v rozbalovacích oblastech s hledáním.
+Stránka `/prehled-funkci` ukazuje všechny funkce AristoTela. Nahoře je hledání, pod ním šest záložek podle fází práce
+(Základ, Plánování, Provoz, Docházka a mzdy, Integrace, Platforma) a pod nimi všechny funkce vybrané fáze, oblast po oblasti.
+Ostatní fáze zůstávají v HTML, jen skryté, aby je četly vyhledávače i AI. Záložky zůstávají při posouvání nahoře.
 Vede na ni odkaz z hlavního menu (Produkt → Přehled funkcí), ze stránky Funkce (pod každou částí „Všechny funkce … →“)
 a z patičky. Stránka `/funkce` se v menu, v patičce a v odkazech jmenuje „Od předpovědi po mzdy“, aby se s přehledem
 funkcí nepletla; adresa a titulek pro vyhledávače zůstávají „Funkce“.
-Odkaz s kotvou, například `/prehled-funkci#dochazka`, oblast rovnou rozbalí.
+Odkaz s kotvou, například `/prehled-funkci#dochazka`, přepne na fázi, do které oblast patří, a posune na ni.
 
 Obsah je v `src/content/prehled-funkci.json`. Novou funkci přidáte jako `{ "n": "Název", "p": "Jedna věta, co umí." }`
 do správné oblasti; počty na stránce, v hledání i ve strukturovaných datech se přepočítají samy.
-Když přibude nebo ubude celá oblast, zkontrolujte rozložení (levý sloupec má prvních 7 oblastí části Funkce)
-a pravidlo „jedna část = jedna obrazovka“.
+Nová oblast potřebuje v datech `id`, název a jednu větu popisu a v `PrehledFunkciSeznam.tsx` ikonu (`IKONY`, cesta SVG 24 × 24).
+
+Stránka je výjimka z pravidla „jedna část = jedna obrazovka“: úvod je nízký, aby byly záložky vidět hned po otevření,
+a katalog je delší než obrazovka, protože funkce se nezbalují. Ostatní části stránky (role, výzva k ukázce) pravidlo dodržují.
 
 Pravidla pro obsah:
 
