@@ -63,7 +63,8 @@ se schovají nápovědy u polí, pod 700 px i posuvníky.
 
 Stránka `/prehled-funkci` ukazuje všechny funkce AristoTela v rozbalovacích oblastech s hledáním.
 Vede na ni odkaz z hlavního menu (Produkt → Přehled funkcí), ze stránky Funkce (pod každou částí „Všechny funkce … →“)
-a z patičky.
+a z patičky. Stránka `/funkce` se v menu, v patičce a v odkazech jmenuje „Od předpovědi po mzdy“, aby se s přehledem
+funkcí nepletla; adresa a titulek pro vyhledávače zůstávají „Funkce“.
 Odkaz s kotvou, například `/prehled-funkci#dochazka`, oblast rovnou rozbalí.
 
 Obsah je v `src/content/prehled-funkci.json`. Novou funkci přidáte jako `{ "n": "Název", "p": "Jedna věta, co umí." }`
