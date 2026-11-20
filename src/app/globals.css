@@ -379,11 +379,13 @@ main > section.pf-sekce > * { zoom: 1 !important; }
 .pf-odkaz:hover { color: #004A68; }
 /* Výsledky tečou do tří sloupců, aby při pár nálezech nezůstala polovina šířky prázdná */
 .pf-vysledky-seznam { column-count: 3; column-gap: 36px; padding-top: 4px; }
-.pf-vysledky-seznam > h3 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin: 0; padding: 26px 0 10px; font-size: 1.15rem; font-weight: 600; line-height: 1.25; break-after: avoid; }
-.pf-vysledky-seznam > h3 span { font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 12.5px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #4A5866; }
-.pf-vysledky-seznam > div { display: flex; flex-direction: column; gap: 3px; padding: 13px 0 14px; border-top: 1px solid #E3E8ED; break-inside: avoid; }
-.pf-vysledky-seznam > div > strong { font-size: 16px; font-weight: 600; line-height: 1.35; color: #0E1A24; }
-.pf-vysledky-seznam > div > span { font-size: 15px; line-height: 1.45; color: #4A5866; }
+.pf-skupina-cela { break-inside: avoid; }
+.pf-skupina > h3 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin: 0; padding: 26px 0 10px; font-size: 1.15rem; font-weight: 600; line-height: 1.25; break-after: avoid; }
+.pf-skupina-faze { font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 12.5px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #4A5866; }
+.pf-skupina > div { display: flex; flex-direction: column; gap: 3px; padding: 13px 0 14px; border-top: 1px solid #E3E8ED; break-inside: avoid; }
+.pf-skupina > div > strong { font-size: 16px; font-weight: 600; line-height: 1.35; color: #0E1A24; }
+.pf-skupina > div > span { font-size: 15px; line-height: 1.45; color: #4A5866; }
+.pf-vysledky-seznam mark { padding: 0 2px; margin: 0 -2px; border-radius: 3px; background: #FFE3D6; color: inherit; }
 .pf-nic { margin: 0; padding: 24px 0; font-size: 1.1rem; color: #33424F; }
 
 /* Nízká okna notebooků: menší úvod i záložky, aby pod nimi zbylo místo na obsah */
