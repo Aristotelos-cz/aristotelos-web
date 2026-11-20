@@ -45,18 +45,15 @@ node scripts/kontrola-obrazovek.mjs             # nebo s adresou a velikostmi: �
 ```
 
 Chyby (úvod přesahuje nebo je pod ním vidět další část, část nižší než obrazovka, přetečení do šířky) ukončí skript
-s kódem 1. Části vyšší než obrazovka na počítači jsou jen upozornění. Známá upozornění, která vznikla před zavedením
-kontroly a čekají na úpravu obsahu:
+s kódem 1. Části vyšší než obrazovka na počítači skript vypíše jako upozornění. Dnes jich je nula a tak to má zůstat:
+před nahráním upravte rozvržení, aby se část vešla.
 
-| Okno | Stránka | Část | Přesah |
-| --- | --- | --- | --- |
-| 1366 × 625 | `/bezpecnost` | 3 | 2 px |
-| 1280 × 600 | `/bezpecnost` | 3 | 21 px |
-| 1280 × 600 | `/reseni/banky-a-pojistovny` | 3 | 8 px |
-| 1024 × 700 | `/reseni/banky-a-pojistovny` | 3 | 30 px |
-| 1024 × 700 | `/` | 6 | 57 px |
+Když se část na nízkém nebo užším okně nevejde, nemění se text, ale rozložení jen pro ta okna (pravidla
+`@media (min-width: 1001px) and (max-height: …)` v `globals.css`). Příklady:
 
-Nové upozornění k tomuto seznamu nepřidávejte, upravte obsah, aby se část vešla.
+- víc sloupců, aby karty zabraly méně řad (`reseni-mrizka` na úvodní stránce, `it-mrizka` na Bankách a pojišťovnách),
+- těsnější mezery a okraje karet (`it-mrizka`, `provoz-karta`, `sla-blok` na Bezpečnosti),
+- číslo a popis vedle sebe místo pod sebou (`sla-karta`).
 
 ## Snímky aplikace
 
