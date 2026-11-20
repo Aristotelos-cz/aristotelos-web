@@ -24,7 +24,7 @@ node scripts/kontrola-obrazovek.mjs http://localhost:3000        # rozvržení, 
 ## Závazná pravidla
 
 - **Jedna část = jedna obrazovka.** Každá `main > section` vyplní obrazovku a na počítači se do ní vejde. Po každé změně
-  vzhledu nebo textu spusť kontrolu rozvržení v 11 oknech a nenahrávej, dokud hlásí chyby. Nové přesahy nepřidávej.
+  vzhledu nebo textu spusť kontrolu rozvržení v 11 oknech a nenahrávej, dokud hlásí chyby nebo upozornění.
   Výjimka: katalog na `/prehled-funkci`. Výška hlavičky je natvrdo v `--hlavicka: 73px`.
 - **Slovník:** pracovníci (ne lidé), operátoři (ne agenti, linka), distribuční centra (ne DC), Veřejný plán (Main schedule).
   Výjimky a další pravidla: `docs/obsah-a-texty.md`.
