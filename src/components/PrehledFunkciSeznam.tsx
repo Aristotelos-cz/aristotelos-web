@@ -69,11 +69,55 @@ function Ikona({ id, velikost }: { id: string; velikost: number }) {
   )
 }
 
-function RadekFunkce({ f }: { f: Funkce }) {
+// Zvýraznění nalezených slov ve výsledcích hledání. Hledá se bez diakritiky a podle kmene slova,
+// proto se pozice nálezu přepočítá zpět na původní text a zvýrazní se celé slovo (výměna → „výměny“).
+const jePismeno = (c: string | undefined) => !!c && (c.toLowerCase() !== c.toUpperCase() || (c >= '0' && c <= '9'))
+
+function Zvyrazni({ text, slova }: { text: string; slova?: string[] }) {
+  if (!slova || !slova.length) return <>{text}</>
+  let norm = ''
+  const puvod: number[] = []
+  for (let i = 0; i < text.length; i++) {
+    const z = zaklad(text[i])
+    for (let k = 0; k < z.length; k++) {
+      norm += z[k]
+      puvod.push(i)
+    }
+  }
+  const useky: [number, number][] = []
+  for (const s of slova) {
+    for (let od = norm.indexOf(s); od !== -1; od = norm.indexOf(s, od + s.length)) {
+      let zacatek = puvod[od]
+      let konec = puvod[od + s.length - 1] + 1
+      while (zacatek > 0 && jePismeno(text[zacatek - 1])) zacatek--
+      while (jePismeno(text[konec])) konec++
+      useky.push([zacatek, konec])
+    }
+  }
+  if (!useky.length) return <>{text}</>
+  useky.sort((a, b) => a[0] - b[0])
+  const casti: React.ReactNode[] = []
+  let pozice = 0
+  for (const [od, konec] of useky) {
+    if (konec <= pozice) continue
+    const zacatek = Math.max(od, pozice)
+    if (zacatek > pozice) casti.push(text.slice(pozice, zacatek))
+    casti.push(<mark key={zacatek}>{text.slice(zacatek, konec)}</mark>)
+    pozice = konec
+  }
+  if (pozice < text.length) casti.push(text.slice(pozice))
+  return <>{casti}</>
+}
+
+function RadekFunkce({ f, slova }: { f: Funkce; slova?: string[] }) {
   return (
     <div>
-      <strong>{f.n}</strong>
-      <span>{f.p}</span>
+      <strong>
+        <Zvyrazni text={f.n} slova={slova} />
+      </strong>
+      <span>
+        <Zvyrazni text={f.p} slova={slova} />
+      </span>
     </div>
   )
 }
@@ -236,14 +280,18 @@ export default function PrehledFunkciSeznam() {
               ) : (
                 <div className="pf-vysledky-seznam">
                   {vysledky.map((v) => (
-                    <Fragment key={v.o.id}>
+                    // menší skupiny zůstávají ve sloupci pohromadě, velké se smějí zalomit do dalšího
+                    <div key={v.o.id} className={v.funkce.length <= 10 ? 'pf-skupina pf-skupina-cela' : 'pf-skupina'}>
                       <h3>
-                        {v.o.nazev} <span>{v.faze}</span>
+                        <span>
+                          <Zvyrazni text={v.o.nazev} slova={slova} />
+                        </span>
+                        <span className="pf-skupina-faze">{v.faze}</span>
                       </h3>
                       {v.funkce.map((x) => (
-                        <RadekFunkce key={x.n} f={x} />
+                        <RadekFunkce key={x.n} f={x} slova={slova} />
                       ))}
-                    </Fragment>
+                    </div>
                   ))}
                 </div>
               )}
