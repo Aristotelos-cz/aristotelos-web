@@ -285,7 +285,7 @@ export default function MainPage() {
 </div>
 <h2 style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Pro váš typ provozu</h2>
 </div>
-<div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(340px, 100%), 1fr))", gap: "20px" }}>
+<div className="reseni-mrizka" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(340px, 100%), 1fr))", gap: "20px" }}>
 <Link href="/reseni/kontaktni-centra" style={{ display: "flex", flexDirection: "column", gap: "12px", padding: "clamp(16px, 2.6vh, 28px)", border: "1px solid #DCE3E9", borderRadius: "12px", color: "#0E1A24", textDecoration: "none", background: "#FFFFFF" }}>
 <h3 style={{ margin: "0", fontSize: "1.25rem", fontWeight: "600" }}>Kontaktní centra</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Předpověď hovorů, počet operátorů na požadovanou úroveň obsluhy a napojení na Genesys, Cisco nebo Daktelu.</p>

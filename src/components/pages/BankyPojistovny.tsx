@@ -106,7 +106,7 @@ export default function BankyPojistovnyPage() {
 <h2 style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Co ověří vaše IT a bezpečnost</h2>
 <p style={{ margin: "0", fontSize: "1.1rem", color: "#C3CED7" }}>Odpovědi na otázky, které v bankách a pojišťovnách padají při každém výběrovém řízení.</p>
 </div>
-<div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(340px, 100%), 1fr))", gap: "16px" }}>
+<div className="it-mrizka" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(340px, 100%), 1fr))", gap: "16px" }}>
 <div style={{ border: "1px solid rgba(255, 255, 255, 0.2)", borderRadius: "12px", padding: "clamp(16px, 2.6vh, 28px)", display: "flex", flexDirection: "column", gap: "10px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "1.3rem", fontWeight: "600", color: "#FF8A2B" }}>ISO/IEC 27001:2022</span>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#C3CED7" }}>Certifikace systému řízení bezpečnosti informací pro návrh, vývoj, instalaci, provoz a správu AristoTela. Certifikační orgán TAYLLORCOX, platnost do 27. 6. 2028.</p>

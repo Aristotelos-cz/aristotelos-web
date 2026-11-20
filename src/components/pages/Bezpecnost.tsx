@@ -108,7 +108,7 @@ export default function BezpecnostPage() {
 <h2 style={{ margin: "0", fontSize: "clamp(1.7rem, min(3.2vw, 5.2vh), 2.8rem)", lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700", textWrap: "balance" }}>Kde AristoTelos poběží, rozhodnete vy</h2>
 </div>
 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(440px, 100%), 1fr))", gap: "20px" }}>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(18px, 3vh, 32px)", display: "flex", flexDirection: "column", gap: "14px" }}>
+<div className="provoz-karta" style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(18px, 3vh, 32px)", display: "flex", flexDirection: "column", gap: "14px" }}>
 <h3 style={{ margin: "0", fontSize: "1.4rem", fontWeight: "700", letterSpacing: "-0.01em" }}>Jako služba</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>AristoTelos provozujeme my, v zabezpečeném datovém centru Českých Radiokomunikací (ČRa) s úrovní Tier III. Provoz řídíme podle ISO/IEC 27001.</p>
 <ul style={{ listStyle: "none", margin: "4px 0 0", padding: "0", display: "flex", flexDirection: "column", gap: "10px", fontSize: "15.5px" }}>
@@ -142,7 +142,7 @@ export default function BezpecnostPage() {
 </li>
 </ul>
 </div>
-<div style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(18px, 3vh, 32px)", display: "flex", flexDirection: "column", gap: "14px" }}>
+<div className="provoz-karta" style={{ background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "14px", padding: "clamp(18px, 3vh, 32px)", display: "flex", flexDirection: "column", gap: "14px" }}>
 <h3 style={{ margin: "0", fontSize: "1.4rem", fontWeight: "700", letterSpacing: "-0.01em" }}>Ve vaší infrastruktuře</h3>
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Instalace na vašich serverech, pod dohledem a podle pravidel vašeho IT.</p>
 <ul style={{ listStyle: "none", margin: "4px 0 0", padding: "0", display: "flex", flexDirection: "column", gap: "10px", fontSize: "15.5px" }}>
@@ -163,18 +163,18 @@ export default function BezpecnostPage() {
 </ul>
 </div>
 </div>
-<div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+<div className="sla-blok" style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
 <h3 style={{ margin: "0", fontSize: "1.25rem", fontWeight: "600" }}>Garantovaná podpora podle smluvního SLA</h3>
 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))", gap: "20px" }}>
-<div style={{ display: "flex", flexDirection: "column", gap: "6px", padding: "24px", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px" }}>
+<div className="sla-karta" style={{ display: "flex", flexDirection: "column", gap: "6px", padding: "24px", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "2rem", fontWeight: "600", lineHeight: "1.05" }}>8–18 h</span>
 <span style={{ fontSize: "15px", color: "#4A5866" }}>podpora v pracovní dny</span>
 </div>
-<div style={{ display: "flex", flexDirection: "column", gap: "6px", padding: "24px", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px" }}>
+<div className="sla-karta" style={{ display: "flex", flexDirection: "column", gap: "6px", padding: "24px", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "2rem", fontWeight: "600", lineHeight: "1.05" }}>30 min</span>
 <span style={{ fontSize: "15px", color: "#4A5866" }}>reakce na kritickou vadu</span>
 </div>
-<div style={{ display: "flex", flexDirection: "column", gap: "6px", padding: "24px", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px" }}>
+<div className="sla-karta" style={{ display: "flex", flexDirection: "column", gap: "6px", padding: "24px", background: "#FFFFFF", border: "1px solid #DCE3E9", borderRadius: "12px" }}>
 <span style={{ fontFamily: "'IBM Plex Mono', Menlo, monospace", fontSize: "2rem", fontWeight: "600", lineHeight: "1.05" }}>10 h</span>
 <span style={{ fontSize: "15px", color: "#4A5866" }}>vyřešení kritické vady v provozní době</span>
 </div>
