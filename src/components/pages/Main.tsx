@@ -242,7 +242,7 @@ export default function MainPage() {
 <p style={{ margin: "0", fontSize: "15.5px", color: "#4A5866" }}>Odpracovaný čas, příplatky a výkonnostní ukazatele odejdou automaticky do mzdového systému.</p>
 </li>
 </ol>
-<Link href="/funkce" style={{ alignSelf: "flex-start", fontWeight: "600", fontSize: "16px", textDecoration: "none", display: "inline-flex", alignItems: "center", minHeight: "44px" }}>Prohlédnout všechny funkce →</Link>
+<Link href="/funkce" style={{ alignSelf: "flex-start", fontWeight: "600", fontSize: "16px", textDecoration: "none", display: "inline-flex", alignItems: "center", minHeight: "44px" }}>Od předpovědi po mzdy podrobně →</Link>
 </div>
 </section>
 

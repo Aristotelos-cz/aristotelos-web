@@ -56,7 +56,7 @@ export default function PrehledFunkciPage() {
                 </a>
               ))}
             </div>
-            <Link href="/funkce" style={{ alignSelf: 'flex-start', fontWeight: 600, fontSize: '15px', display: 'inline-flex', alignItems: 'center', minHeight: '44px' }}>Hlavní funkce v kostce →</Link>
+            <Link href="/funkce" style={{ alignSelf: 'flex-start', fontWeight: 600, fontSize: '15px', display: 'inline-flex', alignItems: 'center', minHeight: '44px' }}>Od předpovědi po mzdy →</Link>
           </div>
         </div>
       </section>
