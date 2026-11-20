@@ -8,7 +8,7 @@ type Polozka = { href: string; label: string }
 type PolozkaNabidky = Polozka & { popis: string }
 
 const PRODUKT: PolozkaNabidky[] = [
-  { href: '/funkce', label: 'Funkce', popis: 'Hlavní funkce v kostce, se snímky z aplikace' },
+  { href: '/funkce', label: 'Od předpovědi po mzdy', popis: 'Devět oblastí AristoTela se snímky z aplikace' },
   { href: '/prehled-funkci', label: 'Přehled funkcí', popis: 'Úplný seznam funkcí po oblastech, s hledáním' },
 ]
 const PRED: Polozka[] = [
